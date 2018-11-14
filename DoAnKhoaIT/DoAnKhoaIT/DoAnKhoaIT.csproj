@@ -160,6 +160,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaidangController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongtinnguoidungController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\CongTacController.cs" />
@@ -4328,6 +4329,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Baidang\" />
     <Folder Include="Areas\GiaoVien\Models\" />
     <Folder Include="Areas\Guest\Models\" />
     <Folder Include="Areas\Guest\Views\HoatDongSV\" />
