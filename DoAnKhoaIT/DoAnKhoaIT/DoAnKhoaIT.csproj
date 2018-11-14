@@ -171,7 +171,7 @@
     <Compile Include="Areas\GiaoVien\Controllers\ThongBaoController.cs" />
     <Compile Include="Areas\GiaoVien\GiaoVienAreaRegistration.cs" />
     <Compile Include="Areas\Guest\Controllers\CauLacBoSVController.cs" />
-    <Compile Include="Areas\Guest\Controllers\DemoController.cs" />
+    <Compile Include="Areas\Guest\Controllers\DaoTaoController.cs" />
     <Compile Include="Areas\Guest\Controllers\HoatDongDoanHoiController.cs" />
     <Compile Include="Areas\Guest\Controllers\HomeController.cs" />
     <Compile Include="Areas\Guest\Controllers\LayoutController.cs" />
@@ -4300,6 +4300,7 @@
     <Content Include="Files\04.xlsx" />
     <Content Include="Areas\Guest\Views\Shared\Gioithieu1.cshtml" />
     <Content Include="Areas\Guest\Views\Shared\LoadLoaiBD.cshtml" />
+    <Content Include="Areas\Guest\Views\DaoTao\TDDH.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -4333,7 +4334,6 @@
     <Folder Include="Areas\Admin\Views\Baidang\" />
     <Folder Include="Areas\GiaoVien\Models\" />
     <Folder Include="Areas\Guest\Models\" />
-    <Folder Include="Areas\Guest\Views\Demo\" />
     <Folder Include="Areas\Guest\Views\HoatDongSV\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
