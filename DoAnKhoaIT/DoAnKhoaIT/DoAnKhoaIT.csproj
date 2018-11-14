@@ -170,6 +170,7 @@
     <Compile Include="Areas\GiaoVien\Controllers\ThongBaoController.cs" />
     <Compile Include="Areas\GiaoVien\GiaoVienAreaRegistration.cs" />
     <Compile Include="Areas\Guest\Controllers\CauLacBoSVController.cs" />
+    <Compile Include="Areas\Guest\Controllers\DemoController.cs" />
     <Compile Include="Areas\Guest\Controllers\HoatDongDoanHoiController.cs" />
     <Compile Include="Areas\Guest\Controllers\HomeController.cs" />
     <Compile Include="Areas\Guest\Controllers\LayoutController.cs" />
@@ -4330,6 +4331,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\GiaoVien\Models\" />
     <Folder Include="Areas\Guest\Models\" />
+    <Folder Include="Areas\Guest\Views\Demo\" />
     <Folder Include="Areas\Guest\Views\HoatDongSV\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
