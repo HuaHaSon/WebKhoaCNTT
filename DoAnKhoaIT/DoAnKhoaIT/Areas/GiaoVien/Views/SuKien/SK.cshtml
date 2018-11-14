@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "SK";
+    Layout = "~/Areas/GiaoVien/Views/Shared/_LayoutGV.cshtml";
+}
+
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+
+                    <li>
+                        @Html.ActionLink("Trang chủ", "IndexGV", "Home")
+                    </li>
+                    <li>Sự kiện</li>
+
+                </ul>
+            </div>
+            <div class="col-sm-12" id="blog-listing">
+
+                <div class="post">
+                    @Html.ActionLink("Tiêu đề sự kiện", "SK1", "SuKien", null, new { style = "color: Black; font-size:22px; font-family:Arial" })
+                    <p>
+                        Nội dung bên trong
+                    </p>
+                    <p class="read-more btn btn-primary" style="background-color:#337ab7;">
+                        @Html.ActionLink("Xem thêm", "SK1", "SuKien", null, new { style = "color: White" })
+                    </p>
+                </div>
+
+
+
+                @*<p class="read-more"> <a href="" class="btn btn-primary"> Xem thêm</a> </p>*@
+
+
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="">Mới hơn</a>
+                    </li>
+                    <li class="next">
+                        <a href="">Cũ hơn</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+
+        </div>  @*#content*@
+    </div>
+</body>
+<style>
+    .post {
+        background: #f5f5f5;
+        margin: 0 0 30px;
+        border: solid 1px #e6e6e6;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+</style>
+

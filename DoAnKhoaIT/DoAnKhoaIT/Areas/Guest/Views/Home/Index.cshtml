@@ -1,0 +1,309 @@
+﻿@model Model.ViewModel.View3baidang
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-bottom">
+    <!-- Load template -->
+    <!-- End load template -->
+    <div class="header-slide">
+        <div class="content-slide">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- Home Slideshow-->
+                    <div class="slide-show">
+                        <div id="owl-slide-show" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <a target="" href="news-14.html">
+                                    <img class="newsbox" src="/Assets/Guest/images/hinhtinnoibat1.jpg" alt="Thông báo xét tuyển ngành CNTT chất lượng cao">
+                                    <div class="carousel-caption">Thông báo tuyển sinh trình độ Tiến sĩ, Thạc sĩ năm 2018</div>
+                                </a>
+                            </div><div class="item">
+                                <a target="" href="">
+                                    <img class="newsbox" src="/Assets/Guest/images/hinhtinnoibat2.jpg" alt="Sinh viên khoa I.T thích xem hoạt hình">
+                                    <div class="carousel-caption">Sinh viên khoa I.T thích xem hoạt hình</div>
+                                </a>
+                            </div><div class="item">
+                                <a target="" href="">
+                                    <img class="newsbox" src="/Assets/Guest/images/tinnoibat3.jpg" alt="Xu hướng chụp ảnh của giới trẽ I.T hiện nay">
+                                    <div class="carousel-caption">Xu hướng chụp ảnh của giới trẽ I.T hiện nay</div>
+                                </a>
+                            </div><div class="item">
+                                <a target="" href="">
+                                    <img class="newsbox" src="/Assets/Guest/images/tinnoibat4.jpg" alt="Văn Thành tạo dáng chụp ảnh sống ảo">
+                                    <div class="carousel-caption">Văn Thành tạo dáng chụp ảnh sống ảo</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Home Slideshow-->
+                    <!-- Home Hot new-->
+                    <!-- End Home Hot new-->
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 news-hot">
+                    <!-- hot new-->
+                    <div class="hot-title"> <span> Thông báo </span> </div>
+
+                    <div class="hot-content scrollbar-inner" style="margin-right:0px;">
+                        @foreach (var item in Model.v4)
+                        {
+                            <ul id="owl-hot-new">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            @Html.ActionLink(@item.TieuDe, "ThongBao1", "ThongBao", new { mabaidang = item.MaBD }, null)
+                                            <span class="badge label-danger "> @item.Ngaydang.Value.ToString("dd/MM/yyyy") </span>
+                   
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-4 hot-button">
+                        <p class="btn btn-info"> @Html.ActionLink("Xem thêm", "TB", "ThongBao", null, new { style = "color: Black" })</p>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- End hot new-->
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Home Tab-->
+                <div class="row">
+                    <!--    content top     -->
+                    <div class="box-row">
+                        <div class="box-element col-md-4 col-sm-4">
+                            <div class="box-title">
+                                @Html.ActionLink("Tin tức", "TT", "TinTuc")
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="box-content">
+                                <div class="box-content-list">
+                                    <div class="content-list-col box-img image-480-200">
+                                        <img src="/Assets/Guest/images/newsandevents-default.jpg" />
+                                    </div>
+
+                                    @foreach (var item in Model.v1)
+                                    {
+                                        <div class="row">
+                                            <div class="content-list-col box-img col-xs-3">
+                                                <a href="news-27.html" title="Ngày hội tuyển dụng, việc làm năm 2018">
+                                                    <img src="/Assets/Guest/images/hihi.jpg" class="image-66x44" alt="Ngày hội tuyển dụng, việc làm năm 2018" />
+                                                </a>
+                                            </div>
+
+                                            <div class="content-list-col col-xs-9" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">                    
+                                                @Html.ActionLink(item.TieuDe,"TinTuc1","TinTuc",new { mabaidang=item.MaBD},null)
+                                            </div>
+
+                                        </div>
+                                   }
+
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="box-element col-md-4 col-sm-4">
+                            <div class="box-title">
+                                @Html.ActionLink("Sự kiện", "SK", "SuKien")
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="box-content">
+                                <div class="box-content-list">
+                                    <div class="content-list-col box-img image-480-200">
+                                        <img src="/Assets/Guest/images/intership-default.jpg" />
+                                    </div>
+                                    @foreach (var item in Model.v2)
+                                    {
+                                        <div class="row">
+                                            <div class="content-list-col box-img col-xs-3">
+                                                <a href="news-31.html" title="Công ty Cổ phần Nam Tây Phương CẦN TUYỂN GẤP KẾ TOÁN NỘI BỘ">
+                                                    <img src="/Assets/Guest/images/hihi.jpg" class="image-66x44" alt="Công ty Cổ phần Nam Tây Phương CẦN TUYỂN GẤP KẾ TOÁN NỘI BỘ" />
+                                                </a>
+                                            </div>
+                                            <div class="content-list-col col-xs-9" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">                                                
+                                                @Html.ActionLink(item.TieuDe, "SuKien1", "SuKien",new { mabaidang=item.MaBD},null)
+                                            </div>
+                                        </div>
+                                    }
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="box-element col-md-4 col-sm-4">
+                            <div class="box-title">
+                                @Html.ActionLink("Thông tin tuyển sinh", "TTTS", "ThongTinTuyenSinh")
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="box-content">
+                                <div class="box-content-list">
+                                    <div class="content-list-col box-img image-480-200">
+                                        <img src="/Assets/Guest/images/thongtintuyensinh.png" />
+                                    </div>
+                                   @foreach (var item in Model.v3)
+                                    {
+                                        <div class="row">
+                                            <div class="content-list-col box-img col-xs-3">
+                                                <a href="news-34.html" title="Thông báo tuyển sinh bậc cao đẳng hệ chính quy năm 2018">
+                                                    <img src="/Assets/Guest/images/hihi.jpg" class="image-66x44" alt="Thông báo tuyển sinh bậc cao đẳng hệ chính quy năm 2018" />
+                                                </a>
+                                            </div>
+                                            <div class="content-list-col col-xs-9" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical"> @Html.ActionLink(item.TieuDe, "TuyenSinh1", "ThongTinTuyenSinh",new { mabaidang=item.MaBD},null) </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12" style="padding-left:15px; padding-right:16px;">
+        <!-- Home Tab-->
+        <div class="row" style="background: #F5F5F5; margin-top:15px;">
+            <!--    content top     -->
+            <div id="sdf" style=" color:white; background:#a52838; text-align:center; padding-bottom: -10px;padding-top: 15px;padding-bottom:15px; margin-top: 0px; text-decoration:none; outline:none; font-weight:bold; font-size: 18px; font-family:Source Sans Pro;"> HOẠT ĐỘNG SINH VIÊN </div>
+            <div class="box-row">
+
+                <div class="box-element col-md-4 col-sm-4">
+
+                    <div class="box-content">
+                        <div class="box-content-list">
+                            <div #href="#" class="content-list-col box-img image-480-200 container1">
+                                <img src="/Assets/Guest/images/hinh1.jpg" style="width:100%">
+                                <div class="centered">
+                                    <a href="#" style="color:white;font-weight:bold">@Html.ActionLink("Câu lạc bộ sinh viên", "CLBSV", "CauLacBoSV", null, new { @style = "color:white" })</a>
+                                </div>
+                            </div>
+                            @foreach (var item in Model.v5)
+                            {
+                                <div class="row">
+                                    <div class="content-list-col box-img col-xs-3"> </div>
+                                    <div class="content-list-col col-xs-9" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical"> @Html.ActionLink(item.TieuDe, "CLBSV1", "CauLacBoSV",new { mabaidang=item.MaBD},null)</div>
+                                </div>
+                            }
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="box-element col-md-4 col-sm-4">
+
+                    <div class="box-content">
+                        <div class="box-content-list">
+                            <div #href="#" class="content-list-col box-img image-480-200 container1">
+                                <img src="/Assets/Guest/images/hinh2.jpg" style="width:100%">
+                                <div class="centered">
+                                    @Html.ActionLink("Hoạt động đoàn hội", "HDDH", "HoatDongDoanHoi", null, new { @style = "color:white" })
+
+                                </div>
+                            </div>
+                            @foreach (var item in Model.v6)
+                            {
+                                <div class="row">                                    
+                                    <div class="content-list-col box-img col-xs-3"> </div>
+                                    <div class="content-list-col col-xs-9" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">  @Html.ActionLink(item.TieuDe, "HDDH1", "HoatDongDoanHoi",new { mabaidang=item.MaBD},null) </div>
+                                </div>
+                            }
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="box-element col-md-4 col-sm-4">
+
+                    <div class="box-content">
+                        <div class="box-content-list">
+                            <div #href="#" class="content-list-col box-img image-480-200 container1">
+                                <img src="/Assets/Guest/images/hinh3.jpg" style="width:100%">
+                                <div class="centered">
+                                    <a style="color:white;font-weight:bold">@Html.ActionLink("Olympic sinh viên", "OLPSV", "OlympicSV", null, new { @style = "color:white", @class = "menu" })</a>
+                                </div>
+                            </div>
+                            @foreach (var item in Model.v7)
+                            {
+                                <div class="row">                                  
+                                    <div class="content-list-col box-img col-xs-3"> </div>
+                                    <div class="content-list-col col-xs-9" style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">  @Html.ActionLink(item.TieuDe, "OLPSV1", "OlympicSV",new { mabaidang=item.MaBD},null) </div>
+                                </div>
+                            }
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+<style>
+
+    .menu:hover {
+        color: darkkhaki;
+    }
+
+    .container1 {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 77%;
+        transform: translate(-50%, -50%);
+    }
+
+    img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+</style>
+
