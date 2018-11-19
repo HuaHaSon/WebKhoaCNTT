@@ -8,6 +8,7 @@ namespace DoAnKhoaIT.Common
     public class TaikhoanLogin
     {
         public string UserName { get; set; }
+        public string Name { get; set; }
         public string PassWord { get; set; }
     }
 }

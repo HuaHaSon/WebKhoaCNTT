@@ -29,6 +29,11 @@ namespace Model.DAO.Admin
         {
             return db.Quyennguoidungs.ToList();
         }
+        public List<Chitietquyen> timlistquyen(string id)
+        {
+            var res = db.Chitietquyens.Where(model => model.Machucvu == id).ToList();
+            return res;
+        }
         public bool Themtaikhoan(Taikhoan entity)
         {
             var x = db.Taikhoans.Find(entity.Tentaikhoan);
@@ -58,7 +63,10 @@ namespace Model.DAO.Admin
         }
         public bool themquyen(Quyennguoidung entity)
         {
+            var check = db.Quyennguoidungs.Find(entity.Maquyen);
+            if (check != null) return false;
             var res = db.Quyennguoidungs.Add(entity);
+            db.SaveChanges();
             return true;
         }
         public bool themchitietquyen(string machucvu, string maquyen)
@@ -83,6 +91,11 @@ namespace Model.DAO.Admin
         {
             var res = db.Thongtinnguoidungs.Where(Model => Model.Tentaikhoan == tentaikhoan);
             return res.SingleOrDefault();
+        }
+        public Quyennguoidung timquyen(string maquyen)
+        {
+            var res = db.Quyennguoidungs.Find(maquyen);
+            return res;
         }
         public bool Suataikhoan(Taikhoan entity)
         {
@@ -110,6 +123,13 @@ namespace Model.DAO.Admin
         {
             var res = db.Chucvus.Find(entity.Machucvu);
             res.Tenchucvu = entity.Tenchucvu;
+            return true;
+        }
+        public bool suaquyen(Quyennguoidung entity)
+        {
+            var res = db.Quyennguoidungs.Find(entity.Maquyen);
+            res.Tenquyen = entity.Tenquyen;
+            db.SaveChanges();
             return true;
         }
         public IEnumerable<Chucvu> Ichucvu()
@@ -144,10 +164,12 @@ namespace Model.DAO.Admin
             db.SaveChanges();
             return !chucvu.Flag;
         }
-        public List<Chitietquyen> timlistquyen(string id)
+        public bool? changeStatusQuyen(string id)
         {
-            var res = db.Chitietquyens.Where(model => model.Machucvu == id).ToList();
-            return res;
+            var quyen = db.Quyennguoidungs.Find(id);
+            quyen.Flag = !quyen.Flag;
+            db.SaveChanges();
+            return !quyen.Flag;
         }
         public bool xoachitietquyen(string id)
         {

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -203,7 +202,7 @@
                     }
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="~/Assets/Admin/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">@session.UserName</b><span class="caret"></span> </a>
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="~/Assets/Admin/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs" id="sessiontext">@session.Name</b><span class="caret"></span> </a>
                         <ul class="dropdown-menu dropdown-user animated flipInY">
                             <li>
                                 <div class="dw-user-box">
@@ -451,6 +450,8 @@
     <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
     <!-- end - This is for export functionality only -->
     <!-- Plugin JavaScript -->
+    <script src="~/Assets/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/Assets/plugins/ckfinder/ckfinder.js"></script>
     <script src="~/Assets/Admin/plugins/bower_components/moment/moment.js"></script>
     <!-- Clock Plugin JavaScript -->
     <script src="~/Assets/Admin/plugins/bower_components/clockpicker/dist/jquery-clockpicker.min.js"></script>
@@ -473,11 +474,8 @@
             var activeTab = localStorage.getItem('activeTab');
             if (activeTab) {
                 $('#tabthongtinnguoidung a[href="' + activeTab + '"]').tab('show');
+                $('#tabbaidangs a[href="' + activeTab + '"]').tab('show');
             }
-            $(".btn2").click(function () {
-                alert("A");
-                location.reload();
-            });
         });
 
         // Clock pickers

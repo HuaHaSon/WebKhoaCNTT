@@ -30,9 +30,9 @@ namespace Model.DAO
                 return 0;
         }
 
-        public Taikhoan GetById(string UserName)
+        public Thongtinnguoidung GetById(string UserName)
         {
-            return db.Taikhoans.SingleOrDefault(x => x.Tentaikhoan == UserName);
+            return db.Thongtinnguoidungs.SingleOrDefault(x => x.Tentaikhoan == UserName);
         }
     }
 }

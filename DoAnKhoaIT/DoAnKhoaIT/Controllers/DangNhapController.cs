@@ -72,8 +72,10 @@ namespace DoAnKhoaIT.Controllers
                         Response.Cookies.Add(LuuMatkhau);
                     }
                     var user = dao.GetById(collection.UserName);
+                    
                     var usersession = new TaikhoanLogin();
-                    usersession.UserName = user.Tentaikhoan;                   
+                    usersession.UserName = user.Tentaikhoan;
+                    usersession.Name = user.Hoten;
                     Session.Add(CommonConstants.USER_SESSION, usersession);
                     return RedirectToAction("Index", "Admin/Home");
                 }

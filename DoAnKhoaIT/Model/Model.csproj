@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\Admin\BaidangDao.cs" />
     <Compile Include="DAO\Admin\ThongtinnguoidungDao.cs" />
     <Compile Include="DAO\DangNhapDao.cs" />
     <Compile Include="DAO\Guest\HomeDAO.cs" />
@@ -89,7 +90,9 @@
     <Compile Include="EF\ThongtinGV.cs" />
     <Compile Include="EF\Thongtinnguoidung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\BaidangAdminModel.cs" />
     <Compile Include="ViewModel\BaidangModel.cs" />
+    <Compile Include="ViewModel\Doituonghienthi.cs" />
     <Compile Include="ViewModel\ThongtinnguoidungModel.cs" />
     <Compile Include="ViewModel\Trangthai.cs" />
     <Compile Include="ViewModel\View3baidang.cs" />
