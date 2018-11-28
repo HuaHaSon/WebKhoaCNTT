@@ -24,6 +24,9 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
             res.listquyen = dao.Listquyen();
             ViewBag.Ichucvu = dao.Ichucvu();
             ViewBag.Itrangthai = dao.ITrangthai;
+            ViewBag.bang = "bang";
+            ViewBag.show = "false";
+            ViewBag.check = "false";
             return View(res);
         }
         [HttpPost]
@@ -192,7 +195,6 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
                     status = false
                 });
             }
-            dao.suachucvu(chucvures);
             dao.xoachitietquyen(chucvures.Machucvu);
             for (int i = 0; i < list.Count(); ++i)
             {
@@ -215,53 +217,42 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         [HttpPost]
         public JsonResult Themquyen(string quyen)
         {
-            Quyennguoidung quyenres = JsonConvert.DeserializeObject<Quyennguoidung>(quyen);
-            ThongtinnguoidungDao dao = new ThongtinnguoidungDao();
-            var res = dao.themquyen(quyenres);
-            if (res == false)
-            {
-                return Json(new
-                {
-                    status = false
-                });
-            }
+            var quyenres = JsonConvert.DeserializeObject<Quyennguoidung>(quyen);
+            var check = new ThongtinnguoidungDao().themquyen(quyenres);
             return Json(new
             {
-                status = true
+                status = quyenres
             });
         }
         [HttpPost]
-        public JsonResult LoadSuaquyen(string id)
+        public JsonResult Suquyen(string quyen)
         {
-            ThongtinnguoidungDao dao = new ThongtinnguoidungDao();
-            var res = dao.timquyen(id);
-            var listquyen = new
-            {
-                maquyen = res.Maquyen,
-                tenquyen = res.Tenquyen
-            };
-            return Json(new
-            {
-                status = true,
-                result = listquyen
-            });
-        }
-        [HttpPost]
-        public JsonResult Suaquyen(string quyen)
-        {
-            Quyennguoidung quyenres = JsonConvert.DeserializeObject<Quyennguoidung>(quyen);
-            ThongtinnguoidungDao dao = new ThongtinnguoidungDao();
-            var res = dao.suaquyen(quyenres);
+            var quyenres = JsonConvert.DeserializeObject<Quyennguoidung>(quyen);
+            var res = new ThongtinnguoidungDao().suaquyen(quyenres);
             return Json(new
             {
                 status = res
             });
         }
         [HttpPost]
+        public JsonResult LoadSuaquyen(string id)
+        {
+            var res = new ThongtinnguoidungDao().timquyen(id);
+            var quyen = new
+            {
+                maquyen = res.Maquyen,
+                tenquyen = res.Tenquyen
+            };
+            return Json(new
+            {
+                quyen,
+                status = true
+            });
+        }
+        [HttpPost]
         public JsonResult ChangeStatusQuyen(string id)
         {
-            ThongtinnguoidungDao dao = new ThongtinnguoidungDao();
-            var res = dao.changeStatusQuyen(id);
+            var res = new ThongtinnguoidungDao().changeStatusQuyen(id);
             return Json(new
             {
                 status = res

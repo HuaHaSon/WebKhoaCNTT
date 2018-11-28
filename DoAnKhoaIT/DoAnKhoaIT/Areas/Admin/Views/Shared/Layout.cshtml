@@ -43,17 +43,12 @@
     <link href="~/Assets/Admin/plugins/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="~/Assets/Admin/css/animate.css" rel="stylesheet">
+    <!-- Calendar CSS -->
+    <link href="~/Assets/Admin/plugins/bower_components/calendar/dist/fullcalendar.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="~/Assets/Admin/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="~/Assets/Admin/css/colors/megna-dark.css" id="theme" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body class="fix-header">
@@ -241,7 +236,7 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li class="user-pro">
-                        <a href="#" class="waves-effect"><i class="mdi mdi-format-color-fill fa-fw"></i> <span class="hide-menu"> Trang chủ </span></a>
+                        <a href=@Url.Action("Index","Home") class="waves-effect"><i class="mdi mdi-format-color-fill fa-fw"></i> <span class="hide-menu"> Trang chủ </span></a>
 
                     </li>
 
@@ -249,12 +244,14 @@
                         <a href="#" class="waves-effect"><i class="mdi mdi-format-color-fill fa-fw"></i> <span class="hide-menu"> Quản lý <span class="fa arrow"></span> <span class="label label-rouded label-success pull-right">7</span> </span></a>
                         <ul class="nav nav-second-level">
                             <li><a href=@Url.Action("Index","Thongtinnguoidung")><i data-icon="&#xe026;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Thông tin người dùng</span></a></li>
-                            <li><a href=@Url.Action("Index","Congtacsinhvien")><i data-icon="&#xe025;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Công tác sinh viên</span></a></li>
+                            <li><a href=@Url.Action("Index","Bieumauthutuc")><i data-icon="&#xe025;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Biểu mẫu thủ tục</span></a></li>
                             <li><a href=@Url.Action("Index","Baidang")><i class="ti-layout-menu fa-fw"></i> <span class="hide-menu">Bài đăng</span></a></li>
-                            <li><a href="gioithieu.html"><i class="ti-alert fa-fw"></i> <span class="hide-menu">Giới thiệu</span></a></li>
-                            <li><a href="daotao.html"><i data-icon="k" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Đào tạo</span></a></li>
-                            <li><a href="chuyentiepfile.html"><i data-icon="&#xe009;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Chuyển tiếp file</span></a></li>
-                            <li><a href="phanquyen.html"><i data-icon="&#xe009;" class="fa fa-eye fa-fw"></i> <span class="hide-menu">Phân quyền</span></a></li>
+                            <li><a href=@Url.Action("Index","Gioithieu")><i class="ti-alert fa-fw"></i> <span class="hide-menu">Giới thiệu</span></a></li>
+                            <li><a href=@Url.Action("Index","Daotao")><i data-icon="k" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Đào tạo</span></a></li>
+                            <li><a href=@Url.Action("Index","Thongbaochuyentiep")><i data-icon="&#xe009;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Thông báo chuyển tiếp</span></a></li>
+                            <li><a href=@Url.Action("Index","Bomon")><i data-icon="&#xe009;" class="fa fa-eye fa-fw"></i> <span class="hide-menu">Bộ môn</span></a></li>
+                            <li><a href=@Url.Action("Index","Nghiencuukhoahoc")><i data-icon="&#xe009;" class="fa fa-hacker-news fa-fw"></i> <span class="hide-menu">Nghiên cứu khoa học</span></a></li>
+                            <li><a href=@Url.Action("Index","Congtacgiaovien")><i data-icon="&#xe009;" class="fa fa-empire fa-fw"></i> <span class="hide-menu">Công tác giáo viên</span></a></li>
 
                         </ul>
                     </li>
@@ -464,6 +461,10 @@
     <!-- Date range Plugin JavaScript -->
     <script src="~/Assets/Admin/plugins/bower_components/timepicker/bootstrap-timepicker.min.js"></script>
     <script src="~/Assets/Admin/plugins/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Calendar JavaScript -->
+    <script src="~/Assets/Admin/plugins/bower_components/moment/moment.js"></script>
+    <script src='~/Assets/Admin/plugins/bower_components/calendar/dist/fullcalendar.min.js'></script>
+    <script src="~/Assets/Admin/plugins/bower_components/calendar/dist/cal-init.js"></script>
     <script>
 
 
@@ -475,6 +476,12 @@
             if (activeTab) {
                 $('#tabthongtinnguoidung a[href="' + activeTab + '"]').tab('show');
                 $('#tabbaidangs a[href="' + activeTab + '"]').tab('show');
+                $('#tabbieumauthutuc a[href="' + activeTab + '"]').tab('show');
+                $('#tabdaotao a[href="' + activeTab + '"]').tab('show');
+                $('#tabgioithieu a[href="' + activeTab + '"]').tab('show');
+                $('#tabbomon a[href="' + activeTab + '"]').tab('show');
+                $('#tabnghiencuukhoahoc a[href="' + activeTab + '"]').tab('show');
+                $('#tabcongtacgiaovien a[href="' + activeTab + '"]').tab('show');
             }
         });
 

@@ -71,6 +71,9 @@
       <HintPath>..\packages\ImageProcessor.2.6.1.19\lib\net452\ImageProcessor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
@@ -177,7 +180,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BaidangController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BieumauthutucController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BomonController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CongtacgiaovienController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DaotaoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GioithieuController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NghiencuukhoahocController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThongbaochuyentiepController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongtinnguoidungController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\CongTacController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\GuiMailController.cs" />
@@ -186,19 +196,14 @@
     <Compile Include="Areas\GiaoVien\Controllers\SuKienController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\ThongBaoController.cs" />
     <Compile Include="Areas\GiaoVien\GiaoVienAreaRegistration.cs" />
-    <Compile Include="Areas\Guest\Controllers\BieuMauThuTucController.cs" />
-    <Compile Include="Areas\Guest\Controllers\BoMonController.cs" />
     <Compile Include="Areas\Guest\Controllers\CauLacBoSVController.cs" />
-    <Compile Include="Areas\Guest\Controllers\DaoTaoController.cs" />
     <Compile Include="Areas\Guest\Controllers\DemoController.cs" />
-    <Compile Include="Areas\Guest\Controllers\GioiThieuController.cs" />
     <Compile Include="Areas\Guest\Controllers\HoatDongDoanHoiController.cs" />
     <Compile Include="Areas\Guest\Controllers\HomeController.cs" />
     <Compile Include="Areas\Guest\Controllers\LayoutController.cs" />
     <Compile Include="Areas\Guest\Controllers\OlympicSVController.cs" />
     <Compile Include="Areas\Guest\Controllers\SuKienController.cs" />
     <Compile Include="Areas\Guest\Controllers\ThongBaoController.cs" />
-    <Compile Include="Areas\Guest\Controllers\ThongBao_TinTucController.cs" />
     <Compile Include="Areas\Guest\Controllers\ThongTinTuyenSinhController.cs" />
     <Compile Include="Areas\Guest\Controllers\TinTucController.cs" />
     <Compile Include="Areas\Guest\GuestAreaRegistration.cs" />
@@ -267,6 +272,18 @@
     <Content Include="Assets\Admin\css\style.css" />
     <Content Include="Assets\Admin\js\admin\controller\Baidang.js" />
     <Content Include="Assets\Admin\js\admin\controller\Baidangadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Bieumauthutuc.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Bieumauthutucadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Bomon.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Bomonadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Congtacgiaovien.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Congtacgiaovienadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Daotao.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Daotaoadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Gioithieu.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Nghiencuukhoahoc.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Thongbaochuyentiep.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Thongbaochuyentiepadmin.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongtinnguoidung.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongtinnguoidungadmin.js" />
     <Content Include="Assets\Admin\js\cbpFWTabs.js" />
@@ -5208,29 +5225,13 @@
     <Content Include="Assets\plugins\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Assets\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Assets\plugins\ckeditor\skins\moono-lisa\readme.md" />
-    <Content Include="Assets\plugins\Uploads\files\01.pdf" />
-    <Content Include="Assets\plugins\Uploads\files\02.docx" />
-    <Content Include="Assets\plugins\Uploads\files\03.docx" />
-    <Content Include="Assets\plugins\Uploads\files\04.xlsx" />
-    <Content Include="Assets\plugins\Uploads\files\DonXinHoTroChiPhiHocTap.docx" />
-    <Content Include="Assets\plugins\Uploads\files\DonXinMienGiamHocPhi.docx" />
-    <Content Include="Assets\plugins\Uploads\files\DonXinTroCapDanToc.docx" />
-    <Content Include="Areas\Guest\Views\GioiThieu\TTC_GTC.cshtml" />
-    <Content Include="Areas\Guest\Views\GioiThieu\CCTC_ChiBo.cshtml" />
-    <Content Include="Areas\Guest\Views\DaoTao\TDDH.cshtml" />
-    <Content Include="Areas\Guest\Views\BoMon\HTTT.cshtml" />
-    <Content Include="Areas\Guest\Views\BoMon\KTPM.cshtml" />
-    <Content Include="Areas\Guest\Views\BoMon\KHMT.cshtml" />
-    <Content Include="Areas\Guest\Views\BoMon\MMT.cshtml" />
-    <Content Include="Areas\Guest\Views\ThongBao_TinTuc\HB.cshtml" />
-    <Content Include="Areas\Guest\Views\ThongBao_TinTuc\TTTD.cshtml" />
-    <Content Include="Areas\Guest\Views\BieuMauThuTuc\BM.cshtml" />
-    <Content Include="Areas\Guest\Views\Shared\DaoTao.cshtml" />
-    <Content Include="Areas\Guest\Views\Shared\BoMon.cshtml" />
-    <Content Include="Areas\Guest\Views\Shared\BMTT.cshtml" />
-    <Content Include="Areas\Guest\Views\DaoTao\CTDT.cshtml" />
-    <Content Include="Areas\Guest\Views\BieuMauThuTuc\CTBM.cshtml" />
-    <Content Include="Areas\Guest\Views\ThongBao_TinTuc\CTTD.cshtml" />
+    <Content Include="Areas\Admin\Views\Bieumauthutuc\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Daotao\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Thongbaochuyentiep\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Gioithieu\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Bomon\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Nghiencuukhoahoc\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Congtacgiaovien\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -5242,9 +5243,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -5267,6 +5266,7 @@
     <Folder Include="Areas\Guest\Models\" />
     <Folder Include="Areas\Guest\Views\Demo\" />
     <Folder Include="Areas\Guest\Views\HoatDongSV\" />
+    <Folder Include="Assets\plugins\Uploads\files\" />
     <Folder Include="Assets\plugins\Uploads\flash\" />
     <Folder Include="Assets\plugins\Uploads\images\" />
     <Folder Include="Views\Base\" />

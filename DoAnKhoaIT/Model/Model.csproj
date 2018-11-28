@@ -57,20 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Admin\BaidangDao.cs" />
+    <Compile Include="DAO\Admin\BieumauthutucDao.cs" />
+    <Compile Include="DAO\Admin\BomonDao.cs" />
+    <Compile Include="DAO\Admin\CongtacgiaovienDao.cs" />
+    <Compile Include="DAO\Admin\DaotaoDao.cs" />
+    <Compile Include="DAO\Admin\GioithieuDao.cs" />
+    <Compile Include="DAO\Admin\NghiencuukhoahocDao.cs" />
+    <Compile Include="DAO\Admin\ThongbaochuyentiepDao.cs" />
     <Compile Include="DAO\Admin\ThongtinnguoidungDao.cs" />
     <Compile Include="DAO\DangNhapDao.cs" />
-    <Compile Include="DAO\Guest\BMTTDAO.cs" />
-    <Compile Include="DAO\Guest\BoMonDAO.cs" />
-    <Compile Include="DAO\Guest\CLBSVDAO.cs" />
-    <Compile Include="DAO\Guest\DaoTaoDAO.cs" />
-    <Compile Include="DAO\Guest\GioiThieuDAO.cs" />
-    <Compile Include="DAO\Guest\HDDHDAO.cs" />
     <Compile Include="DAO\Guest\HomeDAO.cs" />
-    <Compile Include="DAO\Guest\OlympicDAO.cs" />
-    <Compile Include="DAO\Guest\SuKien.cs" />
     <Compile Include="DAO\Guest\ThongBaoDAO.cs" />
-    <Compile Include="DAO\Guest\ThongBao_TinTucDAO.cs" />
-    <Compile Include="DAO\Guest\ThongTinTSDAO.cs" />
     <Compile Include="DAO\Guest\TinTucDAO.cs" />
     <Compile Include="EF\Baidang.cs" />
     <Compile Include="EF\Bieumauthutuc.cs" />
@@ -102,15 +99,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\BaidangAdminModel.cs" />
     <Compile Include="ViewModel\BaidangModel.cs" />
+    <Compile Include="ViewModel\BieumauthutucModel.cs" />
+    <Compile Include="ViewModel\BomonModel.cs" />
+    <Compile Include="ViewModel\CongtacgiaovienModel.cs" />
+    <Compile Include="ViewModel\DaotaoModel.cs" />
     <Compile Include="ViewModel\Doituonghienthi.cs" />
+    <Compile Include="ViewModel\GioithieuModel.cs" />
+    <Compile Include="ViewModel\NghiencuukhoahocModel.cs" />
+    <Compile Include="ViewModel\ThongbaochuyentiepModel.cs" />
     <Compile Include="ViewModel\ThongtinnguoidungModel.cs" />
     <Compile Include="ViewModel\Trangthai.cs" />
     <Compile Include="ViewModel\View3baidang.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

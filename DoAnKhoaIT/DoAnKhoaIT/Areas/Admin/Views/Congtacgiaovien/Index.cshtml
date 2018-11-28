@@ -1,0 +1,506 @@
+﻿@model Model.ViewModel.CongtacgiaovienModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+@section jsFooter{
+
+
+    <script src="~/Assets/Admin/js/admin/controller/Congtacgiaovienadmin.js"></script>
+
+}
+
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Quản lý</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+                <ol class="breadcrumb">
+                    <li><a href="#">Quản lý</a></li>
+                    <li class="active">Công tác giáo viên</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /row -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="white-box" id="tabcongtacgiaovien">
+                    <ul class="nav customtab nav-tabs" role="tablist">
+                        <li role="presentation" id="tabcongtac" class="active"><a href="#congtac1" aria-controls="congtac" role="tab" data-toggle="tab" aria-expanded="true"><i class="ti-home"></i><span class="hidden-xs">Công tác</span></a></li>
+                        <li role="presentation" id="tabchitietcongtac" class=""><a href="#chitietcongtac1" aria-controls="chitietcongtac" role="tab" data-toggle="tab" aria-expanded="false"><i class="ti-user"></i> <span class="hidden-xs">Chi tiết công tác</span></a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <!-- bảng công tác giáo viên -->
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="congtac1">
+                            <!-- button thêm -->
+                            <div style="margin-bottom: 15px">
+                                <button class="btn btn-success" data-toggle="modal" data-target="#themcongtac"> Thêm công tác</button>
+                            </div>
+                            <!-- modal -->
+
+                            <div id="themcongtac" class="modal fade" role="dialog">
+                                <div class="modal-dialog  modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thêm công tác giáo viên</h4>
+                                        </div>
+
+                                        <form data-toggle="validator" class="form-horizontal">
+                                            <div class="modal-body">
+                                                <div class="white-box col-lg-12 m-b-0">
+                                                    <h3 class="box-title m-b-0">Thông tin công tác giáo viên</h3>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Mã công tác giáo viên </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.congtacgiaovien.MaCT, "", new { @type = "text", @class = "form-control macongtacadd", @placeholder = "Mã công tác giáo viên", @required = "required" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Tên công tác giáo viên</label>
+                                                        <div class="col-md-12">
+                                                            @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                            @Html.TextBoxFor(Model => Model.congtacgiaovien.TenCT, "", new { @class = "form-control tencongtacadd", @placeholder = "Tên công tác giáo viên", required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Flag </label>
+                                                        <div class="col-md-12">
+                                                            @Html.DropDownListFor(Model => Model.congtacgiaovien.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "congtacadd_flag", @class = "form-control flagcongtacadd", required = "required" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="modal-footer">
+
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                                <button type="button" id="btnthemcongtac" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="suacongtac" class="modal fade" role="dialog">
+                                <div class="modal-dialog  modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Sửa công tác giáo viên</h4>
+                                        </div>
+
+                                        <form data-toggle="validator" class="form-horizontal">
+                                            <div class="modal-body">
+                                                <div class="white-box col-lg-12 m-b-0">
+                                                    <h3 class="box-title m-b-0">Thông tin công tác giáo viên</h3>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Mã công tác giáo viên</label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.congtacgiaovien.MaCT, "", new { @type = "text", @class = "form-control macongtacedit", @placeholder = "Mã công tác giáo viên", @required = "required", @readonly = "readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Tên công tác giáo viên</label>
+                                                        <div class="col-md-12">
+                                                            @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                            @Html.TextBoxFor(Model => Model.congtacgiaovien.TenCT, "", new { @class = "form-control tencongtacedit", @placeholder = "Tên công tác giáo viên", required = "required" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="modal-footer">
+
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                                <button type="button" id="btnsuacongtac" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- thanh ẩn -->
+                            <div class="panel">
+                                Ẩn cột: <a class="toggle-vis" id="tcongtac" data-column="1">Tên công tác giáo viên</a> / <a class="toggle-vis" id="tcongtac" data-column="2">Flag</a> / <a class="toggle-vis" id="tcongtac" data-column="3">Chức năng</a>
+                            </div>
+                            <!-- table -->
+                            <div class="table-responsive">
+                                <table id="congtacTable" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã công tác</th>
+                                            <th>Tên công tác</th>
+                                            <th>Flag</th>
+                                            <th> Chức năng </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.listcongtacgiaovien)
+                                        {
+                                            <tr>
+                                                <td class="macongtac">@item.MaCT</td>
+                                                <td>@item.TenCT</td>
+                                                <td>
+                                                    <a class="btncongtacflag" data-macongtac="@item.MaCT" hres="#">
+                                                        @if (@item.Flag == true)
+                                                        {
+                                                            <span class="text-info"> Không khóa </span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="text-danger"> Khóa </span>
+                                                        }
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <button class="btnloadcongtac" type="button" data-toggle="modal" data-target="#suacongtac" style="background-color:transparent;border:none">
+                                                        <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                    </button>
+                                                </td>
+
+                                            </tr>
+                                        }
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="chitietcongtac1">
+                            <!-- button thêm -->
+                            <div style="margin-bottom: 15px">
+                                <button class="btn btn-success" data-toggle="modal" data-target="#themchitietcongtac"> Thêm chi tiết công tác</button>
+                            </div>
+                            <!-- modal -->
+                            <div id="themchitietcongtac" class="modal fade" role="dialog">
+                                <div class="modal-dialog  modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thêm chi tiết công tác giáo viên</h4>
+                                        </div>
+
+                                        <form data-toggle="validator" class="form-horizontal">
+                                            <div class="modal-body">
+                                                <div class="white-box col-lg-12 m-b-0">
+                                                    <h3 class="box-title m-b-0">Chi tiết công tác giáo viên</h3>
+                                                    <div class="form-group" style="width:50%; float:left">
+                                                        <label class="col-md-12"> Mã chi tiết công tác giáo viên </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.MaCTCTGV, "", new { @type = "text", @class = "form-control machitietcongtacadd", @placeholder = "Mã chi tiết công tác giáo viên", @required = "required" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="width:50%;float:right">
+                                                        <label class="col-md-12"> Loại công tác giáo viên</label>
+                                                        <div class="col-md-12">
+                                                            @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                            @Html.DropDownListFor(Model => Model.chitietcongtacgiaovien.MaCT, new SelectList(Model.listcongtacgiaovien, "MaCT", "TenCT"), new { @class = "form-control macongtacchitietcongtacadd", @id = "chitietcongtacadd_macongtac", @placeholder = "Mã công tác giáo viên", required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Ngày công tác </label>
+                                                        <div class="col-md-12">
+                                                            <div class="input-group">
+                                                                @Html.TextBoxFor(model => model.chitietcongtacgiaovien.NgayCT, "", new { @type = "text", @class = "form-control ngaycongtacchitietcongtacadd", @id = "datepicker-autoclose", @placeholder = "mm/dd/yyyy", @required = "required" })
+                                                                @*<input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy" required />*@
+                                                                <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Nội dung </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextAreaFor(model => model.chitietcongtacgiaovien.Noidung, new { @type = "text", @class = "form-control noidungchitietcongtacadd", @id = "chitietcongtacadd_noidung", @placeholder = "Nội dung", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Thành phần </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextAreaFor(model => model.chitietcongtacgiaovien.Thanhphan, new { @type = "text", @class = "form-control thanhphanchitietcongtacadd", @id = "chitietcongtacadd_thanhphan", @placeholder = "Nội dung", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="width:50%; float:left">
+                                                        <label class="col-md-12"> Địa điểm </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.Diadiem, "", new { @type = "text", @class = "form-control diadiemchitietcongtacadd", @placeholder = "địa điểm", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="width:50%; float:right">
+                                                        <label class="col-md-12"> Chủ trì </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.Chutri, "", new { @type = "text", @class = "form-control chutrichitietcongtacadd", @placeholder = "chủ trì", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Bổ sung </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.Bosung, "", new { @type = "text", @class = "form-control bosungchitietcongtacadd", @placeholder = "bổ sung", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Flag </label>
+                                                        <div class="col-md-12">
+                                                            @Html.DropDownListFor(Model => Model.chitietcongtacgiaovien.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "chitietcongtacadd_flag", @class = "form-control flagchitietcongtacadd", required = "required" })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="modal-footer">
+
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                                <button type="button" id="btnthemchitietcongtac" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="suachitietcongtac" class="modal fade" role="dialog">
+                                <div class="modal-dialog  modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Sửa chi tiết công tác giáo viên</h4>
+                                        </div>
+
+                                        <form data-toggle="validator" class="form-horizontal">
+                                            <div class="modal-body">
+                                                <div class="white-box col-lg-12 m-b-0">
+                                                    <h3 class="box-title m-b-0">Chi tiết công tác giáo viên</h3>
+                                                    <div class="form-group" style="width:50%; float:left">
+                                                        <label class="col-md-12"> Mã chi tiết công tác giáo viên </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.MaCTCTGV, "", new { @type = "text", @class = "form-control machitietcongtacedit", @placeholder = "Mã chi tiết công tác giáo viên", @required = "required",@readonly="readonly" })
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="width:50%;float:right">
+                                                        <label class="col-md-12"> Loại công tác giáo viên</label>
+                                                        <div class="col-md-12">
+                                                            @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                            @Html.DropDownListFor(Model => Model.chitietcongtacgiaovien.MaCT, new SelectList(Model.listcongtacgiaovien, "MaCT", "TenCT"), new { @class = "form-control macongtacchitietcongtacedit", @id = "chitietcongtacedit_macongtac", @placeholder = "Mã công tác giáo viên", required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Ngày công tác </label>
+                                                        <div class="col-md-12">
+                                                            <div class="input-group">
+                                                                @Html.TextBoxFor(model => model.chitietcongtacgiaovien.NgayCT, "", new { @type = "text", @class = "form-control ngaycongtacchitietcongtacedit", @id = "datepicker-autoclose", @placeholder = "mm/dd/yyyy", @required = "required" })
+                                                                @*<input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy" required />*@
+                                                                <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Nội dung </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextAreaFor(model => model.chitietcongtacgiaovien.Noidung, new { @type = "text", @class = "form-control noidungchitietcongtacedit", @id = "chitietcongtacedit_noidung", @placeholder = "Nội dung", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Thành phần </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextAreaFor(model => model.chitietcongtacgiaovien.Thanhphan, new { @type = "text", @class = "form-control thanhphanchitietcongtacedit", @id = "chitietcongtacedit_thanhphan", @placeholder = "Nội dung", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="width:50%; float:left">
+                                                        <label class="col-md-12"> Địa điểm </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.Diadiem, "", new { @type = "text", @class = "form-control diadiemchitietcongtacedit", @placeholder = "địa điểm", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" style="width:50%; float:right">
+                                                        <label class="col-md-12"> Chủ trì </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.Chutri, "", new { @type = "text", @class = "form-control chutrichitietcongtacedit", @placeholder = "chủ trì", @required = "required" })
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-12"> Bổ sung </label>
+                                                        <div class="col-md-12">
+                                                            @Html.TextBoxFor(model => model.chitietcongtacgiaovien.Bosung, "", new { @type = "text", @class = "form-control bosungchitietcongtacedit", @placeholder = "bổ sung", @required = "required" })
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+
+
+                                            <div class="modal-footer">
+
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                                <button type="button" id="btnsuachitietcongtac" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Thanh ẩn -->
+                            <div class="panel">
+                                Ẩn cột: <a class="toggle-vis" id="tchitietcongtac" data-column="1">Mã công tác</a> / <a class="toggle-vis" id="tchitietcongtac" data-column="2">Ngày công tác</a> / <a class="toggle-vis" id="tchitietcongtac" data-column="3">Nội dung</a> / <a class="toggle-vis" id="tchitietcongtac" data-column="4">Thành phần</a> / <a class="toggle-vis" id="tchitietcongtac" data-column="5">Địa điểm</a> / <a class="toggle-vis" id="tchitietcongtac" data-column="6">Chủ trì</a> / <a class="toggle-vis" id="tchitietcongtac" data-column="7"> Bổ sung </a> / <a class="toggle-vis" id="tchitietcongtac" data-column="8"> Tên tài khoản </a> / <a class="toggle-vis" id="tchitietcongtac" data-column="9"> Flag </a> / <a class="toggle-vis" id="tchitietcongtac" data-column="10"> Chức năng </a>
+                            </div>
+                            <!-- table -->
+                            <div class="table-responsive">
+                                <table id="chitietcongtacTable" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã CTCTGV</th>
+                                            <th>Mã CTGV</th>
+                                            <th>Ngày công tác</th>
+                                            <th>Nội dung</th>
+                                            <th>Thành phần</th>
+                                            <th>Địa điểm</th>
+                                            <th>Chủ trì</th>
+                                            <th>Bổ sung</th>
+                                            <th>Tài khoản</th>
+                                            <th>Flag</th>
+                                            <th>Chức năng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.listchitietcongtacgiaovien)
+                                        {
+                                            <tr>
+                                                <td class="machitietcongtac">@item.MaCTCTGV</td>
+                                                <td>@item.MaCT</td>
+                                                <td>@item.NgayCT</td>
+                                                <td>@item.Noidung</td>
+                                                <td>@item.Thanhphan</td>
+                                                <td>@item.Diadiem</td>
+                                                <td>@item.Chutri</td>
+                                                <td>@item.Bosung</td>
+                                                <td>@item.Tentaikhoan</td>                                                
+
+                                                <td>
+                                                    <a class="btnchitietcongtacflag" data-machitietcongtac="@item.MaCTCTGV" hres="#">
+                                                        @if (@item.Flag == true)
+                                                        {
+                                                            <span class="text-info"> Không khóa </span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="text-danger"> Khóa </span>
+                                                        }
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <button class="btnloadchitietcongtac" type="button" data-toggle="modal" data-target="#suachitietcongtac" style="background-color:transparent;border:none">
+                                                        <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                    </button>
+                                                </td>
+
+                                            </tr>
+                                        }
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                                <li><b>With Dark sidebar</b></li>
+                                <br />
+                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                            </ul>
+                            <ul class="m-t-20 all-demos">
+                                <li><b>Choose other demos</b></li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
+    </div>

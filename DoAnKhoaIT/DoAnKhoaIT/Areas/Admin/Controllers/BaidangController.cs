@@ -171,7 +171,7 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
             var loaibaidangres = JsonConvert.DeserializeObject<Loaibaidang>(loaibaidang);
             BaidangDao dao = new BaidangDao();
             var check = dao.themloaibaidang(loaibaidangres);
-            if(check == false)
+            if (check == false)
             {
                 return Json(new
                 {
@@ -260,7 +260,7 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
             BaidangDao dao = new BaidangDao();
             var tagidres = JsonConvert.DeserializeObject<Tag>(tagid);
             var check = dao.suatagid(tagidres);
-            if(check == false)
+            if (check == false)
             {
                 return Json(new
                 {

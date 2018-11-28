@@ -430,7 +430,7 @@ var thongtinnguoidung = {
                         } else {
                             alert("Thêm thành công");
                             location.reload();
-                        }                           
+                        }
                     }
                 });
             } else {
@@ -446,8 +446,8 @@ var thongtinnguoidung = {
                 dataType: "json",
                 type: "POST",
                 success: function (response) {
-                    $(".maquyenedit").val(response.result.maquyen);
-                    $(".tenquyenedit").val(response.result.tenquyen);
+                    $(".maquyenedit").val(response.quyen.maquyen);
+                    $(".tenquyenedit").val(response.quyen.tenquyen);
                 }
 
             });

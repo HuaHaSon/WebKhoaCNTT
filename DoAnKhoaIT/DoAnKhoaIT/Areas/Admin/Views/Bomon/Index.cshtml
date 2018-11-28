@@ -1,0 +1,655 @@
+﻿@model  Model.ViewModel.BomonModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+@section jsFooter{
+
+
+    <script src="~/Assets/Admin/js/admin/controller/Bomon.js"></script>
+
+}
+
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Quản lý</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Quản lý</a></li>
+                <li class="active">Bộ môn</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box" id="tabdaotao">
+                <ul class="nav customtab nav-tabs" role="tablist">
+                    <li role="presentation" id="tabbomon" class="active"><a href="#bomon1" aria-controls="bomon" role="tab" data-toggle="tab" aria-expanded="true"><i class="ti-home"></i><span class="hidden-xs">Bộ môn</span></a></li>
+                    <li role="presentation" id="tabmonhoc" class=""><a href="#monhoc1" aria-controls="monhoc" role="tab" data-toggle="tab" aria-expanded="false"><i class="ti-user"></i> <span class="hidden-xs">Môn học</span></a></li>
+                    <li role="presentation" id="tabgiaovien" class=""><a href="#giaovien1" aria-controls="giaovien" role="tab" data-toggle="tab" aria-expanded="false"><i class="ti-user"></i> <span class="hidden-xs">Giáo viên</span></a></li>
+
+                </ul>
+                <!-- Tab panes -->
+                <!-- bảng biểu mẫu -->
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active in" id="bomon1">
+                        <!-- button thêm -->
+                        <div style="margin-bottom: 15px">
+                            <button class="btn btn-success" data-toggle="modal" data-target="#thembomon"> Thêm bộ môn </button>
+                        </div>
+                        <!-- modal -->
+
+                        <div id="thembomon" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm bộ môn</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin bộ môn</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã bộ môn </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.bomon.MaBM, "", new { @type = "text", @class = "form-control mabomonadd", @placeholder = "Mã bộ môn", @required = "required" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên bộ môn</label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.TextBoxFor(Model => Model.bomon.TenBM, "", new { @class = "form-control tenbomonadd", @placeholder = "Tên bộ môn", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Nội dung </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextAreaFor(Model => Model.bomon.Noidung, new { @id = "bomonadd_noidung", @class = "form-control noidungbomonadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Flag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.bomon.Flag, new SelectList(ViewBag.Trangthai,"id","flag"), new { @id = "bomonadd_flag", @class = "form-control flagbomonadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnthembomon" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="suabomon" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sửa bộ môn</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin bộ môn</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã bộ môn </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.bomon.MaBM, "", new { @type = "text", @class = "form-control mabomonedit", @placeholder = "Mã bộ môn", @required = "required",@readonly="readonly" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên bộ môn</label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.TextBoxFor(Model => Model.bomon.TenBM, "", new { @class = "form-control tenbomonedit", @placeholder = "Tên bộ môn", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Nội dung </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextAreaFor(Model => Model.bomon.Noidung, new { @id = "bomonedit_noidung", @class = "form-control noidungbomonedit", required = "required" })
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnsuabomon" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- thanh ẩn -->
+                        <div class="panel">
+                            Ẩn cột: <a class="toggle-vis" id="tbomon" data-column="1">Tên bộ môn</a> / <a class="toggle-vis" id="tbomon" data-column="2">Nội dung</a> / <a class="toggle-vis" id="tbomon" data-column="3">Flag</a> / <a class="toggle-vis" id="tbomon" data-column="4">Chức năng</a>
+                        </div>
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table id="bomonTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Mã bộ môn</th>
+                                        <th>Tên bộ môn</th>
+                                        <th>Nội dung</th>
+                                        <th>flag</th>
+                                        <th> Chức năng </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.listbomon)
+                                    {
+                                        <tr>
+                                            <td class="mabomon">@item.MaBM</td>
+                                            <td>@item.TenBM</td>
+                                            <td>@item.Noidung</td>
+                                            <td>
+                                                <a class="btnbomonflag" data-mabomon="@item.MaBM" hres="#">
+                                                    @if (@item.Flag == true)
+                                                    {
+                                                        <span class="text-info"> Không khóa </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-danger"> Khóa </span>
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <button class="btnloadbomon" type="button" data-toggle="modal" data-target="#suabomon" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="monhoc1">
+                        <!-- button thêm -->
+                        <div style="margin-bottom: 15px">
+                            <button class="btn btn-success" data-toggle="modal" data-target="#themmonhoc"> Thêm môn học </button>
+                        </div>
+                        <!-- modal -->
+                        <div id="themmonhoc" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm môn học</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin môn học</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã môn học </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.monhoc.MaMH, "", new { @type = "text", @class = "form-control mamonhocadd", @placeholder = "Mã môn học", @required = "required" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Bộ môn </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.monhoc.MaBM, new SelectList(Model.listbomon, "MaBM", "TenBM"), new { @id = "monhocadd_bomon", @class = "form-control bomonmonhocadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên môn học</label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.TextBoxFor(Model => Model.monhoc.TenMH, "", new { @class = "form-control tenmonhocadd", @placeholder = "Tên môn học", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Flag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.monhoc.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "monhocadd_flag", @class = "form-control flagmonhocadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnthemmonhoc" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="suamonhoc" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sửa môn học</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin môn học</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã môn học </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.monhoc.MaMH, "", new { @type = "text", @class = "form-control mamonhocedit", @placeholder = "Mã môn học", @required = "required", @readonly="readonly" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Bộ môn </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.monhoc.MaBM, new SelectList(Model.listbomon, "MaBM", "TenBM"), new { @id = "monhocedit_bomon", @class = "form-control bomonmonhocedit", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên môn học</label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.TextBoxFor(Model => Model.monhoc.TenMH, "", new { @class = "form-control tenmonhocedit", @placeholder = "Tên môn học", required = "required" })
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnsuamonhoc" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Thanh ẩn -->
+                        <div class="panel">
+                            Ẩn cột: <a class="toggle-vis" id="tmonhoc" data-column="1">Mã bộ môn</a> / <a class="toggle-vis" id="tmonhoc" data-column="2">Tên môn học</a> / <a class="toggle-vis" id="tmonhoc" data-column="3">Flag</a> / <a class="toggle-vis" id="tmonhoc" data-column="4">Chức năng</a>
+                        </div>
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table id="monhocTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Mã môn học</th>
+                                        <th>Mã bộ môn</th>
+                                        <th>Tên môn học</th>
+                                        <th>flag</th>
+                                        <th> Chức năng </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.listmonhoc)
+                                    {
+                                        <tr>
+                                            <td class="mamonhoc">@item.MaMH</td>
+                                            <td>@item.MaBM</td>
+                                            <td>@item.TenMH</td>
+                                            <td>
+                                                <a class="btnmonhocflag" data-mamonhoc="@item.MaMH" hres="#">
+                                                    @if (@item.Flag == true)
+                                                    {
+                                                        <span class="text-info"> Không khóa </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-danger"> Khóa </span>
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <button class="btnloadmonhoc" type="button" data-toggle="modal" data-target="#suamonhoc" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="giaovien1" class="tab-pane fade">
+                        <!--button-->
+                        <div style="margin-bottom: 15px">
+                            <button class="btn btn-success" data-toggle="modal" data-target="#themgiaovien"> Thêm giáo viên </button>
+                        </div>
+                        <!--modal-->
+                        <div id="themgiaovien" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm giáo viên</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin giáo viên</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã giáo viên </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.giaovien.MaGV, "", new { @type = "text", @class = "form-control magiaovienadd", @placeholder = "Mã giáo viên", @required = "required" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Bộ môn </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.giaovien.MaBM, new SelectList(Model.listbomon, "MaBM", "TenBM"), new { @id = "giaovienadd_bomon", @class = "form-control bomongiaovienadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên giáo viên</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.TenGV, "", new { @class = "form-control tengiaovienadd", @placeholder = "Tên giáo viên", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Chức vụ</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.Chucvu, "", new { @class = "form-control chucvugiaovienadd", @placeholder = "Chức vụ", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Chức danh</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.Chucdanh, "", new { @class = "form-control chucdanhgiaovienadd", @placeholder = "Chức danh", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Thông tin</label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.TextAreaFor(Model => Model.giaovien.ThongtinGV1, new { @id = "giaovienadd_thongtin", @class = "form-control thongtingiaovienadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Mail</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.Diachimail, "", new { @type = "mail", @class = "form-control mailgiaovienadd", @placeholder = "...@mail.com", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Flag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.giaovien.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "giaovienadd_flag", @class = "form-control flaggiaovienadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnthemgiaovien" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="suagiaovien" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sửa giáo viên</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin giáo viên</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã giáo viên </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.giaovien.MaGV, "", new { @type = "text", @class = "form-control magiaovienedit", @placeholder = "Mã giáo viên", @required = "required",@readonly="readonly" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Bộ môn </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.giaovien.MaBM, new SelectList(Model.listbomon, "MaBM", "TenBM"), new { @id = "giaovienedit_bomon", @class = "form-control bomongiaovienedit", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên giáo viên</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.TenGV, "", new { @class = "form-control tengiaovienedit", @placeholder = "Tên giáo viên", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Chức vụ</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.Chucvu, "", new { @class = "form-control chucvugiaovienedit", @placeholder = "Chức vụ", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Chức danh</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.Chucdanh, "", new { @class = "form-control chucdanhgiaovienedit", @placeholder = "Chức danh", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Thông tin</label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.TextAreaFor(Model => Model.giaovien.ThongtinGV1, new { @id = "giaovienedit_thongtin", @class = "form-control thongtingiaovienedit", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Mail</label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(Model => Model.giaovien.Diachimail, "", new { @type = "mail", @class = "form-control mailgiaovienedit", @placeholder = "...@mail.com", required = "required" })
+                                                    </div>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnsuagiaovien" class="btn btn-success waves-effect waves-light m-r-30">Sửa</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Thanh ẩn -->
+                        <div class="panel">
+                            Ẩn cột: <a class="toggle-vis" id="tgiaovien" data-column="1">Mã bộ môn</a> / <a class="toggle-vis" id="tgiaovien" data-column="2">Tên giáo viên</a> / <a class="toggle-vis" id="tgiaovien" data-column="3">Chức vụ</a> / <a class="toggle-vis" id="tgiaovien" data-column="4">Chức danh</a> / <a class="toggle-vis" id="tgiaovien" data-column="5">Thông tin giáo viên</a> / <a class="toggle-vis" id="tgiaovien" data-column="6">Mail</a> / <a class="toggle-vis" id="tgiaovien" data-column="7">Flag</a> / <a class="toggle-vis" id="tgiaovien" data-column="8">Chức năng</a>
+                        </div>
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table id="giaovienTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Mã giáo viên</th>
+                                        <th>Mã bộ môn</th>
+                                        <th>Tên giáo viên</th>
+                                        <th>Chức vụ</th>
+                                        <th>Chức danh</th>
+                                        <th>Thông tin giáo viên</th>
+                                        <th>Mail</th>
+                                        <th>Flag</th>
+                                        <th> Chức năng </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.listgiaovien)
+                                    {
+                                        <tr>
+                                            <td class="magiaovien">@item.MaGV</td>
+                                            <td>@item.MaBM</td>
+                                            <td>@item.TenGV</td>
+                                            <td>@item.Chucvu</td>
+                                            <td>@item.Chucdanh</td>
+                                            <td>@item.ThongtinGV1</td>
+                                            <td>@item.Diachimail</td>
+                                            <td>
+                                                <a class="btngiaovienflag" data-magiaovien="@item.MaGV" hres="#">
+                                                    @if (@item.Flag == true)
+                                                    {
+                                                        <span class="text-info"> Không khóa </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-danger"> Khóa </span>
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <button class="btnloadgiaovien" type="button" data-toggle="modal" data-target="#suagiaovien" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <div class="right-sidebar">
+                <div class="slimscrollright">
+                    <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                    <div class="r-panel-body">
+                        <ul id="themecolors" class="m-t-20">
+                            <li><b>With Light sidebar</b></li>
+                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                            <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                            <li><b>With Dark sidebar</b></li>
+                            <br />
+                            <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                            <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                        </ul>
+                        <ul class="m-t-20 all-demos">
+                            <li><b>Choose other demos</b></li>
+                        </ul>
+                        <ul class="m-t-20 chatonline">
+                            <li><b>Chat option</b></li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </div>
+    </div>
+</div>
+

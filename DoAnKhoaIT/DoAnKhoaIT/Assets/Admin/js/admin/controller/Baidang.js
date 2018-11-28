@@ -132,7 +132,7 @@
                     $(this).removeClass('text-info');
                     $(this).addClass('text-danger');
                 }
-                
+
                 // Get the column API object
                 var column = table2.column($(this).attr('data-column'));
 
@@ -371,37 +371,47 @@
             loaibaidang.maloai = $('.maloailoaibaidangadd').val();
             loaibaidang.tenloai = $('.tenloailoaibaidangadd').val();
             loaibaidang.flag = document.getElementById("loaibaidangadd_flag").value;
-            loaibaidang = JSON.stringify(loaibaidang);
-            $.ajax({
-                url: "/Admin/Baidang/Themloaibaidang",
-                data: { loaibaidang: loaibaidang },
-                type: "POST",
-                dataType: "Json",
-                success: function (response) {
-                    if (response.status == false) alert("Loại bài đăng đã tồn tại");
-                    else {
-                        alert("Thêm thành công");
-                        location.reload();
+            if (loaibaidang.maloai != "" && loaibaidang.tenloai != "") {
+                loaibaidang = JSON.stringify(loaibaidang);
+                $.ajax({
+                    url: "/Admin/Baidang/Themloaibaidang",
+                    data: { loaibaidang: loaibaidang },
+                    type: "POST",
+                    dataType: "Json",
+                    success: function (response) {
+                        if (response.status == false) alert("Loại bài đăng đã tồn tại");
+                        else {
+                            alert("Thêm thành công");
+                            location.reload();
+                        }
                     }
-                }
-            })
+                });
+            } else {
+                alert("bạn chưa nhập đủ thông tin");
+            }
+
         });
         $("#btnsualoaibaidang").click(function (e) {
             var loaibaidang = '{"maloai":"" , "tenloai":""}';
             loaibaidang = JSON.parse(loaibaidang);
             loaibaidang.maloai = $('.maloailoaibaidangedit').val();
             loaibaidang.tenloai = $('.tenloailoaibaidangedit').val();
-            loaibaidang = JSON.stringify(loaibaidang);
-            $.ajax({
-                url: "/Admin/Baidang/Sualoaibaidang",
-                data: { loaibaidang: loaibaidang },
-                type: "POST",
-                dataType: "Json",
-                success: function (response) {
+            if (loaibaidang.maloai != "" && loaibaidang.tenloai != "") {
+                loaibaidang = JSON.stringify(loaibaidang);
+                $.ajax({
+                    url: "/Admin/Baidang/Sualoaibaidang",
+                    data: { loaibaidang: loaibaidang },
+                    type: "POST",
+                    dataType: "Json",
+                    success: function (response) {
                         alert("Sửa thành công");
                         location.reload();
-                }
-            })
+                    }
+                });
+            } else {
+                alert("bạn chưa nhập đủ thông tin");
+            }
+
         });
         $('.btnloadloaibaidang').click(function (e) {
             var btn = $(this).closest('tr').find('.maloaibaidang').text();
@@ -442,20 +452,25 @@
             tagid.tentag = $('.tentagtagidadd').val();
             tagid.machucvu = document.getElementById("tagidadd_chucvu").value;
             tagid.flag = document.getElementById("tagidadd_flag").value;
-            tagid = JSON.stringify(tagid);
-            $.ajax({
-                url: "/Admin/Baidang/Themtagid",
-                data: { tagid: tagid },
-                type: "POST",
-                dataType: "Json",
-                success: function (response) {
-                    if (response.status == false) alert("Tên tag đã tồn tại");
-                    else {
-                        alert("Thêm thành công");
-                        location.reload();
+            if (tagid.tentag != "") {
+                tagid = JSON.stringify(tagid);
+                $.ajax({
+                    url: "/Admin/Baidang/Themtagid",
+                    data: { tagid: tagid },
+                    type: "POST",
+                    dataType: "Json",
+                    success: function (response) {
+                        if (response.status == false) alert("Tên tag đã tồn tại");
+                        else {
+                            alert("Thêm thành công");
+                            location.reload();
+                        }
                     }
-                }
-            })
+                });
+            } else {
+                alert("bạn chưa nhập đủ thông tin");
+            }
+
         });
         $('#btnsuatagid').click(function (e) {
             var tagid = '{"tagid":"", "tentag":"", "machucvu":""}';
@@ -463,20 +478,25 @@
             tagid.tagid = $('.matagtagidedit').val();
             tagid.tentag = $('.tentagtagidedit').val();
             tagid.machucvu = document.getElementById("tagidedit_chucvu").value;
-            tagid = JSON.stringify(tagid);
-            $.ajax({
-                url: "/Admin/Baidang/Suatagid",
-                data: { tagid: tagid },
-                type: "POST",
-                dataType: "Json",
-                success: function (response) {
-                    if (response.status == false) alert("Tên tag đã tồn tại");
-                    else {
-                        alert("Sửa thành công");
-                        location.reload();
+            if (tagid.tentag != "") {
+                tagid = JSON.stringify(tagid);
+                $.ajax({
+                    url: "/Admin/Baidang/Suatagid",
+                    data: { tagid: tagid },
+                    type: "POST",
+                    dataType: "Json",
+                    success: function (response) {
+                        if (response.status == false) alert("Tên tag đã tồn tại");
+                        else {
+                            alert("Sửa thành công");
+                            location.reload();
+                        }
                     }
-                }
-            })
+                });
+            } else {
+                alert("bạn chưa nhập đủ thông tin");
+            }
+
         });
         $('.btnloadtagid').click(function (e) {
             var btn = $(this).closest('tr').find('.matagid').text();
@@ -492,7 +512,7 @@
                 }
             })
         });
-        $('.btnloaibaidangflag').off('click').on('click', function (e) {
+        $('.btntagidflag').off('click').on('click', function (e) {
             e.preventDefault();
             var btn = $(this);
             $.ajax({

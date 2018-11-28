@@ -467,7 +467,7 @@
                                                 <div class="form-group">
                                                     <label class="col-md-12"> Tên tag </label>
                                                     <div class="col-md-12">
-                                                        @Html.TextBoxFor(model => model.tag.TenTag, "", new { @type = "text", @class = "form-control tentagtagidadd", @placeholder = "Mã loại", @required = "required" })
+                                                        @Html.TextBoxFor(model => model.tag.TenTag, "", new { @type = "text", @class = "form-control tentagtagidadd", @placeholder = "Tên tag", @required = "required" })
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -522,7 +522,7 @@
                                                 <div class="form-group">
                                                     <label class="col-md-12"> Tên tag </label>
                                                     <div class="col-md-12">
-                                                        @Html.TextBoxFor(model => model.tag.TenTag, "", new { @type = "text", @class = "form-control tentagtagidedit", @placeholder = "Mã loại", @required = "required" })
+                                                        @Html.TextBoxFor(model => model.tag.TenTag, "", new { @type = "text", @class = "form-control tentagtagidedit", @placeholder = "Mã tag", @required = "required" })
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -572,7 +572,7 @@
                                             <td>@item.TenTag</td>
                                             <td>@item.Machucvu</td>
                                             <td>
-                                                <a class="btnloaibaidangflag" data-matagid="@item.TagID" hres="#">
+                                                <a class="btntagidflag" data-matagid="@item.TagID" hres="#">
                                                     @if (@item.Flag == true)
                                                     {
                                                         <span class="text-info"> Không khóa </span>
