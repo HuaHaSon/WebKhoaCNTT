@@ -1,0 +1,78 @@
+.header-top{display: none !important;}
+header{display: none !important;}
+.navbar{display: none !important;}
+.crumb{display: none;}
+.page-banner{display: none;}
+.page-right{display: none;}
+.footer{display: none;}
+.cooperate-list{display: none;}
+.page-title{display: none}
+.tienich{display: none;}
+
+
+.HeaderPrint{display:block; line-height:19px;}
+table.lct th{
+	color:#000;
+	font-weight:bold;
+}
+.TextHeaderLeft{
+	float:left;
+	width:400px;
+	text-transform:uppercase;
+	display:block;
+	text-align:center;
+}
+.TextHeaderRight{
+	float:right;
+	width:400px;
+	text-transform:uppercase;
+	display:block;
+	text-align:center;
+}
+.TextSubjectPrint{
+	padding-top: 35px;
+	padding-bottom:35px;
+	text-align:center;
+	width:100% !important;
+	display:block;
+	margin: auto !important;
+	font-size: 150%;
+}
+/*#footer{display:none;}
+.bor-top{display:none;}
+.tienich{display:none;}
+h1{display:none;}
+
+.content{display:block; width:950px; !important; font-size:12pt}
+.HeaderPrint{display:block; line-height:19px;}
+table.lct th{
+	color:#000;
+	
+font-weight:bold;
+}
+*/
+.TextHeaderLeft{
+	float:left;
+	width:400px;
+	text-transform:uppercase;
+	display:block;
+	text-align:center;
+}
+.TextHeaderRight{
+	float:right;
+	width:400px;
+	text-transform:uppercase;
+	display:block;
+	text-align:center;
+}
+.TextSubjectPrint{
+	padding-top: 35px;
+	padding-bottom:35px;
+	text-align:center;
+	width:950px;
+	display:block;
+}
+.noidung{width:380px;}
+.ngay{width:120px;}
+.chutri{width:65px;}
+.Sign{ width:350px; float:right; text-align:center; display:block; margin-top:20px;}

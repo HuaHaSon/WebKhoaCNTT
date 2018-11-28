@@ -1,0 +1,84 @@
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.pdb
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.pdb
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.pdb
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.pdb
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\Model.pdb
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\PagedList.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\PagedList.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.pdb
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.pdb
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.Mvc.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\PagedList.Mvc.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache

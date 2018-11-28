@@ -1,0 +1,395 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+
+<!-- Mirrored from hufi.edu.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Nov 2018 01:43:26 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Khoa Công Nghệ Thông Tin - Trường Đại học Sài Gòn</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Templates/images/iconsgu.png" rel="shortcut icon" type="image/x-icon">
+
+   
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css”>
+
+    <link href="/Assets/GiaoVien/University/21_HUFI/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Assets/GiaoVien/University/21_HUFI/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Assets/GiaoVien/University/21_HUFI/css/style.css" rel="stylesheet" />
+    <link href="/Assets/GiaoVien/University/21_HUFI/css/menu.css" rel="stylesheet" />
+    <link href="/Assets/GiaoVien/University/21_HUFI/content/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="/Assets/GiaoVien/University/21_HUFI/content/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="/Assets/GiaoVien/University/21_HUFI/css/magnific-popup.css" rel="stylesheet" />
+    <script src="/Assets/GiaoVien/University/21_HUFI/js/jquery.min.js"></script>
+    <script src="/Assets/GiaoVien/University/21_HUFI/content/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/Assets/GiaoVien/University/21_HUFI/js/menu.js"></script>
+    <script src="/Assets/GiaoVien/University/21_HUFI/js/slideshow.js"></script>
+    <script src="/Assets/GiaoVien/University/21_HUFI/js/jquery.magnific-popup.min.js"></script>
+    <script src="/Assets/GiaoVien/University/21_HUFI/js/home.js"></script>
+    <script src="/Assets/GiaoVien/Module/js/common/aes.js"></script>
+    <script src="/Assets/GiaoVien/Module/js/common/pbkdf2.js"></script>
+
+    @*<link href="/TemplatesGV/css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <link href="/TemplatesGV/css/ct-navbar.css" rel="stylesheet" />
+
+        <script src="/TemplatesGV/css/jquery-1.10.2.js"></script>
+        <script src="/TemplatesGV/css/bootstrap.js"></script>
+        <script src="/TemplatesGV/css/ct-navbar.js"></script>*@
+
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var BASE_URL_WEB = 'index.html';
+    </script>
+</head>
+<body>
+
+    <div class="site-container">
+        <div class="site-pusher">
+
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-9">
+                            <img class="img-responsive" id="img-logo" src="/Assets/GiaoVien/images/logosgu.png" />
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3" id="account">
+
+                            <ul class="nav navbar-nav navbar-right">                               
+                                <li>
+                                    <div id="ex4">
+                                        <span class="p1 fa-stack fa-2x has-badge" data-count="4">
+                                        <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
+                                        <i class="fa fa-envelope-o" style="color: cornflowerblue;" data-count="4b"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <div class="pull-right" style="margin-top: 8px">
+                                    <ul class="nav pull-right">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="account_circle" style="color: red;"></i> <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
+                                                <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </ul>
+                            <div class="form-search input-group group-search" style="width:270px">
+                                <input id="txtsearch" name="txtSearch" value="" type="text" class="form-control txt-search" placeholder="Tìm kiếm ..." style="height:40px">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" data-toggle="tooltip" title="Cơ bản" style="height:40px"><i class="fa fa-search"></i>  </button>
+                                    <span data-toggle="collapse" data-target="#demo"> <button type="button" class="btn btn-default" data-toggle="tooltip" title="Nâng cao" style="margin-left: -3px; height:40px"><i class="fa fa-search-plus"></i></button> </span>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="demo" class="collapse content-slide" style="padding: 10px;border-bottom:solid #3B5998 1px">
+
+                            <form>
+                                <div class="form-group col-lg-6">
+                                    <label> Từ ngày </label>
+                                    <input type="date" class="form-control" style="width: 300px" value=myFunction() />
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label> Đến ngày </label>
+                                    <input type="date" class="form-control" style="width: 300px" value=myFunction() />
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label> Tên bài viết </label>
+                                    <input class="form-control" style="width: 300px" placeholder="nhập vào tên bài viết" />
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label> Nội dung </label>
+                                    <input class="form-control" style="width: 300px" placeholder="nhập vào nội dung" />
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label>Loại bài đăng</label>
+                                    <select class="form-control" style="width: 300px">
+                                        <option value="saab">Tất cả</option>
+                                        <option value="saab">Thông báo</option>
+                                        <option value="volvo">Tin tức sự kiện</option>
+                                        <option value="saab">Thực tập tuyển dụng</option>
+                                        <option value="mercedes">Tuyển sinh</option>
+                                        <option value="audi">Khác</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6" style="width: 300px; padding-top: 25px;margin-left: 3%;">
+
+                                    <button class="btn btn-success" style="float:right;margin-right:15px" type="button"> Tìm </button>
+                                    <button class="btn btn-default" style="float:right;margin-right:15px" type="button" data-toggle="collapse" data-target="#demo"> Hủy </button>
+
+                                </div>
+
+                            </form>
+                        </div>
+                       
+
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section id="menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="header">
+                                        <a href="index.html" id="header__home"><i class="fa fa-angle-left" aria-hidden="true"></i><span>Trang chủ</span></a>
+                                        <a href="#" class="header__icon" id="header__icon"><span>Menu</span></a>
+                                        <nav id="moitmenu" class="menu">
+                                            <ul>
+                                                <li id="homeitem" class="active"><a href="index.html" class="home icon-home"></a></li>
+                                                <li>
+                                                    <a href="index.html">Giới thiệu</a>
+                                                    <i class="fa fa-angle-right fa-menu"></i>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="Error0b03.html">Thông tin chung</a>
+                                                            <i class="fa fa-angle-right fa-menu"></i>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="index.html">Giới thiệu chung</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">Cơ sở vật chất</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="Error0b03.html">Cơ cấu tổ chức</a>
+                                                            <i class="fa fa-angle-right fa-menu"></i>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="index.html">Chi bộ</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">Ban chủ nhiệm khoa</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">Hội đồng khoa học</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">Công đoàn</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">Văn phòng khoa</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">Công viên chức khoa</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="chon-danh-muc-de-xem.html">Đào tạo</a>
+                                                    <i class="fa fa-angle-right fa-menu"></i>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Trình độ thạc sĩ</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Trình độ tiến sĩ</a>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="http://tuyensinh.hufi.edu.vn/">Bộ môn</a>
+                                                    <i class="fa fa-angle-right fa-menu"></i>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Hệ thống thông tin</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Kỹ thuật phần mềm</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Khoa học máy tính</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Mạng và hệ thống thông tin</a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="http://egov.hufi.edu.vn/">Công tác giáo viên</a>
+                                                    <i class="fa fa-angle-right fa-menu"></i>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Lịch họp</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Lịch trực tuần</a>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="http://sinhvien.hufi.edu.vn/">Nghiên cứu khoa học</a>
+                                                    <i class="fa fa-angle-right fa-menu"></i>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Sự kiện khoa học</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Bài báo công bố</a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="index.html">Biểu mẫu Thủ tục</a>
+                                                    <i class="fa fa-angle-right fa-menu"></i>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Biểu mẫu</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Quy định</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Quy trình</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Danh sách khóa luận tốt nghiệp</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <form action="http://hufi.edu.vn/Home/Search" method="get" id="mobile-search">
+                                                <p class="input-group">
+                                                    <input type="text" class="form-control" name="s" required="" placeholder="Tìm kiếm...">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                    </span>
+                                                </p><!-- /input-group -->
+                                            </form>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            @RenderBody()
+
+           
+
+
+            <section id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-md-5" id="contact-f">
+                            <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                            <p><i class="ffa fa-address" aria-hidden="true"></i> <span>273 An Dương Vương, P3, Q5, TP. Hồ Chí Minh</span></p>
+                            <p><i class="ffa fa-phones" aria-hidden="true"></i> <span>Điện thoại: 0996070558</span></p>
+                            <p><i class="ffa fa-email" aria-hidden="true"></i> <span>Email: itsgu@gmail.com</span></p>
+                            <p><i class="ffa fa-website" aria-hidden="true"></i> <span>Website SGU: <a href="index.html">https://sgu.edu.vn/</a></span></p>
+                        </div>
+                        <div class="col-sm-4 col-md-4" id="follow">
+                            <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/fit.sgu.edu.vn/">
+                                        <img src="/Assets/GiaoVien/University/21_HUFI/images/follow/FACEBOOK.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/"><img src="/Assets/GiaoVien/University/21_HUFI/images/follow/GOOGLE-PLUS.png" /></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/">
+                                        <img src="/Assets/GiaoVien/University/21_HUFI/images/follow/IN.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/">
+                                        <img src="/Assets/GiaoVien/University/21_HUFI/images/follow/TWITER.png" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-md-3">
+                            <h4>THỐNG KÊ TRUY CẬP</h4>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item"><span class="badge bg-online">309</span><i class="fa fa-user online" aria-hidden="true"></i> Đang online :</a>
+                                <a href="#" class="list-group-item"><span class="badge bg-hom-nay">914</span><i class="fa fa-user hom-nay" aria-hidden="true"></i> Hôm nay: </a>
+                                <a href="#" class="list-group-item"><span class="badge bg-hom-qua">3.819</span><i class="fa fa-user hom-qua" aria-hidden="true"></i> Hôm qua : </a>
+                                <a href="#" class="list-group-item"><span class="badge bg-tong-cong">2.118.719</span><i class="fa fa-bar-chart tong-cong" aria-hidden="true"></i> Tổng cộng : </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-f"><p>Khoa công nghệ thông tin - Trường đại học Sài Gòn </p></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div id="small-dialog" class="zoom-anim-dialog mfp-hide loginmodal-container">
+                <h3>Đăng nhập</h3>
+                <form id="signin" method="post">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i style="font-size:15px;" class="fa fa-user" aria-hidden="true"></i></span>
+                        <input id="username" class="form-control" name="email" value="" placeholder="Tên đăng nhập" required>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i style="font-size:16px;" class="fa fa-lock" aria-hidden="true"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" value="" placeholder="Mật khẩu" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    <p class="message">Sai thông tin đăng nhập</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        #ex4 .p1[data-count]:after {
+            position: absolute;
+            top: 8%;
+            content: attr(data-count);
+            font-size: 40%;
+            padding: .2em;
+            border-radius: 50%;
+            line-height: 1em;
+            color: white;
+            background: rgba(255,0,0,.85);
+            text-align: center;
+            min-width: 1em;
+            //font-weight:bold;
+        }
+    </style>
+
+
+</body>
+
+<!-- Mirrored from hufi.edu.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Nov 2018 02:03:06 GMT -->
+</html>
+
