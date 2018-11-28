@@ -1,0 +1,738 @@
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL PC\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+C:\Users\Goku\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+C:\Users\DELL PC\Downloads\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.dll
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.xml
+C:\Users\HaSon\Documents\GitHub\HTTTDN_WebITSGU\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Autofac.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Config.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Core.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.FileSystem.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ImageProcessor.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Autofac.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Config.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Core.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.FileSystem.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ImageProcessor.xml
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKFinder.dll
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKFinder.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Autofac.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKFinder.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Config.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Core.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.FileSystem.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ImageProcessor.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Autofac.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKFinder.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Config.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Core.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.FileSystem.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ImageProcessor.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+D:\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ApplicationInsights.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\DoAnKhoaIT.pdb
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.exe.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csc.rsp
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.exe.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\csi.rsp
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.AppContext.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Collections.Immutable.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Console.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Compression.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.IO.Pipes.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Reflection.Metadata.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.AccessControl.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Claims.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.ValueTuple.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.exe.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\vbc.rsp
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\roslyn\VBCSCompiler.exe.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Autofac.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKFinder.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Config.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Core.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.FileSystem.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ImageProcessor.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.ApplicationInsights.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.Web.Infrastructure.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\WebGrease.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.pdb
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Model.dll.config
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Autofac.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKFinder.pdb
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Config.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.CKFinder.Connector.Core.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\CKSource.FileSystem.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\EntityFramework.SqlServer.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\ImageProcessor.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.Mvc.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Helpers.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Mvc.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Optimization.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.Razor.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Deployment.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Web.WebPages.Razor.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Newtonsoft.Json.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Antlr3.Runtime.pdb
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.DependencyCollector.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.WindowsServer.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.AI.Web.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\bin\PagedList.xml
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csprojAssemblyReference.cache
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CoreCompileInputs.cache
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.csproj.CopyComplete
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.dll
+E:\Tai lieu CNTT\WebKhoaCNTT\DoAnKhoaIT\DoAnKhoaIT\obj\Debug\DoAnKhoaIT.pdb

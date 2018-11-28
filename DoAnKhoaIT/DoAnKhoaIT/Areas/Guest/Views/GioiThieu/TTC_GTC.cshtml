@@ -1,0 +1,77 @@
+﻿@model Model.EF.NoidungGT
+@{
+    ViewBag.Title = "TTC_GTC";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                        @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>Giới thiệu</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <!-- *** PAGES MENU ***
+                _________________________________________________________ -->
+                <!-- *** PAGES MENU END *** -->
+
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size:18px">Giới thiệu</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <p>@Html.ActionLink("Giới thiệu chung", "TTC_GTC", "GioiThieu",new { tieude= "Giới thiệu chung" },null)</p>
+                        <p>@Html.ActionLink("Cơ sở vật chất", "TTC_GTC", "GioiThieu", new { tieude = "Cơ sở vật chất" }, null)</p>
+                        <p>@Html.ActionLink("Chi bộ khoa", "CCTC_ChiBo", "GioiThieu", new { tieude = "Chi bộ khoa" }, null)</p>
+                        <p>@Html.ActionLink("Ban chủ nhiệm khoa", "CCTC_ChiBo", "GioiThieu", new { tieude = "Ban chủ nhiệm khoa" }, null)</p>
+                        <p>@Html.ActionLink("Hội đồng khoa học", "CCTC_ChiBo", "GioiThieu", new { tieude = "Hội đồng khoa học" }, null)</p>
+                        <p>@Html.ActionLink("Công đoàn khoa", "CCTC_ChiBo", "GioiThieu", new { tieude = "Công đoàn khoa" }, null)</p>
+                        <p>@Html.ActionLink("Văn phòng khoa", "CCTC_ChiBo", "GioiThieu", new { tieude = "Văn phòng khoa"}, null)</p>
+                        <p>@Html.ActionLink("Công viên chức khoa", "CCTC_ChiBo", "GioiThieu", new { tieude = "Cựu viên chức khoa" }, null)</p>
+
+                    </div>
+                </div>
+
+                <!-- *** PAGES MENU END *** -->
+                @*<div class="banner">
+                        <a href="#">
+                            <img src="../../../cntt_media/khoa-cntt.jpg" alt="Khoa CNTT" class="img-responsive">
+                        </a>
+                    </div>*@
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="box" id="text-page">
+                    <h1 style="font-size:22px">@Model.Tieude</h1>
+
+                    @Html.Raw(@Model.Noidung)
+                    <hr>
+                    <p>Đăng bởi: @Model.Tentaikhoan, Ngày: @Model.Ngaydang</p>
+                    <p>Đính kèm: </p>
+                </div>
+
+
+            </div>
+            <!-- /.col-md-9 -->
+        </div>
+        <!-- /.container -->
+        <!-- /#content -->
+    </div>
+</body>
+
+
+

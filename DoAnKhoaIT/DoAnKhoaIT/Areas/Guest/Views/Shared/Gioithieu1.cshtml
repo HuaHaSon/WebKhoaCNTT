@@ -1,0 +1,4 @@
+﻿@foreach(var item in ViewBag.List)
+{
+    <li>@Html.ActionLink((string)item, "CCTC_ChiBo","GioiThieu",new { tieude=item},null)</li>
+}

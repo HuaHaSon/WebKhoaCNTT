@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "HB";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+
+                    <li>
+                         @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>Thông báo - tin tức</li>
+                    <li>Học bổng</li>
+                </ul>
+            </div>
+
+            <!-- *** LEFT COLUMN ***
+            _________________________________________________________ -->
+
+            <div class="col-sm-9" id="blog-listing">
+
+                <div class="post"><h4><a href="../../../detail/17/nganh-cong-nghe-thong-tin-he-chinh-quy/1.html">Ngành Công nghệ thông tin - Hệ chính quy</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;Đào tạo Kỹ sư ngành Công nghệ thông tin; các kỹ sư ngành Công nghệ thông tin của Trường Đai học Sài Gòn có thể đảm nhiệm tốt một số vai trò trong các công ty phần mềm, các công ty chuyên về Mạng và Hệ thống máy tính, nhân ...</p><p class="read-more"> <a href="../../../detail/17/nganh-cong-nghe-thong-tin-he-chinh-quy/1.html" class="btn btn-primary"> Xem thêm</a> </p></div><div class="post">
+                    <h4><a href="../../../detail/246/chuong-trinh-dao-t-o-co-ch-d-c-thu/1.html">Chương trình đào tạo ngành Kỹ Thuật Phần Mềm - Hệ chính quy</a></h4><p>
+                        CTĐT Kỹ thuật phần mềm. Xem tại đây.
+                        ...
+                    </p><p class="read-more"> <a href="../../../detail/246/chuong-trinh-dao-t-o-co-ch-d-c-thu/1.html" class="btn btn-primary"> Xem thêm</a> </p>
+                </div><div class="post">
+                    <h4><a href="../../../detail/54/nganh-cntt-chat-luong-cao/1.html">Ngành Công nghệ thông tin - Hệ chính quy (chất lượng cao)</a></h4><p>
+                        &nbsp; &nbsp; CTĐT Công nghệ Thông tin chất lượng cao. Xem tại đây
+
+                        &nbsp;
+                        ...
+                    </p><p class="read-more"> <a href="../../../detail/54/nganh-cntt-chat-luong-cao/1.html" class="btn btn-primary"> Xem thêm</a> </p>
+                </div><div class="post">
+                    <h4><a href="../../../detail/42/nganh-cong-nghe-thong-tin-he-chinh-quy-lien-thong/1.html">Ngành Công nghệ thông tin - Hệ liên thông</a></h4><p>
+                        Hệ liên thông trình độ đại&nbsp;học
+
+
+                        Liên thông từ Trung cấp lên Đại học. Xem tại đây
+                        Liên thông từ Cao đẳng lên Đại học. Xem tại đây
+
+
+                        &nbsp;(Thông tin tuyển sinh chi tiết xem tại website của Phòng đào tạo và phòng Giáo dục thường xuyên)
+                        ...
+                    </p><p class="read-more"> <a href="../../../detail/42/nganh-cong-nghe-thong-tin-he-chinh-quy-lien-thong/1.html" class="btn btn-primary"> Xem thêm</a> </p>
+                </div>
+
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="../../11/trinh-do-dai-hoc/1.html">Mới hơn</a>
+                    </li>
+                    <li class="next">
+                        <a href="../../11/trinh-do-dai-hoc/2.html">Cũ hơn</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.col-md-9 -->
+            <!-- *** LEFT COLUMN END *** -->
+            <div class="col-md-3">
+                <!-- *** BLOG MENU ***
+                _________________________________________________________ -->
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Đào tạo</h3>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <ul class="nav nav-pills nav-stacked">
+                            <li> @Html.ActionLink("Học bổng", "HB", "ThongBao_TinTuc")</li>
+                            <li> @Html.ActionLink("Thực tập tuyển dụng", "TTTD", "ThongBao_TinTuc")</li>
+                            <li> @Html.ActionLink("Hoạt động đoàn hội", "HDDH", "HoatDongDoanHoi")</li>
+                            <li> @Html.ActionLink("Olympic sinh viên", "OLPSV", "OlympicSV")</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /.col-md-3 -->
+                <!-- *** BLOG MENU END *** -->
+                @*<div class="banner">
+                        <img src="../../../cntt_media/khoa-cntt.jpg" alt="Khoa cntt" class="img-responsive">
+
+                    </div>*@
+            </div>
+
+
+        </div>
+        <!-- /.container -->
+        <!-- /#content -->
+    </div>
+
+</body>
+
+
+

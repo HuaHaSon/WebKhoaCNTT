@@ -1,0 +1,74 @@
+﻿@model PagedList.IPagedList<Model.EF.Baidang>
+@using PagedList.Mvc;
+    @{
+        ViewBag.Title = "TTTD";
+        Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+    }
+
+    <head>
+        <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+    </head>
+    <body>
+        <div id="content">
+
+            <div class="container">
+
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+
+                        <li>
+                            @Html.ActionLink("Trang chủ", "Index", "Home")
+                        </li>
+                        <li>Thông báo - tin tức</li>
+                        <li>@ViewBag.Ten</li>
+                    </ul>
+                </div>
+
+                <!-- *** LEFT COLUMN ***
+                _________________________________________________________ -->
+
+                <div class="col-sm-9" id="blog-listing">
+                    
+                    @foreach(var item in Model)
+                    {
+                        <div class="post">
+                            <h4>@Html.ActionLink(item.Tieude, "CTTD", "ThongBao_TinTuc", new { mabd = item.Mabaidang ,tagid=ViewBag.TagID,ten=ViewBag.Ten}, null)</h4>
+                        <p>@Html.Raw(item.Noidung.Substring(0, Math.Min(item.Noidung.Length, 550)))....</p>
+                        <p class="read-more btn btn-primary"> @Html.ActionLink("Xem thêm","CTTD","ThongBao_TinTuc",new { mabd=item.Mabaidang, tagid = ViewBag.TagID, ten = ViewBag.Ten },null)</p>
+                        </div>                                                                           
+                    }                   
+                        <div class="col-lg-12">
+                            @Html.PagedListPager(Model, page => Url.Action("TTTD", new { page ,tagid=ViewBag.TagID,ten=ViewBag.Ten}))
+                        </div>
+                </div>
+                <!-- /.col-md-9 -->
+                <!-- *** LEFT COLUMN END *** -->
+                <div class="col-md-3">
+                    <!-- *** BLOG MENU ***
+                    _________________________________________________________ -->
+                    <div class="panel panel-default sidebar-menu">
+
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Đào tạo</h3>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li> @Html.ActionLink("Học bổng", "HB", "ThongBao_TinTuc", new { tagid = "10", ten = "Học bổng" }, null)</li>
+                                <li> @Html.ActionLink("Thực tập tuyển dụng", "TTTD", "ThongBao_TinTuc", new { tagid = "6", ten = "Thực tập - Tuyển dụng" }, null)</li>
+                                <li> @Html.ActionLink("Hoạt động đoàn hội", "HDDH", "HoatDongDoanHoi")</li>
+                                <li> @Html.ActionLink("Olympic sinh viên", "OLPSV", "OlympicSV")</li>
+                            </ul>
+                        </div>
+
+                    </div>                   
+                </div>
+            </div>            
+        </div>       
+    </body>
+
+
+
+
+

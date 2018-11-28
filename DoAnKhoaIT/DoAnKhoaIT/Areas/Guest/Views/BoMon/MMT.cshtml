@@ -1,0 +1,320 @@
+﻿
+@{
+    ViewBag.Title = "MMT";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                         @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>Bộ môn</li>
+                    <li>Mạng máy tính</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <!-- *** PAGES MENU ***
+                _________________________________________________________ -->
+                <!-- *** PAGES MENU END *** -->
+
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size:18px">Mạng máy tính</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <p><a @Html.ActionLink("Hệ thống thông tin", "HTTT", "BoMon")</a></p>
+                        <p><a @Html.ActionLink("Kỹ thuật phần mềm", "KTPM", "BoMon")</a></p>
+                        <p><a @Html.ActionLink("Khoa học máy tính", "KHMT", "BoMon")</a></p>
+                        <p><a @Html.ActionLink("Mạng máy tính", "MMT", "BoMon")</a></p>
+
+                    </div>
+                </div>
+
+                <!-- *** PAGES MENU END *** -->
+                @*<div class="banner">
+                        <a href="#">
+                            <img src="../../../cntt_media/khoa-cntt.jpg" alt="Khoa CNTT" class="img-responsive">
+                        </a>
+                    </div>*@
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="box" id="text-page">
+                    <h1 style="font-size:22px">Bộ môn Mạng và Hệ thống máy tính</h1>
+
+                    <p>Mục tiêu lớn nhất của bộ môn là đào tạo nhũng sinh viên có khả năng triển khai và xây dựng và phát triển các ứng dụng trên các hệ thống mạng trong các doanh nghiệp.&nbsp;Sinh viên sẽ được học các môn học tiên quyết để hiểu về sự vận hành của hệ thống mạng như Mạng máy tính, Quản trị mạng và Kiến trúc máy tính. Từ các môn tiên đề này sinh viên sẽ phát triển hoàn thiện kỹ năng của mình thông qua các môn chuyên ngành. Ví dụ, sinh viên đam mê các vấn đề về an ninh và bảo mật trên mạng có thể theo học môn định hướng như An toàn và Bảo mật mạng.</p>
+
+                    <p>Ngoài mục tiêu đào tạo các kỹ sư mạng cung cấp cho xã hội, bộ môn còn quan tâm đến các vấn đề nghiên cứu và học thuật để kịp thời cập nhật các xu hướng mới của công nghệ nhằm nâng cao chất lượng giảng dạy. Chính vì thế, định hướng cho sinh viên tham gia các đề tài nghiên cứu cũng là một mục tiêu khác được bộ môn quan tâm.&nbsp; Các sinh viên sẽ được hổ trợ tham gia nghiên cứu cùng giáo viên, giáo viên sẽ định hướng cho các em nghiên cứu. Sau quá trình nghiên cứu, sinh viên có thể viết bài và đăng bài ở các hội thảo khoa học trong và ngoài nước. Đây là bước khởi đầu tốt cho sự nghiệp nghiên cứu của các em sinh viên sau này.</p>
+
+                    <p>&nbsp;</p>
+
+                    <h2>Đội ngũ cán bộ của bộ môn bao gồm:</h2>
+
+                    <p>&nbsp;</p>
+
+                    <ul>
+                        <li>Thạc sĩ NCS: 05</li>
+                    </ul>
+
+                    <p>&nbsp;</p>
+                    <!-------------------------->
+
+                    <div class="col-md-12" data-animate="fadeInUp">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="post" style="background-color:#FFF">
+                                    <div class="hieuunganh_box">
+                                        <div><a class="btn btn-success" href="#" type="button">Xem thêm</a></div>
+                                    </div>
+
+                                    <div>
+                                        <p style="text-align:center">
+                                            Trưởng bộ môn<br />
+                                            ThS.NCS. Lê Ngọc Kim Khánh<br />
+                                            Email: lnkkhanh@sgu.edu.vn,
+                                        </p>
+
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----->
+
+                            <div class="col-md-4">
+                                <div class="post" style="background-color:#FFF">
+                                    <div class="hieuunganh_box">
+                                        <div><a class="btn btn-success" type="button">Xem thêm</a></div>
+                                    </div>
+
+                                    <div>
+                                        <p style="text-align: center;">
+                                            Giảng viên<br />
+                                            ThS. Nguyễn Minh Thi
+                                        </p>
+
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----->
+
+                            <div class="col-md-4">
+                                <div class="post" style="background-color:#FFF">
+                                    &nbsp;
+                                    <div class="hieuunganh_box">
+                                        <div><a class="btn btn-success" type="button">Xem thêm</a></div>
+                                    </div>
+
+                                    <div>
+                                        <p style="text-align: center;">
+                                            Giảng viên<br />
+                                            ThS. Lương Minh Huấn<br />
+                                            Email: huanlm@sgu.edu.vn
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----->
+
+                            <div class="col-md-4">
+                                <div class="post" style="background-color:#FFF">
+                                    <a href="#"><img alt="" class="hieuunganh_image" src="../../../images/cntt_media/male.png" style="border-radius:20%" width="100" /> </a>
+
+                                    <div class="hieuunganh_box">
+                                        <div><a class="btn btn-success" href="#" type="button">Xem thêm</a></div>
+
+                                        <div>&nbsp;</div>
+                                    </div>
+
+                                    <div>
+                                        <p style="text-align: center;"><a href="../../49/giang-vien-kieu-my/1.html"><img alt="" class="hieuunganh_image" src="../../../images/cntt_media/bo-mon/kieumy.jpg" style="border-radius:20%" width="100" /></a></p>
+
+                                        <p style="text-align: center;">
+                                            Giảng viên<br />
+                                            ThS. Kiều My
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----->
+
+                            <div class="col-md-4">
+                                <div class="post" style="background-color:#FFF">
+                                    &nbsp;
+                                    <div class="hieuunganh_box">
+                                        <div><a class="btn btn-success" type="button">Xem thêm</a></div>
+                                    </div>
+
+                                    <div>
+                                        <p style="text-align: center;">
+                                            Giảng viên<br />
+                                            ThS. Nguyễn Võ Lam Giang<br />
+                                            Phòng Khảo Thí và Đảm Bảo Chất Lượng GD- ĐHSG (mời giảng)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----->
+                        </div>
+                    </div>
+                    <!-------------------------->
+
+                    <p>&nbsp;</p>
+
+                    <p style="text-align: center;"><strong>Danh sách các học phần do Bộ môn Mạng và Hệ thống máy tính quản lý</strong></p>
+
+                    <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:567px;" width="567">
+                        <tbody>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;"><strong>STT</strong></p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;"><strong>MÃ HP</strong></p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;"><strong>TÊN MÔN HỌC</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">1</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841021</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Kiến trúc máy tính</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">2</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841022</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Hệ điều hành</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">3</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841058</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Hệ điều hành mã nguồn mở</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">4</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841104</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Mạng máy tính</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">5</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841059</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Quản trị mạng</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">6</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841117</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Lập trình ứng dụng mạng</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">7</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841118</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Lập trình hệ thống mạng</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">8</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841061</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Mạng máy tính nâng cao</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">9</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841119</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">An ninh mạng máy tính</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">10</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;">841073</p>
+                                </td>
+                                <td nowrap="nowrap" style="width:439px;height:20px;">
+                                    <p style="text-align: center;">Seminar chuyên đề (hướng Mạng và hệ thống máy tính)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr>
+                    <p>Post by: Khoa CNTT, ngày: 2017-08-03 14:04:00</p>
+                    <p>Đính kèm: </p>
+
+
+                </div>
+
+
+            </div>
+            <!-- /.col-md-9 -->
+        </div>
+</body>
+
+
+
+

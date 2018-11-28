@@ -1,0 +1,4 @@
+﻿@foreach(var item in ViewBag.List)
+{
+    <li>@Html.ActionLink((string)item.TenBMTT,"BM","BieuMauThuTuc",new { mabm=item.MaBMTT,tenbm=item.TenBMTT},null)</li>
+}

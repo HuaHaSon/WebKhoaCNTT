@@ -1,0 +1,39 @@
+﻿@model Model.EF.Baidang
+@{
+    ViewBag.Title = "CTTD";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+
+                    <li>
+                        @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>@Html.ActionLink((string)ViewBag.Ten, "TTTD", "ThongBao_TinTuc",new { tagid=ViewBag.TagID,ten=ViewBag.Ten},null)</li>
+                    <li>Thông tin</li>
+                </ul>
+            </div>
+            <div class="col-md-9" style="margin-right:400px ; margin-left: 0px">
+                <div id="text-page" class="box" style="margin-right:-200px">
+                    <h1 style="font-size:22px"> @Model.Tieude</h1>
+                    <p>@Html.Raw(Model.Noidung)</p>
+                    <hr />
+                    <p>Đăng bởi:@Model.Tennguoidang, Ngày đăng: @Model.Ngaydang </p>
+                    
+                </div>
+            </div>
+
+        </div>  @*#content*@
+    </div>
+</body>
+
+

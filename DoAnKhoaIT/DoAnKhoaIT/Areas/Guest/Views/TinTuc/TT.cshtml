@@ -1,0 +1,54 @@
+﻿@model PagedList.IPagedList<Model.EF.Baidang>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "TT";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+
+                    <li>
+                        @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>Tin tức</li>
+
+                </ul>
+            </div>
+            <div class="col-sm-12" id="blog-listing">
+                @foreach (var item in Model)
+                {
+                    <div class="post">
+                        <h4>@Html.ActionLink(item.Tieude, "TinTuc1", "TinTuc",new { mabaidang=item.Mabaidang},null)</h4>
+                        <p>
+                            @Html.Raw(item.Noidung.Substring(0, Math.Min(item.Noidung.Length, 550)))....
+                        </p>
+                        <p class="read-more btn btn-primary"> @Html.ActionLink("Xem thêm", "TinTuc1", "TinTuc", new { mabaidang=item.Mabaidang},new { style = "color: White" }) </p>
+                    </div>
+
+                }
+                
+
+            </div>
+
+
+        </div>
+        <div class="col-sm-12">
+            @Html.PagedListPager(Model, page => Url.Action("TT", new { page, @*maloai = ViewBag.Maloai*@ }))
+
+
+        </div>
+    </div>
+
+
+</body>
+

@@ -1,0 +1,135 @@
+﻿@model Model.EF.Bomon
+@{
+    ViewBag.Title = "HTTT";
+    Layout = "~/Areas/Guest/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                        @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>Bộ môn</li>
+                    <li>@ViewBag.TenBM</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <!-- *** PAGES MENU ***
+                _________________________________________________________ -->
+                <!-- *** PAGES MENU END *** -->
+
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size:18px">Hệ thống thông tin</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <p> @Html.ActionLink("Hệ thống thông tin", "HTTT", "BoMon",new { mabm="BM1",tenbm= "Hệ thống thông tin" },null)</p>
+                        <p> @Html.ActionLink("Kỹ thuật phần mềm", "HTTT", "BoMon", new { mabm = "BM2", tenbm = "Kỹ thuật phần mềm" }, null)</p>
+                        <p> @Html.ActionLink("Khoa học máy tính", "HTTT", "BoMon", new { mabm = "BM3", tenbm = "Khoa học máy tính" }, null)</p>
+                        <p> @Html.ActionLink("Mạng máy tính", "HTTT", "BoMon", new { mabm = "BM4", tenbm = "Mạng máy tính" }, null)</p>
+                    </div>
+                </div>
+
+                <!-- *** PAGES MENU END *** -->
+                @*<div class="banner">
+                        <a href="#">
+                            <img src="../../../cntt_media/khoa-cntt.jpg" alt="Khoa CNTT" class="img-responsive">
+                        </a>
+                    </div>*@
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="box" id="text-page">
+                    <h1 style="font-size:22px">Bộ môn @ViewBag.TenBM</h1>
+                    <p>@Html.Raw(Model.Noidung)</p>
+                    <p>Đội ngũ cán bộ của bộ môn bao gồm:</p>
+
+                    <p>• Tiến sĩ: @ViewBag.SLTS</p>
+
+                    <p>• Thạc sĩ, NCS: @ViewBag.SLThacsi <!--------------------------></p>
+                   
+                    <div class="col-md-12" data-animate="fadeInUp">
+                        <div class="row">
+                            @foreach (var item in ViewBag.ListGV)
+                            {
+                                <div class="col-md-4">
+                                    <div class="post" style="background-color:#FFF">
+                                        <a href="#"><img alt="" class="hieuunganh_image" src="../../../images/cntt_media/male.png" style="border-radius:20%" width="100" /> </a>
+
+                                        <div class="hieuunganh_box">
+                                            <div><a class="btn btn-success" href="#" type="button">Xem thêm</a></div>
+                                        </div>
+
+                                        <div>
+                                            <p style="text-align:center">
+                                                @item.Chucdanh<br />
+                                                @item.TenGV<br />
+                                                Email: @item.Diachimail
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                            <!----->
+                            <!----->
+                        </div>
+                    </div>
+                    <!-------------------------->
+
+                    <h3 style="text-align: center;">Danh sách các học phần do Bộ môn Hệ thống thông tin quản lý</h3>
+
+                    <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:504px;" width="504">
+                        <tbody>
+                            <tr>                               
+                                <td nowrap="nowrap" style="width:64px;height:20px;">
+                                    <p style="text-align: center;"><strong>MÃ HP</strong></p>
+                                </td>
+                                <td nowrap="nowrap" style="width:378px;height:20px;">
+                                    <p style="text-align: center;"><strong>TÊN MÔN HỌC</strong></p>
+                                </td>
+                            </tr>
+                            @foreach (var item in ViewBag.ListMH)
+                            {
+                                <tr>                                   
+                                    <td nowrap="nowrap" style="width:64px;height:20px;">
+                                        <p style="text-align: center;"><strong>@item.MaMH</strong></p>
+                                    </td>
+                                    <td nowrap="nowrap" style="width:378px;height:20px;">
+                                        <p style="text-align: center;"><strong>@item.TenMH</strong></p>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+
+                    <hr>
+                    <p>Post by: Khoa CNTT, ngày: 2017-08-03 14:03:09</p>
+                    <p>Đính kèm: </p>
+
+
+                </div>
+
+
+            </div>
+            <!-- /.col-md-9 -->
+        </div>
+</body>
+
+
+
+
