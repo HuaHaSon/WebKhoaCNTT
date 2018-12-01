@@ -4,6 +4,13 @@
     Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
 }
 
+@section jsFooter{
+
+    <script src="~/Assets/Admin/js/admin/controller/HomeAdmin.js"></script>
+
+}
+
+
 <div class="container-fluid">
     <div class="row bg-title">
         <!-- .page title -->
@@ -94,8 +101,8 @@
                 <div class="p-20">
                     <div class="row">
                         <div class="col-xs-6">
-                            <h5 class="m-b-0">This months task</h5>
-                            <h3 class="m-t-0 font-medium">TO-DO LIST</h3>
+                            <h5 class="m-b-0">Sự kiện</h5>
+                            <h3 class="m-t-0 font-medium">SỰ KIỆN KHOA HỌC</h3>
                         </div>
                         <div class="col-xs-6">
                             <a href="javascript:void(0)" class="pull-right btn btn-rounded btn-danger m-t-15" data-toggle="modal" data-target="#myModal">Add Task</a>
@@ -202,12 +209,12 @@
                             <h5 class="m-b-0">Lịch</h5>
                             <h3 class="m-t-0 font-medium">LỊCH CÔNG TÁC</h3>
                         </div>
-                        
+
                     </div>
                 </div>
-               
-                
-                
+
+
+
             </div>
             <div id="calendar"></div>
         </div>

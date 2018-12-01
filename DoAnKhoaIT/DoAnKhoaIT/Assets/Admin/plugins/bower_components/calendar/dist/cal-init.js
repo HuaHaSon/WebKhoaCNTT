@@ -36,6 +36,7 @@
     },
     /* on click on event */
     CalendarApp.prototype.onEventClick =  function (calEvent, jsEvent, view) {
+
         var $this = this;
             var form = $("<form></form>");
             form.append("<label>Change event name</label>");
