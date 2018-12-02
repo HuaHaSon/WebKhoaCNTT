@@ -115,6 +115,7 @@
     <Compile Include="ViewModel\DaotaoModel.cs" />
     <Compile Include="ViewModel\Doituonghienthi.cs" />
     <Compile Include="ViewModel\GioithieuModel.cs" />
+    <Compile Include="ViewModel\HomeModel.cs" />
     <Compile Include="ViewModel\NghiencuukhoahocModel.cs" />
     <Compile Include="ViewModel\ThongbaochuyentiepModel.cs" />
     <Compile Include="ViewModel\ThongtinnguoidungModel.cs" />

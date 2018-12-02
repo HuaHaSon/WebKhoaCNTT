@@ -1,6 +1,8 @@
 ﻿using DoAnKhoaIT.Controllers;
 using Model.DAO.Admin;
 using Model.EF;
+using Model.ViewModel;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,9 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         // GET: Admin/Home
         public ActionResult Index()
         {
-            return View();
+            HomeModel model = new HomeModel();
+            model.listchitietnghiencuukhoahoc = new NghiencuukhoahocDao().listchitietnghiencuukhoahoc();
+            return View(model);
         }
         public JsonResult loadlichGV(string status)
         {
@@ -26,12 +30,45 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
                 res.Add(new ChitietCTGV
                 {
                     MaCTCTGV = item.MaCTCTGV,
-                    Diadiem = item.Diadiem
+                    Diadiem = item.Diadiem,
+                    NgayCT = item.NgayCT
                 });
             }
+            var data = JsonConvert.SerializeObject(res);
             return Json(new
             {
-                res
+                data
+            });
+        }
+        public JsonResult LoadchitietCongtacgiaovien(string id)
+        {
+            CongtacgiaovienDao dao = new CongtacgiaovienDao();
+            var res = dao.timchitietcongtacgiaovien(id);
+            var congtac = new {
+                mactct = res.MaCTCTGV,
+                ngayct = res.NgayCT.Value.ToShortDateString(),
+                noidung = res.Noidung,
+                thanhphan = res.Thanhphan,
+                diadiem = res.Diadiem
+            };
+            return Json(new
+            {
+                congtac
+            });
+        }
+        public JsonResult loadchitietkhoahoc(string id)
+        {
+            NghiencuukhoahocDao dao = new NghiencuukhoahocDao();
+            var res = dao.timchitietnghiencuukhoahoc(id);
+            var khoahoc = new
+            {
+                tieude = res.Tieude,
+                ngaykh = res.NgaySK.Value.ToShortDateString(),
+                noidung = res.Noidung
+            };
+            return Json(new
+            {
+                khoahoc
             });
         }
     }
