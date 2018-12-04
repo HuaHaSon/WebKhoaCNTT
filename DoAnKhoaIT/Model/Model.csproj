@@ -112,6 +112,7 @@
     <Compile Include="ViewModel\BieumauthutucModel.cs" />
     <Compile Include="ViewModel\BomonModel.cs" />
     <Compile Include="ViewModel\CongtacgiaovienModel.cs" />
+    <Compile Include="ViewModel\DangnhapModel.cs" />
     <Compile Include="ViewModel\DaotaoModel.cs" />
     <Compile Include="ViewModel\Doituonghienthi.cs" />
     <Compile Include="ViewModel\GioithieuModel.cs" />

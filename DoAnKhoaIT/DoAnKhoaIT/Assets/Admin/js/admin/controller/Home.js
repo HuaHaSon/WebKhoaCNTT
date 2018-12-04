@@ -10,7 +10,6 @@
                 type: "Post",
                 data: { status: '1' },
                 success: function (response) {
-
                     var res = JSON.parse(response.data);
                     var events = [];
                     $.each(res, function (i, v) {
@@ -97,6 +96,10 @@
             });
             $("#khoahocmodal").modal("show");
         });
+        $("#reportrange > span").on(change, function (e) {
+            alert($(this).text);
+        });
+        $("#")
     }
 }
 home.init();

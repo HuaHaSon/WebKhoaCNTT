@@ -259,40 +259,7 @@
                     <li>
                         <a href="#" class="waves-effect"><i class="mdi mdi-content-copy fa-fw"></i> <span class="hide-menu"> Thống kê <span class="fa arrow"></span><span class="label label-rouded label-warning pull-right">30</span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="starter-page.html"><i class="ti-layout-width-default fa-fw"></i> <span class="hide-menu">Starter Page</span></a></li>
-                            <li><a href="blank.html"><i class="ti-layout-sidebar-left fa-fw"></i> <span class="hide-menu">Blank Page</span></a></li>
-                            <li>
-                                <a href="javascript:void(0)" class="waves-effect"><i class="ti-email fa-fw"></i> <span class="hide-menu">Email Templates</span><span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li> <a href="~/Assets/Admin/email-templates/basic.html"><i class="fa-fw">B</i> <span class="hide-menu">Basic</span></a></li>
-                                    <li> <a href="~/Assets/Admin/email-templates/alert.html"><i class="ti-alert fa-fw"></i> <span class="hide-menu">Alert</span></a></li>
-                                    <li> <a href="~/Assets/Admin/email-templates/billing.html"><i class="ti-wallet fa-fw"></i> <span class="hide-menu">Billing</span></a></li>
-                                    <li> <a href="~/Assets/Admin/email-templates/password-reset.html"><i class="ti-more fa-fw"></i> <span class="hide-menu">Reset Pwd</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="waves-effect"><i class="ti-lock fa-fw"></i><span class="hide-menu">Authentication</span><span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a href="login.html"><i class="fa-fw">L</i> <span class="hide-menu">Login Page</span></a></li>
-                                    <li><a href="login2.html"><i class="fa-fw">L</i> <span class="hide-menu">Login v2</span></a></li>
-                                    <li><a href="register.html"><i class="fa-fw">R</i> <span class="hide-menu">Register</span></a></li>
-                                    <li><a href="register2.html"><i class="fa-fw">R</i> <span class="hide-menu">Register v2</span></a></li>
-                                    <li><a href="register3.html"><i class="fa-fw">3</i> <span class="hide-menu">3 Step Registration</span></a></li>
-                                    <li><a href="recoverpw.html"><i class="fa-fw">R</i> <span class="hide-menu">Recover Password</span></a></li>
-                                    <li><a href="lock-screen.html"><i class="fa-fw">L</i> <span class="hide-menu">Lock Screen</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" class="waves-effect"><i class="ti-info-alt fa-fw"></i><span class="hide-menu">Error Pages</span><span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a href="400.html"><i class="ti-info-alt fa-fw"></i> <span class="hide-menu">Error 400</span></a></li>
-                                    <li><a href="403.html"><i class="ti-info-alt fa-fw"></i> <span class="hide-menu">Error 403</span></a></li>
-                                    <li><a href="404.html"><i class="ti-info-alt fa-fw"></i> <span class="hide-menu">Error 404</span></a></li>
-                                    <li><a href="500.html"><i class="ti-info-alt fa-fw"></i> <span class="hide-menu">Error 500</span></a></li>
-                                    <li><a href="503.html"><i class="ti-info-alt fa-fw"></i> <span class="hide-menu">Error 503</span></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="lightbox.html"><i class="fa-fw">L</i> <span class="hide-menu">Lightbox Popup</span></a></li>
+                            <li><a href=@Url.Action("Index","Luottruycap")><i class="fa-fw">L</i> <span class="hide-menu">Lượt truy cập</span></a></li>
                             <li><a href="treeview.html"><i class="fa-fw">T</i> <span class="hide-menu">Treeview</span></a></li>
                             <li><a href="search-result.html"><i class="fa-fw">S</i> <span class="hide-menu">Search Result</span></a></li>
                             <li><a href="utility-classes.html"><i class="fa-fw">U</i> <span class="hide-menu">Utility Classes</span></a></li>
@@ -465,6 +432,9 @@
     <script src="~/Assets/Admin/plugins/bower_components/moment/moment.js"></script>
     <script src='~/Assets/Admin/plugins/bower_components/calendar/dist/fullcalendar.min.js'></script>
     @*<script src="~/Assets/Admin/plugins/bower_components/calendar/dist/cal-init.js"></script>*@
+    <!-- Chart JS -->
+    <script src="~/Assets/Admin/plugins/bower_components/Chart.js/Chart.min.js"></script>
+    <script src="~/Assets/Admin/plugins/bower_components/Chart.js/Chart.bundle.min.js"></script>
     <script>
 
 

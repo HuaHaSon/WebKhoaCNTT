@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DoAnKhoaIT.Models
+namespace Model.ViewModel
 {
-    public class TaikhoanModel
+    public class DangnhapModel
     {
         [Required(ErrorMessage = "Bạn chưa nhập tên tài khoản")]
         public string UserName { get; set; }

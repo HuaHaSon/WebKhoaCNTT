@@ -65,7 +65,6 @@ C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.c
 C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.dll
 C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.pdb
-C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
 D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.dll.config
 D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.dll
 D:\WebKhoaCNTT\DoAnKhoaIT\Model\bin\Debug\Model.pdb

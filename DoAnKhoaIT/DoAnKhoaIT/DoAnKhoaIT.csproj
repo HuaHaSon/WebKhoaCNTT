@@ -186,6 +186,7 @@
     <Compile Include="Areas\Admin\Controllers\DaotaoController.cs" />
     <Compile Include="Areas\Admin\Controllers\GioithieuController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LuottruycapController.cs" />
     <Compile Include="Areas\Admin\Controllers\NghiencuukhoahocController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongbaochuyentiepController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongtinnguoidungController.cs" />
@@ -199,6 +200,7 @@
     <Compile Include="Areas\Guest\Controllers\BieuMauThuTucController.cs" />
     <Compile Include="Areas\Guest\Controllers\BoMonController.cs" />
     <Compile Include="Areas\Guest\Controllers\CauLacBoSVController.cs" />
+    <Compile Include="Areas\Guest\Controllers\DangnhapController.cs" />
     <Compile Include="Areas\Guest\Controllers\DaoTaoController.cs" />
     <Compile Include="Areas\Guest\Controllers\DemoController.cs" />
     <Compile Include="Areas\Guest\Controllers\GioiThieuController.cs" />
@@ -218,12 +220,9 @@
     <Compile Include="Common\RememberMe.cs" />
     <Compile Include="Common\TaikhoanLogin.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\DangNhapController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\TaikhoanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -288,6 +287,8 @@
     <Content Include="Assets\Admin\js\admin\controller\Gioithieu.js" />
     <Content Include="Assets\Admin\js\admin\controller\Home.js" />
     <Content Include="Assets\Admin\js\admin\controller\HomeAdmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Luottruycap.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Luottruycapadmin.js" />
     <Content Include="Assets\Admin\js\admin\controller\Nghiencuukhoahoc.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongbaochuyentiep.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongbaochuyentiepadmin.js" />
@@ -681,6 +682,7 @@
     <Content Include="Assets\Admin\plugins\bower_components\calendar\dist\lang\zh-cn.js" />
     <Content Include="Assets\Admin\plugins\bower_components\calendar\dist\lang\zh-tw.js" />
     <Content Include="Assets\Admin\plugins\bower_components\calendar\jquery-ui.min.js" />
+    <Content Include="Assets\Admin\plugins\bower_components\Chart.js\Chart.bundle.min.js" />
     <Content Include="Assets\Admin\plugins\bower_components\Chart.js\Chart.js" />
     <Content Include="Assets\Admin\plugins\bower_components\Chart.js\Chart.min.js" />
     <Content Include="Assets\Admin\plugins\bower_components\Chart.js\chartjs.init.js" />
@@ -5252,6 +5254,8 @@
     <Content Include="Areas\Guest\Views\ThongBao_TinTuc\CTTD.cshtml" />
     <Content Include="Areas\Guest\Views\ThongBao_TinTuc\HB.cshtml" />
     <Content Include="Areas\Guest\Views\ThongBao_TinTuc\TTTD.cshtml" />
+    <Content Include="Areas\Admin\Views\Luottruycap\Index.cshtml" />
+    <Content Include="Areas\Guest\Views\Dangnhap\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -5272,8 +5276,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -5289,7 +5291,9 @@
     <Folder Include="Assets\plugins\Uploads\files\" />
     <Folder Include="Assets\plugins\Uploads\flash\" />
     <Folder Include="Assets\plugins\Uploads\images\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

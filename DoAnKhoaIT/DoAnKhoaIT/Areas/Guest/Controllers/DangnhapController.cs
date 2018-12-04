@@ -1,15 +1,15 @@
 ﻿using DoAnKhoaIT.Common;
-using DoAnKhoaIT.Models;
 using Model.DAO;
+using Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace DoAnKhoaIT.Controllers
+namespace DoAnKhoaIT.Areas.Guest.Controllers
 {
-    public class DangNhapController : Controller
+     public class DangNhapController : Controller
     {
         // GET: DangNhap
         public ActionResult Index()
@@ -23,7 +23,7 @@ namespace DoAnKhoaIT.Controllers
                 Response.Cookies.Add(LuuMatkhau);
                 ck_luumatkhau = Request.Cookies.Get("LuuMatkhau");
             }
-            TaikhoanModel target = new TaikhoanModel();
+            DangnhapModel target = new DangnhapModel();
 
             if (ck_luumatkhau.Value == "false")
             {
@@ -47,7 +47,7 @@ namespace DoAnKhoaIT.Controllers
             return View(target);
         }
         [HttpPost]
-        public ActionResult Index(TaikhoanModel collection)
+        public ActionResult Index(DangnhapModel collection)
         {
             if (ModelState.IsValid)
             {
@@ -77,7 +77,7 @@ namespace DoAnKhoaIT.Controllers
                     usersession.UserName = user.Tentaikhoan;
                     usersession.Name = user.Hoten;
                     Session.Add(CommonConstants.USER_SESSION, usersession);
-                    return RedirectToAction("Index", "Admin/Home");
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });
                 }
                 else
                     if (res == -1)

@@ -18,6 +18,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         {
             HomeModel model = new HomeModel();
             model.listchitietnghiencuukhoahoc = new NghiencuukhoahocDao().listchitietnghiencuukhoahoc();
+            ViewBag.giaovien = new BomonDao().listgiaovien().Count();
+            ViewBag.monhoc = new BomonDao().listmonhoc().Count();
             return View(model);
         }
         public JsonResult loadlichGV(string status)
@@ -49,6 +51,7 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
                 ngayct = res.NgayCT.Value.ToShortDateString(),
                 noidung = res.Noidung,
                 thanhphan = res.Thanhphan,
+                chutri = res.Chutri,
                 diadiem = res.Diadiem
             };
             return Json(new
