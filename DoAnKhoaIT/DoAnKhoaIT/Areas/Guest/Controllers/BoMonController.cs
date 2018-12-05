@@ -10,6 +10,7 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
     public class BoMonController : Controller
     {
         // GET: Guest/BoMon
+        SGU db = new SGU();
         BoMonDAO dao = new BoMonDAO();
         public ActionResult HTTT(string mabm,string tenbm)
         {
@@ -19,6 +20,7 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
             ViewBag.ListMH = dao.ListMH(mabm);
             ViewBag.TenBM = tenbm;
             ViewBag.SLThacsi = dao.SLThacsi(mabm);
+            ViewBag.List = db.Bomons.Where(s => s.Flag == true).ToList();
             if (res == null)
                 return View(new Bomon());
             return View(res);

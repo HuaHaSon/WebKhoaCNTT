@@ -34,8 +34,10 @@
                     </div>
 
                     <div class="panel-body">
-                        <p>    @Html.ActionLink("Trình độ đại học", "TDDH", "DaoTao",new { maloaidt="DH",tenloai= "Trình độ đại học" },null)</p>
-                        <p>    @Html.ActionLink("Trình độ thạc sĩ", "TDDH", "DaoTao", new { maloaidt = "TS", tenloai = "Trình độ thạc sĩ" }, null)</p>                     
+                        @foreach (var item in ViewBag.List)
+                        {
+                            <li> @Html.ActionLink((string)item.Tenloai, "TDDH", "DaoTao", new { maloaidt = item.MaloaiDT, tenloai = item.Tenloai }, null)</li>
+                        }
                     </div>
                 </div>
 
@@ -55,7 +57,7 @@
                     @Html.Raw(@Model.NoidungDT1)
                     <hr>
                     <p>Đăng bởi: @Model.Tentaikhoan, Ngày: @Model.Ngaydang</p>
-                    <p>Đính kèm: </p>
+            
                 </div>
 
 

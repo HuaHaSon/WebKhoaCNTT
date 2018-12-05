@@ -15,5 +15,7 @@ namespace Model.ViewModel
         public List<BaidangModel> v5 { get; set; }
         public List<BaidangModel> v6 { get; set; }
         public List<BaidangModel> v7 { get; set; }
+        public BaidangModel v8 { get; set; }
+        public BaidangModel v9 { get; set; }
     }
 }

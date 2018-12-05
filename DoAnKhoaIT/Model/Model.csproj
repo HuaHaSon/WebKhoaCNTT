@@ -66,6 +66,12 @@
     <Compile Include="DAO\Admin\ThongbaochuyentiepDao.cs" />
     <Compile Include="DAO\Admin\ThongtinnguoidungDao.cs" />
     <Compile Include="DAO\DangNhapDao.cs" />
+    <Compile Include="DAO\GiaoVien\HomeDAO.cs" />
+    <Compile Include="DAO\GiaoVien\LichGV.cs" />
+    <Compile Include="DAO\GiaoVien\NghienCuuKH.cs" />
+    <Compile Include="DAO\GiaoVien\SuKien.cs" />
+    <Compile Include="DAO\GiaoVien\ThongBaoDAO.cs" />
+    <Compile Include="DAO\GiaoVien\TinTucDAO.cs" />
     <Compile Include="DAO\Guest\BMTTDAO.cs" />
     <Compile Include="DAO\Guest\BoMonDAO.cs" />
     <Compile Include="DAO\Guest\CLBSVDAO.cs" />
@@ -115,6 +121,7 @@
     <Compile Include="ViewModel\DaotaoModel.cs" />
     <Compile Include="ViewModel\Doituonghienthi.cs" />
     <Compile Include="ViewModel\GioithieuModel.cs" />
+    <Compile Include="ViewModel\LichGV_TheoNgay.cs" />
     <Compile Include="ViewModel\NghiencuukhoahocModel.cs" />
     <Compile Include="ViewModel\ThongbaochuyentiepModel.cs" />
     <Compile Include="ViewModel\ThongtinnguoidungModel.cs" />

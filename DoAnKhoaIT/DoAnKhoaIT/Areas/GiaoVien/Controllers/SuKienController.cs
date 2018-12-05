@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Model.DAO.GiaoVien;
+using Model.EF;
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
     public class SuKienController : Controller
     {
         // GET: GiaoVien/SuKien
-        public ActionResult SK()
+        SuKien dao = new SuKien();
+        public ActionResult SK(int page=1,int pagesize=5)
         {
-            return View();
+            var res = dao.ListSK(page, pagesize);
+            if (res == null)
+                return View(new Baidang());
+            return View(res);
         }
-        public ActionResult SK1()
+        public ActionResult SK1(string mabaidang)
         {
-            return View();
+            var res = dao.CTBD(mabaidang);
+            return View(res);
         }
     }
 }

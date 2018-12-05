@@ -16,7 +16,7 @@ CREATE TABLE Taikhoan
 	Trangthaihd varchar(10), /* ý chỉ trạng thái online */
 	Flag BIT,
 )
-INSERT INTO Taikhoan VALUES( 'IT1','12345','12-12-2007','Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT1','s2Shwzk2H0I=','12-12-2007','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT2','12345','11-2-2012','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT3','12345','3-22-2005','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT4','12345','11-5-2002' ,'Offline',1)
@@ -153,40 +153,40 @@ CREATE TABLE NoidungBMTT
 	MaBMTT VARCHAR(50),
 	Tieude nvarchar(100),
 	NoidungBMTT NVARCHAR(MAX),
-	Tentaikhoan VARCHAR(100),
+	Tentaikhoan nVARCHAR(100),
 	Ngaydang DATETIME,
 	flag BIT,
 	FOREIGN KEY (MaBMTT) REFERENCES Bieumauthutuc(MaBMTT),
-	FOREIGN KEY (Tentaikhoan) REFERENCES Taikhoan(Tentaikhoan)
+	
 )
 GO
 INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
-VALUES   ( 'ND1' , 'BMTT1' , N'Biểu mẫu Chế độ chính sách',N'<p><a href="~/Files/DonXinHoTroChiPhiHocTap.docx">1. Đơn xin hỗ trợ chi ph&iacute; học tập</a></p>
+VALUES   ( 'ND1' , 'BMTT1' , N'Biểu mẫu Chế độ chính sách',N'<p><a href="/Assets/plugins/Uploads/files/DonXinHoTroChiPhiHocTap.docx">1. Đơn xin hỗ trợ chi ph&iacute; học tập</a></p>
 
-<p><a href="~/Files/DonXinMienGiamHocPhi.docx">2. DonXinMienGiamHocPhi</a></p>
+<p><a href="/Assets/plugins/Uploads/files/DonXinMienGiamHocPhi.docx.docx">2. DonXinMienGiamHocPhi</a></p>
 
-<p><a href="~/Files/DonXinTroCapDanToc.docx">3. DonXinTroCapDanToc</a></p>
-','IT1','08-03-2018' , 1)
+<p><a href="/Assets/plugins/Uploads/files/DonXinTroCapDanToc.docx">3. DonXinTroCapDanToc</a></p>
+',N'Thiên Văn Minh','08-03-2018' , 1)
 
 INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
 VALUES ( 'ND2' , 'BMTT1' , N'Biểu mẫu Khóa luận tốt nghiệp' ,N'<p>C&aacute;c biểu mẫu d&agrave;nh cho SV</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; + Phụ lục 1:&nbsp;<a href="~/Files/04.xlsx"> Mẫu đề cương KLTN</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; + Phụ lục 1:&nbsp;<a href="/Assets/plugins/Uploads/files/04.xlsx"> Mẫu đề cương KLTN</a></p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; + Mẫu1:&nbsp;<a href="~/Files/01.pdf"> B&igrave;a KLTN</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; + Mẫu1:&nbsp;<a href="/Assets/plugins/Uploads/files/01.pdf"> B&igrave;a KLTN</a></p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; + Phụ lục 3:&nbsp;<a href="~/Files/02.docx"> Mẫu Đăng k&yacute; KLTN</a></p>
-','IT1', '08-03-2018'  , 1)
-
-INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
-VALUES( 'ND3' , 'BMTT2' ,  N'Quy định về khóa luận Tốt Nghiệp',N'<p>Sinh vi&ecirc;n l&agrave;m kh&oacute;a luận tốt nghiệp&nbsp;tham khảo quy định 1516/QĐ-ĐHSG-ĐT ng&agrave;y 27/09/2011&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y</a>&nbsp;v&agrave; được sửa đổi một số điều theo Quyết định số 2410/QĐ-ĐHSG-ĐT ng&agrave;y 25/11/2015&nbsp;<a href="~/Files/04.xlsx">tại đ&acirc;y.</a></p>
-' ,'IT2', '08-03-2018'  , 1 )
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; + Phụ lục 3:&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx"> Mẫu Đăng k&yacute; KLTN</a></p>
+',N'Thiên Văn Minh', '08-03-2018'  , 1)
 
 INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
-VALUES ( 'ND4' , 'BMTT2' ,  N'Tài liệu hướng dẫn, quy định và các biểu mẫu thực tập',N'<p>Sinh vi&ecirc;n&nbsp;thực tập&nbsp;tốt nghiệp&nbsp;tham khảo&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y.</a></p>' , 'IT3','08-03-2018'  , 1)
+VALUES( 'ND3' , 'BMTT2' ,  N'Quy định về khóa luận Tốt Nghiệp',N'<p>Sinh vi&ecirc;n l&agrave;m kh&oacute;a luận tốt nghiệp&nbsp;tham khảo quy định 1516/QĐ-ĐHSG-ĐT ng&agrave;y 27/09/2011&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y</a>&nbsp;v&agrave; được sửa đổi một số điều theo Quyết định số 2410/QĐ-ĐHSG-ĐT ng&agrave;y 25/11/2015&nbsp;<a href="/Assets/plugins/Uploads/files/04.xlsx">tại đ&acirc;y.</a></p>
+' ,N'Đinh Hoàn', '08-03-2018'  , 1 )
 
 INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
-VALUES  ( 'ND5' , 'BMTT3' ,  N'Khóa Luận Tốt Nghiệp' , N'<p><strong>B1:</strong>&nbsp;Sinh vi&ecirc;n xem điều kiện, quy định để được l&agrave;m kh&oacute;a luận tốt nghiệp tại&nbsp;<a href="~/Files/03.docx">http:~/Files/03.docx</a>.</p>
+VALUES ( 'ND4' , 'BMTT2' ,  N'Tài liệu hướng dẫn, quy định và các biểu mẫu thực tập',N'<p>Sinh vi&ecirc;n&nbsp;thực tập&nbsp;tốt nghiệp&nbsp;tham khảo&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y.</a></p>' , 'Trần Bá Xú','08-03-2018'  , 1)
+
+INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
+VALUES  ( 'ND5' , 'BMTT3' ,  N'Khóa Luận Tốt Nghiệp' , N'<p><strong>B1:</strong>&nbsp;Sinh vi&ecirc;n xem điều kiện, quy định để được l&agrave;m kh&oacute;a luận tốt nghiệp tại&nbsp;<a href="/Assets/plugins/Uploads/files/03.docx">http:/Assets/plugins/Uploads/files/03.docx</a>.</p>
 
 <p><strong>&nbsp;B2:</strong>&nbsp;Khoảng 1 th&aacute;ng trước khi bắt đầu đợt đăng k&yacute; m&ocirc;n học của học kỳ cuối. Khoa sẽ c&ocirc;ng bố danh s&aacute;ch đề t&agrave;i v&agrave; giảng vi&ecirc;n hướng dẫn kh&oacute;a luận tốt nghiệp. Sinh vi&ecirc;n chủ động li&ecirc;n hệ với giảng vi&ecirc;n để trao đổi về đề t&agrave;i, ngo&agrave;i ra sinh vi&ecirc;n c&oacute; thể li&ecirc;n hệ với c&aacute;c giảng vi&ecirc;n (kể cả giảng vi&ecirc;n kh&ocirc;ng c&oacute; t&ecirc;n trong&nbsp; danh s&aacute;ch) để nhờ hướng dẫn v&agrave; đề xuất đề t&agrave;i.</p>
 
@@ -194,12 +194,12 @@ VALUES  ( 'ND5' , 'BMTT3' ,  N'Khóa Luận Tốt Nghiệp' , N'<p><strong>B1:</
 
 <p><strong>B4:</strong>&nbsp;Ph&ograve;ng đ&agrave;o tạo sẽ đăng k&yacute; học phần kh&oacute;a luận tốt nghiệp cho c&aacute;c sinh vi&ecirc;n theo danh s&aacute;ch m&agrave; khoa đ&atilde; gửi. Sinh vi&ecirc;n theo d&otilde;i kiểm tra v&agrave; đ&oacute;ng học ph&iacute; theo th&ocirc;ng b&aacute;o của nh&agrave; trường</p>
 
-<p><strong>B5:</strong>&nbsp;Sinh vi&ecirc;n nộp đơn đăng k&yacute; l&agrave;m kh&oacute;a luận tốt nghiệp về văn ph&ograve;ng khoa. Download mẫu đơn tại link&nbsp;<a href="~/Files/01.pdf">http:~/Files/01.pdf</a>&nbsp; =&gt; phụ lục kh&oacute;a luận (phụ lục 1).</p>
-','IT4','08-03-2018'  , 1)
+<p><strong>B5:</strong>&nbsp;Sinh vi&ecirc;n nộp đơn đăng k&yacute; l&agrave;m kh&oacute;a luận tốt nghiệp về văn ph&ograve;ng khoa. Download mẫu đơn tại link&nbsp;<a href="/Assets/plugins/Uploads/files/01.pdf">http:/Assets/plugins/Uploads/files/01.pdf</a>&nbsp; =&gt; phụ lục kh&oacute;a luận (phụ lục 1).</p>
+',N'Nguyễn Ngọc Hải','08-03-2018'  , 1)
 
 INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
 VALUES ( 'ND6' , 'BMTT3' ,  N'Thủ tục xin thôi học',N'<ul>
-	<li>Bước 1: Sinh vi&ecirc;n điền th&ocirc;ng tin v&agrave;o đơn th&ocirc;i học (tải mẫu đơn <a href="~/Files/04.xlsx">tại đ&acirc;y</a>), đưa cho phụ huynh k&iacute; x&aacute;c nhận sau đ&oacute; nộp về khoa để k&iacute; x&aacute;c nhận.</li>
+	<li>Bước 1: Sinh vi&ecirc;n điền th&ocirc;ng tin v&agrave;o đơn th&ocirc;i học (tải mẫu đơn <a href="/Assets/plugins/Uploads/files/04.xlsx">tại đ&acirc;y</a>), đưa cho phụ huynh k&iacute; x&aacute;c nhận sau đ&oacute; nộp về khoa để k&iacute; x&aacute;c nhận.</li>
 	<li>Bước 2: Sau khi Khoa x&aacute;c nhận, sinh vi&ecirc;n nộp về Ph&ograve;ng C&ocirc;ng t&aacute;c sinh vi&ecirc;n</li>
 	<li>Bước 3: Ph&ograve;ng C&ocirc;ng t&aacute;c sinh vi&ecirc;n l&agrave;m thủ tục ra quyết định th&ocirc;i học cho sinh vi&ecirc;n</li>
 </ul>
@@ -209,10 +209,10 @@ VALUES ( 'ND6' , 'BMTT3' ,  N'Thủ tục xin thôi học',N'<ul>
 <ul>
 	<li>Bước 4: Ph&ograve;ng C&ocirc;ng t&aacute;c sinh vi&ecirc;n sẽ th&ocirc;ng b&aacute;o kết quả giải quyết đơn cho Khoa v&agrave; sinh vi&ecirc;n.</li>
 </ul>
-' ,'IT4', '08-03-2018'  , 1)
+' ,N'Nguyễn Ngọc Hải', '08-03-2018'  , 1)
 
 INSERT INTO NoidungBMTT( MaNDBMTT , MaBMTT ,Tieude,NoidungBMTT ,Tentaikhoan,Ngaydang , flag )
-VALUES ( 'ND7' , 'BMTT4' ,  N'Khóa luận Tốt nghiệp' ,'<p>Sinh vi&ecirc;n xem chi tiết trong&nbsp;<a href="~/Files/01.pdf">file đ&iacute;nh k&egrave;m</a></p>','IT3', '08-03-2018'  , 1)
+VALUES ( 'ND7' , 'BMTT4' ,  N'Khóa luận Tốt nghiệp' ,'<p>Sinh vi&ecirc;n xem chi tiết trong&nbsp;<a href="/Assets/plugins/Uploads/files/01.pdf">file đ&iacute;nh k&egrave;m</a></p>',N'Trần Bá Xú', '08-03-2018'  , 1)
 
 go
 CREATE TABLE Loaibaidang
@@ -246,6 +246,7 @@ INSERT INTO Tag VALUES  ( '6', N'Tuyển dụng','CV5', 1)
 INSERT INTO Tag VALUES  ( '7', N'Tuyển sinh','CV5', 1)
 INSERT INTO Tag VALUES  ( '8', N'Olympic','CV7', 1)
 INSERT INTO Tag VALUES  ( '9', N'CLB Sinhvien','CV7', 1)
+INSERT INTO Tag VALUES  ( '10', N'Học bổng','CV4', 1)
 go
 CREATE TABLE Baidang
 (
@@ -261,30 +262,30 @@ CREATE TABLE Baidang
 	FOREIGN KEY (Maloai) REFERENCES Loaibaidang(Maloai)
 )
 
-INSERT INTO Baidang  VALUES ('BD1','TS',N'Thông báo về việc xét tuyến sinh viên từ chương trình đào tạo đại trà qua chương trình đào tạo chất lượng cao ngành Công nghệ thông tin',N'<p>SINH VI&Ecirc;N XEM CHI TIẾT TẠI FILE Đ&Iacute;NH K&Egrave;M&nbsp; <a href="~/Files/02.docx">FILE 1</a>V&Agrave;&nbsp;<a href="~/Files/01.pdf">FILE 2</a></p>
+INSERT INTO Baidang  VALUES ('BD1','TS',N'Thông báo về việc xét tuyến sinh viên từ chương trình đào tạo đại trà qua chương trình đào tạo chất lượng cao ngành Công nghệ thông tin',N'<p>SINH VI&Ecirc;N XEM CHI TIẾT TẠI FILE Đ&Iacute;NH K&Egrave;M&nbsp; <a href="/Assets/plugins/Uploads/files/02.docx">FILE 1 </a>V&Agrave;&nbsp;<a href="/Assets/plugins/Uploads/files/01.pdf">FILE 2</a></p>
 
 <p>C&aacute;c em n&agrave;o c&oacute; nhu cầu chuyển từ lớp đại tr&agrave; sang lớp chất lượng cao vui l&ograve;ng li&ecirc;n hệ văn ph&ograve;ng khoa CNTT. Hạn cuối Thứ hai ng&agrave;y 01/10/2018</p>
 ','09/28/2018',N'Trần Bá Xú','10/01/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD2','TB',N'Thời khóa biểu lớp kỹ sư CNTT khóa 2018- hệ đào tạo chất lượng cao',N'<p>C&aacute;c bạn sinh vi&ecirc;n xem chi tiết tại&nbsp;<a href="~/Files/03.docx">file đ&iacute;nh k&egrave;m</a></p>
+INSERT INTO Baidang  VALUES ('BD2','TB',N'Thời khóa biểu lớp kỹ sư CNTT khóa 2018- hệ đào tạo chất lượng cao',N'<p>C&aacute;c bạn sinh vi&ecirc;n xem chi tiết tại&nbsp;<a href="/Assets/plugins/Uploads/files/03.docx">file đ&iacute;nh k&egrave;m</a></p>
 ','09/08/2018',N'Trần Bá Xú','12/30/2019','ALL',1)
 
-INSERT INTO Baidang  VALUES ('BD3','TS',N'Giới thiệu CTĐT ngành CNTT hệ đào tạo chất lượng cao',N'<p>C&aacute;c bạn sinh vi&ecirc;n xem chi tiết chương tr&igrave;nh đ&agrave;o tạo Kỹ sư ng&agrave;nh C&ocirc;ng nghệ Th&ocirc;ng tin tại&nbsp;<a href="~/Files/02.docx">file</a></p>
+INSERT INTO Baidang  VALUES ('BD3','TS',N'Giới thiệu CTĐT ngành CNTT hệ đào tạo chất lượng cao',N'<p>C&aacute;c bạn sinh vi&ecirc;n xem chi tiết chương tr&igrave;nh đ&agrave;o tạo Kỹ sư ng&agrave;nh C&ocirc;ng nghệ Th&ocirc;ng tin tại&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">file</a></p>
 ','08/22/2018',N'Trần Bá Xú','12/30/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD4','HDSV',N'Khóa luận dành cho K14',N'<p>B1. Sinh vi&ecirc;n kh&oacute;a 14 l&agrave;m kh&oacute;a luận tốt nghiệp tham khảo quy tr&igrave;nh về kh&oacute;a luận&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y</a></p>
+INSERT INTO Baidang  VALUES ('BD4','HDSV',N'Khóa luận dành cho K14',N'<p>B1. Sinh vi&ecirc;n kh&oacute;a 14 l&agrave;m kh&oacute;a luận tốt nghiệp tham khảo quy tr&igrave;nh về kh&oacute;a luận&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y</a></p>
 
-<p>B2. Xem điều kiện l&agrave;m kh&oacute;a luận tốt nghiệp&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y</a></p>
+<p>B2. Xem điều kiện l&agrave;m kh&oacute;a luận tốt nghiệp&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y</a></p>
 
-<p>B3. Sinh vi&ecirc;n c&oacute; thể chọn giảng vi&ecirc;n hướng dẫn theo<a href="~/Files/02.docx">&nbsp;</a><a href="~/Files/02.docx">danh s&aacute;ch</a>&nbsp;hoặc chủ động t&igrave;m giảng vi&ecirc;n hướng dẫn</p>
+<p>B3. Sinh vi&ecirc;n c&oacute; thể chọn giảng vi&ecirc;n hướng dẫn theo<a href="/Assets/plugins/Uploads/files/02.docx">&nbsp;</a><a href="/Assets/plugins/Uploads/files/02.docx">danh s&aacute;ch</a>&nbsp;hoặc chủ động t&igrave;m giảng vi&ecirc;n hướng dẫn</p>
 
-<p>B4. Sinh vi&ecirc;n điền th&ocirc;ng tin v&agrave;o&nbsp;<a href="~/Files/02.docx">danh s&aacute;ch</a>&nbsp; để khoa gửi về ph&ograve;ng đ&agrave;o tạo trước khi tiến h&agrave;nh đăng k&yacute; m&ocirc;n học cho học kỳ 1 năm 2018-2019.</p>
+<p>B4. Sinh vi&ecirc;n điền th&ocirc;ng tin v&agrave;o&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">danh s&aacute;ch</a>&nbsp; để khoa gửi về ph&ograve;ng đ&agrave;o tạo trước khi tiến h&agrave;nh đăng k&yacute; m&ocirc;n học cho học kỳ 1 năm 2018-2019.</p>
 
 <p>(Hạn Ch&oacute;t ng&agrave;y 15/7/2018)</p>
 ','07/02/2018',N'Trần Bá Xú','07/25/2019','SV',1)
  
 INSERT INTO Baidang  VALUES ('BD5','TB',N'Thay thế các học phần đã hủy ở chu kỳ 2016-2020 (Tiếng Anh1, Tiếng Anh 2, ĐT Căn Bản, Nhập môn máy tính, Phân tích thiết kế giải thuật)',N'
-<p>Hiện tại khoa đ&atilde; đề nghị thay thế c&aacute;c học phần đ&atilde; hủy bỏ của chương tr&igrave;nh đ&agrave;o tạo chu kỳ 2016-2010. Sinh vi&ecirc;n xem để đăng k&yacute; v&agrave; quy đổi tương đương thay thế cho c&aacute;c học phần đ&atilde; hủy bỏ. Xem chi tiết&nbsp;<a href="~/Files/02.docx">Tại đ&acirc;y</a></p>
+<p>Hiện tại khoa đ&atilde; đề nghị thay thế c&aacute;c học phần đ&atilde; hủy bỏ của chương tr&igrave;nh đ&agrave;o tạo chu kỳ 2016-2010. Sinh vi&ecirc;n xem để đăng k&yacute; v&agrave; quy đổi tương đương thay thế cho c&aacute;c học phần đ&atilde; hủy bỏ. Xem chi tiết&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">Tại đ&acirc;y</a></p>
 
 <p>Mọi thắc mắc li&ecirc;n hệ Thầy Sang: Email: thanhsang@sgu.edu.vn, Điện thoai: 01666686557 hoặc C&ocirc; Uy&ecirc;n Nhi: Email:ntunhi@sgu.edu.vn, Điện thoại: 01233362003</p>
 
@@ -293,7 +294,7 @@ INSERT INTO Baidang  VALUES ('BD5','TB',N'Thay thế các học phần đã hủ
 
 INSERT INTO Baidang  VALUES ('BD6','TS',N'Đăng ký học chương trình đào tạo chất lượng cao Kỹ sư CNTT năm 2017',N'<p>Đăng k&yacute; học&nbsp;chương tr&igrave;nh đ&agrave;o tạo chất lượng cao Kỹ sư CNTT năm 2017</p>
 
-<p><a href="~/Files/02.docx">chi tiết</a></p>
+<p><a href="/Assets/plugins/Uploads/files/02.docx">chi tiết</a></p>
 
 <p>&nbsp;</p>
 ','08/31/2017',N'Trần Bá Xú','12/30/2019','SV',1)
@@ -322,12 +323,12 @@ INSERT INTO Baidang  VALUES ('BD7','SK',N'Đăng kí dự hội thảo Blockchai
 ','09/23/2018',N'Đinh Hoàn','10/15/2019','SV',1)
 
 INSERT INTO Baidang  VALUES ('BD8','SK',N'Hội thảo khoa học "Một số vấn đề chọn lọc về CNTT	và truyền thông',N'
-<p>C&aacute;c bạn sinh vi&ecirc;n xem chi tiết&nbsp;<a href="~/Files/02.docx">tại&nbsp;đ&acirc;y</a></p>
+<p>C&aacute;c bạn sinh vi&ecirc;n xem chi tiết&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại&nbsp;đ&acirc;y</a></p>
 ','03/22/2018',N'Đinh Hoàn','12/30/2019','ALL',1)
 
 INSERT INTO Baidang  VALUES ('BD9','TB',N'Về việc học bổng đồng hương Bạc Liêu - Cà Mau năm học 2017-2018',N'<p>C&aacute;c bạn sinh vi&ecirc;n thường tr&uacute; tại 02 tỉnh Bạc Li&ecirc;u, C&agrave; Mau đang học hệ ch&iacute;nh quy tại trường, c&oacute; ho&agrave;n cảnh đặc biệt kh&oacute; khăn, c&oacute; phẩm chất đạo đức tốt, hộ ngh&egrave;o hoặc c&oacute; th&agrave;nh t&iacute;ch đạt điểm trung b&igrave;nh cao, được khen thưởng th&agrave;nh t&iacute;ch kh&aacute;c,....</p>
 
-<p>Chi tiết tại file&nbsp;<a href="~/Files/02.docx">đ&iacute;nh k&egrave;m</a></p>
+<p>Chi tiết tại file&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">đ&iacute;nh k&egrave;m</a></p>
 ','10/05/2017',N'Trần Bá Xú','10/20/2019','SV',1)
 
 INSERT INTO Baidang  VALUES ('BD10','TB',N'Thông báo về việc học bổng Vũ Đình Liệu năm học 2017-2018',N'<p>C&aacute;c bạn sinh vi&ecirc;n l&agrave; :</p>
@@ -340,13 +341,13 @@ INSERT INTO Baidang  VALUES ('BD10','TB',N'Thông báo về việc học bổng 
 
 <p>- Kh&ocirc;ng x&eacute;t học bổng cho sinh vi&ecirc;n đ&atilde; được đ&agrave;i thọ chi ph&iacute; học tập</p>
 
-<p>Chi tiết c&aacute;c bạn xem th&ocirc;ng b&aacute;o&nbsp;<a href="~/Files/02.docx">đ&iacute;nh k&egrave;m</a></p>
+<p>Chi tiết c&aacute;c bạn xem th&ocirc;ng b&aacute;o&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">đ&iacute;nh k&egrave;m</a></p>
 
 <p>&nbsp;</p>
 ','09/19/2017',N'Trần Bá Xú','12/30/2019','SV',1)
 
 INSERT INTO Baidang  VALUES ('BD11','TT',N'Tuyển sinh viên thực tập',N'
-<p>Hiện tại c&ocirc;ng ty&nbsp;KYANON DIGITAL đang c&oacute; nhu cầu tuyển thực tập. C&aacute;c bạn sinh vi&ecirc;n c&oacute; nhu cầu tham khảo&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y</a>.</p>
+<p>Hiện tại c&ocirc;ng ty&nbsp;KYANON DIGITAL đang c&oacute; nhu cầu tuyển thực tập. C&aacute;c bạn sinh vi&ecirc;n c&oacute; nhu cầu tham khảo&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y</a>.</p>
 ','10/23/2018',N'Trần Bá Xú','12/30/2019','SV',1)
 
 INSERT INTO Baidang  VALUES ('BD12','TT',N'Tuyển dụng ở IVC Fresher 2018',N'<p>C&ocirc;ng ty IVC tuyển dụng Fresher năm 2018, với c&aacute;c ng&agrave;nh nghề:&nbsp;</p>
@@ -363,30 +364,30 @@ INSERT INTO Baidang  VALUES ('BD12','TT',N'Tuyển dụng ở IVC Fresher 2018',
 
 <p>C&aacute;c bạn xem th&ecirc;m th&ocirc;ng tin chi tiết ở file đ&iacute;nh k&egrave;m:</p>
 
-<p><a href="~/Files/02.docx">files/sinh-vien/IVC-FRESHER-2018-_3rd.docx</a></p>
+<p><a href="/Assets/plugins/Uploads/files/02.docx">files/sinh-vien/IVC-FRESHER-2018-_3rd.docx</a></p>
 
 <p>&nbsp;</p>
 ','09/25/2018',N'Trần Bá Xú','10/15/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD13','TT',N'Công Ty TMA Tuyển dụng nhân sự',N'<p>Hiện tại c&ocirc;ng ty TMA c&oacute; nhu cầu tuyển dụng nh&acirc;n sự. Sinh vi&ecirc;n quan t&acirc;m tham khảo&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y.</a></p>
+INSERT INTO Baidang  VALUES ('BD13','TT',N'Công Ty TMA Tuyển dụng nhân sự',N'<p>Hiện tại c&ocirc;ng ty TMA c&oacute; nhu cầu tuyển dụng nh&acirc;n sự. Sinh vi&ecirc;n quan t&acirc;m tham khảo&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y.</a></p>
 
 <p>&nbsp;</p>
 ','04/06/2018',N'Trần Bá Xú','12/30/2019','SV',1)
 
 INSERT INTO Baidang  VALUES ('BD14','TT',N'Thông tin tuyển dụng',N'<p>C&ocirc;ng ty Hunter Macdonald cần tuyển juninor&nbsp;, seninor, fresher .NET v&agrave; QC với số lượng nhiều. Sinh vi&ecirc;n n&agrave;o quan t&acirc;m th&igrave; viết CV n&ecirc;u bật nội dung thế mạnh của m&igrave;nh l&agrave; g&igrave;, mong muốn l&agrave;m việc với c&ocirc;ng nghệ n&agrave;o, ... gởi v&agrave;o email&nbsp;<a href="http://fit.sgu.edu.vn/web2017/nhe.ly@huntermacdonald.com">nhe.ly@huntermacdonald.com.</a></p>
 
-<p>Th&ocirc;ng tin chi tiết xem tại:&nbsp;<a href="~/Files/02.docx">https://itviec.com/nha-tuyen-dung/hunter-macdonald</a></p>
+<p>Th&ocirc;ng tin chi tiết xem tại:&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">https://itviec.com/nha-tuyen-dung/hunter-macdonald</a></p>
 
 <p>&nbsp;</p>
 ','09/23/2017',N'Trần Bá Xú','12/30/2019','SV',1)
 
 INSERT INTO Baidang  VALUES ('BD15','TB',N'Thông báo về việc nghiệm thu đề tài khoa học 2017-2018 và đăng ký đề tài khoa học 2018-2019',N'
-<p>Sinh vi&ecirc;n xem th&ocirc;ng b&aacute;o&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y</a></p>
+<p>Sinh vi&ecirc;n xem th&ocirc;ng b&aacute;o&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y</a></p>
 
 <p>&nbsp;</p>
 ','06/18/2018',N'Trần Bá Xú','12/30/2018','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD16','HDSV',N'Danh sách các đội tuyển Olympic 2018',N'<p>C&Aacute;C BẠN SINH VI&Ecirc;N XEM CHI TIẾT TẠI&nbsp;<a href="~/Files/02.docx">FILE Đ&Iacute;NH K&Egrave;M</a>.</p>
+INSERT INTO Baidang  VALUES ('BD16','HDSV',N'Danh sách các đội tuyển Olympic 2018',N'<p>C&Aacute;C BẠN SINH VI&Ecirc;N XEM CHI TIẾT TẠI&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">FILE Đ&Iacute;NH K&Egrave;M</a>.</p>
 
 <p>&nbsp;</p>
 ','08/27/2018',N'Nguyễn Văn Long','12/30/2019','SV',1)
@@ -412,12 +413,12 @@ INSERT INTO Baidang  VALUES ('BD17','HDSV',N'Olympic Tin học 2017',N'<p><stron
 <p>&nbsp;</p>
 ','07/16/2018',N'Nguyễn Văn Long','12/30/2019','ALL',1)
 
-INSERT INTO Baidang  VALUES ('BD18','HDSV',N'Danh sách sinh viên tham gia lớp bồi dưỡng Olympic Tin học 2018',N'<p>C&Aacute;C BẠN SV XEM DANH S&Aacute;CH TẠI&nbsp;<a href="~/Files/02.docx">FILE Đ&Iacute;NH K&Egrave;M</a>.</p>
+INSERT INTO Baidang  VALUES ('BD18','HDSV',N'Danh sách sinh viên tham gia lớp bồi dưỡng Olympic Tin học 2018',N'<p>C&Aacute;C BẠN SV XEM DANH S&Aacute;CH TẠI&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">FILE Đ&Iacute;NH K&Egrave;M</a>.</p>
 
 <p>&nbsp;</p>
 ','07/16/2018',N'Nguyễn Văn Long','12/30/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD19','TB',N'THÔNG BÁO Về việc huấn luyện sinh viên tham dự Olympic Tin học sinh viên Việt Nam và Kỳ thi lập trình sinh viên Quốc tế ACM năm 2018',N'<p>Sinh vi&ecirc;n xem&nbsp;<a href="~/Files/02.docx">chi tiết</a></p>
+INSERT INTO Baidang  VALUES ('BD19','TB',N'THÔNG BÁO Về việc huấn luyện sinh viên tham dự Olympic Tin học sinh viên Việt Nam và Kỳ thi lập trình sinh viên Quốc tế ACM năm 2018',N'<p>Sinh vi&ecirc;n xem&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">chi tiết</a></p>
 
 <p>Lưu &yacute;:</p>
 
@@ -436,16 +437,16 @@ INSERT INTO Baidang  VALUES ('BD20','TB',N'Thông báo về cuộc thi lập tr�
 
 <p>C&aacute;c bạn lưu &yacute; thời gian hết hạn đăng k&yacute;</p>
 
-<p><a href="~/Files/02.docx">files/sinh-vien/63khtv.-tc-cuoc-thi-lap-trinh-makerthon-lan-2_2.pdf</a></p>
+<p><a href="/Assets/plugins/Uploads/files/02.docx">files/sinh-vien/63khtv.-tc-cuoc-thi-lap-trinh-makerthon-lan-2_2.pdf</a></p>
 
-<p><a href="~/Files/02.docx">files/sinh-vien/Makerthon-2018---The-le.pdf</a></p>
+<p><a href="/Assets/plugins/Uploads/files/02.docx">files/sinh-vien/Makerthon-2018---The-le.pdf</a></p>
 
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
 ','10/30/2018',N'Đinh Hoàn','12/30/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD21','TB',N'Thông báo về việc tập đăng ký môn học cho sinh viên khóa 18',N'<p>C&aacute;c bạn sinh vi&ecirc;n kh&oacute;a 18 xem tại<a href="~/Files/02.docx">đ&acirc;y:</a></p>
+INSERT INTO Baidang  VALUES ('BD21','TB',N'Thông báo về việc tập đăng ký môn học cho sinh viên khóa 18',N'<p>C&aacute;c bạn sinh vi&ecirc;n kh&oacute;a 18 xem tại<a href="/Assets/plugins/Uploads/files/02.docx">đ&acirc;y:</a></p>
 
 <p>&nbsp;</p>
 ','10/29/2018',N'Trần Bá Xú','12/30/2019','ALL',1)
@@ -467,7 +468,7 @@ INSERT INTO Baidang  VALUES ('BD23','TT',N'Kế hoạch Seminar giữa sinh viê
 
 <p>Nội dung: chương tr&igrave;nh trao đổi về chương tr&igrave;nh thực tập v&agrave; Fresher tại c&ocirc;ng ty FSoft</p>
 
-<p>Sinh vi&ecirc;n tham dự chương tr&igrave;nh đăng k&yacute; tại&nbsp;<a href="~/Files/02.docx">link</a>&nbsp;đ&iacute;nh k&egrave;m</p>
+<p>Sinh vi&ecirc;n tham dự chương tr&igrave;nh đăng k&yacute; tại&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">link</a>&nbsp;đ&iacute;nh k&egrave;m</p>
 
 <p>Sinh vi&ecirc;n tham gia được cộng điểm r&egrave;n luyện theo quy định</p>
 
@@ -476,11 +477,11 @@ INSERT INTO Baidang  VALUES ('BD23','TT',N'Kế hoạch Seminar giữa sinh viê
 
 INSERT INTO Baidang  VALUES ('BD24','TT',N'Thông tin cuộc thi "HS,SV với ý tưởng khởi nghiệp"',N'<p>Gửi c&aacute;c em th&ocirc;ng tin về&nbsp;Cuộc thi<strong>&nbsp;&ldquo;Học sinh, sinh vi&ecirc;n với &yacute; tưởng khởi nghiệp&rdquo; - SWIS&nbsp;2018</strong>, bao gồm c&aacute;c file (đ&iacute;nh k&egrave;m):</p>
 
-<p>1. Quyết định 3950/QĐ-BGDDT ng&agrave;y 28/09/2018 ban h&agrave;nh thể lệ cuộc thi.&nbsp;&nbsp;<a href="~/Files/02.docx">TẠI Đ&Acirc;Y</a></p>
+<p>1. Quyết định 3950/QĐ-BGDDT ng&agrave;y 28/09/2018 ban h&agrave;nh thể lệ cuộc thi.&nbsp;&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">TẠI Đ&Acirc;Y</a></p>
 
 <p>2. Thể lệ cuộc thi.&nbsp;<a href="https://drive.google.com/open?id=1BrVQT5LBYL4IbSZBpBe0TskyC50NT4W3">TẠI Đ&Acirc;Y</a></p>
 
-<p>3. Th&ocirc;ng b&aacute;o số 2444/TB-ĐHSG ng&agrave;y 15/10/2018 về việc đăng k&iacute; cuộc thi.&nbsp;<a href="~/Files/02.docx">TẠI Đ&Acirc;Y</a></p>
+<p>3. Th&ocirc;ng b&aacute;o số 2444/TB-ĐHSG ng&agrave;y 15/10/2018 về việc đăng k&iacute; cuộc thi.&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">TẠI Đ&Acirc;Y</a></p>
 
 <p>TLNCKH.</p>
 
@@ -501,12 +502,12 @@ INSERT INTO Baidang  VALUES ('BD25','TB',N'Thông báo về việc mở cửa ph
 
 <p>Th&ocirc;ng tin xem file đ&iacute;nh k&egrave;m.</p>
 
-<p><a href="~/Files/02.docx">files/ThongBaomocuaphongmay.pdf</a></p>
+<p><a href="/Assets/plugins/Uploads/files/02.docx">files/ThongBaomocuaphongmay.pdf</a></p>
 
 <p>&nbsp;</p>
 ','10/24/2018',N'Nguyễn Ngọc Hải','12/30/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD26','TB',N'Thông báo về việc tham gia Chương trình "HCMC Student Forum" năm 2018',N'<p>C&aacute;c bạn sinh vi&ecirc;n năm 3 v&agrave; 4 xem&nbsp;<a href="~/Files/02.docx">chi tiết tại</a></p>
+INSERT INTO Baidang  VALUES ('BD26','TB',N'Thông báo về việc tham gia Chương trình "HCMC Student Forum" năm 2018',N'<p>C&aacute;c bạn sinh vi&ecirc;n năm 3 v&agrave; 4 xem&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">chi tiết tại</a></p>
 
 <p>Bạn n&agrave;o đăng k&yacute; vui l&ograve;ng gửi th&ocirc;ng tin (họ t&ecirc;n, MSSV, số điện thoại, email ) về địa chỉ: vpkcntt@sgu.edu.vn trước ng&agrave;y 11 giờ 30 ng&agrave;y 26/10/2018. Cảm ơn c&aacute;c bạn./.</p>
 
@@ -515,7 +516,7 @@ INSERT INTO Baidang  VALUES ('BD26','TB',N'Thông báo về việc tham gia Chư
 <p>&nbsp;</p>
 ','10/25/2018',N'Tràn Bá Xú','12/30/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD27','HDSV',N'Khóa 15_ Kế hoạch tổ chức Cuộc thi tìm hiểu về Biên giới và Bộ đội Biên phòng',N'<p>&nbsp;Chi tiết kế hoạch c&aacute;c bạn xem&nbsp;<a href="~/Files/02.docx">tại:</a></p>
+INSERT INTO Baidang  VALUES ('BD27','HDSV',N'Khóa 15_ Kế hoạch tổ chức Cuộc thi tìm hiểu về Biên giới và Bộ đội Biên phòng',N'<p>&nbsp;Chi tiết kế hoạch c&aacute;c bạn xem&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại:</a></p>
 
 <p>Ghi ch&uacute;: -C&aacute;c bạn sinh vi&ecirc;n nộp b&agrave;i cho lớp trưởng. Lớp trưởng c&aacute;c lớp thu v&agrave; lập danh s&aacute;ch nộp về văn phong khoa trước ng&agrave;y 09/11/2018</p>
 
@@ -528,7 +529,7 @@ INSERT INTO Baidang  VALUES ('BD27','HDSV',N'Khóa 15_ Kế hoạch tổ chức 
 
 INSERT INTO Baidang  VALUES ('BD28','TB',N'Về việc bổ sung hồ sơ nhập học của sinh viên Khóa 18',N'<p>C&aacute;c bạn c&oacute; t&ecirc;n trong danh s&aacute;ch đ&iacute;nh k&egrave;m nộp bổ sung c&aacute;c loại giấy tờ c&ograve;n thiếu tại Ph&ograve;ng C&ocirc;ng t&aacute;c Sinh vi&ecirc;n (HB206) trước ng&agrave;y 15/10/2018. Mọi thắc mắc li&ecirc;n hệ c&ocirc; Nguyễn Ngọc Uyển, số điện thoại :0975.887.964. Qu&aacute; thời hạn tr&ecirc;n nếu sinh vi&ecirc;n kh&ocirc;ng bổ sung được hồ sơ. Nh&agrave; trường sẽ xử l&yacute; theo quy định hiện h&agrave;nh./.</p>
 
-<p>Rất mong c&aacute;c bạn sinh vi&ecirc;n thực hiện tốt nội dung của&nbsp;<a href="~/Files/02.docx">th&ocirc;ng b&aacute;o</a></p>
+<p>Rất mong c&aacute;c bạn sinh vi&ecirc;n thực hiện tốt nội dung của&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">th&ocirc;ng b&aacute;o</a></p>
 
 <p>&nbsp;</p>
 ','10/10/2018',N'Trần Bá Xú','10/15/2019','SV',1)
@@ -602,7 +603,7 @@ INSERT INTO Baidang  VALUES ('BD33','HDSV',N'Tham dự buổi gặp gỡ Đoàn 
 INSERT INTO Baidang  VALUES ('BD34','HDSV',N'Thông báo chương trình sinh viên đến với Bảo tàng năm học 2017-2018',N'<p>ĐỐI TƯỢNG THAM GIA L&Agrave; SINH VI&Ecirc;N NĂM 2 THEO HỌC TẠI TRƯỜNG ĐẠI HỌC S&Agrave;I G&Ograve;N (BẮT BUỘC). SINH VI&Ecirc;N NỘP LẠI DẤU X&Aacute;C NHẬN CỦA BẢO T&Agrave;NG V&Agrave; B&Agrave;I THU HOẠCH CHO LỚP TRƯỞNG. LỚP TRƯỞNG NỘP VỀ&nbsp;VĂN PH&Ograve;NG KHOA HẾT&nbsp;NG&Agrave;Y&nbsp;31/5/2018. SINH VI&Ecirc;N XEM TH&Ecirc;M&nbsp;<a href="http://fit.sgu.edu.vn/web2017/files/DOC050318-003---Copy.pdf">TẠI FILE Đ&Iacute;NH K&Egrave;M</a></p>
 ','05/03/2018',N'Trần Bá Xú','12/30/2019','SV',1)
 
-INSERT INTO Baidang  VALUES ('BD35','HDSV',N'Thử nghiệm sử dụng mẫu thẻ Hội viên loại mới',N'<h1>TH&Ocirc;NG B&Aacute;O QUAN TRỌNG V&Agrave; BẮT BUỘC</h1>
+INSERT INTO Baidang  VALUES ('BD35','HDSV',N'Thử nghiệm sử dụng mẫu thẻ Hội viên loại mới',N'
 
 <p>Thực hiện chủ trương của Trung ương Hội Sinh vi&ecirc;n Việt Nam về việc&nbsp;<strong>thử nghiệm sử dụng mẫu thẻ Hội vi&ecirc;n loại mới</strong>&nbsp;tại trường Đại học S&agrave;i G&ograve;n, tr&acirc;n trọng đề nghị c&aacute;c đồng ch&iacute; phối hợp, thực hiện triển khai c&ocirc;ng t&aacute;c đổi thẻ Hội vi&ecirc;n Hội Sinh vi&ecirc;n Việt Nam tại khoa. Qu&aacute; tr&igrave;nh triển khai thử nghiệm đổi thẻ ho&agrave;n to&agrave;n kh&ocirc;ng ph&aacute;t sinh chi ph&iacute; của sinh vi&ecirc;n.</p>
 
@@ -618,7 +619,7 @@ INSERT INTO Baidang  VALUES ('BD35','HDSV',N'Thử nghiệm sử dụng mẫu th
 
 <p>Ban Chấp h&agrave;nh Li&ecirc;n Chi Hội Sinh vi&ecirc;n khoa ph&acirc;n c&ocirc;ng đồng ch&iacute;&nbsp;<em>Trần Thị Tr&uacute;c Chi</em>&nbsp;(01655080910)&nbsp;phụ tr&aacute;ch nội dung n&agrave;y. Đề nghị c&aacute;c Chi Hội ở c&aacute;c kh&oacute;a&nbsp;15, 16, 17 (cả hệ Đại học v&agrave; Cao đẳng)&nbsp;nghi&ecirc;m t&uacute;c thực hiện v&agrave; triển khai hiệu quả.</p>
 
-<p><a href="~/Files/02.docx">files/TheHV-DSSV-ChiHoi.xlsx</a></p>
+<p><a href="/Assets/plugins/Uploads/files/02.docx">files/TheHV-DSSV-ChiHoi.xlsx</a></p>
 
 <p>&nbsp;</p>
 ','04/09/2018',N'Trần Bá Xú','04/11/2018','SV',1)
@@ -637,7 +638,7 @@ INSERT INTO Baidang  VALUES ('BD36','HDSV',N'Thông báo về cuộc thi tuổi 
 ---clbsv
 
 
-INSERT INTO Baidang  VALUES ('BD37','HDSV',N'Thông báo về việc đăng ký tham dự cuộc thi Vô địch Tin học văn phòng Thế giới năm 2018',N'<p>Đăng k&yacute; tham dự cuộc thi V&ocirc; địch Tin học văn ph&ograve;ng Thế giới năm 2018.&nbsp;<a href="~/Files/02.docx">Chi tiết tại đ&acirc;y.</a></p>
+INSERT INTO Baidang  VALUES ('BD37','HDSV',N'Thông báo về việc đăng ký tham dự cuộc thi Vô địch Tin học văn phòng Thế giới năm 2018',N'<p>Đăng k&yacute; tham dự cuộc thi V&ocirc; địch Tin học văn ph&ograve;ng Thế giới năm 2018.&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">Chi tiết tại đ&acirc;y.</a></p>
 
 <p><a href="http://fit.sgu.edu.vn/web2017/detail/146/thong-bao-v-cu-c-thi-vo-d-ch-tin-h-c-th-gi-i-nam-2019/1">http://fit.sgu.edu.vn/web2017/detail/146/thong-bao-v-cu-c-thi-vo-d-ch-tin-h-c-th-gi-i-nam-2</a></p>
 
@@ -647,14 +648,14 @@ INSERT INTO Baidang  VALUES ('BD37','HDSV',N'Thông báo về việc đăng ký 
 
 
 
-INSERT INTO Baidang  VALUES ('BD38','HDSV',N'Thông báo về việc triển khai chương trình tìm kiếm Đại sứ Adelaide',N'<p>Mọi chi tiết của th&ocirc;ng b&aacute;o c&aacute;c bạn sinh vi&ecirc;n&nbsp;<a href="~/Files/02.docx">xem tại:</a></p>
+INSERT INTO Baidang  VALUES ('BD38','HDSV',N'Thông báo về việc triển khai chương trình tìm kiếm Đại sứ Adelaide',N'<p>Mọi chi tiết của th&ocirc;ng b&aacute;o c&aacute;c bạn sinh vi&ecirc;n&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">xem tại:</a></p>
 
 <p>&nbsp;</p>
 ','09/19/2017',N'Trần Bá Xú','12/30/2019','SV',1)
 
 
 
-INSERT INTO Baidang  VALUES ('BD39','HDSV',N'Lớp phổ cập kiến thức chứng khoáng dành cho sinh viên',N'<p>Căn cứ v&agrave;o c&ocirc;ng văn số 107/UBCK ng&agrave;y 15/10/2017 của Uỷ Ban Chứng Kho&aacute;n nh&agrave; nước. Nh&agrave; trường tạo điều kiện để sinh vi&ecirc;n tham gia lớp phổ cập kiến thức về chứng kho&aacute;n. Xem chi tiết&nbsp;<a href="~/Files/02.docx">tại đ&acirc;y</a>.</p>
+INSERT INTO Baidang  VALUES ('BD39','HDSV',N'Lớp phổ cập kiến thức chứng khoáng dành cho sinh viên',N'<p>Căn cứ v&agrave;o c&ocirc;ng văn số 107/UBCK ng&agrave;y 15/10/2017 của Uỷ Ban Chứng Kho&aacute;n nh&agrave; nước. Nh&agrave; trường tạo điều kiện để sinh vi&ecirc;n tham gia lớp phổ cập kiến thức về chứng kho&aacute;n. Xem chi tiết&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">tại đ&acirc;y</a>.</p>
 
 <p>&nbsp;</p>
 ','11/04/2018',N'Trần Bá Xú','12/30/2019','SV',1)
@@ -666,7 +667,7 @@ INSERT INTO Baidang  VALUES ('BD40','HDSV',N'Thông tin đăng kí nhận vé th
 - V&eacute; được sử dụng trong ng&agrave;y 31/10/2018&nbsp;<br />
 C&ograve;n chần chờ g&igrave; nữa m&agrave; kh&ocirc;ng đăng k&yacute; ngay để nhận v&eacute; ho&agrave;n to&agrave;n miễn ph&iacute;<br />
 Thời hạn đăng k&yacute; t&iacute;nh từ b&acirc;y giờ cho đến 12h00 ng&agrave;y 31/10/2018 nha c&aacute;c bạn. Nhanh tay l&ecirc;n v&igrave; số lượng c&oacute; hạn n&egrave;.&nbsp;<br />
-Link đăng k&yacute;:&nbsp;<a href="~/Files/02.docx">~/Files/02.docx</a></p>
+Link đăng k&yacute;:&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">/Assets/plugins/Uploads/files/02.docx</a></p>
 
 <p>&nbsp;</p>
 ','10/29/2018',N'Trần Bá Xú','12/30/2019','SV',1)
@@ -688,7 +689,7 @@ Th&ocirc;ng tin chi tiết hội thi&nbsp;<a href="https://l.facebook.com/l.php?
 
 
 
-INSERT INTO Baidang  VALUES ('BD42','HDSV',N'THE WINNER - Trận đấu đầy gay cấn và hồi hộp dành cho những chiến binh đã trở lại',N'<h1>THE WINNER - Trận đấu đầy gay cấn v&agrave; hồi hộp d&agrave;nh cho những chiến binh đ&atilde; trở lại</h1>
+INSERT INTO Baidang  VALUES ('BD42','HDSV',N'THE WINNER - Trận đấu đầy gay cấn và hồi hộp dành cho những chiến binh đã trở lại',N'
 
 <p>Bạn muốn trau dồi v&agrave; n&acirc;ng cao vốn tiếng Anh?</p>
 
@@ -744,7 +745,454 @@ Xin ch&acirc;n th&agrave;nh cảm ơn&nbsp;</p>
 ','10/16/2018',N'Trần Bá Xú','12/30/2019','SV',1)
 
 
-go
+INSERT INTO Baidang  VALUES ('BD43','TB',N'Trao học bổng cho đối tượng tân sinh viên vượt khó học giỏi',N'<p>Nhằm hỗ trợ những sinh vi&ecirc;n c&oacute; ho&agrave;n cảnh kh&oacute; khăn c&oacute; th&ecirc;m động lực để vươn l&ecirc;n trong học tập v&agrave; r&egrave;n luyện, Trung t&acirc;m H&ocirc;̃ trợ học sinh, sinh vi&ecirc;n Th&agrave;nh phố tổ chức trao học bổng cho đối tượng t&acirc;n sinh vi&ecirc;n vượt kh&oacute; học giỏi đang theo học tại c&aacute;c trường Đại học, Học viện, Cao đẳng tr&ecirc;n địa b&agrave;n TP.HCM trong năm học 2018 &ndash; 2019.<br />
+&nbsp;Đối tượng:&nbsp;<br />
+- C&oacute; ho&agrave;n cảnh kh&oacute; khăn, gia đ&igrave;nh ch&iacute;nh s&aacute;ch hoặc sổ hộ ngh&egrave;o (bản sao c&oacute; c&ocirc;ng chứng).<br />
+- Mồ c&ocirc;i cha lẫn mẹ (thể hiện trong thư giới thiệu).<br />
+* Đối với t&acirc;n sinh vi&ecirc;n kh&oacute;a 18, c&oacute; tổng điểm thi 3 m&ocirc;n tr&ecirc;n 20 điểm (kh&ocirc;ng nh&acirc;n hệ số, kh&ocirc;ng t&iacute;nh điểm ưu ti&ecirc;n).<br />
+&nbsp;*Đối với sinh vi&ecirc;n năm 2 trở l&ecirc;n c&oacute; tổng điểm trung b&igrave;nh năm học 2017 - 2018 đạt từ 2.5 trở l&ecirc;n.<br />
+Thời gian nộp hồ sơ: Trước 12 giờ ng&agrave;y 20/9/2018. (Li&ecirc;n hệ Thảo Đo&agrave;n - 0973472871)<br />
+Th&ocirc;ng tin chi tiết vui l&ograve;ng xem th&ecirc;m tại link cuối b&agrave;i.<br />
+<a href="http://www.sac.vn/article/tiep-nhan-ho-so-du-xet-hoc-bong-nam-hoc-2018-2019-danh-cho-tan-sinh-vien?fbclid=IwAR3gj16WPRKntOMA046zsjT0TQOCKHMmqQCK00s-UBV6Q1qA7ggmGbsA3H8">http://www.sac.vn/&hellip;/tiep-nhan-ho-so-du-xet-hoc-bong-nam-hoc&hellip;</a><br />
+<a href="http://www.sac.vn/article/tiep-nhan-ho-so-du-xet-hoc-bong-nam-hoc-2018-2019-danh-cho-tan-sinh-vien?fbclid=IwAR2C7HqtYRPKzzZrB8sNJnzGRJLisVMNkLL3r7ZPrqmzF74FUF2JIpAl6PI">http://www.sac.vn/&hellip;/tiep-nhan-ho-so-du-xet-hoc-bong-nam-hoc&hellip;</a><br />
+<a href="http://www.sac.vn/article/thong-bao-trien-khai-quy-hoc-bong-unilever-khoi-dau-thanh-cong-nam-2018?fbclid=IwAR2RgFBqCjqXuNrvv_Icuf6p20TgsfUMzZdB62gozCP1DUEb8nxHdhPDnEE">http://www.sac.vn/&hellip;/thong-bao-trien-khai-quy-hoc-bong-unile&hellip;</a></p>
+','09/18/2018',N'Đinh Hoàn','10/20/2019','SV',1)
+
+
+INSERT INTO Baidang  VALUES ('BD44','TB',N'Học bổng thắp sáng ước mơ cho Tuổi trẻ khoa Công nghệ thông tin',N'<p>Nhằm hỗ trợ sinh vi&ecirc;n c&oacute; ho&agrave;n cảnh kh&oacute; khăn c&oacute; th&ecirc;m động lực để vươn l&ecirc;n trong học tập v&agrave; r&egrave;n luyện, BCH d&agrave;nh tặng 05 suất học bổng cho 05 bạn sinh vi&ecirc;n khoa C&ocirc;ng nghệ Th&ocirc;ng tin c&oacute; ho&agrave;n cảnh kh&oacute; khăn.</p>
+
+<p>Đối tượng: - Sinh vi&ecirc;n, c&aacute;n bộ Đo&agrave;n - Hội c&oacute; ho&agrave;n cảnh gia đ&igrave;nh kh&oacute; khăn, thuộc diện ch&iacute;nh s&aacute;ch, sinh vi&ecirc;n mồ c&ocirc;i, khuyết tật.</p>
+
+<p>Hồ sơ bao gồm:&nbsp;<br />
+- Thư đ&ecirc;̀ đạt nguy&ecirc;̣n vọng c&oacute; d&aacute;n ảnh 3x4 (mẫu đ&iacute;nh k&egrave;m).<br />
+- Thư giới thi&ecirc;̣u tr&igrave;nh b&agrave;y v&ecirc;̀ hoàn cảnh gia đình và khát vọng học t&acirc;̣p.<br />
+- Photo thẻ sinh vi&ecirc;n, chứng minh nh&acirc;n d&acirc;n.<br />
+- Photo Gi&acirc;́y xác nh&acirc;̣n gia đình khó khăn, gia đình chính sách hoặc s&ocirc;̉ h&ocirc;̣ nghèo.&nbsp;<br />
+(mọi giấy tờ tr&ecirc;n kh&ocirc;ng cần c&ocirc;ng chứng)</p>
+
+<p>Mọi thắc mắc v&agrave; Hồ sơ sẽ gửi trực tiếp cho bạn&nbsp;<a href="https://www.facebook.com/ngoc.chuot.50767?__tn__=%2CdKH-R-R&amp;eid=ARBJSO4e9wp1FOAfo5eoxPkfP9eiw3NuftNRKaZHbvBSKaw1S2O1caEanhSu8HVHEm_XvNX-1yJlsKyu&amp;fref=mentions&amp;hc_location=group">Tr&uacute;c Chi</a>, sđt li&ecirc;n hệ: 01655080910</p>
+
+<p>Hạn ch&oacute;t nhận hồ sơ l&agrave; 12 giờ ng&agrave;y 06/04/2018 (thứ 6)</p>
+
+<p><a href="https://drive.google.com/file/d/1BstVQiyJTWnWnJ_0ZcESkMT8rGswCDuc/view?usp=sharing&amp;fbclid=IwAR3Hh5fNT69C7ewFQckM9waNT_EgUC_zetFPI43VC2LDTlT5ad3mlhH4las">https://drive.google.com/&hellip;/1BstVQiyJTWnWnJ_0ZcESkMT8r&hellip;/view&hellip;</a></p>
+
+<p>&nbsp;</p>
+','04/04/2018',N'Đinh Hoàn','10/20/2019','SV',1)
+
+INSERT INTO Baidang  VALUES ('BD45','TB',N'Thông báo học bổng Viso - Khởi đầu ngời sáng dành cho sinh viên',N'<p>Nhằm hỗ trợ những sinh vi&ecirc;n c&oacute; ho&agrave;n cảnh đặc biệt kh&oacute; khăn, tiếp th&ecirc;m động lực để vươn l&ecirc;n trong học tập v&agrave; r&egrave;n luyện, Trung t&acirc;m H&ocirc;̃ trợ học sinh, sinh vi&ecirc;n Th&agrave;nh phố phối hợp với C&ocirc;ng&nbsp;ty TNHH Quốc tế Unilever Việt Nam tổ chức trao quỹ học bổng &ldquo;Viso - Khởi đầu ngời s&aacute;ng&rdquo; cho sinh vi&ecirc;n vượt kh&oacute;, học giỏi đang theo học tại c&aacute;c trường tr&ecirc;n địa b&agrave;n TP.HCM năm học 2017 &ndash; 2018.<br />
+II. Đối tượng &ndash; ti&ecirc;u chuẩn<br />
+- Sinh vi&ecirc;n năm 2,3,4 đang theo học tại c&aacute;c trường Đại học, Học viện, Cao đẳng tr&ecirc;n địa bàn TP.HCM.<br />
+- Ho&agrave;n cảnh gia đ&igrave;nh kh&oacute; khăn, diện ch&iacute;nh s&aacute;ch.&nbsp;<br />
+- C&oacute; điểm trung b&igrave;nh năm học 2016 &ndash; 2017 đạt từ 7.0 (đối với c&aacute;c trường đ&agrave;o tạo theo ni&ecirc;n chế), 2.8 điểm trở l&ecirc;n (đối với c&aacute;c trường đ&agrave;o tạo theo t&iacute;n chỉ) v&agrave; c&oacute; tổng điểm tr&uacute;ng tuyển từ 19 điểm trở l&ecirc;n (đối với t&acirc;n sinh vi&ecirc;n).<br />
+- Ưu ti&ecirc;n sinh vi&ecirc;n mồ c&ocirc;i, khuyết tật.<br />
+- Chưa nhận học bổng x&atilde; hội trong năm 2017.<br />
+III. Hồ sơ x&eacute;t trao học bổng bao gồm:<br />
+- Thư đ&ecirc;̀ đạt nguy&ecirc;̣n vọng c&oacute; d&aacute;n ảnh 3x4 v&agrave; có xác nh&acirc;̣n của Đoàn Thanh ni&ecirc;n &ndash; Hội Sinh vi&ecirc;n trường&nbsp;<br />
+- Thư giới thi&ecirc;̣u tr&igrave;nh b&agrave;y v&ecirc;̀ hoàn cảnh gia đình và khát vọng học t&acirc;̣p.<br />
+- Bản sao bảng điểm năm học 2016 &ndash; 2017 hoặc gi&acirc;́y báo nh&acirc;̣p học, gi&acirc;́y báo trúng tuy&ecirc;̉n có th&ecirc;̉ hi&ecirc;̣n s&ocirc;́ đi&ecirc;̉m đạt được (đối với t&acirc;n sinh vi&ecirc;n) do trường ban h&agrave;nh hoặc bản sao có c&ocirc;ng chứng.<br />
+- Bản sao CMND, thẻ sinh vi&ecirc;n (hoặc giấy x&aacute;c nhận sinh vi&ecirc;n)<br />
+- Bản sao Gi&acirc;́y xác nh&acirc;̣n gia đình khó khăn, gia đình chính sách hoặc s&ocirc;̉ h&ocirc;̣ nghèo c&oacute; c&ocirc;ng chứng.&nbsp;<br />
+Hạn ch&oacute;t gửi hồ sơ v&agrave; mail về: bichchiit1701@gmail.com l&uacute;c 8h ng&agrave;y 27/10/2017</p>
+','10/26/2018',N'Đinh Hoàn','10/20/2019','SV',1)
+
+
+INSERT INTO Baidang  VALUES ('BD46','TB',N'Thông báo tuyển sinh đào tạo trình độ thạc sĩ đợt 2 năm 2018',N'<p>Trường Đại học C&ocirc;ng nghệ Th&ocirc;ng tin-Đại học S&agrave;i G&ograve;n&nbsp;th&ocirc;ng b&aacute;o tuyển sinh đ&agrave;o tạo tr&igrave;nh độ thạc sĩ đợt 2&nbsp;năm 2018 như sau:</p>
+
+<p><strong>NG&Agrave;NH TUYỂN SINH</strong></p>
+
+<ul>
+	<li>C&ocirc;ng nghệ th&ocirc;ng tin, m&atilde; ng&agrave;nh: 848 02 01.</li>
+	<li>Khoa học m&aacute;y t&iacute;nh, m&atilde; ng&agrave;nh: 848 01 01.</li>
+</ul>
+
+<p><strong>H&Igrave;NH THỨC Đ&Agrave;O TẠO, THỜI GIAN Đ&Agrave;O TẠO</strong></p>
+
+<p>Học tập trung, thời gian đ&agrave;o tạo 02 (hai) năm</p>
+
+<p><strong>M&Ocirc;N THI TUYỂN V&Agrave; THỜI GIAN THI TUYỂN</strong></p>
+
+<ol>
+	<li><strong>C&aacute;c m&ocirc;n thi tuyển:</strong></li>
+</ol>
+
+<ul>
+	<li>M&ocirc;n cơ bản (To&aacute;n cho m&aacute;y t&iacute;nh): thi tự luận.</li>
+	<li>M&ocirc;n cơ sở (Tin học cơ sở): thi tự luận.</li>
+	<li>M&ocirc;n&nbsp;tiếng Anh: thi trắc nghiệm.</li>
+</ul>
+
+<p>Nếu th&iacute; sinh đăng k&yacute; thi m&ocirc;n ngoại ngữ kh&aacute;c (tiếng Ph&aacute;p, Nga, Đức, Trung, Nhật) th&igrave; c&oacute; thể đăng k&yacute; thi tại c&aacute;c điểm thi ngoại ngữ trong kỳ tuyển sinh sau đại học do ĐHQG-HCM tổ chức.</p>
+
+<ol>
+	<li><strong>Ng&agrave;y thi tuyển:&nbsp;</strong>dự kiến&nbsp;<strong>20-21/10/2018</strong></li>
+	<li><strong>Lệ ph&iacute; thi:&nbsp;</strong>120.000đ/m&ocirc;n.</li>
+</ol>
+
+<p><strong>CHỈ TI&Ecirc;U TUYỂN SINH</strong></p>
+
+<ul>
+	<li>Ng&agrave;nh Khoa học m&aacute;y t&iacute;nh: 24&nbsp;học vi&ecirc;n.</li>
+	<li>Ng&agrave;nh C&ocirc;ng nghệ th&ocirc;ng tin: 53&nbsp;học vi&ecirc;n.</li>
+</ul>
+
+<p><strong>ƯU Đ&Atilde;I HỌC PH&Iacute; SAU KHI TH&Iacute; SINH TR&Uacute;NG TUYỂN</strong></p>
+
+<p>Giảm 10% học ph&iacute; đối với sinh vi&ecirc;n tốt nghiệp đại học tại Trường Đại học S&agrave;i G&ograve;n; giảng vi&ecirc;n c&aacute;c Trường Đại học, Cao đẳng, Trung học Phổ th&ocirc;ng.</p>
+
+<p>Giảm 5% học ph&iacute; đối với c&aacute;c đối tượng kh&aacute;c.</p>
+
+<p>Chế độ ưu đ&atilde;i học ph&iacute; căn cứ theo Quy định h&agrave;ng năm của Trường.</p>
+
+<p><strong>THỜI GIAN C&Ocirc;NG BỐ KẾT QUẢ THI V&Agrave; NG&Agrave;Y KHAI GIẢNG</strong></p>
+
+<p>Thời gian c&ocirc;ng bố kết quả: dự kiến ng&agrave;y 21/11/2018.</p>
+
+<p>Ng&agrave;y khai giảng, nhập học: dự kiến đầu th&aacute;ng 12/2018.</p>
+
+<p><strong>ĐIỀU KIỆN DỰ TUYỂN</strong></p>
+
+<p>Người dự tuyển đ&agrave;o tạo tr&igrave;nh độ thạc sĩ phải thoả c&aacute;c điều kiện sau:</p>
+
+<ol>
+	<li>Văn bằng&nbsp;tốt nghiệp đại học:&nbsp;phải thoả một trong c&aacute;c điều kiện như sau:</li>
+</ol>
+
+<ul>
+	<li>Đ&atilde; tốt nghiệp đại học ng&agrave;nh đ&uacute;ng, ng&agrave;nh ph&ugrave; hợp với ng&agrave;nh đăng k&yacute; dự thi&nbsp;<a href="https://sdh.uit.edu.vn/sites/default/files/uploads/files/201802/phu_luc_1.docx">(Phụ lục 1)</a>.</li>
+	<li>Th&iacute; sinh tốt nghiệp đại học ng&agrave;nh gần, ng&agrave;nh kh&aacute;c với ng&agrave;nh đăng k&yacute; dự thi phải học bổ sung kiến thức để đạt y&ecirc;u cầu chuy&ecirc;n m&ocirc;n dự thi đ&agrave;o tạo tr&igrave;nh độ thạc sĩ&nbsp;<a href="https://sdh.uit.edu.vn/sites/default/files/uploads/files/201802/phu_luc_1.docx">(Phụ lục 1)</a>.</li>
+	<li>Phải c&oacute; đủ tr&igrave;nh độ ngoại ngữ để tham khảo t&agrave;i liệu, tham gia hoạt động chuy&ecirc;n m&ocirc;n phục vụ nghi&ecirc;n cứu v&agrave; thực hiện đề t&agrave;i luận văn.</li>
+</ul>
+
+<ol>
+	<li>C&oacute; đủ sức khỏe để học tập.</li>
+</ol>
+
+<p><strong>ĐIỀU KIỆN MIỄN THI M&Ocirc;N TIẾNG ANH</strong></p>
+
+<p>Người dự tuyển được miễn thi m&ocirc;n tiếng Anh nếu đ&aacute;p ứng một trong c&aacute;c y&ecirc;u cầu sau:</p>
+
+<ul>
+	<li>C&oacute; bằng tốt nghiệp đại học ng&agrave;nh&nbsp;ng&ocirc;n ngữ nước ngo&agrave;i (Anh, Ph&aacute;p, Nga, Đức, Trung, Nhật)&nbsp;do c&aacute;c cơ sở đ&agrave;o tạo của Việt Nam cấp;</li>
+	<li>C&oacute; bằng tốt nghiệp đại học hay sau đại học&nbsp;được đ&agrave;o tạo to&agrave;n thời gian ở&nbsp;nước ngo&agrave;i m&agrave; ng&ocirc;n ngữ&nbsp;sử dụng trong đ&agrave;o tạo&nbsp;l&agrave; tiếng&nbsp;Anh v&agrave; được cơ quan c&oacute; thẩm quyền c&ocirc;ng nhận văn bằng theo quy định hiện h&agrave;nh;</li>
+	<li>C&oacute; bằng tốt nghiệp đại học&nbsp;của&nbsp;c&aacute;c chương tr&igrave;nh&nbsp;ti&ecirc;n tiến theo Đề &aacute;n của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo, trong đ&oacute; chương tr&igrave;nh giảng dạy ho&agrave;n to&agrave;n bằng tiếng Anh được Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo hoặc ĐHSG c&ocirc;ng nhận;</li>
+	<li>C&oacute; một trong c&aacute;c&nbsp;chứng&nbsp;chỉ, chứng nhận tr&igrave;nh độ ngoại ngữ được quy định tối thiểu cấp độ B1, c&ograve;n hiệu lực 2 năm t&iacute;nh từ ng&agrave;y cấp chứng chỉ/ chứng nhận đến ng&agrave;y 20/10/2018:</li>
+</ul>
+
+<p>Tiếng Anh&nbsp;Cấp&nbsp;độ CEFR B1:</p>
+
+<table align="center" style="width:612px">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>IELTS</strong></p>
+			</td>
+			<td>
+			<p><strong>TOEFL</strong></p>
+			</td>
+			<td>
+			<p><strong>TOEIC</strong></p>
+			</td>
+			<td>
+			<p><strong>Cambridge Exam</strong></p>
+			</td>
+			<td>
+			<p><strong>BEC</strong></p>
+			</td>
+			<td>
+			<p><strong>BULATS</strong></p>
+			</td>
+			<td>
+			<p><strong>VNU-EPT</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>4.5</p>
+			</td>
+			<td>
+			<p>450 PBT/ITP</p>
+
+			<p>133 CBT</p>
+
+			<p>45 iBT</p>
+			</td>
+			<td>
+			<p>450</p>
+			</td>
+			<td>
+			<p>Preliminary PET</p>
+			</td>
+			<td>
+			<p>Business Preliminary</p>
+			</td>
+			<td>
+			<p>40</p>
+			</td>
+			<td>
+			<p>201</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Một số tiếng kh&aacute;c:</p>
+
+<table style="width:624px">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Cấp độ (CEFR)</strong></p>
+			</td>
+			<td>
+			<p><strong>Tiếng Nga</strong></p>
+			</td>
+			<td>
+			<p><strong>Tiếng Ph&aacute;p</strong></p>
+			</td>
+			<td>
+			<p><strong>Tiếng Đức</strong></p>
+			</td>
+			<td>
+			<p><strong>Tiếng Trung</strong></p>
+			</td>
+			<td>
+			<p><strong>Tiếng Nhật</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>B1</strong></p>
+			</td>
+			<td>
+			<p>TRKI 1</p>
+			</td>
+			<td>
+			<p>DELF B1<br />
+			TCF niveau B1</p>
+			</td>
+			<td>
+			<p>B1<br />
+			ZD</p>
+			</td>
+			<td>
+			<p>HSK<br />
+			cấp độ 3</p>
+			</td>
+			<td>
+			<p>JLPT N3</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Chứng chỉ tiếng Anh tr&igrave;nh độ B1 của Trường Đại học Ngoại ngữ-Đại học Quốc gia H&agrave; Nội; Trường Đại học H&agrave; Nội; Trường Đại học Ngoại ngữ-Đại học Đ&agrave; Nẵng; Trường Đại học Ngoại ngữ-Đại học Huế; Trường Đại học Sư phạm Tp.HCM; Trường Đại học Th&aacute;i Nguy&ecirc;n; Trường Đại học Sư phạm H&agrave; Nội; Trường Đại học Vinh; Trường Đại học Cần Thơ; Trung t&acirc;m SEAMEO RETRAC.</li>
+	<li>Giấy&nbsp;chứng&nbsp;nhận điểm m&ocirc;n thi tiếng Anh đạt từ 50 điểm trở l&ecirc;n trong kỳ thi tuyển sinh sau đại học do ĐHSG tổ chức (từ đợt&nbsp;12&nbsp;năm 2016).</li>
+</ul>
+
+<p><strong>HỒ SƠ ĐĂNG K&Yacute; DỰ TUYỂN</strong></p>
+
+<ol>
+	<li><strong>Thời gian nhận hồ sơ:</strong><strong>&nbsp;</strong><strong>từ ng&agrave;y ra th&ocirc;ng b&aacute;o đến hết ng&agrave;y&nbsp;</strong><strong>02/10/2018</strong>.</li>
+	<li><strong>Lệ ph&iacute; hồ sơ:&nbsp;</strong>60.000 đ/ bộ.</li>
+	<li><strong>Hồ sơ đăng k&yacute; dự tuyển&nbsp;gồm:</strong>
+	<ol>
+		<li>Đơn xin&nbsp;dự&nbsp;tuyển&nbsp;</li>
+		<li>L&yacute; lịch&nbsp;khoa học&nbsp;</li>
+		<li>Bản sao bằng tốt nghiệp đại học;</li>
+		<li>Bản sao bảng điểm đại học;</li>
+		<li>Bản sao bằng tốt nghiệp cao đẳng (nếu c&oacute;);</li>
+		<li>Bản sao bảng điểm cao đẳng (nếu c&oacute;);</li>
+		<li>Bảng điểm&nbsp;c&aacute;c m&ocirc;n học&nbsp;bổ t&uacute;c kiến thức (nếu thuộc đối tượng ng&agrave;nh gần);</li>
+		<li>Bản sao văn bằng, chứng chỉ ngoại ngữ (nếu c&oacute;);</li>
+		<li>Giấy chứng nhận&nbsp;sức khỏe;</li>
+		<li>Giấy chứng nhận đối tượng ch&iacute;nh s&aacute;ch (nếu c&oacute;);</li>
+		<li>2 tấm ảnh 3x4&nbsp;(<em>ghi r&otilde; họ t&ecirc;n, ng&agrave;y sinh</em>).</li>
+	</ol>
+	</li>
+</ol>
+
+<p><strong>ĐỐI&nbsp;TƯỢNG&nbsp;V&Agrave; CH&Iacute;NH S&Aacute;CH ƯU TI&Ecirc;N</strong></p>
+
+<ol>
+	<li><strong>Đối tượng ưu ti&ecirc;n:</strong></li>
+</ol>
+
+<p>Người c&oacute; thời gian c&ocirc;ng t&aacute;c li&ecirc;n tục từ 2 năm trở l&ecirc;n (t&iacute;nh đến ng&agrave;y hết hạn nộp hồ sơ đăng k&yacute; dự tuyển) tại c&aacute;c địa phương được quy định l&agrave; Khu vực 1 trong Quy chế thi trung học phổ th&ocirc;ng quốc gia v&agrave; phải c&oacute; quyết định tiếp nhận c&ocirc;ng t&aacute;c hoặc điều động, biệt ph&aacute;i c&ocirc;ng t&aacute;c của cơ quan, tổ chức c&oacute; thẩm quyền;</p>
+
+<p>Thương binh, người hưởng ch&iacute;nh s&aacute;ch thương binh;</p>
+
+<p>Con liệt sĩ;</p>
+
+<p>Anh h&ugrave;ng lực lượng vũ trang, anh h&ugrave;ng lao động;</p>
+
+<p>Con đẻ của người hoạt động kh&aacute;ng chiến bị nhiễm chất độc ho&aacute; học, được Uỷ ban nh&acirc;n d&acirc;n cấp tỉnh c&ocirc;ng nhận bị dị dạng, dị tật, suy giảm khả năng tự lực trong sinh hoạt, học tập do hậu quả của chất độc ho&aacute; học;</p>
+
+<p>Người thuộc d&acirc;n tộc thiểu số.</p>
+
+<p><strong>&nbsp; &nbsp;</strong> 2.<strong> Mức ưu ti&ecirc;n:</strong></p>
+
+<p>Người thuộc diện ưu ti&ecirc;n được cộng v&agrave;o kết quả thi 10 điểm (thang điểm 100) cho m&ocirc;n tiếng Anh nếu kh&ocirc;ng thuộc diện được miễn thi tiếng Anh, v&agrave; cộng 1.0 điểm (thang điểm 10) cho một trong hai m&ocirc;n thi theo nguy&ecirc;n tắc ưu ti&ecirc;n m&ocirc;n thi c&oacute; điểm &lt;5.0. C&aacute;c trường hợp c&ograve;n lại th&igrave; cộng 1.0 điểm v&agrave;o m&ocirc;n cơ sở.</p>
+','09/13/2018',N'Trần Bá Xú','10/01/2019','GV',1)
+
+
+
+INSERT INTO Baidang  VALUES ('BD47','TB',N'Thông báo sinh hoạt đầu khoá cao học khoá 13 đợt 2 năm 2018',N'<p>Trường Đại học S&agrave;i G&ograve;n&nbsp;th&ocirc;ng b&aacute;o đến c&aacute;c Anh/Chị học vi&ecirc;n đ&atilde; tr&uacute;ng tuyển chương tr&igrave;nh đ&agrave;o tạo tr&igrave;nh độ thạc sĩ kho&aacute; 13 đợt 2&nbsp;bao gồm: 35&nbsp;học vi&ecirc;n lớp C&ocirc;ng nghệ Th&ocirc;ng tin, 23&nbsp;học vi&ecirc;n lớp Khoa học M&aacute;y t&iacute;nh tham gia buổi sinh hoạt đầu kh&oacute;a như sau:</p>
+
+<p>Thời gian: L&uacute;c&nbsp;<strong>14&nbsp;giờ 00</strong>&nbsp;s&aacute;ng ng&agrave;y&nbsp;<strong>08/12/2018</strong>.</p>
+
+<p>Địa điểm:Khu A&nbsp;Ph&ograve;ng A107,&nbsp; 273 An Dương Vương, P.3, Q.5&nbsp;TP.HCM</p>
+
+<p>Th&agrave;nh phần tham dự: Trưởng khoa- Khoa học m&aacute;y t&iacute;nh, Trưởng Bộ m&ocirc;n- Khoa học v&agrave; Kỹ thuật th&ocirc;ng tin, Trưởng ph&ograve;ng- ĐTSĐH&amp;KHCN, v&agrave; c&aacute;c Thầy/C&ocirc; trong ph&ograve;ng, khoa, bộ m&ocirc;n.</p>
+
+<p>Đề nghị c&aacute;c Anh/Chị thu xếp thời gian tham dự đầy đủ v&agrave; đ&uacute;ng giờ.</p>
+
+<p>Tr&acirc;n trọng.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+
+<p>P/S: Anh/Chị học vi&ecirc;n c&oacute; thể đến l&agrave;m thủ tục nhập học v&agrave; nộp minh chứng miễn giảm s&aacute;ng ng&agrave;y 08/12/2018.</p>
+','11/28/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD48','SK',N'Thư mời tham gia Giải thưởng Nhân tài Đất Việt 2018',N'<p>K&iacute;nh gửi Qu&yacute; Thầy/C&ocirc;,</p>
+
+<p>&nbsp;</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN k&iacute;nh gửi Qu&yacute; Thầy/C&ocirc; &quot;Thư mời tham gia giải thưởng Nh&acirc;n t&agrave;i Đất Việt 2018&quot; của Tập đo&agrave;n Bưu ch&iacute;nh Viễn th&ocirc;ng Việt Nam (VNPT) v&agrave; B&aacute;o D&acirc;n tr&iacute; đồng tổ chức.</p>
+
+<p>&nbsp;</p>
+
+<p>Nội dung chi tiết: Qu&yacute; Thầy/C&ocirc; vui l&ograve;ng xem file đ&iacute;nh k&egrave;m.</p>
+
+<p>&nbsp;</p>
+
+<p>Tr&acirc;n trọng.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+','08/06/2018',N'Đinh Hoàn','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD49','TB',N'Thông báo về việc khảo sát HVCH khóa 2018 đợt 1 về hoạt động giảng dạy của GV năm 2018',N'<p>Ph&ograve;ng ĐTSĐH&amp;KHCN th&ocirc;ng b&aacute;o đến c&aacute;c học vi&ecirc;n kh&oacute;a tuyển 2018 đợt 1 khảo s&aacute;t HVCH về hoạt động của Giảng vi&ecirc;n năm 2018 (chi tiết cụ thể xem trong file đ&iacute;nh k&egrave;m).</p>
+
+<p>Đề nghị c&aacute;c Anh/Chị học vi&ecirc;n thực hiện theo y&ecirc;u cầu của th&ocirc;ng b&aacute;o số 130/TB-ĐHSG, ng&agrave;y 25 th&aacute;ng 10 năm 2018.</p>
+
+<p>Tr&acirc;n trọng.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+','10/31/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD50','TB',N'Thông báo tuyển Intership và Postdoc',N'<p>Ch&agrave;o&nbsp;c&aacute;c bạn sinh vi&ecirc;n, học vi&ecirc;n cao học, nghi&ecirc;n cứu sinh&nbsp;v&agrave; c&aacute;c giảng vi&ecirc;n,</p>
+
+<p>Hiện tại Ph&ograve;ng th&iacute; nghiệm ph&acirc;n t&iacute;ch dữ liệu lớn, Viện Tin học v&agrave; Truyền th&ocirc;ng, Nhật bản (NICT) đang tuyển 2 sinh vi&ecirc;n l&agrave;m 3-6 th&aacute;ng intership (sinh vi&ecirc;n đại học, học vi&ecirc;n cao học, NCS), v&agrave; 1-2 năm post-doc (giảng vi&ecirc;n, nghi&ecirc;n cứu vi&ecirc;n c&oacute; bằng tiến sĩ).</p>
+
+<p>Y&ecirc;u cầu như sau:</p>
+
+<p>A.</p>
+
+<p>- C&oacute; nền tảng về m&aacute;y học (machine learning), khai kho&aacute;ng dữ liệu (data mining), học s&acirc;u (deep learning), thị gi&aacute;c m&aacute;y t&iacute;nh (computer vision)</p>
+
+<p>Hoặc&nbsp;</p>
+
+<p>- IoT (lắp đặt c&aacute;c sensor từ c&aacute;c bộ phận ri&ecirc;ng rẽ + kiến thức networking)</p>
+
+<p>B.</p>
+
+<p>- Th&agrave;nh thạo lập tr&igrave;nh với 1 hoặc nhiều ng&ocirc;n ngữ như Python, Java, R, SQL</p>
+
+<p>C.</p>
+
+<p>- Tiếng Anh giao tiếp c&ocirc;ng việc, đọc v&agrave; viết tốt</p>
+
+<p>Ứng vi&ecirc;n c&oacute; nguyện vọng xin gửi email (bằng tiếng Anh) k&egrave;m CV về:</p>
+
+<p>Đ&agrave;o Minh Sơn, Senior Researcher, NICT</p>
+
+<p><a href="mailto:dao@nict.go.jp">dao@nict.go.jp</a></p>
+
+<p>Tr&acirc;n trọng.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+','11/09/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD51','TB',N'Thông báo lịch thi môn Công nghệ mạng và truyền thông hiện đại',N'<p>Ph&ograve;ng ĐTSĐH&amp;KHCN th&ocirc;ng b&aacute;o đến Anh/Chị học vi&ecirc;n cao học lịch thi&nbsp;cụ thể như sau:</p>
+
+<p>Thời gian:&nbsp;<strong>tối thứ năm ng&agrave;y 31/5/2018, t</strong><strong>ừ 18g00 đến 20g00, thời gian thi&nbsp;</strong>120 ph&uacute;t. Danh s&aacute;ch ph&ograve;ng thi xem&nbsp;<a href="https://sdh.uit.edu.vn/sites/default/files/uploads/images/201805/kq_dkhp_cong_nghe_mang_va_truyen_thong_hien_dai.xlsx">tại đ&acirc;y</a>.</p>
+
+<p>Địa điểm : Hội trường B<strong>,&nbsp;</strong>273 An Dương Vương, P.3, Q.5&nbsp;TP.HCM</p>
+
+<p>Lưu &yacute;: Học vi&ecirc;n c&oacute; mặt tại ph&ograve;ng thi đ&uacute;ng giờ, mang theo thẻ học vi&ecirc;n (CMND) tr&igrave;nh c&aacute;n bộ coi thi.</p>
+
+<p>Tr&acirc;n trọng</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN</p>
+','05/29/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD52','TB',N'Thông báo về lệ phí tốt nghiệp thạc sĩ đợt 2 năm 2018',N'<p>Ph&ograve;ng ĐTSĐH&amp;KHCN th&ocirc;ng b&aacute;o đến c&aacute;c Anh/Chị học vi&ecirc;n đ&atilde; đăng k&yacute; x&eacute;t tốt nghiệp thạc sĩ về thời gian dự kiến tổ chức lễ tốt nghiệp đợt 2 v&agrave;o th&aacute;ng 12/2018 (chi tiết cụ thể sẽ th&ocirc;ng b&aacute;o sau).</p>
+
+<p>Đề nghị c&aacute;c học vi&ecirc;n ho&agrave;n tất việc nộp lệ ph&iacute; tốt nghiệp theo th&ocirc;ng b&aacute;o 134/TB-ĐHSG, ng&agrave;y 15 th&aacute;ng 11 năm 2018 của Ph&ograve;ng Kế hoạch - T&agrave;i ch&iacute;nh. (xem file đ&iacute;nh k&egrave;m)</p>
+
+<p>Thời hạn: từ ng&agrave;y ra th&ocirc;ng b&aacute;o đến ng&agrave;y 30/11/2018.</p>
+
+<p>Nộp trực tiếp tại: Ph&ograve;ng Kế hoạch - T&agrave;i ch&iacute;nh, 273 An Dương Vương, P.3, Q.5&nbsp;TPHCM. (c&oacute; thể nhờ bạn b&egrave; trong c&ugrave;ng nh&oacute;m đ&oacute;ng gi&uacute;p).</p>
+
+<p>Đề nghị c&aacute;c Anh/ Chị thực hiện theo đ&uacute;ng quy định.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+','11/21/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+
+INSERT INTO Baidang  VALUES ('BD53','TB',N'Thông tin học bổng DAAD scholarship Programmes for Vietnam',N'<p>Ph&ograve;ng ĐTSĐH&amp;KHCN nhận được th&ocirc;ng tin của chương tr&igrave;nh học bổng của Cơ quan trao đổi h&agrave;n l&acirc;m Đức (DAAD)&nbsp;<strong>&quot; DAAD scholarship Programmes for Vietnam&quot;&nbsp;</strong>từ Ph&ograve;ng QHĐN. Nay, Ph&ograve;ng th&ocirc;ng b&aacute;o đến c&aacute;c Anh/Chị học vi&ecirc;n c&oacute; quan t&acirc;m về chương tr&igrave;nh học bổng tại file đ&iacute;nh k&egrave;m.</p>
+
+<p>- Tham khảo tại website:&nbsp;<a href="https://deref-web-02.de/mail/client/jtweyOFjJw0/dereferrer/?redirectUrl=http%3A%2F%2Fwww.daad-vietnam.vn">www.daad-vietnam.vn</a>&nbsp;.</p>
+
+<p><strong>- Chi tiết li&ecirc;n hệ; Mr B&igrave;nh theo email:&nbsp;</strong>&lt;<a href="mailto:binh@daadvn.org">binh@daadvn.org</a>.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+
+<p><img alt="PDF icon" src="https://sdh.uit.edu.vn/modules/file/icons/application-pdf.png" />&nbsp;<a href="https://sdh.uit.edu.vn/sites/default/files/201810/daad_scholarship_programmes_for_vietnam.pdf">daad_scholarship_programmes_for_vietnam.pdf</a></p>
+','10/03/2018',N'Đinh Hoàn','10/20/2019','GV',1)
+
+
+INSERT INTO Baidang  VALUES ('BD54','TB',N'Thông báo chương trình học bổng TOSHIBA năm 2018',N'<p>Thực hiện tại c&ocirc;ng văn số 1330/ ĐHQG- QHĐN, ng&agrave;y 17 th&aacute;ng 7 năm 2018 của Đại học Quốc gia Th&agrave;nh phố Hồ Ch&iacute; Minh (ĐHQG-HCM), Trường Đại học S&agrave;i G&ograve;n&nbsp;tr&acirc;n trọng&nbsp;th&ocirc;ng b&aacute;o đến c&aacute;c Anh/ Chị học vi&ecirc;n về chương tr&igrave;nh học&nbsp;&nbsp;bổng Toshiba năm học 2018 như sau:</p>
+
+<p>Chương tr&igrave;nh học bổng Toshiba nhằm hỗ trợ những học vi&ecirc;n xuất sắc, c&oacute; ho&agrave;n cảnh kh&oacute; khăn về kinh tế, sẽ hoặc đang học chương tr&igrave;nh Thạc sĩ/Tiến sĩ tại Đại học Quốc gia Th&agrave;nh phố Hồ Ch&iacute; Minh (ĐHQG-HCM) v&agrave; c&oacute; triển vọng trở th&agrave;nh những người l&atilde;nh đạo tiềm năng trong tương lai. Chương tr&igrave;nh học bổng Toshiba năm 2018 sẽ cấp học bổng trong nước cho c&aacute;c học vi&ecirc;n thuộc c&aacute;c ng&agrave;nh khoa học, kỹ thuật v&agrave; c&aacute;c chuy&ecirc;n ng&agrave;nh kh&aacute;c.&nbsp;</p>
+
+<p>Trong năm 2018 (t&iacute;nh từ ng&agrave;y khai giảng năm học 2018-2019), chương tr&igrave;nh học bổng Toshiba sẽ cấp c&aacute;c suất học bổng bao gồm: năm (05) học bổng to&agrave;n phần trị gi&aacute; 200,000 JPY/năm học v&agrave; năm (05) học bổng b&aacute;n phần trị gi&aacute; 100,000 JPY/năm học. &nbsp;&nbsp;</p>
+
+<p>Hồ sơ ứng tuyển vui l&ograve;ng&nbsp;<strong>nộp tại Văn ph&ograve;ng khoa,&nbsp;Trường Đại học S&agrave;i G&ograve;n&nbsp;(A107) trước ng&agrave;y 02/08/2018</strong>&nbsp;để Ph&ograve;ng l&agrave;m c&ocirc;ng văn gửi ĐHQG.</p>
+
+<p>Th&ocirc;ng tin chi tiết, vui l&ograve;ng xem th&ecirc;m file đ&iacute;nh k&egrave;m.</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+
+<p>&nbsp;</p>
+','07/18/2018',N'Đinh Hoàn','10/20/2019','GV',1)
+
+
+INSERT INTO Baidang  VALUES ('BD55','TB',N'Thông báo về chương trình thực tập và postdoc tại Nhật',N'<p>Ph&ograve;ng ĐTSĐH&amp;KHCN th&ocirc;ng b&aacute;o đến c&aacute;c Anh/ Chị học vi&ecirc;n cao học v&agrave; Nghi&ecirc;n cứu sinh quan t&acirc;m về chương tr&igrave;nh thực tập v&agrave; postdoc tại Nhật (intership 6 th&aacute;ng thực tập ở Nhật) với đề t&agrave;i nghi&ecirc;n cứu li&ecirc;n quan tới Machine Learning, Computer Vision, Data Science.</p>
+
+<p>Ngo&agrave;i ra, c&ograve;n một suất postdoc tai đại học Osaka, về Media Clone, c&oacute; thể l&agrave;m ngắn hạn 6 th&aacute;ng hoặc d&agrave;i hạn 3 năm.</p>
+
+<p>Anh/Chị học vi&ecirc;n n&agrave;o quan t&acirc;m, vui l&ograve;ng li&ecirc;n lạc với TS. Đ&agrave;o Minh Sơn (<a href="mailto:sondm@uit.edu.vn">sondm@uit.edu.vn</a>) để biết th&ecirc;m chi tiết.</p>
+
+<p>&nbsp;</p>
+
+<p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
+','06/22/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+GO
 CREATE TABLE Chitietbaidang
 (	
 	Mabaidang varchar(50),
@@ -754,7 +1202,6 @@ CREATE TABLE Chitietbaidang
 	FOREIGN KEY (TagID) REFERENCES Tag(TagID),
 	FOREIGN KEY (Mabaidang) REFERENCES Baidang (Mabaidang)
 )
-
 INSERT INTO Chitietbaidang VALUES ('BD1','7',1)
 INSERT INTO Chitietbaidang VALUES ('BD2','2',1)
 INSERT INTO Chitietbaidang VALUES ('BD3','7',1)
@@ -763,8 +1210,8 @@ INSERT INTO Chitietbaidang VALUES ('BD5','2',1)
 INSERT INTO Chitietbaidang VALUES ('BD6','3',1)
 INSERT INTO Chitietbaidang VALUES ('BD7','1',1)
 INSERT INTO Chitietbaidang VALUES ('BD8','1',1)
-INSERT INTO Chitietbaidang VALUES ('BD9','2',1)
-INSERT INTO Chitietbaidang VALUES ('BD10','2',1)
+INSERT INTO Chitietbaidang VALUES ('BD9','10',1)
+INSERT INTO Chitietbaidang VALUES ('BD10','10',1)
 INSERT INTO Chitietbaidang VALUES ('BD11','6',1)
 INSERT INTO Chitietbaidang VALUES ('BD12','6',1)
 INSERT INTO Chitietbaidang VALUES ('BD13','6',1)
@@ -797,6 +1244,19 @@ INSERT INTO Chitietbaidang VALUES ('BD39','9',1)
 INSERT INTO Chitietbaidang VALUES ('BD40','5',1)
 INSERT INTO Chitietbaidang VALUES ('BD41','9',1)
 INSERT INTO Chitietbaidang VALUES ('BD42','9',1)
+INSERT INTO Chitietbaidang VALUES ('BD43','10',1)
+INSERT INTO Chitietbaidang VALUES ('BD44','10',1)
+INSERT INTO Chitietbaidang VALUES ('BD45','10',1)
+INSERT INTO Chitietbaidang VALUES ('BD46','7',1)
+INSERT INTO Chitietbaidang VALUES ('BD47','7',1)
+INSERT INTO Chitietbaidang VALUES ('BD48','1',1)
+INSERT INTO Chitietbaidang VALUES ('BD49','3',1)
+INSERT INTO Chitietbaidang VALUES ('BD50','7',1)
+INSERT INTO Chitietbaidang VALUES ('BD51','3',1)
+INSERT INTO Chitietbaidang VALUES ('BD52','3',1)
+INSERT INTO Chitietbaidang VALUES ('BD53','10',1)
+INSERT INTO Chitietbaidang VALUES ('BD54','10',1)
+INSERT INTO Chitietbaidang VALUES ('BD55','6',1)
 
 
 
@@ -812,6 +1272,8 @@ go
 INSERT INTO LoaiDaotao  VALUES  ( 'DH', N'Trình độ Đại học ',1)
 
 INSERT INTO LoaiDaotao  VALUES  ( 'TS', N'Trình độ Thạc sĩ ',1)
+
+INSERT INTO LoaiDaotao  VALUES  ( 'TiS', N'Trình độ Tiến sĩ ',1)
 GO
 CREATE TABLE NoidungDT
 (
@@ -830,28 +1292,223 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT1' ,'DH' ,N'Ngành Công nghệ thông tin 
 
 <p><strong>1. Chương tr&igrave;nh đ&agrave;o tạo chuẩn</strong></p>
 
-<p>- Chương tr&igrave;nh đ&agrave;o tạo chu kỳ 2012-2016.&nbsp;<a href="~/Files/02.docx">Xem tại đ&acirc;y</a></p>
+<p>- Chương tr&igrave;nh đ&agrave;o tạo chu kỳ 2012-2016.&nbsp;<a href="/Assets/plugins/Uploads/files/02.docx">Xem tại đ&acirc;y</a></p>
 
-<p>- Chương tr&igrave;nh đ&agrave;o tạo chu kỳ 2016 - 2020.&nbsp;<a href="~/Files/04.xlsx">Xem tai đ&acirc;y</a></p>
+<p>- Chương tr&igrave;nh đ&agrave;o tạo chu kỳ 2016 - 2020.&nbsp;<a href="/Assets/plugins/Uploads/files/04.xlsx">Xem tai đ&acirc;y</a></p>
 
-<p>- Chương tr&igrave;nh đ&agrave;o tạo theo cơ chế đặc th&ugrave;.&nbsp;<a href="~/Files/01.pdf">Xem tại đ&acirc;y</a></p>
+<p>- Chương tr&igrave;nh đ&agrave;o tạo theo cơ chế đặc th&ugrave;.&nbsp;<a href="/Assets/plugins/Uploads/files/01.pdf">Xem tại đ&acirc;y</a></p>
 ' ,'07-19-2018','IT2' ,1 )
 INSERT INTO NoidungDT	VALUES  ( 'NDDT2' ,'DH' ,N'Ngành Công nghệ thông tin - Hệ liên thông',N'<p><strong>Hệ li&ecirc;n th&ocirc;ng tr&igrave;nh độ đại&nbsp;học</strong></p>
 
 <ul>
-	<li>Li&ecirc;n th&ocirc;ng từ Trung cấp l&ecirc;n Đại học.&nbsp;<a href="~/Files/03.docx">Xem tại đ&acirc;y.</a></li>
-	<li>Li&ecirc;n th&ocirc;ng từ Cao đẳng l&ecirc;n Đại học.&nbsp;<a href="~/Files/04.xlsx">Xem tại đ&acirc;y</a></li>
+	<li>Li&ecirc;n th&ocirc;ng từ Trung cấp l&ecirc;n Đại học.&nbsp;<a href="/Assets/plugins/Uploads/files/03.docx">Xem tại đ&acirc;y.</a></li>
+	<li>Li&ecirc;n th&ocirc;ng từ Cao đẳng l&ecirc;n Đại học.&nbsp;<a href="/Assets/plugins/Uploads/files/04.xlsx">Xem tại đ&acirc;y</a></li>
 </ul>
 
 <p>&nbsp;(Th&ocirc;ng tin tuyển sinh chi tiết xem tại website của Ph&ograve;ng đ&agrave;o tạo v&agrave; ph&ograve;ng Gi&aacute;o dục thường xuy&ecirc;n)</p>
 ' ,'07-19-2018','IT2' ,1 )
-INSERT INTO NoidungDT	VALUES  ( 'NDDT3' ,'TS' ,N'[Thạc sỹ] Ngành Khoa học máy tính',N'<p>+Th&ocirc;ng tin chi tiết chương tr&igrave;nh đ&agrave;o tạo thạc sĩ KHMT&nbsp;<a href="~/Files/01.pdf">Xem tại đ&acirc;y</a></p>
+INSERT INTO NoidungDT	VALUES  ( 'NDDT3' ,'TS' ,N'[Thạc sỹ] Ngành Khoa học máy tính',N'<p>+Th&ocirc;ng tin chi tiết chương tr&igrave;nh đ&agrave;o tạo thạc sĩ KHMT&nbsp;<a href="/Assets/plugins/Uploads/files/01.pdf">Xem tại đ&acirc;y</a></p>
 
 <p>(Th&ocirc;ng tin tuyển sinh chi tiết xem tại website của Ph&ograve;ng đ&agrave;o tạo Sau đại học)</p>
 
 <p><img alt="" src="~/Files/khoa-hoc-may-tinh.png" style="height:300px; width:592px" /></p>
 ' ,'07-19-2018','IT2' ,1 )
 
+
+INSERT INTO NoidungDT	VALUES  ( 'NDDT4' ,'TiS' ,N'Đào tạo tiến sĩ Khoa học máy tính',N'<p><strong>1. GIỚI THIỆU CHUNG</strong></p>
+
+<p><strong>1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mục ti&ecirc;u đ&agrave;o tạo</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Đ&agrave;o tạo tr&igrave;nh độ ti&ecirc;́n sĩ gi&uacute;p học vi&ecirc;n nắm vững l&yacute; thuyết, c&oacute; tr&igrave;nh độ cao, c&oacute; khả năng l&agrave;m việc độc lập, s&aacute;ng tạo v&agrave; c&oacute; năng lực ph&aacute;t hiện, giải quyết những vấn đề thuộc chuy&ecirc;n ng&agrave;nh được đ&agrave;o tạo. Chương tr&igrave;nh đào tạo phải đảm bảo kiến thức cốt l&otilde;i cho ng&agrave;nh KHMT, v&agrave; ph&aacute;t huy thế mạnh về t&iacute;nh chuy&ecirc;n s&acirc;u của c&aacute;c chuy&ecirc;n ng&agrave;nh KHMT của nh&agrave; trường, bao gồm: C&ocirc;ng nghệ tri thức v&agrave; m&aacute;y học; Xử l&yacute; ng&ocirc;n ngữ tự nhi&ecirc;n.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Nghi&ecirc;n cứu sinh c&oacute; kiến thức nền tảng v&agrave; chuy&ecirc;n s&acirc;u, c&oacute; phương ph&aacute;p luận vững chắc, c&oacute; khả năng ứng dụng c&aacute;c th&agrave;nh quả hiện đại của KHMT v&agrave;o thực tiễn đ&aacute;p ứng c&aacute;c nhu cầu cao của x&atilde; hội, c&oacute; khả năng nghi&ecirc;n cứu v&agrave; ph&aacute;t triển ở tr&igrave;nh độ cao, cũng như c&oacute; khả năng đ&oacute;ng vai tr&ograve; l&atilde;nh đạo quản l&yacute; v&agrave; đ&oacute;ng g&oacute;p t&iacute;ch cực cho sự tiến bộ của khoa học v&agrave; c&ocirc;ng nghệ.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo cung cấp cho người học&nbsp;kiến thức chuy&ecirc;n s&acirc;u của ng&agrave;nh, chuy&ecirc;n ng&agrave;nh v&agrave; phương ph&aacute;p nghi&ecirc;n cứu khoa học ph&ugrave; hợp để c&oacute; thể độc lập nghi&ecirc;n cứu, ph&aacute;t triển c&aacute;c quan điểm, luận thuyết khoa học, bước đầu c&oacute; thể h&igrave;nh th&agrave;nh &yacute; tưởng khoa học, ph&aacute;t hiện, kh&aacute;m ph&aacute; v&agrave; thử nghiệm kiến thức mới; c&oacute; khả năng thực hiện c&ocirc;ng việc ở c&aacute;c vị tr&iacute; nghi&ecirc;n cứu, giảng dạy, tư vấn v&agrave; hoạch định ch&iacute;nh s&aacute;ch hoặc c&aacute;c vị tr&iacute; kh&aacute;c thuộc lĩnh vực ng&agrave;nh, chuy&ecirc;n ng&agrave;nh đ&agrave;o tạo.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương trình cũng gi&uacute;p cho&nbsp;người học n&acirc;ng cao kiến thức chuy&ecirc;n m&ocirc;n v&agrave; kỹ năng hoạt động nghề nghiệp; c&oacute; năng lực l&agrave;m việc độc lập, s&aacute;ng tạo; c&oacute; khả năng thiết kế sản phẩm, ứng dụng kết quả nghi&ecirc;n cứu, ph&aacute;t hiện v&agrave; tổ chức thực hiện c&aacute;c c&ocirc;ng việc phức tạp trong hoạt động chuy&ecirc;n m&ocirc;n nghề nghiệp.</p>
+
+<p><strong>1.2&nbsp;&nbsp;&nbsp; Quan điểm x&acirc;y dựng chương tr&igrave;nh đ&agrave;o tạo</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo tiến sĩ ng&agrave;nh khoa học m&aacute;y t&iacute;nh (KHTM) được x&acirc;y dựng theo định hướng nghi&ecirc;n cứu với sự hướng dẫn của người hướng dẫn khoa học (NHD) v&agrave; đơn vị chuy&ecirc;n m&ocirc;n (ĐVCM) phụ tr&aacute;ch quản l&yacute;; coi trọng r&egrave;n luyện phương ph&aacute;p, th&oacute;i quen nghi&ecirc;n cứu khoa học, ph&aacute;t triển tư duy s&aacute;ng tạo trong ph&aacute;t hiện, giải quyết những vấn đề chuy&ecirc;n m&ocirc;n.</p>
+
+<p><strong>1.3&nbsp;&nbsp;&nbsp; T</strong><strong>hời gian đ&agrave;o tạo:</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Thực hiện theo điều 3 của quy chế đ&agrave;o tạo tiến sĩ ban h&agrave;nh k&egrave;m theo quyết định số 25/QĐ-ĐHCNTT-ĐTSĐH ng&agrave;y 15 th&aacute;ng 04 năm 2014 của Hiệu trưởng Trường Đại học S&agrave;i G&ograve;n</p>
+
+<h1><strong>2. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></h1>
+
+<p><strong>2.1&nbsp;&nbsp; C&aacute;c học phần bổ sung</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; C&aacute;c học phần bổ sung d&agrave;nh cho c&aacute;c NCS chưa c&oacute; bằng thạc sĩ hoặc c&oacute; bằng thạc sĩ c&aacute;c ng&agrave;nh gần ph&ugrave; hợp, c&aacute;c học phần n&agrave;y gi&uacute;p NCS c&oacute; đủ kiến thức v&agrave; tr&igrave;nh độ chuy&ecirc;n m&ocirc;n để thực hiện nhiệm vụ của NCS.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS chưa c&oacute; bằng thạc sĩ phải học bổ sung&nbsp;<strong>học phần cơ sở&nbsp;</strong>v&agrave;&nbsp;<strong>chuy&ecirc;n ng&agrave;nh&nbsp;</strong>trong CTĐT Thạc sĩ hiện h&agrave;nh ng&agrave;nh KHMT chưa kể c&aacute;c m&ocirc;n Triết học để ho&agrave;n th&agrave;nh c&aacute;c học phần tr&igrave;nh độ thạc sĩ KHMT.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS c&oacute; bằng thạc sĩ c&aacute;c ng&agrave;nh gần với ng&agrave;nh Khoa học m&aacute;y t&iacute;nh, sau đi đối chiếu với bảng điểm thạc sĩ đ&atilde; c&oacute;, NCS phải học c&aacute;c m&ocirc;n học c&ograve;n thiếu của c&aacute;c học phần cơ sở v&agrave; chuy&ecirc;n ng&agrave;nh trong CTĐT thạc sĩ ng&agrave;nh Khoa học m&aacute;y t&iacute;nh. Danh s&aacute;ch m&ocirc;n học bổ sung sẽ dựa v&agrave;o chương tr&igrave;nh đ&agrave;o tạo thạc sĩ ng&agrave;nh Khoa học m&aacute;y t&iacute;nhhiện h&agrave;nh c&ugrave;ng kh&oacute;a với đợt tuyển sinh tiến sĩ.</p>
+
+<p><strong>2.2&nbsp;&nbsp; C&aacute;c học phần tr&igrave;nh độ tiến sĩ, c&aacute;c chuy&ecirc;n đề tiến sĩ, tiểu luận tổng quan</strong></p>
+
+<p><strong>2.2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&aacute;c học phần tr&igrave;nh độ tiến sĩ</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Mục đ&iacute;ch của c&aacute;c học phần tr&igrave;nh độ tiến sĩ l&agrave; gi&uacute;p NCS cập nhật kiến thức mới trong lĩnh vực chuy&ecirc;n m&ocirc;n; n&acirc;ng cao tr&igrave;nh độ l&yacute; thuyết, phương ph&aacute;p luận nghi&ecirc;n cứu v&agrave; khả năng ứng dụng c&aacute;c phương ph&aacute;p nghi&ecirc;n cứu khoa học quan trọng, thiết yếu của lĩnh vực nghi&ecirc;n cứu.</p>
+
+<p><strong>2.2.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&aacute;c chuy&ecirc;n đề tiến sĩ</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; C&aacute;c chuy&ecirc;n đề tiến sĩ (CĐTS) đ&ograve;i hỏi NCS tự cập nhật kiến thức mới, c&oacute; độ s&acirc;u về chuy&ecirc;n ng&agrave;nh, c&oacute; bề rộng về c&aacute;c ng&agrave;nh li&ecirc;n quan v&agrave; c&oacute; li&ecirc;n quan trực tiếp đến đề t&agrave;i của NCS, gi&uacute;p n&acirc;ng cao năng lực NCKH của NCS; gi&uacute;p NCS giải quyết một số nội dung của đề t&agrave;i luận &aacute;n.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Mỗi NCS phải ho&agrave;n th&agrave;nh 03 CĐTS, mỗi chuy&ecirc;n đề 02 t&iacute;n chỉ. NCS phải đăng k&yacute; thực hiện c&aacute;c CĐTS ph&ugrave; hợp với hướng nghi&ecirc;n cứu của m&igrave;nh với ph&ecirc; duyệt của người hướng dẫn v&agrave; đơn vị chuy&ecirc;n m&ocirc;n.</p>
+
+<p><strong>2.2.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiểu luận tổng quan</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS phải thực hiện 01 tiểu luận tổng quan về t&igrave;nh h&igrave;nh nghi&ecirc;n cứu v&agrave; c&aacute;c vấn đề li&ecirc;n quan đến đề t&agrave;i luận &aacute;n, tiểu luận tổng quan đ&ograve;i hỏi NCS thể hiện khả năng ph&acirc;n t&iacute;ch, đ&aacute;nh gi&aacute; c&aacute;c c&ocirc;ng tr&igrave;nh nghi&ecirc;n cứu đ&atilde; c&oacute; của c&aacute;c t&aacute;c giả trong v&agrave; ngo&agrave;i nước li&ecirc;n quan mật thiết đến đề t&agrave;i luận &aacute;n, n&ecirc;u những vấn đề c&ograve;n tồn tại, chỉ ra những vấn đề m&agrave; luận &aacute;n cần tập trung nghi&ecirc;n cứu giải quyết.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS thực hiện, b&aacute;o c&aacute;o tiểu luận tổng quan sau khi ho&agrave;n th&agrave;nh c&aacute;c chuy&ecirc;n đề tiến sĩ v&agrave; cần phải bảo vệ th&agrave;nh c&ocirc;ng tiểu luận tổng quan trước khi tr&igrave;nh luận &aacute;n tiến sĩ.</p>
+
+<p><strong>2.3&nbsp;&nbsp;&nbsp;Nghi&ecirc;n cứu khoa học v&agrave; luận &aacute;n tiến sĩ</strong></p>
+
+<p><strong>2.3.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nghi&ecirc;n cứu khoa học</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 1. Nghi&ecirc;n cứu khoa học l&agrave; nhiệm vụ bắt buộc của NCS trong qu&aacute; tr&igrave;nh nghi&ecirc;n cứu thực hiện LATS. Từ khi c&oacute; quyết định c&ocirc;ng nhận NCS, trong thời gian 12 th&aacute;ng đối với người đ&atilde; c&oacute; bằng thạc sĩ hoặc 24 th&aacute;ng với người chỉ c&oacute; bằng đại học, NCS đối chiếu với t&igrave;nh h&igrave;nh ph&aacute;t triển khoa học thuộc hướng nghi&ecirc;n cứu của m&igrave;nh nhằm cập nhật, bổ sung đề cương dự định nghi&ecirc;n cứu l&uacute;c dự tuyển NCS để bảo vệ tại một hội đồng x&eacute;t duyệt đề cương đề t&agrave;i LATS do ĐVCM đề nghị v&agrave; Hiệu trưởng xem x&eacute;t, quyết định.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 2. T&ugrave;y t&iacute;nh chất của lĩnh vực nghi&ecirc;n cứu m&agrave; ĐVCM c&oacute; y&ecirc;u cầu kh&aacute;c nhau đối với việc đ&aacute;nh gi&aacute; hiện trạng tri thức, c&aacute;c giải ph&aacute;p c&ocirc;ng nghệ li&ecirc;n quan đến đề t&agrave;i LATS, y&ecirc;u cầu điều tra, thực nghiệm để bổ sung dữ liệu cần thiết, y&ecirc;u cầu suy luận khoa học v&agrave; thiết kế giải ph&aacute;p, thực nghiệm để từ đ&oacute; NCS đạt tới tri thức mới, giải ph&aacute;p mới. Đ&acirc;y l&agrave; những cơ sở quan trọng để NCS viết LATS.&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 3. Nội dung, quy m&ocirc; NCKH phải ph&ugrave; hợp với mục ti&ecirc;u của LATS. T&ugrave;y theo t&iacute;nh chất của đề t&agrave;i nghi&ecirc;n cứu luận &aacute;n, Trường v&agrave; NHD c&oacute; thể tạo điều kiện kinh ph&iacute;, cơ sở vật chất, ph&ograve;ng th&iacute; nghiệm để NCS ho&agrave;n th&agrave;nh c&aacute;c nghi&ecirc;n cứu cần thiết. NCS phải đảm bảo t&iacute;nh trung thực, ch&iacute;nh x&aacute;c, t&iacute;nh mới của kết quả NCKH của m&igrave;nh, chấp h&agrave;nh những quy định về sở hữu tr&iacute; tuệ của Việt Nam v&agrave; quốc tế.&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 4. Thời gian NCKH được bố tr&iacute; trong thời gian ĐTTS. Nếu v&igrave; l&yacute; do kh&aacute;ch quan hay chủ quan, việc NCKH kh&ocirc;ng thể ho&agrave;n th&agrave;nh trong thời gian dự kiến th&igrave; NCS c&oacute; thể đăng k&yacute; k&eacute;o d&agrave;i thời gian nghi&ecirc;n cứu. Chi ph&iacute; đ&agrave;o tạo trong thời gian k&eacute;o d&agrave;i do NCS tự trang trải hoặc do đơn vị cử đi học hỗ trợ nếu c&oacute; điều kiện.&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 5. Trường v&agrave; ĐVCM tạo điều kiện để NCS chủ tr&igrave; hoặc tham gia thực hiện c&aacute;c đề t&agrave;i, c&aacute;c chương tr&igrave;nh NCKH c&aacute;c cấp do Trường chủ tr&igrave; v&agrave; c&oacute; li&ecirc;n quan đến lĩnh vực đề t&agrave;i LATS của NCS.</p>
+
+<p><strong>2.3.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luận &aacute;n tiến sĩ</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Luận &aacute;n tiến sĩ phải l&agrave; một c&ocirc;ng tr&igrave;nh nghi&ecirc;n cứu khoa học s&aacute;ng tạo của ch&iacute;nh NCS, t&igrave;m ra kết quả mới, kh&ocirc;ng tr&ugrave;ng lặp với c&aacute;c nghi&ecirc;n cứu của người kh&aacute;c, giải quyết được trọn vẹn một vấn đề khoa học, l&agrave; một c&ocirc;ng tr&igrave;nh NCKH độc đ&aacute;o, mang t&iacute;nh ch&iacute;nh x&aacute;c, trung thực, s&aacute;ng tạo trong lĩnh vực nghi&ecirc;n cứu, c&oacute; đ&oacute;ng g&oacute;p về mặt l&yacute; luận, chứa đựng những tri thức hoặc giải ph&aacute;p mới c&oacute; gi&aacute; trị trong việc ph&aacute;t triển, gia tăng tri thức khoa học của lĩnh vực nghi&ecirc;n cứu hoặc giải quyết s&aacute;ng tạo c&aacute;c vấn đề đang đặt ra với một ng&agrave;nh khoa học hoặc thực tiễn x&atilde; hội, chấp h&agrave;nh c&aacute;c quy định về sở hữu tr&iacute; tuệ của Việt Nam v&agrave; quốc tế.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Luận &aacute;n tiến sĩ kh&ocirc;ng vượt qu&aacute; 200 trang A4 (kh&ocirc;ng kể phần phụ lục), trong đ&oacute; tr&ecirc;n 50% l&agrave; tr&igrave;nh b&agrave;y c&aacute;c kết quả nghi&ecirc;n cứu v&agrave; biện luận của ri&ecirc;ng NCS.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Nội dung chủ yếu v&agrave; c&aacute;c kết quả nghi&ecirc;n cứu của luận &aacute;n phải được b&aacute;o c&aacute;o tại&nbsp; c&aacute;c hội nghị khoa học chuy&ecirc;n ng&agrave;nh; được c&ocirc;ng bố &iacute;t nhất trong hai b&agrave;i b&aacute;o tr&ecirc;n tạp ch&iacute;,&nbsp; hội nghị khoa học chuy&ecirc;n ng&agrave;nh c&oacute; phản biện độc lập, được Hội đồng chức danh gi&aacute;o sư Nh&agrave; nước t&iacute;nh điểm, c&oacute; trong danh mục c&aacute;c tạp ch&iacute; khoa học v&agrave; c&aacute;c hội nghị khoa học ph&ugrave; hợp với chuy&ecirc;n ng&agrave;nh đ&agrave;o tạo tiến sĩ.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS phải bảo vệ luận &aacute;n trước hội đồng cấp đơn vị chuy&ecirc;n m&ocirc;n v&agrave; hội đồng cấp Trường theo quy định.</p>
+
+<h1><strong>3. KẾ HOẠCH Đ&Agrave;O TẠO DỰ KIẾN</strong></h1>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; To&agrave;n bộ chương tr&igrave;nh đ&agrave;o tạo tr&igrave;nh độ tiến sĩ đối với người c&oacute; bằng thạc sĩ l&agrave; 3 năm học tập trung li&ecirc;n tục; đối với người c&oacute; bằng tốt nghiệp đại học nhưng chưa c&oacute; bằng thạc sĩ chuy&ecirc;n ng&agrave;nh ph&ugrave; hợp l&agrave; 5 năm học tập trung li&ecirc;n tục.</p>
+' ,'05-20-2015','IT2' ,1 )
+
+INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công nghệ thông tin',N'<p><strong>1. GIỚI THIỆU CHUNG</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo được cập nhật căn cứ tr&ecirc;n sứ mệnh v&agrave; mục ti&ecirc;u đ&agrave;o tạo của ng&agrave;nh học, đối chiếu với c&aacute;c chương tr&igrave;nh đ&agrave;o tạo tiến sĩ thuộc lĩnh vực CNTT tại Đại học Quốc gia TP. Hồ Ch&iacute; Minh cũng như một số đại học kh&aacute;c trong khu vực v&agrave; tr&ecirc;n thế giới.</p>
+
+<p><strong>1.1 Mục ti&ecirc;u đ&agrave;o tạo</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Mục ti&ecirc;u chung của chương tr&igrave;nh đ&agrave;o tạo tiến sĩ&nbsp; CNTT l&agrave; đ&agrave;o tạo những nh&agrave; khoa học trong lĩnh vực CNTT c&oacute; tr&igrave;nh độ cao về l&yacute; thuyết v&agrave; năng lực thực h&agrave;nh ph&ugrave; hợp, c&oacute; tư duy khoa học, c&oacute; khả năng nghi&ecirc;n cứu độc lập, s&aacute;ng tạo, khả năng ph&aacute;t hiện v&agrave; giải quyết được những vấn đề mới c&oacute; &yacute; nghĩa về khoa học, c&ocirc;ng nghệ v&agrave; hướng dẫn NCKH, c&oacute; khả năng tiếp cận v&agrave; giải quyết c&aacute;c vấn đề khoa học chuy&ecirc;n ng&agrave;nh.</p>
+
+<p><strong>1.2 Quan điểm x&acirc;y dựng chương tr&igrave;nh đ&agrave;o tạo</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo tiến sĩ CNTT được x&acirc;y dựng theo định hướng tự nghi&ecirc;n cứu với sự hướng dẫn của người hướng dẫn khoa học (NHD) v&agrave; đơn vị chuy&ecirc;n m&ocirc;n (ĐVCM) phụ tr&aacute;ch; coi trọng r&egrave;n luyện phương ph&aacute;p, th&oacute;i quen nghi&ecirc;n cứu khoa học, ph&aacute;t triển tư duy s&aacute;ng tạo trong ph&aacute;t hiện, giải quyết những vấn đề chuy&ecirc;n m&ocirc;n.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh được thiết kế v&agrave; x&acirc;y dựng dựa tr&ecirc;n:</p>
+
+<ul>
+	<li>Tham khảo các chương trình đào tạo tiến sĩ thu&ocirc;̣c lĩnh vực c&ocirc;ng nghệ th&ocirc;ng tin v&agrave; truyền th&ocirc;ng của c&aacute;c trường th&agrave;nh vi&ecirc;n Đại Học Quốc Gia TP. Hồ Ch&iacute; Minh và Đại Học Quốc Gia H&agrave; Nội.</li>
+	<li>Chương trình đào tạo tiến sĩ li&ecirc;n kết giữa ĐH B&aacute;ch Khoa H&agrave; Nội v&agrave; ĐH C&ocirc;ng nghệ Sydney.</li>
+	<li>Tham khảo chương trình đào tạo sau đại học ng&agrave;nh CNTT của các trường Đại học tr&ecirc;n thế giới như:</li>
+	<li>Virginia Tech University, USA</li>
+	<li>University of Technology, Sydney</li>
+	<li>Queensland University of Technology, Australia</li>
+</ul>
+
+<p><strong>1.3 Phương thức v&agrave; thời gian đ&agrave;o tạo</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Thời gian đ&agrave;o tạo tr&igrave;nh độ tiến sĩ đối với người c&oacute; bằng thạc sĩ l&agrave; 3 năm tập trung li&ecirc;n tục; đối với người c&oacute; bằng tốt nghiệp đại học nhưng chưa c&oacute; bằng thạc sĩ chuy&ecirc;n ng&agrave;nh ph&ugrave; hợp l&agrave; 5 năm tập trung li&ecirc;n tục.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Trường hợp NCS kh&ocirc;ng theo học tập trung li&ecirc;n tục được v&agrave; được Trường chấp nhận th&igrave; chương tr&igrave;nh đ&agrave;o tạo v&agrave; nghi&ecirc;n cứu của NCS phải c&oacute; tổng thời gian học v&agrave; nghi&ecirc;n cứu như quy định tr&ecirc;n, trong đ&oacute; c&oacute; &iacute;t nhất 12 th&aacute;ng tập trung li&ecirc;n tục tại cơ sở đ&agrave;o tạo để thực hiện đề t&agrave;i nghi&ecirc;n cứu. Trong trường hợp n&agrave;y thời gian đ&agrave;o tạo được cộng th&ecirc;m 1 năm tương ứng với từng đối tượng.</p>
+
+<p><strong>2. ĐỐI TƯỢNG &Aacute;P DỤNG</strong><p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; C&aacute;c kh&oacute;a tuyển sinh tiến sĩ ng&agrave;nh CNTT từ &nbsp;năm 2014.</p>
+
+<p><strong>3. QUY CHẾ Đ&Agrave;O TẠO</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo tiến sĩ ng&agrave;nh CNTT của trường Đại học S&agrave;i G&ograve;n&nbsp;được thực hiện căn cứ v&agrave;o:</p>
+
+<ul>
+	<li>Quy chế đ&agrave;o tạo tiến sĩ ban h&agrave;nh k&egrave;m theo Quyết định số 25/QĐ-ĐHSG-ĐTSĐH ng&agrave;y 15 th&aacute;ng 04 năm 2014 của Hiệu trưởng Trường Đại học S&agrave;i G&ograve;n&nbsp;(gọi tắt l&agrave; Quy chế đ&agrave;o tạo tiến sĩ của trường ĐHSG).</li>
+	<li>Quy&nbsp; định&nbsp; về&nbsp; đ&agrave;o&nbsp; tạo&nbsp; tr&igrave;nh&nbsp; độ&nbsp; tiến&nbsp; sĩ,&nbsp; theo&nbsp; Quyết&nbsp; định&nbsp; số 1020/QĐ-ĐHQG-ĐH&amp;SĐH 10/09/2010 của Gi&aacute;m đốc ĐHQG-HCM.</li>
+	<li>Quy chế đ&agrave;o tạo tr&igrave;nh độ tiến sĩ ban h&agrave;nh k&egrave;m theo th&ocirc;ng tư số 10/2009/TT-BGD&amp;ĐT ng&agrave;y 07/5/2009 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo; v&agrave; Th&ocirc;ng tư số 05/2012/TT-BGDĐT ng&agrave;y 15/2/2012 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo về việc Sửa đổi, bổ sung Th&ocirc;ng tư 10/2009/TT-BGDĐT, c&oacute; hiệu lực từ 2/4/2012.</li>
+</ul>
+
+<p><strong>4. CHUẨN ĐẦU RA</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Học vi&ecirc;n tốt nghiệp chương tr&igrave;nh đ&agrave;o tạo sau đại học tiến sĩ ng&agrave;nh CNTT phải đ&aacute;p ứng c&aacute;c y&ecirc;u cầu về ti&ecirc;u chuẩn đầu ra (k&yacute; hiệu LO &ndash; Learning Outcomes) sau:</p>
+
+<p><strong>4.1 Về kiến thức</strong></p>
+
+<ul>
+	<li>LO 1: C&oacute; kiến thức chuy&ecirc;n s&acirc;u, ti&ecirc;n tiến, to&agrave;n diện v&agrave; hệ thống về CNTT.</li>
+	<li>LO 2: C&oacute; tư duy nghi&ecirc;n cứu độc lập, s&aacute;ng tạo, l&agrave;m chủ được c&aacute;c gi&aacute; trị cố l&otilde;i, quan trọng trong học thuật, ph&aacute;t triển c&aacute;c nguy&ecirc;n l&yacute;, học thuyết của chuy&ecirc;n ng&agrave;nh CNTT.</li>
+	<li>LO 3: C&oacute; kiến thức, khả năng ph&aacute;t hiện hoặc biết tổ chức c&ocirc;ng việc, chuy&ecirc;n m&ocirc;n, trực tiếp giải quyết c&aacute;c vấn đề khoa học thuộc lĩnh vực CNTT. C&oacute; kiến thức trong c&aacute;c hệ thống CNTT t&iacute;ch hợp hay c&aacute;c hệ thống li&ecirc;n ng&agrave;nh c&oacute; li&ecirc;n quan đến CNTT.</li>
+</ul>
+
+<p><strong>4.2 Về kỹ năng</strong></p>
+
+<ul>
+	<li>LO 4: C&oacute; kỹ năng ph&aacute;t hiện, ph&acirc;n t&iacute;ch c&aacute;c vấn đề phức tạp v&agrave; đưa ra c&aacute;c giải ph&aacute;p s&aacute;ng tạo giải quyết vấn đề.</li>
+	<li>LO 5: C&oacute; kỹ năng c&aacute; nh&acirc;n về tư duy logic, nghi&ecirc;n cứu độc lập, s&aacute;ng tạo v&agrave; th&aacute;i độ học tập suốt đời.</li>
+	<li>LO 6: C&oacute; kỹ năng giao tiếp, h&igrave;nh th&agrave;nh nh&oacute;m ớ mức quốc gia hay quốc tế v&agrave; l&atilde;nh đạo nh&oacute;m hiệu quả.</li>
+	<li>LO 7: C&oacute; khả năng cao để tr&igrave;nh b&agrave;y, giới thiệu (bằng c&aacute;c h&igrave;nh thức b&agrave;i viết, b&aacute;o c&aacute;o hội nghị, giảng dạy đại học v&agrave; sau đại học) c&aacute;c vấn đề khoa học thuộc lĩnh vực CNTT.</li>
+	<li>LO 8: C&oacute; kỹ năng tốt về tiếng Anh, c&oacute; thể giao tiếp, thảo luận với c&aacute;c nh&agrave; khoa học, c&aacute;c chuy&ecirc;n gia bằng tiếng anh trong lĩnh vực CNTT. C&oacute; thể viết c&aacute;c b&aacute;o c&aacute;o khoa học, b&aacute;o c&aacute;o chuy&ecirc;n ng&agrave;nh.</li>
+	<li>LO 9: C&oacute; năng lực tổng hợp tr&iacute; tuệ tập thể, dẫn dắt chuy&ecirc;n m&ocirc;n, xử l&yacute; c&aacute;c vấn đề qui m&ocirc; quốc tế.</li>
+</ul>
+
+<p><strong>4.3 Về th&aacute;i độ</strong></p>
+
+<ul>
+	<li>LO 10: &Yacute; thức tr&aacute;ch nhiệm c&ocirc;ng d&acirc;n; c&oacute; th&aacute;i độ v&agrave; đạo đức nghề nghiệp đ&uacute;ng đắn.</li>
+	<li>LO 11: C&oacute; tr&aacute;ch nhiệm, c&oacute; thể l&agrave;m việc độc lập hoặc l&agrave;m việc nh&oacute;m, c&oacute; h&agrave;nh xử chuy&ecirc;n nghiệp.</li>
+</ul>
+
+<p><strong>4.4 Năng lực v&agrave; vị tr&iacute; c&ocirc;ng t&aacute;c</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Sau khi t&ocirc;́t nghi&ecirc;̣p, các tiến sĩ ng&agrave;nh CNTT:</p>
+
+<ul>
+	<li>C&oacute; tr&igrave;nh độ cao v&agrave; kiến thức chuy&ecirc;n s&acirc;u, nắm bắt c&aacute;c c&ocirc;ng nghệ mới về CNTT.</li>
+	<li>C&oacute; năng lực dẫn dắt trong lẫn vực CNTT đ&atilde; được đ&agrave;o tạo.</li>
+	<li>C&oacute; năng lực s&aacute;ng tạo trọng qu&aacute; tr&igrave;nh thực hiện nhiệm vụ; c&oacute; năng lực tự định hướng, th&iacute;ch nghi với m&ocirc;i trường CNTT.</li>
+	<li>C&oacute; năng lực tự học tập, t&iacute;ch lũy kiến thức, kinh nghiệm để n&acirc;ng cao tr&igrave;nh độ.</li>
+	<li>C&oacute; khả năng ph&acirc;n t&iacute;ch, đ&aacute;nh gi&aacute; đưa ra c&aacute;c kết luận về chuy&ecirc;n m&ocirc;n v&agrave; một số vấn đề phức tạp về hệ thống CNTT.</li>
+	<li>C&oacute; năng lực lập kế hoạch về hệ thống CNTT, điều phối, ph&aacute;t huy tr&iacute; tuệ tập thể.</li>
+	<li>C&oacute; năng lực cải tiến, đ&aacute;nh gi&aacute; c&aacute;c hoạt động CNTT ở qui m&ocirc; trung b&igrave;nh.</li>
+	<li>Có khả năng l&agrave;m trưởng nh&oacute;m nghi&ecirc;n cứu và vận dụng được c&aacute;c kiến thức c&ocirc;ng nghệ mới, đa lĩnh vực v&agrave;o ph&aacute;t triển c&aacute;c sản phẩm v&agrave; ứng dụng CNTT trong c&aacute;c doanh nghiệp, viện nghi&ecirc;n cứu hay cố vấn, chuy&ecirc;n gia cao cấp trong c&aacute;c tổ chức.</li>
+	<li>C&oacute; khả năng ph&acirc;n t&iacute;ch thực tiễn để x&aacute;c định c&aacute;c thiết kế ph&ugrave; hợp cho một hệ thống CNTT t&iacute;ch hợp.</li>
+	<li>C&oacute; thể giảng dạy hệ Đại học, Sau Đại học ng&agrave;nh CNTT tại c&aacute;c trường Đại học.</li>
+</ul>
+
+<p><strong>5. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Căn cứ v&agrave;o Quy chế đ&agrave;o tạo tiến sĩ của trường ĐH.SG, NCS phải thực hiện 3 phần nội dung của chương tr&igrave;nh đ&agrave;o tạo sau đ&acirc;y:</p>
+
+<ul>
+	<li>Phần 1: C&aacute;c học phần bổ sung.</li>
+	<li>Phần 2: C&aacute;c học phần tr&igrave;nh độ tiến sĩ, c&aacute;c chuy&ecirc;n đề tiến sĩ, tiểu luận tổng quan.</li>
+	<li>Phần 3: Nghi&ecirc;n cứu khoa học v&agrave; luận &aacute;n tiến sĩ.</li>
+</ul>
+
+<p><strong>5.1) Phần 1. C&aacute;c học phần bổ sung</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; C&aacute;c học phần bổ sung d&agrave;nh cho c&aacute;c NCS chưa c&oacute; bằng thạc sĩ hoặc c&oacute; bằng thạc sĩ c&aacute;c ng&agrave;nh gần ph&ugrave; hợp, c&aacute;c học phần n&agrave;y gi&uacute;p NCS c&oacute; đủ kiến thức v&agrave; tr&igrave;nh độ chuy&ecirc;n m&ocirc;n để thực hiện nhiệm vụ của NCS.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS chưa c&oacute; bằng thạc sĩ phải học bổ sung&nbsp;<strong>học phần cơ sở</strong>&nbsp;v&agrave;&nbsp;<strong>chuy&ecirc;n ng&agrave;nh</strong>&nbsp;trong CTĐT Thạc sĩ hiện h&agrave;nh ng&agrave;nh CNTT chưa kể c&aacute;c m&ocirc;n Triết học để ho&agrave;n th&agrave;nh c&aacute;c học phần tr&igrave;nh độ thạc sĩ CNTT.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; NCS c&oacute; bằng thạc sĩ c&aacute;c ng&agrave;nh gần ph&ugrave; hợp, sau đi đối chiếu với bảng điểm thạc sĩ đ&atilde; c&oacute;, NCS phải học c&aacute;c m&ocirc;n học c&ograve;n thiếu của c&aacute;c học phần cơ sở v&agrave; chuy&ecirc;n ng&agrave;nh trong CTĐT Thạc sĩ ng&agrave;nh CNTT. Danh s&aacute;ch m&ocirc;n học bổ sung sẽ dựa v&agrave;o chương tr&igrave;nh đ&agrave;o tạo thạc sĩ ng&agrave;nh CNTT hiện h&agrave;nh c&ugrave;ng kh&oacute;a với đợt tuyển sinh tiến sĩ.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Điểm ho&agrave;n th&agrave;nh c&aacute;c học phần bổ sung l&agrave; từ 5.0 trở l&ecirc;n.</p>
+
+<p><strong>5.2) Phần 2. C&aacute;c học phần tr&igrave;nh độ tiến sĩ, c&aacute;c chuy&ecirc;n đề tiến sĩ, tiểu luận tổng quan</strong></p>
+
+<p><strong>5.2.1 C&aacute;c học phần tr&igrave;nh độ tiến sĩ</strong></p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Mục đ&iacute;ch của c&aacute;c học phần tr&igrave;nh độ tiến sĩ l&agrave; gi&uacute;p NCS cập nhật kiến thức mới trong lĩnh vực chuy&ecirc;n m&ocirc;n; n&acirc;ng cao tr&igrave;nh độ l&yacute; thuyết, phương ph&aacute;p luận nghi&ecirc;n cứu v&agrave; khả năng ứng dụng c&aacute;c phương ph&aacute;p NCKH quan trọng, thiết yếu của lĩnh vực nghi&ecirc;n cứu. Gồm 12 t&iacute;n chỉ trong đ&oacute; 6 t&iacute;n chỉ bắt buộc v&agrave; 6 t&iacute;n chỉ tự chọn.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Điểm ho&agrave;n th&agrave;nh c&aacute;c học phần tr&igrave;nh độ tiến sĩ l&agrave; từ 7.0 trở l&ecirc;n.</p>
+' ,'05-20-2014','IT2' ,1 )
 GO
 CREATE TABLE Thongbaochuyentiep
 (
@@ -970,22 +1627,22 @@ CREATE TABLE ThongtinGV
 )
 go
 INSERT INTO ThongtinGV ( MaGV ,MaBM , TenGV,Chucvu,Chucdanh ,ThongtinGV, Diachimail ,Flag )
-VALUES ( 'GV1' , 'BM1',N'Nguyễn Quốc Huy','Tiến sĩ','Trưởng bộ môn','','nqhuy@sgu.edu.vn' , 1 )
+VALUES ( 'GV1' , 'BM1',N'Nguyễn Quốc Huy',N'Tiến sĩ',N'Trưởng bộ môn','','nqhuy@sgu.edu.vn' , 1 )
 
 INSERT INTO ThongtinGV ( MaGV ,MaBM ,TenGV, Chucvu,Chucdanh ,ThongtinGV, Diachimail ,Flag )
-VALUES  ( 'GV2' , 'BM1',N'Đinh Thị Ngọc Loan' ,'Thạc sĩ','Giảng viên','','', 1 )
+VALUES  ( 'GV2' , 'BM1',N'Đinh Thị Ngọc Loan' ,N'Thạc sĩ',N'Giảng viên','','', 1 )
 
 INSERT INTO ThongtinGV ( MaGV ,MaBM ,TenGV, Chucvu,Chucdanh ,ThongtinGV, Diachimail ,Flag )
-VALUES ( 'GV3' , 'BM1'  ,N'Nguyễn Thị Uyên Nhi','Thạc sĩ','Giảng viên','','ntunhi@sgu.edu.vn' , 1 )
+VALUES ( 'GV3' , 'BM1'  ,N'Nguyễn Thị Uyên Nhi',N'Thạc sĩ',N'Giảng viên','','ntunhi@sgu.edu.vn' , 1 )
 
 INSERT INTO ThongtinGV ( MaGV ,MaBM ,TenGV, Chucvu,Chucdanh ,ThongtinGV, Diachimail ,Flag )
-VALUES ( 'GV4' , 'BM1' ,N'Lê Nhị Lãm Thúy ','Thạc sĩ','Giảng viên','','thuylnl@sgu.edu.vn' , 1 )
+VALUES ( 'GV4' , 'BM1' ,N'Lê Nhị Lãm Thúy ',N'Thạc sĩ',N'Giảng viên','','thuylnl@sgu.edu.vn' , 1 )
 
 INSERT INTO ThongtinGV ( MaGV ,MaBM ,TenGV, Chucvu,Chucdanh ,ThongtinGV, Diachimail ,Flag )
-VALUES ( 'GV5' , 'BM1' ,N'Phan Thị Kim Loan','Thạc sĩ','Giảnng viên','',' ptkloan@sgu.edu.vn' , 1 )
+VALUES ( 'GV5' , 'BM1' ,N'Phan Thị Kim Loan',N'Thạc sĩ',N'Giảnng viên','',' ptkloan@sgu.edu.vn' , 1 )
 
 INSERT INTO ThongtinGV ( MaGV ,MaBM ,TenGV, Chucvu,Chucdanh ,ThongtinGV, Diachimail ,Flag )
-VALUES ( 'GV6' , 'BM2' ,N'Phùng Thái Thiên Trang','Thạc sĩ','Giảng viên',N'<table border="1" cellpadding="0" cellspacing="0" style="width:100%">
+VALUES ( 'GV6' , 'BM2' ,N'Phùng Thái Thiên Trang',N'Thạc sĩ',N'Giảng viên',N'<table border="1" cellpadding="0" cellspacing="0" style="width:100%">
 	<tbody>
 		<tr>
 			<td>
@@ -1435,8 +2092,8 @@ create table NghiencuuKH
 	TenNCKH nvarchar(50),
 	Flag bit
 )
-INSERT INTO NghiencuuKH VALUES  ('SK','Sự kiện',1)
-INSERT INTO NghiencuuKH VALUES  ('BB','Bài báo',1)
+INSERT INTO NghiencuuKH VALUES  ('SK',N'Sự kiện',1)
+INSERT INTO NghiencuuKH VALUES  ('BB',N'Bài báo',1)
 
 GO
 create table ChitietNCKH
@@ -1473,8 +2130,8 @@ INSERT INTO ChitietNCKH VALUES  ('NCKH1','SK',N'Đăng kí dự hội thảo Blo
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJJPrLTv94uGEKkh7-3BoescLuhNdbFkghud9bZLj4bj9coA/viewform">https://docs.google.com/forms/d/e/1FAIpQLSeJJPrLTv94uGEKkh7-3BoescLuhNdbFkghud9bZLj4bj9coA/viewform</a></p>'
 ,'09/23/2018','10/19/2018','IT2',1)
 
-INSERT INTO ChitietNCKH VALUES ('NCKH2','SK',N'Hội thảo khoa học "Một số vấn đề chọn lọc về CNTT và truyền thông',N'Các bạn xem chi tiết tại đây','03/22/2018','','IT2',1)
-INSERT INTO ChitietNCKH VALUES ('NCKH3','SK',N'Nghiên cứu khoa học',N'','09/09/2018','','IT2',1)
+INSERT INTO ChitietNCKH VALUES ('NCKH2','SK',N'Hội thảo khoa học',N'<p>Một số chọn lọc về CNTT truyền th&ocirc;ng</p>','03/22/2018','10/19/2018','IT2',1)
+INSERT INTO ChitietNCKH VALUES ('NCKH3','SK',N'Nghiên cứu khoa học',N'','09/09/2018','10/19/2018','IT2',1)
 
 go
 create table LoaiGT
@@ -1517,7 +2174,7 @@ INSERT INTO NoidungGT VALUES ('GT2','TTC',N'Cơ sở vật chất',N'<p>Khoa C&o
 </ol>'
 ,'03/08/2017','IT2',1)
 
-INSERT INTO NoidungGT VALUES ('GT3','CCTC',N'Chi bộ khoa',N'<h1>Chi bộ khoa</h1>
+INSERT INTO NoidungGT VALUES ('GT3','CCTC',N'Chi bộ khoa',N'
 
 <p>Nh&acirc;n sự Chi bộ Khoa CNTT- TT CNTT:</p>
 
@@ -1535,11 +2192,9 @@ INSERT INTO NoidungGT VALUES ('GT3','CCTC',N'Chi bộ khoa',N'<h1>Chi bộ khoa<
 </ol>
 ','03/08/2017','IT2',1)
 
-INSERT INTO NoidungGT VALUES ('GT4','CCTC',N'Ban chủ nhiệm khoa',N'<p>&nbsp;</p>
+INSERT INTO NoidungGT VALUES ('GT4','CCTC',N'Ban chủ nhiệm khoa',N'
 
-<h1><strong>Ban chủ nhiệm khoa</strong></h1>
-
-<table align="center" border="1" cellpadding="0.5" cellspacing="0.5" style="width:800px">
+<table align="center" border="1" cellpadding="0.5" cellspacing="0.5" style="width:630px">
 	<thead>
 		<tr>
 			<th scope="row">L&atilde;nh đạo khoa</th>
@@ -1606,7 +2261,7 @@ INSERT INTO NoidungGT VALUES ('GT4','CCTC',N'Ban chủ nhiệm khoa',N'<p>&nbsp;
 
 <h1><strong>Danh s&aacute;ch c&aacute;c trợ l&yacute; l&atilde;nh đạo Khoa</strong></h1>
 
-<table align="left" border="1" cellpadding="0.5" cellspacing="0.5" style="width:800px">
+<table align="left" border="1" cellpadding="0.5" cellspacing="0.5" style="width:630px">
 	<thead>
 	</thead>
 	<tbody>
@@ -1639,7 +2294,7 @@ INSERT INTO NoidungGT VALUES ('GT4','CCTC',N'Ban chủ nhiệm khoa',N'<p>&nbsp;
 <p>&nbsp;</p>'
 ,'03/08/2017','IT2',1)
 
-INSERT INTO NoidungGT VALUES ('GT5','CCTC',N'Hội đồng khoa học',N'<h2>Hội đồng khoa học&nbsp;</h2>
+INSERT INTO NoidungGT VALUES ('GT5','CCTC',N'Hội đồng khoa học',N'
 
 <p>1. TS Huỳnh Minh Tr&iacute;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - Chủ tịch</p>
 
@@ -1656,7 +2311,7 @@ INSERT INTO NoidungGT VALUES ('GT5','CCTC',N'Hội đồng khoa học',N'<h2>H�
 <p>7. ThS Ph&ugrave;ng Th&aacute;i Thi&ecirc;n Trang&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Thư k&yacute;</p>
 ','03/08/2018','IT2',1)
 
-INSERT INTO NoidungGT VALUES ('GT6','CCTC',N'Công đoàn khoa',N'<h1>C&ocirc;ng đo&agrave;n khoa</h1>
+INSERT INTO NoidungGT VALUES ('GT6','CCTC',N'Công đoàn khoa',N'
 
 <p>1. C&ocirc; Ph&ugrave;ng Th&aacute;i Thi&ecirc;n Trang &ndash; Chủ tịch</p>
 
@@ -1668,8 +2323,7 @@ INSERT INTO NoidungGT VALUES ('GT6','CCTC',N'Công đoàn khoa',N'<h1>C&ocirc;ng
 INSERT INTO NoidungGT VALUES ('GT7','CCTC',N'Văn phòng khoa',N'','03/08/2017','IT2',1)
 
 
-INSERT INTO NoidungGT VALUES ('GT8','CCTC',N'Cựu viên chức khoa',N'<h1>Cựu vi&ecirc;n chức khoa</h1>
-
+INSERT INTO NoidungGT VALUES ('GT8','CCTC',N'Cựu viên chức khoa',N'
 <p>1. C&ocirc; PhanThị Cảnh</p>
 
 <p>2. Thầy Nguyễn Đăng Quan</p>
@@ -1702,99 +2356,99 @@ CREATE table Files
 )
 go
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD1','ND2','NDDT1',null,null,'CT1','File 1','~/Files/01.pdf',1)
+values ('BD1','ND2','NDDT1',null,null,'CT1','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND5','NDDT3','NCKH3','GT1','CT1','File 1','~/Files/01.pdf',1)
+values (null,'ND5','NDDT3','NCKH3','GT1','CT1','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND7',null,'NCKH3',null,'CT2','File 1','~/Files/01.pdf',1)
+values (null,'ND7',null,'NCKH3',null,'CT2','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD1','ND2','NDDT1',null,null,'CT3','File 2','~/Files/02.docx',1)
+values ('BD1','ND2','NDDT1',null,null,'CT3','File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD3','ND3',null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD3','ND3',null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD4','ND4',null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD4','ND4',null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD5',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD5',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD6',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD6',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD7',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD7',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD8',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD8',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD9',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD9',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD10',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD10',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD11',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD11',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD11',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD11',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD12',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD12',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD13',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD13',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD14',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD14',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD15',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD15',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD16',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD16',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD17',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD17',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD18',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD18',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD19',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD19',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD20',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD20',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD21',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD21',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD22',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD22',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD23',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD23',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD24',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD24',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD25',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD25',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD26',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD26',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD27',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD27',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD28',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD28',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD29',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD29',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD30',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD30',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD31',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD31',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD35',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD35',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD37',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD37',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD38',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD38',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD39',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD39',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD40',null,null,null,null,null,'File 2','~/Files/02.docx',1)
+values ('BD40',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD2','ND5',null,null,null,null,'File 3','~/Files/03.docx',1)
+values ('BD2','ND5',null,null,null,null,'File 3','/Assets/plugins/Uploads/files/03.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD2','ND5','NDDT2',null,null,null,'File 3','~/Files/03.docx',1)
+values ('BD2','ND5','NDDT2',null,null,null,'File 3','/Assets/plugins/Uploads/files/03.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND2','NDDT1',null,null,null,'File 4','~/Files/04.xlsx',1)
+values (null,'ND2','NDDT1',null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND3','NDDT2',null,null,null,'File 4','~/Files/04.xlsx',1)
+values (null,'ND3','NDDT2',null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND6',null,null,null,null,'File 4','~/Files/04.xlsx',1)
+values (null,'ND6',null,null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND1',null,null,null,null,'DonXinHoTroChiPhiHocTap','~/Files/DonXinHoTroChiPhiHocTap.docx',1)
+values (null,'ND1',null,null,null,null,'DonXinHoTroChiPhiHocTap','/Assets/plugins/Uploads/files/DonXinHoTroChiPhiHocTap.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND1',null,null,null,null,'DonXinMienGiamHocPhi','~/Files/DonXinMienGiamHocPhi.docx',1)
+values (null,'ND1',null,null,null,null,'DonXinMienGiamHocPhi','/Assets/plugins/Uploads/files/DonXinMienGiamHocPhi.docx.docx',1)
 insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND1',null,null,null,null,'DonXinTroCapDanToc','~/Files/DonXinTroCapDanToc.docx',1)
+values (null,'ND1',null,null,null,null,'DonXinTroCapDanToc','/Assets/plugins/Uploads/files/DonXinTroCapDanToc.docx',1)
 
 go
 create table Hinhanh
@@ -1816,3 +2470,16 @@ create table Hinhanh
 )
 insert into Hinhanh(Mabaidang,MaNDDT,MaCTNCKH,Machuyentiep,MaNDGT,TenFile,FilePath,Flag)
 values(null,'NDDT3',null,null,null,'khoa-hoc-may-tinh','~/Image/khoa-hoc-may-tinh.jpg',1)
+
+SELECT * FROM ThongtinGV 
+
+--select *  from ThongTinGV
+--where MaBM='BM2' and Chucvu like 'Tiến sĩ'
+--select * from Bomon
+
+select convert(varchar(10), NgayCT,101)
+from ChitietCTGV
+group by convert(varchar(10), NgayCT,101)
+
+select * from ChitietCTGV
+order by NgayCT asc

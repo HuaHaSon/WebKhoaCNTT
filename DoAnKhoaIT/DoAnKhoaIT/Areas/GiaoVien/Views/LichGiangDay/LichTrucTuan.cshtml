@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "LichTrucTuan";
+    Layout = "~/Areas/GiaoVien/Views/Shared/_LayoutGV.cshtml";
+}
+
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-sm-12" style="padding-left:0px; padding-right:0px">
+                <ul class="breadcrumb">
+
+                    <li>
+                        @Html.ActionLink("Trang chủ", "IndexGV", "Home")
+                    </li>
+                    <li>Lịch trực tuần</li>
+
+                </ul>
+            </div>
+
+            <div class="col-sm-12" style="padding-left:0px; padding-right:0px">
+                <div class=" post">
+                <table align="center" border="0" cellpadding="0" cellspacing="3" style="font-family: Arial; width: 100%;">
+                    <tbody>
+                        <tr height="30px">
+                            <td align="center">
+                                <h3 class="wd-title2" style="color: blue; font-weight: bold;">LỊCH TRỰC TUẦN</h3>
+                            </td>
+                        </tr>
+                        <tr height="20px">
+                            <td align="right">
+                                Năm học :
+                                <select name="dnn$ctr442$View$cboNamhoc" onchange="javascript:setTimeout('__doPostBack(\'dnn$ctr442$View$cboNamhoc\',\'\')', 0)" id="dnn_ctr442_View_cboNamhoc" style="width:100px;">
+                                    <option value="16">2016 - 2017</option>
+                                    <option value="17">2017 - 2018</option>
+                                    <option selected="selected" value="18">2018 - 2019</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr height="20px">
+                            <td align="center">
+                                Tuần :
+                                <select name="dnn$ctr442$View$cboTuan" onchange="javascript:setTimeout('__doPostBack(\'dnn$ctr442$View$cboTuan\',\'\')', 0)" id="dnn_ctr442_View_cboTuan" style="width:200px;">
+                                    <option value="1801">Tuần thứ 1: 06/08/2018</option>
+                                    <option value="1802">Tuần thứ 2: 13/08/2018</option>
+                                    <option value="1803">Tuần thứ 3: 20/08/2018</option>
+                                    <option value="1804">Tuần thứ 4: 27/08/2018</option>
+                                    <option value="1805">Tuần thứ 5: 03/09/2018</option>
+                                    <option value="1806">Tuần thứ 6: 10/09/2018</option>
+                                    <option value="1807">Tuần thứ 7: 17/09/2018</option>
+                                    <option value="1808">Tuần thứ 8: 24/09/2018</option>
+                                    <option value="1809">Tuần thứ 9: 01/10/2018</option>
+                                    <option value="1810">Tuần thứ 10: 08/10/2018</option>
+                                    <option value="1811">Tuần thứ 11: 15/10/2018</option>
+                                    <option value="1812">Tuần thứ 12: 22/10/2018</option>
+                                    <option value="1813">Tuần thứ 13: 29/10/2018</option>
+                                    <option value="1814">Tuần thứ 14: 05/11/2018</option>
+                                    <option value="1815">Tuần thứ 15: 12/11/2018</option>
+                                    <option value="1816">Tuần thứ 16: 19/11/2018</option>
+                                    <option value="1817">Tuần thứ 17: 26/11/2018</option>
+                                    <option selected="selected" value="1818">Tuần thứ 18: 03/12/2018</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr height="10px">
+                            <td align="center"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                <span id="dnn_ctr442_View_lblNoidung">
+                                    <div class="wd-content-detail">
+                                        <table align="center" border="1" bordercolor="#000000" cellpadding="4" cellspacing="0" width="100%" style="margin-bottom:25px">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="8%"><p align="center"><b>THỨ/NGÀY</b></p></td>
+                                                    <td width="8%"><p align="center"><b>THỜI GIAN</b></p></td>
+                                                    <td width="25%"><p align="center"><b>NỘI DUNG</b></p></td>
+                                                    <td width="30%"><p align="center"><b>THÀNH PHẦN</b></p></td>
+                                                    <td width="12%"><p align="center"><b>ĐỊA ĐIỂM</b></p></td>
+                                                    <td width="12%"><p align="center"><b>CHỦ TRÌ</b></p></td>
+                                                    <td width="5%"><p align="center"><b>BỔ SUNG</b></p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="3"><p align="center">Thứ 2</p><p align="center">03/12/2018</p></td>
+                                                    <td><p align="center"><b>08h00</b></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">Kiểm tra tình hình triển khai xây dựng CTĐT CLC</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">- Ban giám hiệu: Hiệu trưởng, PHT TS. Phan Minh Đức;</p><p align="left">- Lãnh đạo phòng Đào tạo, KT&amp;ĐBCL</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">Phòng họp khu A</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="center"><b></b></p><p align="left"><b>Hiệu trưởng</b></p><p></p></td>
+                                                    <td><p align="center">&nbsp;</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p align="center"><b>14h00</b></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">Họp giao ban các đơn vị chức năng trong trường</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">- Ban Giám hiệu;</p><p align="left">- Trưởng các đơn vị chức năng của Trưởng</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left" style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px">Phòng họp khu A</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="center"><b></b></p><p align="left"><b>Hiệu trưởng</b></p><p></p></td>
+                                                    <td><p align="center">&nbsp;</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p align="center"><b>14h15</b></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">Lễ trao học bổng JBAV cho sinh viên ĐHĐN</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">- ĐHĐN: PGĐ Ngô Văn Dưỡng; Trưởng các Ban: HTQT, CTHSSV; Phó CVP (ThS. Đinh Thị Mỹ Hạnh);</p><p align="left">- Các CSGDĐHTV và ĐVTT: Đại diện Phòng CTSV;</p><p align="left">- Các sinh viên được nhận học bổng và phụ huynh.</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">Phòng họp 1 Khu A 41 Lê Duẩn</p><p></p></td>
+                                                    <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="center"><b></b></p><p align="left"><b>PGĐ ĐHĐN PGS. TS Ngô Văn Dưỡng</b></p><p></p></td>
+                                                    <td><p align="center">&nbsp;</p></td>
+                                                </tr>
+
+                                        </table>
+
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size:15px;">Đăng bởi :</h3>
+                <h3 style="font-size:15px;">Ngày đăng :</h3>
+
+                
+            </div>  @*#content*@
+        </div>
+    </div>
+</body>
+<style>
+    .post {
+        background: #f5f5f5;
+        margin: 0 0 30px;
+        border: solid 1px #e6e6e6;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+</style>
+
+
+
+
+

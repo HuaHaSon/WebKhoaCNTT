@@ -1,0 +1,69 @@
+﻿@model Model.EF.ChitietNCKH
+@{
+    ViewBag.Title = "CT_NCKH";
+    Layout = "~/Areas/GiaoVien/Views/Shared/_LayoutGV.cshtml";
+}
+<head>
+    <link href="/Assets/Guest/css/khungbentrai.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li>
+                        @Html.ActionLink("Trang chủ", "Index", "Home")
+                    </li>
+                    <li>@Html.ActionLink((string)ViewBag.TenLoai, "NCKH", "NghienCuuKH")</li>
+                    <li>Thông tin</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <!-- *** PAGES MENU ***
+                _________________________________________________________ -->
+                <!-- *** PAGES MENU END *** -->
+
+                <div class="panel panel-default sidebar-menu">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="font-size:18px">Đào tạo</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <p>    @Html.ActionLink("Sự kiện nghiên cứu", "NCKH", "NghienCuuKH")</p>
+                        <p>    @Html.ActionLink("Bài báo sự kiện", "NCKH", "NghienCuuKH")</p>
+                    </div>
+                </div>
+
+                <!-- *** PAGES MENU END *** -->
+                @*<div class="banner">
+                        <a href="#">
+                            <img src="../../../cntt_media/khoa-cntt.jpg" alt="Khoa CNTT" class="img-responsive">
+                        </a>
+                    </div>*@
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="box" id="text-page">
+                    <h1 style="font-size:22px">@Model.Tieude</h1>
+                    <p>@Html.Raw(@Model.Noidung)</p>
+                    <p>Ngày sự kiện: @Model.NgaySK</p>
+                    <hr>
+                    <p>Đăng bởi: @ViewBag.HoTen, Ngày: @Model.Ngaydang</p>
+                    <p>Đính kèm: </p>
+                </div>
+
+
+            </div>
+            <!-- /.col-md-9 -->
+        </div>
+        <!-- /.container -->
+        <!-- /#content -->
+    </div>
+</body>
+
+

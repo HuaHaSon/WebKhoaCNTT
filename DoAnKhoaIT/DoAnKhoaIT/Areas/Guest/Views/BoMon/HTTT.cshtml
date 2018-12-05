@@ -34,10 +34,11 @@
                     </div>
 
                     <div class="panel-body">
-                        <p> @Html.ActionLink("Hệ thống thông tin", "HTTT", "BoMon",new { mabm="BM1",tenbm= "Hệ thống thông tin" },null)</p>
-                        <p> @Html.ActionLink("Kỹ thuật phần mềm", "HTTT", "BoMon", new { mabm = "BM2", tenbm = "Kỹ thuật phần mềm" }, null)</p>
-                        <p> @Html.ActionLink("Khoa học máy tính", "HTTT", "BoMon", new { mabm = "BM3", tenbm = "Khoa học máy tính" }, null)</p>
-                        <p> @Html.ActionLink("Mạng máy tính", "HTTT", "BoMon", new { mabm = "BM4", tenbm = "Mạng máy tính" }, null)</p>
+                        @foreach (var item in ViewBag.List)
+                        {
+                            <p> @Html.ActionLink((string)item.TenBM, "HTTT", "BoMon", new { mabm = item.MaBM, tenbm =item.TenBM }, null)</p>
+                        }
+                     
                     </div>
                 </div>
 
@@ -68,9 +69,7 @@
                                     <div class="post" style="background-color:#FFF">
                                         <a href="#"><img alt="" class="hieuunganh_image" src="../../../images/cntt_media/male.png" style="border-radius:20%" width="100" /> </a>
 
-                                        <div class="hieuunganh_box">
-                                            <div><a class="btn btn-success" href="#" type="button">Xem thêm</a></div>
-                                        </div>
+
 
                                         <div>
                                             <p style="text-align:center">
@@ -78,6 +77,9 @@
                                                 @item.TenGV<br />
                                                 Email: @item.Diachimail
                                             </p>
+                                        </div>
+                                        <div class="hieuunganh_box">
+                                            <div><a class="btn btn-success" style="margin-left:32px" href="#" type="button">Xem thêm</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +121,7 @@
 
                     <hr>
                     <p>Post by: Khoa CNTT, ngày: 2017-08-03 14:03:09</p>
-                    <p>Đính kèm: </p>
+                 
 
 
                 </div>

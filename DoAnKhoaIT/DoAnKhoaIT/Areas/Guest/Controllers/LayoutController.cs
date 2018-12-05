@@ -22,7 +22,7 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
         }
         public ActionResult DaoTao()
         {
-            ViewBag.List = db.Loaidaotaos.Where(s => s.Flag == true).ToList();
+            ViewBag.List = db.Loaidaotaos.Where(s => s.Flag == true && s.MaloaiDT!="TiS").ToList();
             return PartialView("DaoTao");
         }
         public ActionResult BoMon()

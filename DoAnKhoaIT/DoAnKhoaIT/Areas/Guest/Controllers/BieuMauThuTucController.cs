@@ -11,10 +11,12 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
     {
         // GET: Guest/BieuMauThuTuc
         BMTTDAO dao = new BMTTDAO();
+        SGU db = new SGU();
         public ActionResult BM(string mabm,string tenbm,int page=1,int pagesize=5)
         {
             ViewBag.Ten = tenbm;
             ViewBag.MaBM = mabm;
+            ViewBag.List = db.Bieumauthutucs.Where(s => s.Flag == true).ToList();
             var res = dao.ListALL(mabm, page, pagesize);
             if (res == null)
                 return View(new NoidungBMTT());

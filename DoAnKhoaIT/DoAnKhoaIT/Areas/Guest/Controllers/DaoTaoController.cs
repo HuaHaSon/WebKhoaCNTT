@@ -11,10 +11,12 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
     {
         // GET: Guest/DaoTao
         DaoTaoDAO dao = new DaoTaoDAO();
+        SGU db = new SGU();
         public ActionResult TDDH(string maloaidt,string tenloai,int page=1,int pagesize=5)
         {
             ViewBag.TenLoai = tenloai;
             ViewBag.MaDT = maloaidt;
+            ViewBag.List = db.Loaidaotaos.Where(s => s.Flag == true && s.MaloaiDT != "TiS").ToList();
             var res = dao.LoadList(maloaidt, page, pagesize);
             if (res == null)
                 return View(new NoidungDT());
@@ -24,6 +26,7 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
         {
             ViewBag.MaDT = madt;
             ViewBag.TenLoai = tenloai;
+            ViewBag.List = db.Loaidaotaos.Where(s => s.Flag == true && s.MaloaiDT != "TiS").ToList();
             var res = dao.CTDT(manddt);
             return View(res);
         }

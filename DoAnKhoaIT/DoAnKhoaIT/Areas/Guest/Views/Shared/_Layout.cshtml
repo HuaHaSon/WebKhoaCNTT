@@ -67,8 +67,8 @@
         <div class="container">
             <div class="row header-link">
                 <ul>
-                    <li><a target="_blank" href="http://iuh.edu.vn/">Website SGU</a></li>
-                    <li><a target="_blank" href="http://lib.iuh.edu.vn/">Liên hệ</a></li>
+                    <li><a target="_blank" href="https://sgu.edu.vn/">Website SGU</a></li>
+                    <li>@Html.ActionLink("Liên hệ", "CCTC_ChiBo", "GioiThieu", new { tieude = "Văn phòng khoa" }, null)</li>
                     <li><a target="_blank" href="">Đăng nhập</a></li>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
     </div>
     <header class="header">
         <div class="container">
-            <div class="col-md-3 header-left"> <a href="index.html" class="logo"> <img alt="SGU" title="IUH" src="/Assets/Guest/images/sgulogo.png"> </a> </div>
+            <div class="col-md-3 header-left"> <a href="@Url.Action("Index","Home")" class="logo"> <img alt="SGU" title="IT_SGU" src="/Assets/Guest/images/sgulogo.png"> </a> </div>
             <div class="col-md-9 header-right">
                 <div class="right-up-title">Trường Đại học Sài Gòn</div>
                 <div class="right-title">Khoa Công Nghệ Thông Tin</div>
@@ -148,10 +148,10 @@
                                             </span>
                                         </a>
                                     <ul role="menu" class="dropdown-menu">
-                                        <li>@Html.ActionLink("Học bổng", "HB", "ThongBao_TinTuc", new { tagid = "10", ten = "Học bổng" }, null)</li>
+                                        <li>@Html.ActionLink("Học bổng", "TTTD", "ThongBao_TinTuc", new { tagid = "10", ten = "Học bổng" }, null)</li>
                                         <li> @Html.ActionLink("Thực tập - Tuyển dụng", "TTTD", "ThongBao_TinTuc", new { tagid = "6" ,ten= "Thực tập - Tuyển dụng"}, null)</li>
-                                        <li>@Html.ActionLink("Đoàn hội", "HDDH", "HoatDongDoanHoi")</li>
-                                        <li>@Html.ActionLink("Olympic sinh viên", "OLPSV", "OlympicSV")</li>
+                                        <li>@Html.ActionLink("Đoàn hội", "TTTD", "ThongBao_TinTuc", new { tagid = "5", ten = "Đoàn hội" }, null)</li>
+                                        <li>@Html.ActionLink("Olympic sinh viên", "TTTD", "ThongBao_TinTuc", new { tagid = "8", ten = "Olympic sinh viên" }, null)</li>
                                     </ul>
                                     </li>
                                     <li id="menu-item-198" class="dropdown">
@@ -292,7 +292,7 @@
                                             <li>
                                                 <i class="fa fa-phone"></i> Điện thoại: 028. 389.40390 - 851,582,234 <br />
                                                 Email: itsgu@gmail.com<br />
-                                                <a href="contact.html" style="color:#3a8324">Liên hệ - Phản hồi</a>
+                                                
                                             </li>
                                         </ul>
                                     </div>
@@ -338,15 +338,11 @@
                 </div>
                 <div class="footer-bottom">
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="copyright"> <a href="admins/index.html" style="color:#fff" target="_blank">2018</a> Khoa Công nghệ thông tin - Trường Đại học sài gòn </div>
-                        </div>
+                        <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <div class="social-media">
-                                <i class="fa fa-users"></i> Số lượt  truy cập : 5,672,443<br />
-                                <i class="fa fa-user"></i> Đang online  : <b>44</b>
-                            </div>
+                            <div class="copyright"> <a href="admins/index.html" style="color:#fff" target="_blank"></a> Khoa Công nghệ thông tin - Trường Đại học sài gòn </div>
                         </div>
+                        <div class="col-md-4"></div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
