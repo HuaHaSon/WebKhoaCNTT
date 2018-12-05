@@ -5,6 +5,9 @@
     RegisterEvents: function () {
         // do logic here
         var dulieu = [];
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var chart1;
+        
         $(document).ready(function () {
             $.ajax({
                 url: "/Admin/Luottruycap/Luottruycap",
@@ -24,7 +27,6 @@
                 }
             });
             function GenerateChart(dulieu) {
-                alert("vao ham");
                 var timeFormat = 'DD/MM/YYYY';
                 var config = {
                     type: 'line',
@@ -33,16 +35,37 @@
                             {
                                 label: "Lượt truy cập",
                                 data: dulieu,
-                                fill: false,
-                                borderColor: 'blue'
+                                fill: true,
+                                borderColor: 'blue',
+                                fillColor: "rgba(151,187,205,0.2)",
+                                strokeColor: "rgba(151,187,205,1)",
+                                pointColor: "rgba(151,187,205,1)",
+                                pointStrokeColor: "#fff",
+                                pointHighlightFill: "#fff",
+                                pointHighlightStroke: "rgba(151,187,205,1)",
+                                
+                                pointRadius:1
                             }
                         ]
                     },
                     options: {
+
                         responsive: true,
                         title: {
                             display: true,
                             text: "Đồ thị lượt truy cập"
+                        },
+                        legend: {
+                            display: true,
+                            reverse: true
+                        },
+                        tooltips: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        hover: {
+                            mode: 'nearest',
+                            intersect: true
                         },
                         scales: {
                             xAxes: [{
@@ -71,32 +94,59 @@
                                 scaleLabel: {
                                     display: true,
                                     labelString: 'Lượt truy cập'
-                                }
+                                },
+                                ticks: {
+                                    beginAtZero: true
+                                },
                             }],
-                            tooltips: {
-                                mode: 'y'
-                            }
                         }
                     }
                 };
-                var ctx = document.getElementById("myChart").getContext("2d");
-                var chart1 = new Chart(ctx, config);
+
+                chart1 = new Chart(ctx, config);
             }
 
         });
 
-        var chonngay = "";
-        // when the dialog is closed....
-        $('.dropdown').on('hide.bs.dropdown', function (e) {
-            if (chonngay == "tuychinh") {
-                e.preventDefault();
-            }
-        });
-        $("#myChart").mousemove(function (e) {
+        document.getElementById("myChart").onmousemove = function (evt) {
+            mousemovechart(chart1, evt);       
+        };
 
-            document.getElementById("luottruycap").innerHTML = $(this).getContext;
-            console.log($(this).value);
-        })
+
+
+        function mousemovechart(chart1, evt) {
+            var offset = $("#myChart").offset();
+            var a = evt.pageX - offset.left;          
+
+            var x = -1;
+            var meta = chart1.getDatasetMeta(0);
+
+            // tim kiem nhi phan
+            var left = 0;
+            var right = meta.data.length - 1;
+
+            while (left <= right) {
+                
+                var mid = Math.round((left + right) / 2);
+                var t = Math.round(meta.data[mid]._model.x);
+                if (a == t) {                   
+                    x = mid;
+                    break;
+                }
+                else if (a < t)
+                    right = mid - 1;
+                else if (a > t)
+                    left = mid + 1;
+            }
+
+            if (x != -1) {
+                var pre = (chart1.config.data.datasets[0].data[x].y / chart1.config.data.datasets[0].data[0].y)*100 - 100;           
+                $("#luottruycap").text(chart1.config.data.datasets[0].data[x].y);
+                $("#tiletang").text("+" + Math.round(pre*100)/100 + "%");
+            }
+        }            
+
+
 
         var start = moment().subtract(29, 'days');
         var end = moment();
@@ -130,5 +180,6 @@
         });
 
     }
+
 }
 luottruycap.init();

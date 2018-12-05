@@ -81,3 +81,4 @@ D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
 D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.dll
 D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.pdb
 D:\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
