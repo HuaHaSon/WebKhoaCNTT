@@ -5,15 +5,19 @@
         type: "Post",
         data: {status: '1'},
         success: function (response) {
+            
+            var res = JSON.parse(response.data);
             var events = [];
-            alert("thanh cong");
-            events.push({
-                title: 'Title N',
-                start: '2018-12-25T13:13:55.008',
-            });
+            $.each(res, function (i, v) {
+                //alert(v.NgayCT);
+                events.push({
+                    title: v.MaCTCTGV,
+                    start: v.NgayCT,
+                });     
+            });                    
 
             GenerateCalendar(events);
-            alert("thanh cong");
+            
         }
     });
 });
@@ -40,9 +44,10 @@ function GenerateCalendar(events) {
         events: events,                   
 
         eventClick: function (event, element) {
-
-            event.title = "CLICKED!";
-            event.end = '2018-12-05T13:13:55.008'
+            alert("thanh cong");
+            alert(event.title);
+            $("#lichgvmodal").modal('show');
+            event.color = "black";
             $('#calendar').fullCalendar('updateEvent', event);
 
         },
