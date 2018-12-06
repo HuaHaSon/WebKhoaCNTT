@@ -24,7 +24,7 @@ INSERT INTO Taikhoan VALUES( 'IT5','12345','2-1-2007', 'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT6','12345','1-12-2012','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT7','12345','12-2-2015','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT8','12345','11-13-2013','Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT9','12345','11-11-2011', 'Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT9','d5TT6Zse5uU=','11-11-2011', 'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT10','12345','11-20-2005', 'Offline',1)
 go	
 CREATE TABLE Chucvu

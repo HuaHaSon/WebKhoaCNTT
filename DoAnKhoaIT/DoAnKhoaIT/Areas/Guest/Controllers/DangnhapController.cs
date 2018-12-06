@@ -76,7 +76,12 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
                     var usersession = new TaikhoanLogin();
                     usersession.UserName = user.Tentaikhoan;
                     usersession.Name = user.Hoten;
+                    usersession.chucvu = user.Machucvu;
                     Session.Add(CommonConstants.USER_SESSION, usersession);
+                    if (usersession.chucvu != "CV3")
+                    {
+                        return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien" });
+                    }                   
                     return RedirectToAction("Index", "Home", new { area = "Admin" });
                 }
                 else
