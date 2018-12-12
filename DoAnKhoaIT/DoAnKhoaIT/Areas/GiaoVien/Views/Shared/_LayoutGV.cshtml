@@ -3,6 +3,7 @@
     Layout = null;
 }
 
+
 <!doctype html>
 <html>
 
@@ -25,6 +26,9 @@
     <link href="/Assets/GiaoVien/University/21_HUFI/content/owl-carousel/owl.carousel.css" rel="stylesheet" />
     <link href="/Assets/GiaoVien/University/21_HUFI/content/owl-carousel/owl.theme.css" rel="stylesheet" />
     <link href="/Assets/GiaoVien/University/21_HUFI/css/magnific-popup.css" rel="stylesheet" />
+    <!-- Dropzone css -->
+    <link href="/Asset/Admin/plugins/bower_components/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" />
+
     <script src="/Assets/GiaoVien/University/21_HUFI/js/jquery.min.js"></script>
     <script src="/Assets/GiaoVien/University/21_HUFI/content/owl-carousel/owl.carousel.min.js"></script>
     <script src="/Assets/GiaoVien/University/21_HUFI/js/menu.js"></script>
@@ -33,6 +37,7 @@
     <script src="/Assets/GiaoVien/University/21_HUFI/js/home.js"></script>
     <script src="/Assets/GiaoVien/Module/js/common/aes.js"></script>
     <script src="/Assets/GiaoVien/Module/js/common/pbkdf2.js"></script>
+
 
     @*<link href="/TemplatesGV/css/pe-icon-7-stroke.css" rel="stylesheet" />
         <link href="/TemplatesGV/css/ct-navbar.css" rel="stylesheet" />
@@ -67,7 +72,7 @@
                                     <div id="ex4">
                                         <span class="p1 fa-stack fa-2x has-badge" data-count="4">
                                             <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
-                                           <a href="@Url.Action("GuiMail","GuiMail")"><i class="fa fa-envelope-o" style="color: cornflowerblue;" data-count="4b"></i></a>
+                                            <a href="@Url.Action("GuiMail","GuiMail",new { txtsearch=""},null)"><i class="fa fa-envelope-o" style="color: cornflowerblue;" data-count="4b"></i></a>
                                         </span>
                                     </div>
                                 </li>
@@ -98,7 +103,7 @@
                                 </div>
                                 <div class="clearfix"></div>
                             }
-                            </div>
+                        </div>
                         <div id="demo" class="collapse content-slide" style="padding: 10px;border-bottom:solid #3B5998 1px">
                             @using (Html.BeginForm("TB", "ThongBao", FormMethod.Get))
                             {
@@ -128,15 +133,15 @@
 
                                     <div class="col-lg-6" style="width: 300px; padding-top: 25px;margin-left: 3%;">
 
-                                        <button class="btn btn-success" style="float:right;margin-right:15px" type="button"> Tìm </button>
+                                        <button type="submit" class="btn btn-success" style="float:right;margin-right:15px" type="button"> Tìm </button>
                                         <button class="btn btn-default" style="float:right;margin-right:15px" type="button" data-toggle="collapse" data-target="#demo"> Hủy </button>
 
                                     </div>
 
                                 </form>
-                                                }
+                            }
                         </div>
-                       
+
 
                     </div>
                 </div>
@@ -154,7 +159,7 @@
                                         <a href="#" class="header__icon" id="header__icon"><span>Menu</span></a>
                                         <nav id="moitmenu" class="menu">
                                             <ul>
-                                                <li id="homeitem" class="active">@Html.ActionLink(" ", "IndexGV", "Home",null, new { @class= "home icon-home"})</li>
+                                                <li id="homeitem" class="active">@Html.ActionLink(" ", "IndexGV", "Home", null, new { @class = "home icon-home" })</li>
                                                 <li>
                                                     <a>Giới thiệu</a>
                                                     <i class="fa fa-angle-right fa-menu"></i>
@@ -170,7 +175,7 @@
                                                             @{Html.RenderAction("CCTC", "Layout");}
                                                         </li>
                                                     </ul>
-                                                </li>                                        
+                                                </li>
                                                 <li>
                                                     <a>Đào tạo</a>
                                                     <i class="fa fa-angle-right fa-menu"></i>
@@ -184,15 +189,7 @@
                                                 <li>
                                                     <a>Công tác giáo viên</a>
                                                     <i class="fa fa-angle-right fa-menu"></i>
-                                                    <ul>
-                                                        <li>
-                                                            @Html.ActionLink("Lịch họp","LichHop","LichGiangDay")
-                                                        </li>
-                                                        <li>
-                                                           @Html.ActionLink("Lịch trực tuần","LichTrucTuan","LichGiangDay")
-                                                        </li>
-                                                        
-                                                    </ul>
+                                                    @{Html.RenderAction("LichGV", "Layout");}
                                                 </li>
                                                 <li>
                                                     <a>Nghiên cứu khoa học</a>
@@ -202,7 +199,7 @@
                                                             <a href="cac-trinh-do-dao-tao-cua-truong.html">Sự kiện khoa học</a>
                                                         </li>
                                                         <li>
-                                                            @Html.ActionLink("Bài báo công bố","NCKH_BaiBao","NghienCuuKH")
+                                                            @Html.ActionLink("Bài báo công bố", "NCKH_BaiBao", "NghienCuuKH")
                                                         </li>
 
                                                     </ul>
@@ -215,11 +212,11 @@
                                             </ul>
                                             <form action="http://hufi.edu.vn/Home/Search" method="get" id="mobile-search">
                                                 @*<p class="input-group">
-                                                    <input type="text" class="form-control" name="s" required="" placeholder="Tìm kiếm...">
-                                                    <span class="input-group-btn">
-                                                        <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                                    </span>
-                                                </p>*@
+                                                        <input type="text" class="form-control" name="s" required="" placeholder="Tìm kiếm...">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                        </span>
+                                                    </p>*@
                                             </form>
                                         </nav>
                                     </div>
@@ -232,7 +229,7 @@
 
             @RenderBody()
 
-           
+
 
 
             <section id="footer">
@@ -324,7 +321,20 @@
             //font-weight:bold;
         }
     </style>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Assets/Admin/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="/Assets/Admin/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="/Assets/Admin/js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/Assets/Admin/js/custom.min.js"></script>
+    <!-- Dropzone Plugin JavaScript -->
+    <script src="/Assets/Admin/plugins/bower_components/dropzone-master/dist/dropzone.js"></script>
+    <!--Style Switcher -->
+    <script src="/Assets/Admin/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 
+    @RenderSection("JsFooter", required: false)
 
 </body>
 

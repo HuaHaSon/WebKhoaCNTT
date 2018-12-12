@@ -88,15 +88,19 @@
                                                     @foreach(var item in Model)
                                                     {
                                                     <tr>
-                                                        <td rowspan="3"><p align="center">@item.thu</p><p align="center">@item.Ngay</p></td>
+                                                        <td rowspan="3"><p align="center">@item.thu</p><p align="center">@item.Ngay.Value.ToString("dd/MM/yyyy")</p></td>
                                                         @foreach (var res in ViewBag.Theongay)
                                                         {
-                                                            <td><p align="center"><b>@res.thoigian</b></p></td>
-                                                            <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">@Html.Raw(res.ctgv.Noidung)</p><p></p></td>
-                                                            <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">@Html.Raw(res.ctgv.Thanhphan)</p></td>
-                                                            <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">res.ctgv.Diadiem</p><p></p></td>
-                                                            <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="center"><b></b></p><p align="left"><b>res.ctgv.Chutri</b></p><p></p></td>
-                                                            <td><p align="center">&nbsp;</p></td>
+                                                            if (item.Ngay.Equals(res.Ngay))
+                                                            {
+                                                                <td><p align="center"><b>@res.thoigian</b></p></td>
+                                                                <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">@Html.Raw(@res.Noidung)</p><p></p></td>
+                                                                <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">@Html.Raw(@res.Thanhphan)</p></td>
+                                                                <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="left"></p><p align="left">@res.Diadiem</p><p></p></td>
+                                                                <td style="padding-left:5px; padding-right:5px; padding-top:5px;padding-bottom:5px"><p align="center"><b></b></p><p align="left"><b>@res.ChuTri</b></p><p></p></td>
+                                                                <td><p align="center">&nbsp;</p></td>
+                                                            }
+
                                                         }
 
                                                     </tr>

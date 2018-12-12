@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,7 @@
     <Compile Include="DAO\Admin\ThongbaochuyentiepDao.cs" />
     <Compile Include="DAO\Admin\ThongtinnguoidungDao.cs" />
     <Compile Include="DAO\DangNhapDao.cs" />
+    <Compile Include="DAO\GiaoVien\GuiMail.cs" />
     <Compile Include="DAO\GiaoVien\HomeDAO.cs" />
     <Compile Include="DAO\GiaoVien\LichGV.cs" />
     <Compile Include="DAO\GiaoVien\NghienCuuKH.cs" />
@@ -95,8 +97,6 @@
     <Compile Include="EF\Chitietquyen.cs" />
     <Compile Include="EF\Chucvu.cs" />
     <Compile Include="EF\CongtacGV.cs" />
-    <Compile Include="EF\File.cs" />
-    <Compile Include="EF\Hinhanh.cs" />
     <Compile Include="EF\Loaibaidang.cs" />
     <Compile Include="EF\Loaidaotao.cs" />
     <Compile Include="EF\LoaiGT.cs" />
@@ -121,9 +121,11 @@
     <Compile Include="ViewModel\DangnhapModel.cs" />
     <Compile Include="ViewModel\DaotaoModel.cs" />
     <Compile Include="ViewModel\Doituonghienthi.cs" />
+    <Compile Include="ViewModel\FormMail.cs" />
     <Compile Include="ViewModel\GioithieuModel.cs" />
     <Compile Include="ViewModel\LichGV_TheoNgay.cs" />
     <Compile Include="ViewModel\HomeModel.cs" />
+    <Compile Include="ViewModel\ModelMail.cs" />
     <Compile Include="ViewModel\NghiencuukhoahocModel.cs" />
     <Compile Include="ViewModel\ThongbaochuyentiepModel.cs" />
     <Compile Include="ViewModel\ThongtinnguoidungModel.cs" />

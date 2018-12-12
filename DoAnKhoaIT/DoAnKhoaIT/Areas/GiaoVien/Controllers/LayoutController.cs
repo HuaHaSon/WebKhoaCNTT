@@ -47,7 +47,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
         }
         public ActionResult LoadLoaiBD()
         {
-            ViewBag.List = db.Loaibaidangs.Where(s => s.Flag == true).Select(s => s.Tenloai).ToList();
+            ViewBag.List = db.Loaibaidangs.Where(s => s.Flag == true && s.Maloai!="HDSV" && s.Maloai!="TS").Select(s => s.Tenloai).ToList();
             return PartialView("LoadLoaiBD");
         }
         public ActionResult LichGV()

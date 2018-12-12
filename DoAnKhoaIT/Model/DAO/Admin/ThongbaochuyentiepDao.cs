@@ -23,11 +23,11 @@ namespace Model.DAO.Admin
         {
             return db.Taikhoans.ToList();
         }
-        public Thongbaochuyentiep timchuyentiep(string id)
+        public Thongbaochuyentiep timchuyentiep(int id)
         {
             return db.Thongbaochuyentieps.Find(id);
         }
-        public Chitietchuyentiep timchitietchuyentiep(string id)
+        public Chitietchuyentiep timchitietchuyentiep(int id)
         {
             return db.Chitietchuyentieps.Where(model => model.Machuyentiep == id).SingleOrDefault()
 ;
@@ -64,8 +64,7 @@ namespace Model.DAO.Admin
         public bool? ChangeStatusChuyentiep(string id)
         {
             var res = db.Thongbaochuyentieps.Find(id);
-            res.Flag = !res.Flag;
-            return !res.Flag;
+            return true;
         }
         public IEnumerable<Trangthai> ITrangthai = new List<Trangthai>
         {

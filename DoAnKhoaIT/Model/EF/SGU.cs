@@ -22,8 +22,6 @@
         public virtual DbSet<Chitietquyen> Chitietquyens { get; set; }
         public virtual DbSet<Chucvu> Chucvus { get; set; }
         public virtual DbSet<CongtacGV> CongtacGVs { get; set; }
-        public virtual DbSet<File> Files { get; set; }
-        public virtual DbSet<Hinhanh> Hinhanhs { get; set; }
         public virtual DbSet<Loaibaidang> Loaibaidangs { get; set; }
         public virtual DbSet<Loaidaotao> Loaidaotaos { get; set; }
         public virtual DbSet<LoaiGT> LoaiGTs { get; set; }
@@ -75,10 +73,6 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Chitietchuyentiep>()
-                .Property(e => e.Machuyentiep)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Chitietchuyentiep>()
                 .Property(e => e.Taikhoannhan)
                 .IsUnicode(false);
 
@@ -127,54 +121,6 @@
                 .Property(e => e.MaCT)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<File>()
-                .Property(e => e.Mabaidang)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<File>()
-                .Property(e => e.MaNDBMTT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<File>()
-                .Property(e => e.MaNDDT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<File>()
-                .Property(e => e.MaCTNCKH)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<File>()
-                .Property(e => e.MaNDGT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<File>()
-                .Property(e => e.Machuyentiep)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Hinhanh>()
-                .Property(e => e.Mabaidang)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Hinhanh>()
-                .Property(e => e.MaNDDT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Hinhanh>()
-                .Property(e => e.MaCTNCKH)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Hinhanh>()
-                .Property(e => e.Machuyentiep)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Hinhanh>()
-                .Property(e => e.MaNDGT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Hinhanh>()
-                .Property(e => e.FilePath)
-                .IsUnicode(false);
-
             modelBuilder.Entity<Loaibaidang>()
                 .Property(e => e.Maloai)
                 .IsUnicode(false);
@@ -205,10 +151,6 @@
 
             modelBuilder.Entity<NoidungBMTT>()
                 .Property(e => e.MaBMTT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NoidungBMTT>()
-                .Property(e => e.Tentaikhoan)
                 .IsUnicode(false);
 
             modelBuilder.Entity<NoidungDT>()
@@ -279,10 +221,6 @@
                 .HasMany(e => e.Thongbaochuyentieps)
                 .WithOptional(e => e.Taikhoan)
                 .HasForeignKey(e => e.Taikhoangui);
-
-            modelBuilder.Entity<Thongbaochuyentiep>()
-                .Property(e => e.Machuyentiep)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Thongbaochuyentiep>()
                 .Property(e => e.Taikhoangui)

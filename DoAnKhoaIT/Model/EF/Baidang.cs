@@ -13,8 +13,6 @@ namespace Model.EF
         public Baidang()
         {
             Chitietbaidangs = new HashSet<Chitietbaidang>();
-            Files = new HashSet<File>();
-            Hinhanhs = new HashSet<Hinhanh>();
         }
 
         [Key]
@@ -44,11 +42,5 @@ namespace Model.EF
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chitietbaidang> Chitietbaidangs { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<File> Files { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hinhanh> Hinhanhs { get; set; }
     }
 }

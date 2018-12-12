@@ -13,13 +13,10 @@ namespace Model.EF
         public Thongbaochuyentiep()
         {
             Chitietchuyentieps = new HashSet<Chitietchuyentiep>();
-            Files = new HashSet<File>();
-            Hinhanhs = new HashSet<Hinhanh>();
         }
 
         [Key]
-        [StringLength(50)]
-        public string Machuyentiep { get; set; }
+        public int Machuyentiep { get; set; }
 
         [StringLength(100)]
         public string Taikhoangui { get; set; }
@@ -31,16 +28,10 @@ namespace Model.EF
 
         public DateTime? Ngaychuyen { get; set; }
 
-        public bool? Flag { get; set; }
+        public int? Flag { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chitietchuyentiep> Chitietchuyentieps { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<File> Files { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hinhanh> Hinhanhs { get; set; }
 
         public virtual Taikhoan Taikhoan { get; set; }
     }

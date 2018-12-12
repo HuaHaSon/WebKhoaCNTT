@@ -1,0 +1,674 @@
+﻿@model Model.ViewModel.BaidangAdminModel
+@{
+    ViewBag.Title = "BD";
+    Layout = "~/Areas/VanPhongKhoa/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+
+
+    <script src="~/Assets/Admin/js/admin/controller/Baidang.js"></script>
+
+}
+
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Quản lý</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Quản lý</a></li>
+                <li class="active">Bài đăng</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /row -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box" id="tabbaidangs">
+                <ul class="nav customtab nav-tabs" role="tablist">
+                    <li role="presentation" id="tabbaidang" class="active"><a href="#baidang1" aria-controls="baidang" role="tab" data-toggle="tab" aria-expanded="true"><i class="ti-home"></i><span class="hidden-xs"> Bài đăng</span></a></li>
+                    <li role="presentation" id="tabloaibaidang" class=""><a href="#loaibaidang1" aria-controls="loaibaidang" role="tab" data-toggle="tab" aria-expanded="false"><i class="ti-user"></i> <span class="hidden-xs">Loại bài đăng</span></a></li>
+                    <li role="presentation" id="tabtagid" class=""><a href="#tagid1" aria-controls="tagid" role="tab" data-toggle="tab" aria-expanded="false"><i class="ti-email"></i> <span class="hidden-xs">Tag ID</span></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <!-- bảng tài khoản -->
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active in" id="baidang1">
+                        <div style="margin-bottom: 15px">
+                            <button class="btn btn-success" data-toggle="modal" data-target="#thembaidang"> Thêm bài đăng </button>
+                        </div>
+                        @*<input id="txtimage" /> <button id="btnimage"> Chon </button>*@
+                        <!-- modal -->
+
+                        <div id="thembaidang" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm bài đăng</h4>
+                                    </div>
+
+                                    <form data-toggle="validator">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin bài đăng</h3>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Mã bài đăng </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.baidang.Mabaidang, "", new { @type = "text", @class = "form-control mabaidangadd", @placeholder = "Mã bài đăng", @required = "required" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Mã loại </label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.DropDownListFor(Model => Model.baidang.Maloai, new SelectList(Model.listloaibaidang, "Maloai", "Tenloai"), new { @id = "baidangadd_maloai", @class = "form-control maloaibaidangadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Thời gian hiệu lực </label>
+                                                    <div class="col-md-12">
+                                                        <div class="input-group">
+                                                            @Html.TextBoxFor(model => model.baidang.Thoigianhieuluc, "", new { @type = "text", @class = "form-control tghieulucbaidangadd", @id = "datepicker-autoclose", @placeholder = "mm/dd/yyyy", @required = "required" })
+                                                            <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Đối tượng hiển thị </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.baidang.ĐoituongHT, new SelectList(ViewBag.Hienthi, "id", "ten"), new { @id = "baidangadd_DThienthi", @class = "form-control DThienthibaidangadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:100%;float:left">
+                                                    <label class="col-md-12"> Tiêu đề </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.baidang.Tieude, "", new { @type = "text", @class = "form-control tieudebaidangadd", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:100%;float:left">
+                                                    <label class="col-md-12"> Nội dung </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextAreaFor(model => model.baidang.Noidung, new { @type = "text", @id = "baidangadd_noidung", @class = "form-control noidungbaidangadd", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Chức vụ đăng bài </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(model => model.baidang.Tennguoidang, new SelectList(Model.listchucvudangbai, "Machucvu", "Tenchucvu"), new { @id = "baidangadd_chucvu", @class = "form-control", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Tag bài đăng </label>
+                                                    <div class="col-md-12">
+                                                        <select class="selectpicker bs-select-hidden" id="tagbaidangadd" multiple title="Chưa chọn tag" data-style="form-control">
+                                                            @foreach (var item in Model.listagdangbai)
+                                                            {
+                                                                <option value=@item.TagID> @item.TenTag </option>
+                                                            }
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Flag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.baidang.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "baidangadd_flag", @class = "form-control flagbaidangadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnthembaidang" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="suabaidang" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sửa bài đăng</h4>
+                                    </div>
+
+                                    <form data-toggle="validator">
+                                        <div class="modal-body">
+                                            <div class="white-box col-lg-12 m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin bài đăng</h3>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Mã bài đăng </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.baidang.Mabaidang, "", new { @type = "text", @class = "form-control mabaidangedit", @placeholder = "Mã bài đăng", @required = "required", @readonly = "readonly" })
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Mã loại </label>
+                                                    <div class="col-md-12">
+                                                        @*@Html.TextBoxFor(model => model.baidang.Maloai, "", new { @type = "text", @class = "form-control maloaiadd", @placeholder = "Mã loại", @required = "required" })*@
+                                                        @Html.DropDownListFor(Model => Model.baidang.Maloai, new SelectList(Model.listloaibaidang, "Maloai", "Tenloai"), new { @id = "baidangedit_maloai", @class = "form-control maloaibaidangedit", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Thời gian hiệu lực </label>
+                                                    <div class="col-md-12">
+                                                        <div class="input-group">
+                                                            @Html.TextBoxFor(model => model.baidang.Thoigianhieuluc, "", new { @type = "text", @class = "form-control tghieulucbaidangedit", @id = "datepicker-autoclose", @placeholder = "mm/dd/yyyy", @required = "required" })
+                                                            <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Đối tượng hiển thị </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.baidang.ĐoituongHT, new SelectList(ViewBag.Hienthi, "id", "ten"), new { @id = "baidangedit_DThienthi", @class = "form-control DThienthibaidangedit", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:100%;float:left">
+                                                    <label class="col-md-12"> Tiêu đề </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.baidang.Tieude, "", new { @type = "text", @class = "form-control tieudebaidangedit", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:100%;float:left">
+                                                    <label class="col-md-12"> Nội dung </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextAreaFor(model => model.baidang.Noidung, new { @type = "text", @id = "baidangedit_noidung", @class = "form-control noidungbaidangedit", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Chức vụ đăng bài </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(model => model.baidang.Tennguoidang, new SelectList(Model.listchucvudangbai, "Machucvu", "Tenchucvu"), new { @id = "baidangedit_chucvu", @class = "form-control", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="width:50%;float:left">
+                                                    <label class="col-md-12"> Tag bài đăng </label>
+                                                    <div class="col-md-12">
+                                                        <select class="selectpicker bs-select-hidden" id="tagbaidangedit" name="baidangedit" multiple title="Chưa chọn tag" data-style="form-control">
+                                                            @foreach (var item in Model.listagdangbai)
+                                                            {
+                                                                <option value=@item.TagID> @item.TenTag </option>
+                                                            }
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnsuabaidang" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            Ẩn cột: <a class="toggle-vis" id="tbaidang" data-column="1">Mã loại</a> / <a class="toggle-vis" id="tbaidang" data-column="2">Tiêu đề</a> / <a class="toggle-vis" id="tbaidang" data-column="3">Nội dung</a> / <a class="toggle-vis" id="tbaidang" data-column="4">Ngày đăng</a> / <a class="toggle-vis" id="tbaidang" data-column="5">Tên người đăng</a> / <a class="toggle-vis" id="tbaidang" data-column="6">thời gian hiệu lực</a> / <a class="toggle-vis" id="tbaidang" data-column="7">Đối tượng hiển thị</a> / <a class="toggle-vis" id="tbaidang" data-column="8">Flag</a> / <a class="toggle-vis" id="tbaidang" data-column="9">Chức năng</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="baidangTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Mã bài đăng</th>
+                                        <th>Mã loại</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Nội dung</th>
+                                        <th>Ngày đăng</th>
+                                        <th>Tên người đăng</th>
+                                        <th>Thời gian hiệu lực</th>
+                                        <th> Đối tượng HT </th>
+                                        <th> Flag</th>
+                                        <th> Chức năng </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.listbaidang)
+                                    {
+                                        <tr>
+                                            <td class="mabaidang">@item.Mabaidang</td>
+                                            <td>@item.Maloai</td>
+                                            <td>@item.Tieude</td>
+                                            <td>...</td>
+                                            <td>@item.Ngaydang</td>
+                                            <td>@item.Tennguoidang</td>
+                                            <td>@item.Thoigianhieuluc</td>
+                                            <td>@item.ĐoituongHT</td>
+                                            <td>
+                                                <a class="btnbaidangflag" data-mabaidang="@item.Mabaidang" hres="#">
+                                                    @if (@item.Flag == true)
+                                                    {
+                                                        <span class="text-info"> Không khóa </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-danger"> Khóa </span>
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <button class="btnloadbaidang" type="button" data-toggle="modal" data-target="#suabaidang" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                </button>
+                                                <button type="button" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-info" style="color:blue"> </i>
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="loaibaidang1">
+                        <!-- button thêm -->
+                        <div style="margin-bottom: 15px">
+                            <button class="btn btn-success" data-toggle="modal" data-target="#themloaibaidang"> Thêm loại bài đăng </button>
+                        </div>
+                        <!-- modal -->
+
+                        <div id="themloaibaidang" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm loại bài đăng</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin loại bài đăng</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã loại </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.loaibaidang.Maloai, "", new { @type = "text", @class = "form-control maloailoaibaidangadd", @placeholder = "Mã loại", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên loại </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.loaibaidang.Tenloai, "", new { @type = "text", @class = "form-control tenloailoaibaidangadd", @placeholder = "Tên loại", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Flag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.baidang.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "loaibaidangadd_flag", @class = "form-control flagloaibaidangadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnthemloaibaidang" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="sualoaibaidang" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sửa loại bài đăng</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin loại bài đăng</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã loại </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.loaibaidang.Maloai, "", new { @type = "text", @class = "form-control maloailoaibaidangedit", @placeholder = "Mã loại", @required = "required", @readonly = "readonly" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên loại </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.loaibaidang.Tenloai, "", new { @type = "text", @class = "form-control tenloailoaibaidangedit", @placeholder = "Tên loại", @required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnsualoaibaidang" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Thanh ẩn -->
+                        <div class="panel">
+                            Ẩn cột:  <a class="toggle-vis" id="tloaibaidang" data-column="1">Tên loại </a> / <a class="toggle-vis" id="tloaibaidang" data-column="2">Flag</a> / <a class="toggle-vis" id="tloaibaidang" data-column="3">Chức năng</a>
+                        </div>
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table id="loaibaidangTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Mã loại</th>
+                                        <th>Tên loại</th>
+                                        <th> Flag</th>
+                                        <th> Chức năng </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.listloaibaidang)
+                                    {
+                                        <tr>
+                                            <td class="maloaibaidang">@item.Maloai</td>
+                                            <td>@item.Tenloai</td>
+                                            <td>
+                                                <a class="btnloaibaidangflag" data-maloaibaidang="@item.Maloai" hres="#">
+                                                    @if (@item.Flag == true)
+                                                    {
+                                                        <span class="text-info"> Không khóa </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-danger"> Khóa </span>
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <button class="btnloadloaibaidang" type="button" data-toggle="modal" data-target="#sualoaibaidang" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                </button>
+                                                @*<button type="button" style="background-color:transparent;border:none">
+                                                        <i class="fa fa-info" style="color:blue"> </i>
+                                                    </button>*@
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tagid1">
+                        <!-- button thêm -->
+                        <div style="margin-bottom: 15px">
+                            <button class="btn btn-success" data-toggle="modal" data-target="#themtagid"> Thêm tag id </button>
+                        </div>
+                        <!-- modal -->
+
+                        <div id="themtagid" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Thêm tag id</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin tag id</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên tag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.tag.TenTag, "", new { @type = "text", @class = "form-control tentagtagidadd", @placeholder = "Tên tag", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã chức vụ </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.tag.Machucvu, new SelectList(Model.listchucvu, "machucvu", "tenchucvu"), new { @id = "tagidadd_chucvu", @class = "form-control chucvutagidadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Flag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.tag.Flag, new SelectList(ViewBag.Trangthai, "id", "flag"), new { @id = "tagidadd_flag", @class = "form-control flagtagidadd", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnthemtagid" class="btn btn-success waves-effect waves-light m-r-30">Thêm</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="suatagid" class="modal fade" role="dialog">
+                            <div class="modal-dialog  modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sửa tag id</h4>
+                                    </div>
+
+                                    <form data-toggle="validator" class="form-horizontal">
+                                        <div class="modal-body">
+                                            <div class="white-box m-b-0">
+                                                <h3 class="box-title m-b-0">Thông tin tag id</h3>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tag ID </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.tag.TagID, "", new { @type = "text", @class = "form-control matagtagidedit", @placeholder = "Mã tag", @required = "required", @readonly = "readonly" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Tên tag </label>
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(model => model.tag.TenTag, "", new { @type = "text", @class = "form-control tentagtagidedit", @placeholder = "Mã tag", @required = "required" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12"> Mã chức vụ </label>
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownListFor(Model => Model.tag.Machucvu, new SelectList(Model.listchucvu, "machucvu", "tenchucvu"), new { @id = "tagidedit_chucvu", @class = "form-control chucvutagidedit", required = "required" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="button" id="btnsuatagid" class="btn btn-success waves-effect waves-light m-r-30">Lưu</button>
+
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Thanh ẩn -->
+                        <div class="panel">
+                            Ẩn cột:  <a class="toggle-vis" id="ttagid" data-column="1"> Tên tag </a> / <a class="toggle-vis" id="ttagid" data-column="2">Mã chức vụ</a> / <a class="toggle-vis" id="ttagid" data-column="3">Flag</a> / <a class="toggle-vis" id="ttagid" data-column="4">Chức năng</a>
+                        </div>
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table id="tagidTable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Tag id</th>
+                                        <th>Tên tag</th>
+                                        <th>Mã chức vụ</th>
+                                        <th>Flag</th>
+                                        <th>Chức năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.listag)
+                                    {
+                                        <tr>
+                                            <td class="matagid">@item.TagID</td>
+                                            <td>@item.TenTag</td>
+                                            <td>@item.Machucvu</td>
+                                            <td>
+                                                <a class="btntagidflag" data-matagid="@item.TagID" hres="#">
+                                                    @if (@item.Flag == true)
+                                                    {
+                                                        <span class="text-info"> Không khóa </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-danger"> Khóa </span>
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <button class="btnloadtagid" type="button" data-toggle="modal" data-target="#suatagid" style="background-color:transparent;border:none">
+                                                    <i class="fa fa-pencil-square-o" style="color:red"> </i>
+                                                </button>
+                                                @*<button type="button" style="background-color:transparent;border:none">
+                                                        <i class="fa fa-info" style="color:blue"> </i>
+                                                    </button>*@
+                                            </td>
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <div class="right-sidebar">
+                <div class="slimscrollright">
+                    <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                    <div class="r-panel-body">
+                        <ul id="themecolors" class="m-t-20">
+                            <li><b>With Light sidebar</b></li>
+                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                            <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                            <li><b>With Dark sidebar</b></li>
+                            <br />
+                            <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                            <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                        </ul>
+                        <ul class="m-t-20 all-demos">
+                            <li><b>Choose other demos</b></li>
+                        </ul>
+                        <ul class="m-t-20 chatonline">
+                            <li><b>Chat option</b></li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -11,8 +11,8 @@ namespace Model.EF
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(50)]
-        public string Machuyentiep { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Machuyentiep { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -27,7 +27,7 @@ namespace Model.EF
         [StringLength(20)]
         public string Trangthaichuyen { get; set; }
 
-        public bool? Flag { get; set; }
+        public int? Flag { get; set; }
 
         public virtual Thongbaochuyentiep Thongbaochuyentiep { get; set; }
 

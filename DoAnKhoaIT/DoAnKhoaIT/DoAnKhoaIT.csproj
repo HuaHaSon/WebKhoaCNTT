@@ -221,6 +221,9 @@
     <Compile Include="Areas\Guest\Controllers\ThongTinTuyenSinhController.cs" />
     <Compile Include="Areas\Guest\Controllers\TinTucController.cs" />
     <Compile Include="Areas\Guest\GuestAreaRegistration.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\BaiDangController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\HomeController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\VanPhongKhoaAreaRegistration.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Decryptor.cs" />
     <Compile Include="Common\Encrytor.cs" />
@@ -2248,8 +2251,11 @@
     <Content Include="Assets\GiaoVien\css\ct-navbar.js" />
     <Content Include="Assets\GiaoVien\css\jquery-1.10.2.js" />
     <Content Include="Assets\GiaoVien\css\pe-icon-7-stroke.css" />
+    <Content Include="Assets\GiaoVien\images\Baner_saudaihoc03.jpg" />
+    <Content Include="Assets\GiaoVien\images\hihi1.jpg" />
     <Content Include="Assets\GiaoVien\images\img.jpg" />
     <Content Include="Assets\GiaoVien\images\logosgu.png" />
+    <Content Include="Assets\GiaoVien\js\GuiMail.js" />
     <Content Include="Assets\GiaoVien\media\-6yB4qFCTyxe0vxn7dJzAnYNlOxeZlVwca9bhb_GO6LbXyMyXSyJgCeh2f_rrBtf.jpg" />
     <Content Include="Assets\GiaoVien\media\1acdbuCnsRd9Ncm5jQ0OoD3IRFEhb9jytBFeMnf42qTwaVqDHx95gPlyIP8KqQwK.html" />
     <Content Include="Assets\GiaoVien\media\2-pYvoqMiq6Gu3c4Fr3hnwzomPj5URU9RmQTd43IqoDnTGvhBrHXhZb4G5lBsBVn.png" />
@@ -3315,7 +3321,9 @@
     <Content Include="Assets\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\Login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
     <Content Include="Assets\Login\fonts\montserrat\OFL.txt" />
+    <Content Include="Assets\Login\images\1.jpg" />
     <Content Include="Assets\Login\images\BlueWhite.jpg" />
+    <Content Include="Assets\Login\images\buonqua.jpg" />
     <Content Include="Assets\Login\images\icons\favicon.ico" />
     <Content Include="Assets\Login\images\img-00.png" />
     <Content Include="Assets\Login\images\img-01.png" />
@@ -3350,6 +3358,8 @@
     <Content Include="Assets\plugins\ckeditor\build-config.js" />
     <Content Include="Assets\plugins\ckeditor\ckeditor.js" />
     <Content Include="Assets\plugins\ckeditor\config.js" />
+    <Content Include="Assets\plugins\ckeditor\config2.js" />
+    <Content Include="Assets\plugins\ckeditor\config3.js" />
     <Content Include="Assets\plugins\ckeditor\contents.css" />
     <Content Include="Assets\plugins\ckeditor\lang\af.js" />
     <Content Include="Assets\plugins\ckeditor\lang\ar.js" />
@@ -5287,6 +5297,16 @@
     <Content Include="Areas\GiaoVien\Views\Shared\LichGV.cshtml" />
     <Content Include="Areas\Admin\Views\Luottruycap\Index.cshtml" />
     <Content Include="Areas\Guest\Views\Dangnhap\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\web.config" />
+    <Content Include="Areas\VanPhongKhoa\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Home\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\BaiDang\BD.cshtml" />
+    <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuGui.cshtml" />
+    <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuXoa.cshtml" />
+    <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuQT.cshtml" />
+    <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuNhap.cshtml" />
+    <Content Include="Areas\GiaoVien\Views\GuiMail\DocMail.cshtml" />
+    <Content Include="Areas\GiaoVien\Views\GuiMail\DocMailGui.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -5298,7 +5318,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -5318,6 +5340,7 @@
     <Folder Include="Areas\GiaoVien\Models\" />
     <Folder Include="Areas\Guest\Models\" />
     <Folder Include="Areas\Guest\Views\HoatDongSV\" />
+    <Folder Include="Areas\VanPhongKhoa\Models\" />
     <Folder Include="Assets\plugins\Uploads\files\" />
     <Folder Include="Assets\plugins\Uploads\flash\" />
     <Folder Include="Assets\plugins\Uploads\images\" />

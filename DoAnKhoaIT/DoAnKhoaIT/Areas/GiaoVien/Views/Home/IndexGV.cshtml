@@ -9,8 +9,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="owl-demo" class="owl-carousel owl-theme">
-                    <div class="item"><a href="http://35nam.hufi.edu.vn/"><img src="/Assets/GiaoVien/slideshow/35-year-hufi-website-slide-show-1_11032017015510310_jvsoon5t.tsa.png" /></a></div>
-                    <div class="item"><a href="truong-dh-cong-nghiep-thuc-pham-tp-hcm-dat-tieu-chuan-chat-luong-giao-duc-dai-hoc.html"><img src="/Assets/GiaoVien/slideshow/cong-nhan-dat-chuan-hufi-website-slide-show_22052017092414268_gv33ecjl.vyh.jpg" alt="C&#244;ng nhận đạt ti&#234;u chuẩn" title="C&#244;ng nhận đạt ti&#234;u chuẩn" /></a></div>
+                    <div class="item"><a href="#"><img src="~/Assets/GiaoVien/images/Baner_saudaihoc03.jpg" /></a></div>
+                    <div class="item"><a href="#"><img src="~/Assets/GiaoVien/images/hihi1.jpg" alt="C&#244;ng nhận đạt ti&#234;u chuẩn" title="C&#244;ng nhận đạt ti&#234;u chuẩn" /></a></div>
                 </div>
             </div>
         </div>
@@ -33,9 +33,9 @@
                     <div class="col-sm-12 col-md-6">
                         <div id="new-first">
                             <p id="img-first">
-                                <img class="img-responsive" src="/Assets/GiaoVien/media/fLgdcj9tiekGKJwv2U3RN_N-kpYLIan1iF-cLrl8PWREmWtrYm8TT3IUrN03ljtc.jpg" />
+                                <img class="img-responsive" style="height:300px; width:300px" src="/Assets/GiaoVien/media/fLgdcj9tiekGKJwv2U3RN_N-kpYLIan1iF-cLrl8PWREmWtrYm8TT3IUrN03ljtc.jpg" />
                             </p>
-                            <h3 class="canle"><a href="truong-dai-hoc-cong-nghiep-thuc-pham-tp-ho-chi-minh-to-chuc-le-trao-bang-tot-nghiep-cho-3613-tan-cu-nhan-ky-su-tot-nghiep-nam-2018.html">Trường Đại học C&#244;ng nghiệp Thực phẩm TP. Hồ Ch&#237; Minh tổ chức Lễ trao bằng tốt nghiệp cho 3.613 t&#226;n cử nh&#226;n, kỹ sư tốt nghiệp năm 2018</a></h3>
+                            
                             <p>
 
                             </p>
@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                     <div class="content-area">
-                                        <h3>
+                                        <h3 >
                                             
                                               @Html.ActionLink(@Model.v9.TieuDe,"CT_NCKH","NghienCuuKH", new { mannckh = Model.v9.MaNCKH, tenloai = Model.v9.TenLoaiNCKH},null)
                                             
@@ -101,7 +101,7 @@
                                 <ul>
                                     @foreach (var item in Model.v4)
                                     {
-                                        <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Html.ActionLink(@item.TieuDe, "CT_NCKH", "NghienCuuKH", new { mannckh = Model.v9.MaNCKH, tenloai = Model.v9.TenLoaiNCKH }, null)</li>
+                                        <li style="overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical"  ><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> @Html.ActionLink(@item.TieuDe, "CT_NCKH", "NghienCuuKH", new { mannckh = Model.v9.MaNCKH, tenloai = Model.v9.TenLoaiNCKH }, null)</li>
                                     }
 
                                 </ul>

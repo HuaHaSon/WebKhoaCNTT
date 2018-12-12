@@ -19,7 +19,7 @@ CREATE TABLE Taikhoan
 INSERT INTO Taikhoan VALUES( 'IT1','s2Shwzk2H0I=','12-12-2007','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT2','12345','11-2-2012','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT3','12345','3-22-2005','Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT4','12345','11-5-2002' ,'Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT4','CAxpn3X++hs=','11-5-2002' ,'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT5','12345','2-1-2007', 'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT6','12345','1-12-2012','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT7','12345','12-2-2015','Offline',1)
@@ -71,7 +71,7 @@ INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentai
 	 VALUES  (N'Đinh Hoàn' ,'12-1-1990' ,'0987854322','tota251297@gmail.com' ,N'TPHCM', 'IT2' ,'CV4',1)
 
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
-	VALUES  (N'Trần Bá Xú' ,'2-11-1988' ,'0987657521' ,'tanhtsgu@gmail.com',N'TPHCM', 'IT3' ,'CV5',1)
+	VALUES  (N'Trần Bá Xú' ,'2-11-1988' ,'0987657521' ,'fifaclubfootball2014@gmail.com',N'TPHCM', 'IT3' ,'CV5',1)
 
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
 	VALUES  (N'Nguyễn Ngọc Hải' ,'2-11-1986' ,'0982254321','tota251297@gmail.com' ,N'TPHCM', 'IT4' ,'CV6',1)
@@ -80,7 +80,10 @@ INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentai
 	VALUES (N'Nguyễn Văn Long' ,'12-8-1990' ,'0366789741' ,'nguyennhus293@gmail.com',N'TPHCM', 'IT6' ,'CV7',1)
  
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
-	VALUES  (N'Trần Thị Hồng' , '2-5-1979'  ,'0346804211' ,'tanhtsgu@gmail.com',N'TPHCM', 'IT7','CV8' ,1)
+	VALUES  (N'Trần Thị Hồng' , '2-5-1979'  ,'0346804211' ,'minhphuc605@gmail.com',N'TPHCM', 'IT7','CV8' ,1)
+INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
+	VALUES  (N'Trần Thị Bé Ba' , '2-5-1979'  ,'0346804211' ,'minhphuc605@gmail.com',N'TPHCM', 'IT8','CV8' ,1)
+go
 go
 CREATE TABLE Quyennguoidung
 (
@@ -1192,6 +1195,168 @@ INSERT INTO Baidang  VALUES ('BD55','TB',N'Thông báo về chương trình th�
 
 <p>Ph&ograve;ng ĐTSĐH&amp;KHCN.</p>
 ','06/22/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD56','TT',N'Trường ĐH Sài Gòn tổ chức Hội thảo Nhà tuyển dụng và người giỏi nghề phân tích năng lực phục vụ cải tiến chất lượng chương trình đào tạo
+',N'<p>V&agrave;o ng&agrave;y 17 th&aacute;ng 11 năm 2018, tại số 273 An Dương Vương, Phường 3, Quận 5, Th&agrave;nh phố Hồ Chí Minh, Trường Đại học S&agrave;i G&ograve;n đ&atilde; tổ chức Hội thảo &ldquo;Hội thảo Nh&agrave; tuyển dụng v&agrave; người giỏi nghề ph&acirc;n t&iacute;ch năng lực phục vụ cải tiến chất lượng chương tr&igrave;nh đ&agrave;o tạo&rdquo;.<br />
+Hội thảo được tổ chức với sự phối hợp của trường Đại học S&agrave;i G&ograve;n v&agrave; Trung t&acirc;m Đ&agrave;o tạo Quản l&yacute; Ti&ecirc;n tiến (TCAM) Đại học Quốc Gia Th&agrave;nh phố Hồ Ch&iacute; Minh.<br />
+Hội thảo n&agrave;y tập trung thảo luận v&agrave; lắng nghe &yacute; kiến của c&aacute;c chuy&ecirc;n gia, nh&agrave; tuyển dụng, những người lao động l&agrave;nh nghề m&ocirc; tả y&ecirc;u cầu đối với th&aacute;i độ, kỹ năng, kiến thức, năng lực của người học theo phương ph&aacute;p DACUM.<br />
+Hội thảo gồm ba phi&ecirc;n: DACUM 1 li&ecirc;n quan đến ng&agrave;nh Khoa học M&ocirc;i trường, DACUM 2 li&ecirc;n quan đến ng&agrave;nh Sư ph&aacute;p To&aacute;n học v&agrave; DACUM 3 li&ecirc;n quan đến ng&agrave;nh C&ocirc;ng nghệ th&ocirc;ng tin.<br />
+Đến với Hội thảo, về ph&iacute;a Nh&agrave; trường c&oacute; TS. L&ecirc; Chi Lan, Ph&oacute; Hiệu trưởng Nh&agrave; trường chủ tr&igrave; Hội thảo, về ph&iacute;a kh&aacute;ch mời c&oacute; c&aacute;c nh&agrave; quản l&yacute; doanh nghiệp, c&aacute;c nh&acirc;n vi&ecirc;n giỏi việc, Ban gi&aacute;m hiệu v&agrave; gi&aacute;o vi&ecirc;n của c&aacute;c trường Phổ th&ocirc;ng v&agrave; 1 số chuy&ecirc;n gia của Trung t&acirc;m Đ&agrave;o tạo Quản l&yacute; Ti&ecirc;n tiến (TCAM) Đại học Quốc Gia Th&agrave;nh phố Hồ Ch&iacute; Minh.<br />
+Trong nhiều năm qua, hệ thống đảm bảo chất lượng của trường Đại học S&agrave;i G&ograve;n c&oacute; sự ph&aacute;t triển đồng bộ giữa c&aacute;c mặt: đảm bảo chất lượng b&ecirc;n trong, đảm bảo chất lượng b&ecirc;n ngo&agrave;i v&agrave; kiểm định chất lượng. Đồng thời, c&oacute; sự kết hợp giữa y&ecirc;u cầu đảm bảo chất lượng của Bộ GD&amp;ĐT v&agrave; Mạng lưới c&aacute;c trường đại học Đ&ocirc;ng Nam &Aacute; (AUN). Chuẩn kiểm định chất lượng AUN l&agrave; mục ti&ecirc;u m&agrave; trường ĐH S&agrave;i G&ograve;n hướng tới. Phương ch&acirc;m phấn đấu của Nh&agrave; trường kh&ocirc;ng chỉ l&agrave; thu h&uacute;t học vi&ecirc;n m&agrave; c&ograve;n khẳng định chất lượng đ&agrave;o tạo v&agrave; dần tiến tới l&agrave; việc x&acirc;y dựng văn h&oacute;a chất lượng của một trường ĐH.<br />
+&ldquo;Hội thảo Nh&agrave; tuyển dụng v&agrave; người giỏi nghề ph&acirc;n t&iacute;ch năng lực phục vụ cải tiến chất lượng chương tr&igrave;nh đ&agrave;o tạo&rdquo; theo chuẩn AUN-QA của Trường Đại học S&agrave;i G&ograve;n l&agrave; một hoạt động quan trọng trong lộ tr&igrave;nh cải tiến chất lượng hệ thống đảm bảo chất lượng của m&igrave;nh, phấn đấu c&oacute; &iacute;t nhất 2 chương đ&agrave;o tạo được đ&aacute;nh gi&aacute; chất lượng theo chuẩn AUN-QA v&agrave;o năm 2020 v&agrave; Nh&agrave; trường được đ&aacute;nh gi&aacute; cấp cơ sở theo chuẩn AUN-QA v&agrave;o năm 2025.<br />
+Gi&aacute; trị cốt l&otilde;i của Hội thảo bao gồm thứ nhất t&igrave;m hiểu nhu cầu v&agrave; y&ecirc;u cầu nghề nghiệp trong thực tế, đ&aacute;p ứng được y&ecirc;u cầu của nh&agrave; tuyển dụng, thứ hai t&igrave;m hiểu thị phần v&agrave; xu thế ph&aacute;t triển trong 3 &ndash; 5 năm tới từ đ&oacute; thiết kế v&agrave; cải tiến chương tr&igrave;nh đ&agrave;o tạo. Sau đ&acirc;y l&agrave; một số h&igrave;nh ảnh của Hội thảo.</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image001-6-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 1: TS. L&ecirc; Chi Lan, Ph&oacute; Hiệu trưởng Nh&agrave; trường ph&aacute;t biểu khai mạc Hội thảo</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image002-4-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 2: TS. Nguyễn Thanh Thủy chuy&ecirc;n gia TCAM triển khai Hội thảo, hướng dẫn phương ph&aacute;p DACUM.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image003-8-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 3: C&aacute;c đại biểu n&ecirc;u c&aacute;c y&ecirc;u cầu chuy&ecirc;n m&ocirc;n của nh&agrave; tuyển dụng tại phi&ecirc;n DACUM 1</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image004-2-1024x684.jpg" style="height:684px; width:1024px" />H&igrave;nh 4: Ban Gi&aacute;m hiệu v&agrave; c&aacute;c gi&aacute;o vi&ecirc;n của trường Phổ th&ocirc;ng thực hiện biểu mẫu khảo s&aacute;t tại phi&ecirc;n DACUM 2.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image005-4-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 5: TS. Nguyễn Thanh Thủy thảo luận c&ugrave;ng c&aacute;c gi&aacute;o vi&ecirc;n trường Phổ th&ocirc;ng tại phi&ecirc;n DACUM 2.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image006-3-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 6: TS. L&ecirc; Chi Lan giải đ&aacute;p c&aacute;c c&acirc;u hỏi của c&aacute;c gi&aacute;o vi&ecirc;n trường Phổ th&ocirc;ng tại phi&ecirc;n DACUM 2</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image007-3-1024x684.jpg" style="height:684px; width:1024px" />H&igrave;nh 7: Nh&agrave; quản l&yacute; v&agrave; người giỏi việc trao đổi &yacute; kiến về lĩnh vực c&ocirc;ng nghệ th&ocirc;ng tin trong phi&ecirc;n DACUM 3.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image008-2-1024x684.jpg" style="height:684px; width:1024px" />H&igrave;nh 8: &Yacute; kiến của c&aacute;c đại biểu về c&aacute;c kỹ năng cần thiết được thể hiện tr&ecirc;n c&aacute;c bảng.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image009-3-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 9: Ban Gi&aacute;m hiệu, l&atilde;nh đạo khoa trao đổi th&ocirc;ng tin với nh&agrave; tuyển dụng b&ecirc;n lề Hội thảo.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image010-2-1024x683.jpg" style="height:683px; width:1024px" />H&igrave;nh 10: Giảng vi&ecirc;n Khoa Khoa học M&ocirc;i trường chụp h&igrave;nh lưu niệm với c&aacute;c đại biểu.</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/11/image011-2-1024x684.jpg" style="height:684px; width:1024px" />H&igrave;nh 11: C&aacute;c giảng vi&ecirc;n Khoa C&ocirc;ng nghệ th&ocirc;ng tin chụp h&igrave;nh lưu niệm với c&aacute;c đại biểu.</p>
+','11/22/2018',N'Đinh Hoàn','12/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD57','TT',N'Lễ trao Quyết định bổ nhiệm chức danh Phó Giáo sư năm 2018',N'<p>S&aacute;ng ng&agrave;y 19/06/2018, tại Ph&ograve;ng HB.406 trường Đại học S&agrave;i G&ograve;n đ&atilde; diễn ra lễ trao Quyết định bổ nhiệm chức danh cho c&aacute;c nh&agrave; gi&aacute;o vừa được Hội đồng Chức danh Gi&aacute;o sư Nh&agrave; nước c&ocirc;ng nhận đạt ti&ecirc;u chuẩn chức danh Ph&oacute; Gi&aacute;o sư năm 2018.<br />
+Trong dịp n&agrave;y, trường Đại học S&agrave;i G&ograve;n c&oacute; 5 nh&agrave; gi&aacute;o được bổ nhiệm chức danh Ph&oacute; Gi&aacute;o sư. Buổi lễ trao Quyết định bổ nhiệm chức danh Ph&oacute; Gi&aacute;o sư trường Đại học S&agrave;i G&ograve;n đ&atilde; diễn ra trong kh&ocirc;ng kh&iacute; trang trọng v&agrave; th&acirc;n t&igrave;nh.<br />
+Mở đầu buổi lễ, TS.Th&aacute;i Huy Bảo &ndash; Trưởng Ph&ograve;ng Tổ chức c&aacute;n bộ thừa uỷ nhiệm Hiệu trưởng Nh&agrave; trường c&ocirc;ng bố c&aacute;c quyết định bổ nhiệm c&aacute;c t&acirc;n Ph&oacute; Gi&aacute;o sư của trường Đại học S&agrave;i g&ograve;n bao gồm:<br />
+1. PGS.TS.Trần Th&aacute;i H&agrave; &ndash; Giảng vi&ecirc;n Khoa Sư phạm X&atilde; hội.<br />
+2. PGS.TS.Nguyễn Ho&agrave; &ndash; Ph&oacute; Trưởng Khoa C&ocirc;ng nghệ Th&ocirc;ng tin<br />
+3. PGS.TS.V&otilde; Th&agrave;nh L&acirc;m &ndash; Trưởng Khoa Sư phạm Khoa học Tự nhi&ecirc;n<br />
+4. PGS.TS.Mỵ Giang Sơn &ndash; Trưởng Ph&ograve;ng Đ&agrave;o tạo<br />
+5. PGS.TS.Vũ C&ocirc;ng Thương &ndash; Giảng vi&ecirc;n Khoa Gi&aacute;o dục Ch&iacute;nh trị<br />
+Thay mặt ban l&atilde;nh đạo Nh&agrave; trường, PGS.TS.Phạm Ho&agrave;ng Qu&acirc;n &ndash; Hiệu trưởng trường Đại học S&agrave;i G&ograve;n đ&atilde; trao quyết định, PGS.TS.Nguyễn Khắc H&ugrave;ng, Ph&oacute; Hiệu trưởng trao tặng hoa v&agrave; ch&uacute;c mừng c&aacute;c Ph&oacute; Gi&aacute;o sư mới được bổ nhiệm. Đ&acirc;y kh&ocirc;ng chỉ l&agrave; niềm vui, niềm tự h&agrave;o của c&aacute;c c&aacute; nh&acirc;n được vinh danh, m&agrave; c&ograve;n l&agrave; niềm vinh dự của trường Đại học S&agrave;i G&ograve;n. Việc bổ sung đội ngũ những nh&agrave; khoa học c&oacute; tr&igrave;nh độ chuy&ecirc;n m&ocirc;n s&acirc;u sẽ g&oacute;p phần khẳng định t&ecirc;n tuổi v&agrave; vị tr&iacute; của trường Đại học S&agrave;i G&ograve;n trong lộ tr&igrave;nh ph&aacute;t triển trường theo định hướng nghi&ecirc;n cứu, chuy&ecirc;n nghiệp, hiện đại, hội nhập khu vực v&agrave; quốc tế.</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/06/TanPGS-1024x768.jpg" style="height:768px; width:1024px" /></p>
+
+<p>Ban Gi&aacute;m hiệu Nh&agrave; trường c&ugrave;ng c&aacute;c t&acirc;n Ph&oacute; Gi&aacute;o sư</p>
+
+<p>Trong kh&ocirc;ng kh&iacute; h&acirc;n hoan của buổi lễ, PGS.TS.Mỵ Giang Sơn, thay mặt c&aacute;c t&acirc;n Ph&oacute; Gi&aacute;o sư gửi lời cảm ơn tới Ban Gi&aacute;m hiệu, c&aacute;c thầy c&ocirc; đ&atilde; hỗ trợ, động vi&ecirc;n v&igrave; một tập thể đo&agrave;n kết v&agrave; ph&aacute;t triển.</p>
+
+<p><img alt="" src="http://sgu.edu.vn/wp-content/uploads/2018/06/ThaySon-608x1024.jpg" style="height:1024px; width:608px" /></p>
+
+<p>PGS.TS.Mỵ Giang Sơn thay mặt c&aacute;c t&acirc;n Ph&oacute; Gi&aacute;o sư gửi lời cảm ơn.</p>
+
+<p>Việc x&eacute;t c&ocirc;ng nhận đạt ti&ecirc;u chuẩn chức danh Ph&oacute; Gi&aacute;o sư l&agrave; một chủ trương lớn của Đảng v&agrave; Nh&agrave; nước nhằm n&acirc;ng cao chất lượng gi&aacute;o dục bậc đại học v&agrave; sau đại học trong nước theo hướng hội nhập, ph&ugrave; hợp với th&ocirc;ng lệ quốc tế.</p>
+
+<p>Ban Gi&aacute;m hiệu Nh&agrave; trường cũng ch&acirc;n th&agrave;nh nhắn nhủ với c&aacute;c t&acirc;n Ph&oacute; Gi&aacute;o sư h&atilde;y tiếp tục c&ocirc;ng t&aacute;c, giảng dạy, nghi&ecirc;n cứu khoa học l&agrave; đ&oacute;ng g&oacute;p thiết thực nhất cho sự nghiệp ph&aacute;t triển của Trường v&agrave; của Th&agrave;nh phố Hồ Ch&iacute; Minh.</p>
+','06/19/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD58','TT',N'Tham gia thi trực tuyến Hội thi "Công chức - Viên chức - Người lao động ĐHSG-HCM hưởng ứng ngày pháp luật Việt Nam"',N'<p>K&iacute;nh gửi qu&yacute; Thầy C&ocirc;,<br />
+Văn ph&ograve;ng C&ocirc;ng đo&agrave;n tr&acirc;n trọng k&iacute;nh mời qu&yacute; Thầy C&ocirc; tham gia&nbsp;thi&nbsp;trực tuyến&nbsp;Hội&nbsp;thi&nbsp;&quot;C&ocirc;ng chức, vi&ecirc;n chức, người lao động ĐHSG-HCM hưởng ứng Ng&agrave;y&nbsp;Ph&aacute;p&nbsp;luật&nbsp;Việt Nam&quot;.<br />
+- Địa chỉ tham gia&nbsp;Hội&nbsp;thi&nbsp;:&nbsp;<a href="http://congdoan.vnuhcm.edu.vn/tracnghiem"><strong>http://congdoan.vnuhcm.edu.vn/tracnghiem</strong></a><br />
+- Thời gian&nbsp;thi&nbsp;bắt đầu từ:&nbsp;<strong>08g00 ng&agrave;y 22/10/2018 đến 24g00 ng&agrave;y 24/10/2018.</strong></p>
+
+<p>Tr&acirc;n trọng.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+
+<p><img alt="Microsoft Office document icon" src="http://congdoan.uit.edu.vn/modules/file/icons/x-office-document.png" />&nbsp;<a href="http://congdoan.uit.edu.vn/sites/congdoan/files/uploads/files/201810/thele_thihuongung_ngayphapluat_thoai.doc">thele_thihuongung_ngayphapluat_thoai.doc</a></p>
+
+<p><img alt="PDF icon" src="http://congdoan.uit.edu.vn/modules/file/icons/application-pdf.png" />&nbsp;<a href="http://congdoan.uit.edu.vn/sites/congdoan/files/uploads/files/201810/to_chuc_hoi_thi_phap_luat.pdf">to_chuc_hoi_thi_phap_luat.pdf</a></p>
+
+<p><img alt="PDF icon" src="http://congdoan.uit.edu.vn/modules/file/icons/application-pdf.png" />&nbsp;<a href="http://congdoan.uit.edu.vn/sites/congdoan/files/uploads/files/201810/cv_1904_ve_viec_to_chuc_hoi_thi_cc.vc_.nld_huong_ung_ngay_phap_luat.pdf">cv_1904_ve_viec_to_chuc_hoi_thi_cc.vc_.nld_huong_ung_ngay_phap_luat.pdf</a></p>
+
+<p>&nbsp;</p>
+','10/22/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+
+INSERT INTO Baidang  VALUES ('BD59','TT',N'Mời tham dự Chuyên đề "Chế độ chính sách đối với cán bộ, công chức, viên chức và người lao động"',N'<p>K&iacute;nh gửi qu&yacute; Thầy C&ocirc;,</p>
+
+<p>Thực hiện&nbsp;C&ocirc;ng văn số 147/CĐ-ĐHQG ng&agrave;y 06/10/2016 của&nbsp;C&ocirc;ng&nbsp;đo&agrave;n&nbsp;ĐHQG-HCM về&nbsp;việc hưởng ứng ng&agrave;y ph&aacute;p luật Việt Nam, Ban Chấp h&agrave;nh&nbsp;C&ocirc;ng&nbsp;đo&agrave;n&nbsp;Trường phối hợp Ph&ograve;ng Thanh tra - Ph&aacute;p chế - Đảm bảo Chất lượng&nbsp;x&acirc;y dựng Kế hoạch tổ chức&nbsp;Chuy&ecirc;n đề&nbsp;<strong>&quot;Chế độ ch&iacute;nh s&aacute;ch đối với c&aacute;n bộ,&nbsp;c&ocirc;ng&nbsp;chức, vi&ecirc;n chức v&agrave; người lao động&quot;</strong>&nbsp;năm 2016, cụ thể như sau;</p>
+
+<p>1. Đối tượng tham dự:&nbsp;<strong>C&aacute;n bộ,&nbsp;c&ocirc;ng&nbsp;chức, vi&ecirc;n chức,&nbsp;</strong><strong>người&nbsp;lao động của Trường.</strong></p>
+
+<p>2. Thời gian tổ chức:<strong>&nbsp;14h00 ng&agrave;y 08/11/2016 tại ph&ograve;ng A116.</strong></p>
+
+<p>3. B&aacute;o c&aacute;o vi&ecirc;n&nbsp;tr&igrave;nh b&agrave;y:<strong>&nbsp;ThS. L&acirc;m Tường Thoại, Chủ tịch&nbsp;C&ocirc;ng&nbsp;đo&agrave;n&nbsp;ĐHQG-HCM</strong><strong>,&nbsp;Trưởng ban Thanh tra&nbsp;-&nbsp;Ph&aacute;p chế&nbsp;ĐHQG-HCM.</strong></p>
+
+<p>4.&nbsp;<strong>Nội dung:</strong></p>
+
+<p><strong>-&nbsp;</strong>B&aacute;o c&aacute;o chuy&ecirc;n đề &ldquo;Chế độ ch&iacute;nh s&aacute;ch đối với c&aacute;n bộ,&nbsp;c&ocirc;ng&nbsp;chức, vi&ecirc;n chức v&agrave; người lao động&quot;</p>
+
+<p>- Trao đổi thắc mắc về c&aacute;c chế độ, ch&iacute;nh s&aacute;ch với&nbsp;c&aacute;n bộ,&nbsp;c&ocirc;ng&nbsp;chức, vi&ecirc;n chức,&nbsp;ngườilao động.</p>
+
+<p>C&ocirc;ng&nbsp;đo&agrave;n&nbsp;Trường k&iacute;nh đề nghị qu&yacute; Thầy C&ocirc; sắp xếp thời gian tham dự. K&iacute;nh đề nghị C&ocirc;ng&nbsp;đo&agrave;n&nbsp;Bộ phận lập danh s&aacute;ch qu&yacute; Thầy C&ocirc; tham dự gửi về Văn ph&ograve;ng&nbsp;C&ocirc;ng&nbsp;đo&agrave;ncho anh Vũ Văn Điệp trước&nbsp;<strong>12h00 ng&agrave;y 7/11/2016</strong>.</p>
+
+<p>Tr&acirc;n trọng.</p>
+
+<p>File đ&iacute;nh k&egrave;m:&nbsp;</p>
+
+<p><img alt="Tập tin" src="http://congdoan.uit.edu.vn/modules/file/icons/x-office-document.png" />&nbsp;<a href="http://congdoan.uit.edu.vn/sites/congdoan/files/uploads/files/201611/kh_to_chuc_bao_cao_chuyen_de_ngay_phap_luat_vn.docx">kh_to_chuc_bao_cao_chuyen_de_ngay_phap_luat_vn.docx</a></p>
+','11/03/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+INSERT INTO Baidang  VALUES ('BD60','TT',N'Công chức TP.HCM phải mặc quần tây, áo sơ mi đi làm',N'<p>Ng&agrave;y 29-12, UBND TP.HCM đ&atilde; c&oacute; quyết định về việc ban h&agrave;nh quy định li&ecirc;n quan đến quy tắc ứng xử của c&aacute;n bộ, c&ocirc;ng chức, vi&ecirc;n chức v&agrave; người lao động l&agrave;m việc trong c&aacute;c cơ quan h&agrave;nh ch&iacute;nh, đơn vị sự nghiệp c&ocirc;ng lập tr&ecirc;n địa b&agrave;n TP.HCM.</p>
+
+<p>Trong đ&oacute;, quần t&acirc;y, &aacute;o sơ mi, &aacute;o d&agrave;i được quy định l&agrave; trang phục c&ocirc;ng sở của c&aacute;n bộ c&ocirc;ng chức TP.HCM.</p>
+
+<p><strong>Phải l&agrave;m đủ 8 giờ/ng&agrave;y</strong></p>
+
+<p>Về thời gian l&agrave;m việc, UBND TP.HCM y&ecirc;u cầu c&aacute;n bộ, c&ocirc;ng chức, vi&ecirc;n chức chấp h&agrave;nh nghi&ecirc;m quy định về thời gian l&agrave;m việc của Nh&agrave; nước, sử dụng hiệu quả giờ l&agrave;m việc.&nbsp;</p>
+
+<p>Buổi s&aacute;ng từ 7h30 đến 11h30. Chiều từ 13h đến 17h. Giờ l&agrave;m việc n&agrave;y c&oacute; thể điều chỉnh ph&ugrave; hợp với đặc th&ugrave;, y&ecirc;u cầu c&ocirc;ng t&aacute;c của từng cơ quan, đơn vị nhưng phải đảm bảo đủ 8 giờ l&agrave;m việc/ng&agrave;y.</p>
+
+<p>Đối với c&aacute;c đơn vị sự nghiệp c&ocirc;ng lập, căn cứ t&igrave;nh h&igrave;nh thực tế bố tr&iacute; thời gian l&agrave;m việc ph&ugrave; hợp, đảm bảo đ&uacute;ng quy định của Bộ Luật Lao động. Đối với cơ quan, đơn vị được quy định phải tổ chức l&agrave;m việc s&aacute;ng thứ bảy h&agrave;ng tuần để tiếp nhận, giải quyết thủ tục h&agrave;nh ch&iacute;nh.</p>
+
+<p><strong>Kh&ocirc;ng xem quần jean, &aacute;o thun l&agrave; trang phục c&ocirc;ng sở</strong></p>
+
+<p>Khi thực hiện nhiệm vụ, c&ocirc;ng chức phải mặc trang phục lịch sự, đầu t&oacute;c gọn g&agrave;ng, đi gi&agrave;y hoặc d&eacute;p c&oacute; quai hậu.&nbsp;&nbsp;</p>
+
+<p>Đối với nam: mặc quần t&acirc;y, &aacute;o sơmi. Nữ mặc quần t&acirc;y; v&aacute;y d&agrave;i (chiều d&agrave;i v&aacute;y tối thiểu ngang gối), &aacute;o sơmi (&aacute;o c&oacute; tay); comple; bộ &aacute;o d&agrave;i truyền thống.</p>
+
+<p>Những ng&agrave;nh c&oacute; quy định ri&ecirc;ng về đồng phục th&igrave; thực hiện theo quy định của ng&agrave;nh.</p>
+
+<p>Ngo&agrave;i ra, lễ phục của c&ocirc;ng chức l&agrave; trang phục ch&iacute;nh thức được sử dụng trong những buổi lễ, cuộc họp trọng thể. Đối với nam: quần t&acirc;y, &aacute;o sơmi, c&agrave; vạt hoặc bộ comple. Đối với nữ: &aacute;o d&agrave;i truyền thống hoặc bộ comple nữ.</p>
+
+<p>C&ocirc;ng chức phải đeo thẻ c&ocirc;ng chức khi l&agrave;m việc v&agrave; khi thực hiện nhiệm vụ b&ecirc;n ngo&agrave;i cơ quan.</p>
+
+<p><strong>Kh&ocirc;ng đeo tai nghe, chơi game trong giờ l&agrave;m việc</strong></p>
+
+<p>C&aacute;n bộ, c&ocirc;ng chức, vi&ecirc;n chức kh&ocirc;ng được uống bia, rượu, đồ uống c&oacute; cồn trong giờ l&agrave;m việc, giờ nghỉ trưa của ng&agrave;y l&agrave;m việc, ng&agrave;y trực.</p>
+
+<p>Kh&ocirc;ng h&uacute;t thuốc l&aacute; trong khu&ocirc;n vi&ecirc;n&nbsp;trụ sở cơ quan, ph&ograve;ng l&agrave;m việc, ph&ograve;ng họp v&agrave; hội trường. Kh&ocirc;ng đ&aacute;nh bạc,&nbsp;tham gia c&aacute;c tệ nạn hoặc c&aacute;c h&agrave;nh vi kh&aacute;c tr&aacute;i với quy định ph&aacute;p luật dưới mọi h&igrave;nh thức.</p>
+
+<p>Đặc biệt, kh&ocirc;ng đeo tai nghe, bật nhạc, nghe nhạc, chơi điện tử v&agrave; c&aacute;c thiết bị&nbsp;giải tr&iacute; c&aacute; nh&acirc;n trong giờ l&agrave;m việc; kh&ocirc;ng truy cập c&aacute;c trang mạng c&oacute; nội dung kh&ocirc;ng li&ecirc;n quan đến việc thực hiện nhiệm vụ, c&ocirc;ng vụ.&nbsp;</p>
+
+<p>Hoạt động thờ c&uacute;ng trong ph&ograve;ng l&agrave;m việc v&agrave; hoạt động m&ecirc; t&iacute;n dị đoan kh&ocirc;ng được chấp nhận.</p>
+
+<p>Khi giao tiếp v&agrave; ứng xử với nh&acirc;n d&acirc;n phải c&oacute; th&aacute;i độ niềm nở, nh&atilde; nhặn, lắng nghe &yacute; kiến, giải th&iacute;ch, hướng dẫn r&otilde; r&agrave;ng, cụ thể về c&aacute;c quy định li&ecirc;n quan đến giải quyết c&ocirc;ng việc. Kh&ocirc;ng được c&oacute; th&aacute;i độ h&aacute;ch dịch, nhũng nhiễu; kh&ocirc;ng g&acirc;y căng thẳng, bức x&uacute;c, dọa nạt người d&acirc;n.</p>
+
+<p>Ngo&agrave;i ra, khi giao tiếp qua điện thoại, c&ocirc;ng chức phải xưng t&ecirc;n, chức danh, chức vụ, cơ quan, đơn vị nơi c&ocirc;ng t&aacute;c; trao đổi ngắn gọn, tập trung v&agrave;o nội dung c&ocirc;ng việc; &acirc;m lượng vừa đủ nghe; kh&ocirc;ng tỏ th&aacute;i độ thiếu lịch sự, kh&ocirc;ng gắt gỏng hay n&oacute;i trống kh&ocirc;ng; kh&ocirc;ng ngắt điện thoại đột ngột.</p>
+','06/10/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
 GO
 CREATE TABLE Chitietbaidang
 (	
@@ -1257,6 +1422,11 @@ INSERT INTO Chitietbaidang VALUES ('BD52','3',1)
 INSERT INTO Chitietbaidang VALUES ('BD53','10',1)
 INSERT INTO Chitietbaidang VALUES ('BD54','10',1)
 INSERT INTO Chitietbaidang VALUES ('BD55','6',1)
+INSERT INTO Chitietbaidang VALUES ('BD56','1',1)
+INSERT INTO Chitietbaidang VALUES ('BD57','2',1)
+INSERT INTO Chitietbaidang VALUES ('BD58','2',1)
+INSERT INTO Chitietbaidang VALUES ('BD59','2',1)
+INSERT INTO Chitietbaidang VALUES ('BD60','2',1)
 
 
 
@@ -1392,7 +1562,10 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT4' ,'TiS' ,N'Đào tạo tiến sĩ Khoa h�
 <p>&nbsp;&nbsp;&nbsp;&nbsp; To&agrave;n bộ chương tr&igrave;nh đ&agrave;o tạo tr&igrave;nh độ tiến sĩ đối với người c&oacute; bằng thạc sĩ l&agrave; 3 năm học tập trung li&ecirc;n tục; đối với người c&oacute; bằng tốt nghiệp đại học nhưng chưa c&oacute; bằng thạc sĩ chuy&ecirc;n ng&agrave;nh ph&ugrave; hợp l&agrave; 5 năm học tập trung li&ecirc;n tục.</p>
 ' ,'05-20-2015','IT2' ,1 )
 
-INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công nghệ thông tin',N'<p><strong>1. GIỚI THIỆU CHUNG</strong></p>
+INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công nghệ thông tin',N'<h1><strong>1. GIỚI THIỆU CHUNG</strong></h1>
+
+<p>.</p>
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo được cập nhật căn cứ tr&ecirc;n sứ mệnh v&agrave; mục ti&ecirc;u đ&agrave;o tạo của ng&agrave;nh học, đối chiếu với c&aacute;c chương tr&igrave;nh đ&agrave;o tạo tiến sĩ thuộc lĩnh vực CNTT tại Đại học Quốc gia TP. Hồ Ch&iacute; Minh cũng như một số đại học kh&aacute;c trong khu vực v&agrave; tr&ecirc;n thế giới.</p>
 
 <p><strong>1.1 Mục ti&ecirc;u đ&agrave;o tạo</strong></p>
@@ -1420,11 +1593,11 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Trường hợp NCS kh&ocirc;ng theo học tập trung li&ecirc;n tục được v&agrave; được Trường chấp nhận th&igrave; chương tr&igrave;nh đ&agrave;o tạo v&agrave; nghi&ecirc;n cứu của NCS phải c&oacute; tổng thời gian học v&agrave; nghi&ecirc;n cứu như quy định tr&ecirc;n, trong đ&oacute; c&oacute; &iacute;t nhất 12 th&aacute;ng tập trung li&ecirc;n tục tại cơ sở đ&agrave;o tạo để thực hiện đề t&agrave;i nghi&ecirc;n cứu. Trong trường hợp n&agrave;y thời gian đ&agrave;o tạo được cộng th&ecirc;m 1 năm tương ứng với từng đối tượng.</p>
 
-<p><strong>2. ĐỐI TƯỢNG &Aacute;P DỤNG</strong><p>
+<h1><strong>2. ĐỐI TƯỢNG &Aacute;P DỤNG</strong></h1>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; C&aacute;c kh&oacute;a tuyển sinh tiến sĩ ng&agrave;nh CNTT từ &nbsp;năm 2014.</p>
 
-<p><strong>3. QUY CHẾ Đ&Agrave;O TẠO</strong></p>
+<h1><strong>3. QUY CHẾ Đ&Agrave;O TẠO</strong></h1>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo tiến sĩ ng&agrave;nh CNTT của trường Đại học S&agrave;i G&ograve;n&nbsp;được thực hiện căn cứ v&agrave;o:</p>
 
@@ -1434,7 +1607,7 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 	<li>Quy chế đ&agrave;o tạo tr&igrave;nh độ tiến sĩ ban h&agrave;nh k&egrave;m theo th&ocirc;ng tư số 10/2009/TT-BGD&amp;ĐT ng&agrave;y 07/5/2009 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo; v&agrave; Th&ocirc;ng tư số 05/2012/TT-BGDĐT ng&agrave;y 15/2/2012 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo về việc Sửa đổi, bổ sung Th&ocirc;ng tư 10/2009/TT-BGDĐT, c&oacute; hiệu lực từ 2/4/2012.</li>
 </ul>
 
-<p><strong>4. CHUẨN ĐẦU RA</strong></p>
+<h1><strong>4. CHUẨN ĐẦU RA</strong></h1>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Học vi&ecirc;n tốt nghiệp chương tr&igrave;nh đ&agrave;o tạo sau đại học tiến sĩ ng&agrave;nh CNTT phải đ&aacute;p ứng c&aacute;c y&ecirc;u cầu về ti&ecirc;u chuẩn đầu ra (k&yacute; hiệu LO &ndash; Learning Outcomes) sau:</p>
 
@@ -1481,7 +1654,7 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 	<li>C&oacute; thể giảng dạy hệ Đại học, Sau Đại học ng&agrave;nh CNTT tại c&aacute;c trường Đại học.</li>
 </ul>
 
-<p><strong>5. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></p>
+<h1><strong>5. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></h1>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Căn cứ v&agrave;o Quy chế đ&agrave;o tạo tiến sĩ của trường ĐH.SG, NCS phải thực hiện 3 phần nội dung của chương tr&igrave;nh đ&agrave;o tạo sau đ&acirc;y:</p>
 
@@ -1512,39 +1685,111 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 GO
 CREATE TABLE Thongbaochuyentiep
 (
-	Machuyentiep VARCHAR(50) PRIMARY KEY,
+	Machuyentiep int identity(1,1) primary key,
 	Taikhoangui VARCHAR(100),
 	Tieude NVARCHAR(100),
 	Noidung NVARCHAR(MAX),
 	Ngaychuyen DATETIME,
-	Flag BIT,
+	Flag INT,
 	FOREIGN KEY (Taikhoangui) REFERENCES Taikhoan(Tentaikhoan)
 )
 go
-INSERT INTO Thongbaochuyentiep VALUES  ( 'CT1','IT3'  ,N'Đăng bài', N'<p>Tuyển dụng ở IVC Freshser 2018</p>'  , '09-20-2018' , 1 )
-INSERT INTO Thongbaochuyentiep VALUES  ( 'CT2'  ,'IT9',N'Xóa bài' , N'<p>Xóa bài đăng Nghiên cứu BD3</p>' , '12-25-2018', 1 )
-INSERT INTO Thongbaochuyentiep VALUES  ( 'CT3' ,'IT3',N'Sửa bài' , N'<p>Sửa bài đăng Bộ môn Hệ thống thông tin BD4</p>'  ,  '8-5-2018' , 1 )
-INSERT INTO Thongbaochuyentiep VALUES  ( 'CT4' ,'IT10'  ,N'Xóa bài' , N'<p>Xóa bài đăng Bộ môn Kỹ thuật phần mềm BD5</p>' , '12-5-2018' , 1 )
-INSERT INTO Thongbaochuyentiep VALUES  ( 'CT5' ,'IT4',N'Đăng bài' , N'<p>Quy định về khóa luận Tốt Nghiệp</p>'  , '11-20-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT3'  ,N'Đăng bài', N'<p>Tuyển dụng ở IVC Freshser 2018</p>'  , '09-20-2018' , 1 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  (  'IT9',N'Xóa bài' , N'<p>Xóa bài đăng Nghiên cứu BD3</p>' , '12-25-2018', 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT3',N'Sửa bài' , N'<p>Sửa bài đăng Bộ môn Hệ thống thông tin BD4</p>'  ,  '8-5-2018' , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  (  'IT10'  ,N'Xóa bài' , N'<p>Xóa bài đăng Bộ môn Kỹ thuật phần mềm BD5</p>' , '12-5-2018' , 1 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT4',N'Đăng bài' , N'<p>Quy định về khóa luận Tốt Nghiệp</p>'  , '11-20-2018'  , 1 )
+
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT3',N'Đăng bài' , N'<p>Thông báo về việc xét tuyến sinh viên từ chương trình đào tạo đại trà qua chương trình đào tạo chất lượng cao ngành Công nghệ thông tin</p>'  , '09-23-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT5',N'Sửa bài' , N'<p>Sửa BD2:Thời khóa biểu lớp kỹ sư CNTT khóa 2018- hệ đào tạo chất lượng cao </p>'  , '09-05-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT1',N'Đăng bài' , N'<p>Giới thiệu CTĐT ngành CNTT hệ đào tạo chất lượng cao</p>'  , '08-18-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT7',N'Đăng bài' , N'<p>Khóa luận dành cho K14</p>'  , '06-30-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT3',N'Sửa bài' , N'<p>Sửa BD5: Thay thế các học phần đã hủy ở chu kỳ 2016-2020 (Tiếng Anh1, Tiếng Anh 2, ĐT Căn Bản, Nhập môn máy tính, Phân tích thiết kế giải thuật) </p>'  , '04-30-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT8',N'Xóa bài' , N'<p>Xóa BD6: Đăng ký học chương trình đào tạo chất lượng cao Kỹ sư CNTT năm 2017 </p>'  , '12-20-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT7',N' Sửa bài' , N'<p>Sửa BD7: Đăng kí dự hội thảo Blockchain</p>'  , '10-15-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT2',N'Đăng bài' , N'<p>Hội thảo khoa học "Một số vấn đề chọn lọc về CNTT	và truyền thông</p>'  , '03-20-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT6',N'Xóa bài' , N'<p>Xóa BD9: Về việc học bổng đồng hương Bạc Liêu - Cà Mau năm học 2017-2018</p>'  , '05-10-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT5',N'Xóa bài' , N'<p>Xóa BD10: Thông báo về việc học bổng Vũ Đình Liệu năm học 2017-2018</p>'  , '03-20-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT3',N'Đăng bài' , N'<p>Tuyển sinh viên thực tập</p>'  , '10-22-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT4',N'Đăng bài' , N'<p>Công Ty TMA Tuyển dụng nhân sự</p>'  , '04-02-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT1',N'Xóa bài' , N'<p>Xóa BD14: Thông tin tuyển dụng</p>'  , '05-20-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT10',N'Đăng bài' , N'<p>Thông báo về việc nghiệm thu đề tài khoa học 2017-2018 và đăng ký đề tài khoa học 2018-2019</p>'  , '06-15-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT6',N'Sửa bài' , N'<p>Sửa BD16: Danh sách các đội tuyển Olympic 2018</p>'  , '08-29-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT8',N'Đăng bài' , N'<p>Olympic Tin học 2017</p>'  , '07-10-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT6',N'Xóa bài' , N'<p>Xóa BD18: Danh sách sinh viên tham gia lớp bồi dưỡng Olympic Tin học 2018</p>'  , '12-20-2018'  , 0 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT1',N'Đăng bài' , N'<p>THÔNG BÁO Về việc huấn luyện sinh viên tham dự Olympic Tin học sinh viên Việt Nam và Kỳ thi lập trình sinh viên Quốc tế ACM năm 2018</p>'  , '03-30-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT2',N'Đăng bài' , N'<p>Thông báo về cuộc thi lập trình Makerthon lần 2 - năm 2018</p>'  , '10-28-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT10',N'Sửa bài' , N'<p>Sửa BD22: Tuần Sinh hoạt CD-SV đầu khóa, Khóa 18 (DCT1182, DCT1183, DCT1184)</p>'  , '10-30-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT9',N'Sửa bài' , N'<p>Sửa BD23: Kế hoạch Seminar giữa sinh viên khoa Công nghệ thông tin và Fsoft</p>'  , '10-26-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT7',N'Xóa bài' , N'<p>Xóa BD24: Thông tin cuộc thi "HS,SV với ý tưởng khởi nghiệp</p>'  , '05-30-2018'  , 0 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT4',N'Sửa bài' , N'<p>Sửa BD25: Thông báo về việc mở cửa phòng máy phục vụ sinh viên</p>'  , '10-30-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT5',N'Đăng bài' , N'<p>Thông báo nghỉ học môn kiến trúc máy tính các lớp thầy Huỳnh Tổ Hạp</p>'  , '09-06-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT6',N'Xóa bài' , N'<p>Xóa BD39: Lớp phổ cập kiến thức chứng khoáng dành cho sinh viên</p>'  , '03-20-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT3',N'Đăng bài' , N'<p>Thông tin đăng kí nhận vé tham gia Halloween</p>'  , '10-27-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT2',N'Đăng bài' , N'<p>Hội thi thiết kế nhãn dán STICKER IN LAW</p>'  , '10-20-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT8',N'Sửa bài' , N'<p>Sửa BD43: Trao học bổng cho đối tượng tân sinh viên vượt khó học giỏi</p>'  , '09-30-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT3',N' Đăng bài' , N'<p>Thông báo tuyển sinh đào tạo trình độ thạc sĩ đợt 2 năm 2018</p>'  , '09-09-2018'  , 2 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT1',N'Sửa bài' , N'<p>Sửa BD47: Thông báo sinh hoạt đầu khoá cao học khoá 13 đợt 2 năm 2018</p>'  , '11-30-2018'  , 3 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT10',N'Đăng bài' , N'<p>Thư mời tham gia Giải thưởng Nhân tài Đất Việt 2018</p>'  , '08-04-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT4',N'Đăng bài' , N'<p>Thông báo lịch thi môn Công nghệ mạng và truyền thông hiện đại</p>'  , '05-26-2018'  , 0 )
+INSERT INTO Thongbaochuyentiep(Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag) VALUES  ( 'IT3',N'Sửa bài' , N'<p>Sửa BD52: Thông báo về lệ phí tốt nghiệp thạc sĩ đợt 2 năm 2018</p>'  , '11-25-2018'  , 1 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT7',N'Xóa bài' , N'<p>Xóa BD53: Thông tin học bổng DAAD scholarship Programmes for Vietnam</p>'  , '12-30-2018'  , 0 )
+INSERT INTO Thongbaochuyentiep (Taikhoangui,Tieude,Noidung,Ngaychuyen,Flag)VALUES  ( 'IT2',N'Đăng bài' , N'<p>Thông báo về chương trình thực tập và postdoc tại Nhật</p>'  , '06-20-2018'  , 2 )
 go
 CREATE TABLE Chitietchuyentiep
 (
-	Machuyentiep VARCHAR(50),
+	Machuyentiep int,
 	Taikhoannhan VARCHAR(100),
 	Ngaynhan datetime,
 	Trangthaixem NVARCHAR(20),
 	Trangthaichuyen NVARCHAR(20),
-	Flag BIT,
+	Flag INT,
 	PRIMARY KEY (Machuyentiep,Taikhoannhan),
 	FOREIGN KEY (Machuyentiep) REFERENCES Thongbaochuyentiep(Machuyentiep),
 	FOREIGN KEY (Taikhoannhan) REFERENCES Taikhoan(Tentaikhoan)
 )
 go
-INSERT INTO Chitietchuyentiep  VALUES  ( 'CT1' ,'IT4','09-22-2018', N'Đã xem', N'Đã chuyển',1 )
-INSERT INTO Chitietchuyentiep  VALUES  ( 'CT2' ,'IT10' ,'12-27-2018', N'Đã xem', N'Đã chuyển',1  )
-INSERT INTO Chitietchuyentiep  VALUES  ( 'CT3' ,'IT4' ,'8-8-2018', N'Đã xem', N'Đã chuyển',1  )
-INSERT INTO Chitietchuyentiep  VALUES  ( 'CT4' ,'IT5','12-8-2018', N'Đã xem', N'Đã chuyển',1  )
-INSERT INTO Chitietchuyentiep  VALUES  ( 'CT5' ,'IT3','11-22-2018' , N'Đã xem', N'Đã chuyển',1  )
+INSERT INTO Chitietchuyentiep  VALUES  (1 ,'IT4','09-22-2018', N'Đã xem', N'Đã chuyển',1 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 2 ,'IT10' ,'12-27-2018', N'Đã xem', N'Đã chuyển',1  )
+INSERT INTO Chitietchuyentiep  VALUES  ( 3 ,'IT4' ,'8-8-2018', N'Đã xem', N'Đã chuyển',1  )
+INSERT INTO Chitietchuyentiep  VALUES  ( 4 ,'IT5','12-8-2018', N'Đã xem', N'Đã chuyển',1  )
+INSERT INTO Chitietchuyentiep  VALUES  ( 5 ,'IT3','11-22-2018' , N'Đã xem', N'Đã chuyển',1  )
+
+INSERT INTO Chitietchuyentiep  VALUES  ( 6 ,'IT9','09-25-2018' , N'Đã xem', N'Đã chuyển',2  )
+INSERT INTO Chitietchuyentiep  VALUES  ( 7 ,'IT8','09-07-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 8 ,'IT10','08-20-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 9 ,'IT9','07-02-2018' , N'Đã xem', N'Đã chuyển',  3)
+INSERT INTO Chitietchuyentiep  VALUES  ( 10 ,'IT9','05-02-2018' , N'Đã xem', N'Đã chuyển',  3)
+INSERT INTO Chitietchuyentiep  VALUES  ( 11,'IT2','12-22-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 12 ,'IT1','10-17-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 13 ,'IT10','03-22-2018' , N'Đã xem', N'Đã chuyển', 1 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 14 ,'IT5','05-12-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 15 ,'IT3','03-22-2018' , N'Đã xem', N'Đã chuyển', 1 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 16,'IT8','10-22-2018' , N'Đã xem', N'Đã chuyển', 2 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 17 ,'IT2','04-04-2018' , N'Đã xem', N'Đã chuyển', 2 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 18 ,'IT9','05-22-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 19,'IT7','06-17-2018' , N'Đã xem', N'Đã chuyển',  3)
+INSERT INTO Chitietchuyentiep  VALUES  ( 20,'IT3','09-01-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 21 ,'IT4','07-12-2018' , N'Đã xem', N'Đã chuyển', 2 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 22 ,'IT10','12-22-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 23,'IT7','04-02-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 24 ,'IT8','10-30-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 25 ,'IT3','11-01-2018' , N'Đã xem', N'Đã chuyển',  3)
+INSERT INTO Chitietchuyentiep  VALUES  ( 26 ,'IT10','10-28-2018' , N'Đã xem', N'Đã chuyển',  3)
+INSERT INTO Chitietchuyentiep  VALUES  ( 27 ,'IT1','06-02-2018' , N'Đã xem', N'Đã chuyển',1  )
+INSERT INTO Chitietchuyentiep  VALUES  ( 28,'IT10','11-02-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 29 ,'IT9','09-08-2018' , N'Đã xem', N'Đã chuyển', 3 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 30 ,'IT5','03-22-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 31,'IT7','10-29-2018' , N'Đã xem', N'Đã chuyển', 2 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 32 ,'IT9','10-22-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 33 ,'IT3','10-02-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 34 ,'IT1','09-11-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 35 ,'IT8','12-01-2018' , N'Đã xem', N'Đã chuyển', 3 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 36 ,'IT2','08-06-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 37 ,'IT7','05-28-2018' , N'Đã xem', N'Đã chuyển',  2)
+INSERT INTO Chitietchuyentiep  VALUES  ( 38 ,'IT7','11-27-2018' , N'Đã xem', N'Đã chuyển',  1)
+INSERT INTO Chitietchuyentiep  VALUES  ( 39 ,'IT3','12-03-2018' , N'Đã xem', N'Đã chuyển', 1 )
+INSERT INTO Chitietchuyentiep  VALUES  ( 40,'IT9','06-22-2018' , N'Đã xem', N'Đã chuyển',  2)
 go
 CREATE TABLE Bomon
 (
@@ -2092,8 +2337,8 @@ create table NghiencuuKH
 	TenNCKH nvarchar(50),
 	Flag bit
 )
-INSERT INTO NghiencuuKH VALUES  ('SK',N'Sự kiện',1)
-INSERT INTO NghiencuuKH VALUES  ('BB',N'Bài báo',1)
+INSERT INTO NghiencuuKH VALUES  ('SK','Sự kiện',1)
+INSERT INTO NghiencuuKH VALUES  ('BB','Bài báo',1)
 
 GO
 create table ChitietNCKH
@@ -2130,8 +2375,8 @@ INSERT INTO ChitietNCKH VALUES  ('NCKH1','SK',N'Đăng kí dự hội thảo Blo
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJJPrLTv94uGEKkh7-3BoescLuhNdbFkghud9bZLj4bj9coA/viewform">https://docs.google.com/forms/d/e/1FAIpQLSeJJPrLTv94uGEKkh7-3BoescLuhNdbFkghud9bZLj4bj9coA/viewform</a></p>'
 ,'09/23/2018','10/19/2018','IT2',1)
 
-INSERT INTO ChitietNCKH VALUES ('NCKH2','SK',N'Hội thảo khoa học',N'<p>Một số chọn lọc về CNTT truyền th&ocirc;ng</p>','03/22/2018','10/19/2018','IT2',1)
-INSERT INTO ChitietNCKH VALUES ('NCKH3','SK',N'Nghiên cứu khoa học',N'','09/09/2018','10/19/2018','IT2',1)
+INSERT INTO ChitietNCKH VALUES ('NCKH2','SK',N'Hội thảo khoa học "Một số vấn đề chọn lọc về CNTT và truyền thông',N'Các bạn xem chi tiết tại đây','03/22/2018','','IT2',1)
+INSERT INTO ChitietNCKH VALUES ('NCKH3','SK',N'Nghiên cứu khoa học',N'','09/09/2018','','IT2',1)
 
 go
 create table LoaiGT
@@ -2334,152 +2579,155 @@ INSERT INTO NoidungGT VALUES ('GT8','CCTC',N'Cựu viên chức khoa',N'
 ','03/08/2017','IT2',1)
 
 
-go
-CREATE table Files
-(
-	IDfile int IDENTITY(1,1) primary key,
-	Mabaidang varchar(50),
-	MaNDBMTT varchar(50),
-	MaNDDT VARCHAR(50),
-	MaCTNCKH varchar(50),
-	MaNDGT varchar(50),
-	Machuyentiep varchar(50),
-	TenFile nvarchar(max),
-	FilePath nvarchar(max),
-	Flag bit,
-	FOREIGN KEY (Mabaidang) REFERENCES Baidang(Mabaidang),
-	FOREIGN KEY (MaNDBMTT) REFERENCES NoidungBMTT(MaNDBMTT),
-	FOREIGN KEY (MaNDDT) REFERENCES NoidungDT(MaNDDT),
-	FOREIGN KEY (MaCTNCKH) REFERENCES ChitietNCKH(MaCTNCKH),
-	FOREIGN KEY (Machuyentiep) REFERENCES Thongbaochuyentiep(Machuyentiep),
-	FOREIGN KEY (MaNDGT) REFERENCES NoidungGT(MaNDGT)
-)
-go
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD1','ND2','NDDT1',null,null,'CT1','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND5','NDDT3','NCKH3','GT1','CT1','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND7',null,'NCKH3',null,'CT2','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD1','ND2','NDDT1',null,null,'CT3','File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD3','ND3',null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD4','ND4',null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD5',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD6',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD7',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD8',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD9',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD10',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD11',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD11',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD12',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD13',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD14',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD15',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD16',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD17',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD18',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD19',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD20',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD21',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD22',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD23',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD24',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD25',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD26',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD27',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD28',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD29',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD30',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD31',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD35',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD37',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD38',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD39',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD40',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD2','ND5',null,null,null,null,'File 3','/Assets/plugins/Uploads/files/03.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values ('BD2','ND5','NDDT2',null,null,null,'File 3','/Assets/plugins/Uploads/files/03.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND2','NDDT1',null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND3','NDDT2',null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND6',null,null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND1',null,null,null,null,'DonXinHoTroChiPhiHocTap','/Assets/plugins/Uploads/files/DonXinHoTroChiPhiHocTap.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND1',null,null,null,null,'DonXinMienGiamHocPhi','/Assets/plugins/Uploads/files/DonXinMienGiamHocPhi.docx.docx',1)
-insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
-values (null,'ND1',null,null,null,null,'DonXinTroCapDanToc','/Assets/plugins/Uploads/files/DonXinTroCapDanToc.docx',1)
+--go
+--CREATE table Files
+--(
+--	IDfile int IDENTITY(1,1) primary key,
+--	Mabaidang varchar(50),
+--	MaNDBMTT varchar(50),
+--	MaNDDT VARCHAR(50),
+--	MaCTNCKH varchar(50),
+--	MaNDGT varchar(50),
+--	Machuyentiep varchar(50),
+--	TenFile nvarchar(max),
+--	FilePath nvarchar(max),
+--	Flag bit,
+--	FOREIGN KEY (Mabaidang) REFERENCES Baidang(Mabaidang),
+--	FOREIGN KEY (MaNDBMTT) REFERENCES NoidungBMTT(MaNDBMTT),
+--	FOREIGN KEY (MaNDDT) REFERENCES NoidungDT(MaNDDT),
+--	FOREIGN KEY (MaCTNCKH) REFERENCES ChitietNCKH(MaCTNCKH),
+--	FOREIGN KEY (Machuyentiep) REFERENCES Thongbaochuyentiep(Machuyentiep),
+--	FOREIGN KEY (MaNDGT) REFERENCES NoidungGT(MaNDGT)
+--)
+--go
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD1','ND2','NDDT1',null,null,'CT1','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND5','NDDT3','NCKH3','GT1','CT1','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND7',null,'NCKH3',null,'CT2','File 1','/Assets/plugins/Uploads/files/01.pdf',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD1','ND2','NDDT1',null,null,'CT3','File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD3','ND3',null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD4','ND4',null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD5',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD6',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD7',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD8',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD9',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD10',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD11',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD11',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD12',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD13',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD14',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD15',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD16',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD17',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD18',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD19',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD20',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD21',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD22',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD23',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD24',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD25',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD26',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD27',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD28',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD29',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD30',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD31',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD35',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD37',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD38',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD39',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD40',null,null,null,null,null,'File 2','/Assets/plugins/Uploads/files/02.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD2','ND5',null,null,null,null,'File 3','/Assets/plugins/Uploads/files/03.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values ('BD2','ND5','NDDT2',null,null,null,'File 3','/Assets/plugins/Uploads/files/03.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND2','NDDT1',null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND3','NDDT2',null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND6',null,null,null,null,'File 4','/Assets/plugins/Uploads/files/04.xlsx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND1',null,null,null,null,'DonXinHoTroChiPhiHocTap','/Assets/plugins/Uploads/files/DonXinHoTroChiPhiHocTap.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND1',null,null,null,null,'DonXinMienGiamHocPhi','/Assets/plugins/Uploads/files/DonXinMienGiamHocPhi.docx.docx',1)
+--insert into Files(Mabaidang,MaNDBMTT,MaNDDT,MaCTNCKH,MaNDGT,Machuyentiep,TenFile,FilePath,Flag)
+--values (null,'ND1',null,null,null,null,'DonXinTroCapDanToc','/Assets/plugins/Uploads/files/DonXinTroCapDanToc.docx',1)
 
-go
-create table Hinhanh
-(
-	Id int IDENTITY(1,1) PRIMARY KEY,
-	Mabaidang varchar(50),
-	MaNDDT varchar(50),
-	MaCTNCKH VARCHAR(50),
-	Machuyentiep varchar(50),
-	MaNDGT varchar(50),
-	Tenfile nvarchar(max),
-	FilePath varchar(max),
-	Flag bit,
-	FOREIGN KEY (MaNDDT) REFERENCES NoidungDT(MaNDDT),
-	FOREIGN KEY (Mabaidang) REFERENCES Baidang(Mabaidang),
-	FOREIGN KEY (MaCTNCKH) REFERENCES ChitietNCKH(MaCTNCKH),
-	FOREIGN KEY (Machuyentiep) REFERENCES Thongbaochuyentiep(Machuyentiep),
-	FOREIGN KEY (MaNDGT) REFERENCES NoidungGT(MaNDGT)
-)
-insert into Hinhanh(Mabaidang,MaNDDT,MaCTNCKH,Machuyentiep,MaNDGT,TenFile,FilePath,Flag)
-values(null,'NDDT3',null,null,null,'khoa-hoc-may-tinh','~/Image/khoa-hoc-may-tinh.jpg',1)
+--go
+--create table Hinhanh
+--(
+--	Id int IDENTITY(1,1) PRIMARY KEY,
+--	Mabaidang varchar(50),
+--	MaNDDT varchar(50),
+--	MaCTNCKH VARCHAR(50),
+--	Machuyentiep varchar(50),
+--	MaNDGT varchar(50),
+--	Tenfile nvarchar(max),
+--	FilePath varchar(max),
+--	Flag bit,
+--	FOREIGN KEY (MaNDDT) REFERENCES NoidungDT(MaNDDT),
+--	FOREIGN KEY (Mabaidang) REFERENCES Baidang(Mabaidang),
+--	FOREIGN KEY (MaCTNCKH) REFERENCES ChitietNCKH(MaCTNCKH),
+--	FOREIGN KEY (Machuyentiep) REFERENCES Thongbaochuyentiep(Machuyentiep),
+--	FOREIGN KEY (MaNDGT) REFERENCES NoidungGT(MaNDGT)
+--)
+--insert into Hinhanh(Mabaidang,MaNDDT,MaCTNCKH,Machuyentiep,MaNDGT,TenFile,FilePath,Flag)
+--values(null,'NDDT3',null,null,null,'khoa-hoc-may-tinh','~/Image/khoa-hoc-may-tinh.jpg',1)
 
-SELECT * FROM ThongtinGV 
+--SELECT * FROM ThongtinGV 
 
 --select *  from ThongTinGV
 --where MaBM='BM2' and Chucvu like 'Tiến sĩ'
 --select * from Bomon
 
-select convert(varchar(10), NgayCT,101)
-from ChitietCTGV
-group by convert(varchar(10), NgayCT,101)
+--select * from Thongbaochuyentiep WHERE Taikhoangui='IT4'
+--select* from Chitietchuyentiep WHERE Taikhoannhan='IT4' and Machuyentiep=1
 
-select * from ChitietCTGV
-order by NgayCT asc
+select * 
+from Thongbaochuyentiep a,Chitietchuyentiep b, Thongtinnguoidung c
+where a.Machuyentiep=b.Machuyentiep and a.Taikhoangui= c.Tentaikhoan and  b.Taikhoannhan='IT4' and (b.Flag=2 or b.Flag=3)
+
+--select * from Thongtinnguoidung
+select * from Baidang where (ĐoituongHT='GV' or ĐoituongHT='ALL') and Maloai='TT'

@@ -9,13 +9,6 @@ namespace Model.EF
     [Table("NoidungGT")]
     public partial class NoidungGT
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NoidungGT()
-        {
-            Files = new HashSet<File>();
-            Hinhanhs = new HashSet<Hinhanh>();
-        }
-
         [Key]
         [StringLength(50)]
         public string MaNDGT { get; set; }
@@ -34,12 +27,6 @@ namespace Model.EF
         public string Tentaikhoan { get; set; }
 
         public bool? Flag { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<File> Files { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hinhanh> Hinhanhs { get; set; }
 
         public virtual LoaiGT LoaiGT { get; set; }
 

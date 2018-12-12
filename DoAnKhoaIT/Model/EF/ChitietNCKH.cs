@@ -9,13 +9,6 @@ namespace Model.EF
     [Table("ChitietNCKH")]
     public partial class ChitietNCKH
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ChitietNCKH()
-        {
-            Files = new HashSet<File>();
-            Hinhanhs = new HashSet<Hinhanh>();
-        }
-
         [Key]
         [StringLength(50)]
         public string MaCTNCKH { get; set; }
@@ -39,11 +32,5 @@ namespace Model.EF
         public virtual NghiencuuKH NghiencuuKH { get; set; }
 
         public virtual Taikhoan Taikhoan { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<File> Files { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hinhanh> Hinhanhs { get; set; }
     }
 }

@@ -11,7 +11,8 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
     {
         // GET: GiaoVien/Home
         HomeDAO dao = new HomeDAO();
-        public ActionResult IndexGV()
+        public static string tentk;
+        public ActionResult IndexGV(string ten)
         {
             View3baidang model = new View3baidang();
             model.v1 = dao.Load3baidang("TT");
@@ -21,6 +22,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
             model.v5 = dao.LoadDaoTao();
             model.v8 = dao.GetDaoTao();
             model.v9 = dao.GetSKKH();
+            tentk = ten;
             return View(model);
         }
     }

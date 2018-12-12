@@ -22,7 +22,7 @@ namespace Model.DAO.GiaoVien
             //          {
             //              Ngay = b.Key.
             //          };
-            var res = db.ChitietCTGVs.Where(e => e.Flag == true).OrderBy(e=>e.NgayCT).GroupBy(e => EntityFunctions.TruncateTime(e.NgayCT)).Select(e => new LichGV_TheoNgay { Ngay = e.Key}).ToList();
+            var res = db.ChitietCTGVs.Where(e => e.Flag == true &&e.MaCT == mact).OrderBy(e=>e.NgayCT).GroupBy(e => EntityFunctions.TruncateTime(e.NgayCT)).Select(e => new LichGV_TheoNgay { Ngay = e.Key}).ToList();
             List<LichGV_TheoNgay>  res2 = new List<LichGV_TheoNgay>();
             string s = "";
             foreach (var item in res)
@@ -39,8 +39,8 @@ namespace Model.DAO.GiaoVien
         }
         public List<LichGV_TheoNgay> LoadTheoNgay(string mact)
         {
-            var res = db.ChitietCTGVs.Where(s => s.Flag == true).OrderBy(s=>s.NgayCT).GroupBy(s => EntityFunctions.TruncateTime(s.NgayCT)).Select(s => new LichGV_TheoNgay { Ngay = s.Key }).ToList();
-            var res2 = db.ChitietCTGVs.Where(s => s.Flag == true).OrderBy(s=>s.NgayCT).Select(s => s.NgayCT).ToList();
+            var res = db.ChitietCTGVs.Where(s => s.Flag == true && s.MaCT==mact).OrderBy(s=>s.NgayCT).GroupBy(s => EntityFunctions.TruncateTime(s.NgayCT)).Select(s => new LichGV_TheoNgay { Ngay = s.Key }).ToList();
+            var res2 = db.ChitietCTGVs.Where(s => s.Flag == true && s.MaCT == mact).OrderBy(s=>s.NgayCT).Select(s => s.NgayCT).ToList();
             var c = new List<LichGV_TheoNgay>();
             var d = new List<LichGV_TheoNgay>();
             DateTime dt = new DateTime();
@@ -62,9 +62,20 @@ namespace Model.DAO.GiaoVien
             }
             foreach (var b in d)
             {
-                c = db.ChitietCTGVs.Where(s => s.NgayCT.ToString().Contains(b.thoigian) && s.NgayCT.ToString().Contains(b.Ngay.ToString()) && s.MaCT == mact).Select(s => new LichGV_TheoNgay { ctgv = s, thoigian = b.thoigian }).ToList();
+                LichGV_TheoNgay n = new LichGV_TheoNgay();
+                var res3 =from a in db.ChitietCTGVs
+                           where a.NgayCT.ToString().Contains(b.thoigian) && a.NgayCT.ToString().Contains(b.Ngay.ToString()) && a.MaCT == mact
+                           select a;
+                n.Noidung = res3.Select(s => s.Noidung).ToString();
+                n.Thanhphan = res3.Select(s => s.Thanhphan).ToString();
+                n.ChuTri= res3.Select(s => s.Chutri).ToString();
+                n.Diadiem = res3.Select(s => s.Diadiem).ToString();
+                n.thoigian = b.thoigian;
+                n.Ngay = b.Ngay;
+                c.Add(n);
+                //c = db.ChitietCTGVs.AsEnumerable().Where(s => s.NgayCT.ToString().Contains(b.thoigian) && (s.NgayCT.Value.ToString("dd/MM/yyyy")==b.Ngay.Value.ToString("dd/MM/yyyy")) && s.MaCT == mact).Select(s => new LichGV_TheoNgay {  Noidung=s.Noidung,Thanhphan=s.Thanhphan,Diadiem=s.Diadiem,ChuTri=s.Chutri,thoigian = b.thoigian }).ToList();             
             }
-            return c.OrderBy(e => e.Ngay.Value.ToString("dd/MM/yyyy")).ToList();
+            return c.OrderBy(e => e.Ngay).ToList();
 
         }
         public string GetThu(DateTime? ngayct)

@@ -80,7 +80,7 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
                     Session.Add(CommonConstants.USER_SESSION, usersession);
                     if (usersession.chucvu != "CV3")
                     {
-                        return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien" });
+                        return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien",ten=usersession.UserName.ToString()});
                     }                   
                     return RedirectToAction("Index", "Home", new { area = "Admin" });
                 }

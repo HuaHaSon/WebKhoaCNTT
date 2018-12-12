@@ -9,13 +9,6 @@ namespace Model.EF
     [Table("NoidungDT")]
     public partial class NoidungDT
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NoidungDT()
-        {
-            Files = new HashSet<File>();
-            Hinhanhs = new HashSet<Hinhanh>();
-        }
-
         [Key]
         [StringLength(50)]
         public string MaNDDT { get; set; }
@@ -35,12 +28,6 @@ namespace Model.EF
         public string Tentaikhoan { get; set; }
 
         public bool? Flag { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<File> Files { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hinhanh> Hinhanhs { get; set; }
 
         public virtual Loaidaotao Loaidaotao { get; set; }
 

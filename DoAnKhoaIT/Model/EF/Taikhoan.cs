@@ -15,7 +15,6 @@ namespace Model.EF
             Chitietchuyentieps = new HashSet<Chitietchuyentiep>();
             ChitietCTGVs = new HashSet<ChitietCTGV>();
             ChitietNCKHs = new HashSet<ChitietNCKH>();
-            NoidungBMTTs = new HashSet<NoidungBMTT>();
             NoidungDTs = new HashSet<NoidungDT>();
             NoidungGTs = new HashSet<NoidungGT>();
             Thongbaochuyentieps = new HashSet<Thongbaochuyentiep>();
@@ -44,9 +43,6 @@ namespace Model.EF
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChitietNCKH> ChitietNCKHs { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NoidungBMTT> NoidungBMTTs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NoidungDT> NoidungDTs { get; set; }

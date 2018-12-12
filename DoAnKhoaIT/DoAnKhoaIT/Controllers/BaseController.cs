@@ -21,27 +21,6 @@ namespace DoAnKhoaIT.Controllers
                     controller = "Dangnhap",
                     area = "Guest"
                 }));
-            }else{
-                if (session.chucvu != "CV3")
-                {
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                    {
-                        action = "IndexGV",
-                        controller = "Home",
-                        area = "Giaovien"
-                    }));
-                }
-                else
-                {
-                    // sua loi do di Son :)) tao off day
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                    {
-                        action = "Index",
-                        controller = "Home",
-                        area = "Admin"
-                    }));
-                }
-
             }
             base.OnActionExecuting(filterContext);
         }

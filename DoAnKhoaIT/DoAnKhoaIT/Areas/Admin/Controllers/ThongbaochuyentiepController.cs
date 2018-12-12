@@ -44,7 +44,7 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
             res.Ngaynhan = chuyentiepres.Ngaychuyen;
             res.Trangthaixem = "Chưa xem";
             res.Trangthaichuyen = "Đã chuyển";
-            res.Flag = true;
+            res.Flag = 2;
             dao.themchitietchuyentiep(res);
 
             return Json(new
@@ -69,7 +69,7 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
             });
 
         }
-        public JsonResult Loadchuyentiep(string id)
+        public JsonResult Loadchuyentiep(int id)
         {
             ThongbaochuyentiepDao dao = new ThongbaochuyentiepDao();
             var chuyentiepres = dao.timchuyentiep(id);
