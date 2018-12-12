@@ -25,6 +25,8 @@
     <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- Menu CSS -->
     <link href="~/Assets/Admin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Assets/Admin/plugins/bower_components/gallery/css/animated-masonry-gallery.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/Admin/plugins/bower_components/fancybox/ekko-lightbox.min.css" />
     <!-- Page plugins css -->
     <link href="~/Assets/Admin/plugins/bower_components/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
     <link href="~/Assets/Admin/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
@@ -45,6 +47,12 @@
     <link href="~/Assets/Admin/css/animate.css" rel="stylesheet">
     <!-- Calendar CSS -->
     <link href="~/Assets/Admin/plugins/bower_components/calendar/dist/fullcalendar.css" rel="stylesheet" />
+    <!-- Vector CSS -->
+    <link href="~/Assets/Admin/plugins/bower_components/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <!-- wysihtml5 CSS -->
+    <link rel="stylesheet" href="~/Assets/Admin/plugins/bower_components/html5-editor/bootstrap-wysihtml5.css" />
+    <!-- Dropzone css -->
+    <link href="~/Assets/Admin/plugins/bower_components/dropzone-master/dist/dropzone.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
     <link href="~/Assets/Admin/css/style.css" rel="stylesheet">
     <!-- color CSS -->
@@ -71,7 +79,7 @@
             <div class="navbar-header">
                 <div class="top-left-part">
                     <!-- Logo -->
-                    <a class="logo" href="index.html">
+                    <a class="logo" href=@Url.Action("","Home")>
                         <!-- Logo icon image, you can use font-icon also --><b>
                             <!--This is dark logo icon--><img src="~/Assets/Admin/plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="~/Assets/Admin/plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
                         </b>
@@ -241,7 +249,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="waves-effect"><i class="mdi mdi-format-color-fill fa-fw"></i> <span class="hide-menu"> Quản lý <span class="fa arrow"></span> <span class="label label-rouded label-success pull-right">7</span> </span></a>
+                        <a href="#" class="waves-effect"><i class="mdi mdi-format-color-fill fa-fw"></i> <span class="hide-menu"> Quản lý <span class="fa arrow"></span> <span class="label label-rouded label-success pull-right">9</span> </span></a>
                         <ul class="nav nav-second-level">
                             <li><a href=@Url.Action("Index","Thongtinnguoidung")><i data-icon="&#xe026;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Thông tin người dùng</span></a></li>
                             <li><a href=@Url.Action("Index","Bieumauthutuc")><i data-icon="&#xe025;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Biểu mẫu thủ tục</span></a></li>
@@ -257,111 +265,24 @@
                     </li>
 
                     <li>
-                        <a href="#" class="waves-effect"><i class="mdi mdi-content-copy fa-fw"></i> <span class="hide-menu"> Thống kê <span class="fa arrow"></span><span class="label label-rouded label-warning pull-right">30</span></span></a>
+                        <a href="#" class="waves-effect"><i class="mdi mdi-content-copy fa-fw"></i> <span class="hide-menu"> Thống kê <span class="fa arrow"></span><span class="label label-rouded label-warning pull-right">2</span></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href=@Url.Action("Index","Luottruycap")><i class="fa-fw">L</i> <span class="hide-menu">Lượt truy cập</span></a></li>
-                            <li><a href="treeview.html"><i class="fa-fw">T</i> <span class="hide-menu">Treeview</span></a></li>
-                            <li><a href="search-result.html"><i class="fa-fw">S</i> <span class="hide-menu">Search Result</span></a></li>
-                            <li><a href="utility-classes.html"><i class="fa-fw">U</i> <span class="hide-menu">Utility Classes</span></a></li>
-                            <li><a href="custom-scroll.html"><i class="fa-fw">C</i> <span class="hide-menu">Custom Scrolls</span></a></li>
-                            <li><a href="animation.html"><i class="fa-fw">A</i> <span class="hide-menu">Animations</span></a></li>
-                            <li><a href="profile.html"><i class="fa-fw">P</i> <span class="hide-menu">Profile</span></a></li>
-                            <li><a href="invoice.html"><i class="fa-fw">I</i> <span class="hide-menu">Invoice</span></a></li>
-                            <li><a href="faq.html"><i class="fa-fw">F</i> <span class="hide-menu">FAQ</span></a></li>
-                            <li><a href="gallery.html"><i class="fa-fw">G</i> <span class="hide-menu">Gallery</span></a></li>
-                            <li><a href="pricing.html"><i class="fa-fw">P</i> <span class="hide-menu">Pricing</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect"><i class="mdi mdi-apps fa-fw"></i> <span class="hide-menu">Đăng xuất<span class="fa arrow"></span></span></a>
-
-                    </li>
-                    <li class="devider"></li>
-                    <li>
-                        <a href="forms.html" class="waves-effect"><i class="mdi mdi-clipboard-text fa-fw"></i> <span class="hide-menu">Forms<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="form-basic.html"><i class="fa-fw">B</i><span class="hide-menu">Basic Forms</span></a></li>
-                            <li><a href="form-layout.html"><i class="fa-fw">L</i><span class="hide-menu">Form Layout</span></a></li>
-                            <li><a href="form-advanced.html"><i class="fa-fw">A</i><span class="hide-menu">Form Addons</span></a></li>
-                            <li><a href="form-material-elements.html"><i class="fa-fw">M</i><span class="hide-menu">Form Material</span></a></li>
-                            <li><a href="form-float-input.html"><i class="fa-fw">F</i><span class="hide-menu">Form Float Input</span></a></li>
-                            <li><a href="form-upload.html"><i class="fa-fw">U</i><span class="hide-menu">File Upload</span></a></li>
-                            <li><a href="form-mask.html"><i class="fa-fw">M</i><span class="hide-menu">Form Mask</span></a></li>
-                            <li><a href="form-img-cropper.html"><i class="fa-fw">C</i><span class="hide-menu">Image Cropping</span></a></li>
-                            <li><a href="form-validation.html"><i class="fa-fw">V</i><span class="hide-menu">Form Validation</span></a></li>
-                            <li><a href="form-dropzone.html"><i class="fa-fw">D</i><span class="hide-menu">File Dropzone</span></a></li>
-                            <li><a href="form-pickers.html"><i class="fa-fw">P</i><span class="hide-menu">Form-pickers</span></a></li>
-                            <li><a href="form-wizard.html"><i class="fa-fw">W</i><span class="hide-menu">Form-wizards</span></a></li>
-                            <li><a href="form-typehead.html"><i class="fa-fw">T</i><span class="hide-menu">Typehead</span></a></li>
-                            <li><a href="form-xeditable.html"><i class="fa-fw">X</i><span class="hide-menu">X-editable</span></a></li>
-                            <li><a href="form-summernote.html"><i class="fa-fw">S</i><span class="hide-menu">Summernote</span></a></li>
-                            <li><a href="form-bootstrap-wysihtml5.html"><i class=" fa-fw">W</i><span class="hide-menu">Bootstrap wysihtml5</span></a></li>
-                            <li><a href="form-tinymce-wysihtml5.html"><i class="fa-fw">T</i><span class="hide-menu">Tinymce wysihtml5</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="tables.html" class="waves-effect"><i class="mdi mdi-table fa-fw"></i> <span class="hide-menu">Tables<span class="fa arrow"></span><span class="label label-rouded label-danger pull-right">9</span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="basic-table.html"><i class="fa-fw">B</i><span class="hide-menu">Basic Tables</span></a></li>
-                            <li><a href="table-layouts.html"><i class="fa-fw">L</i><span class="hide-menu">Table Layouts</span></a></li>
-                            <li><a href="data-table.html"><i class="fa-fw">D</i><span class="hide-menu">Data Table</span></a></li>
-                            <li><a href="bootstrap-tables.html"><i class="fa-fw">B</i><span class="hide-menu">Bootstrap Tables</span></a></li>
-                            <li><a href="responsive-tables.html"><i class="fa-fw">R</i><span class="hide-menu">Responsive Tables</span></a></li>
-                            <li><a href="editable-tables.html"><i class="fa-fw">E</i><span class="hide-menu">Editable Tables</span></a></li>
-                            <li><a href="foo-tables.html"><i class="fa-fw">F</i><span class="hide-menu">FooTables</span></a></li>
-                            <li><a href="jsgrid.html"><i class="fa-fw">J</i><span class="hide-menu">JsGrid Tables</span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect"><i class="mdi mdi-chart-bar fa-fw"></i> <span class="hide-menu">Charts<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="flot.html"><i class="fa-fw">F</i><span class="hide-menu">Flot Charts</span></a> </li>
-                            <li><a href="morris-chart.html"><i class="fa-fw">M</i><span class="hide-menu">Morris Chart</span></a></li>
-                            <li><a href="chart-js.html"><i class="fa-fw">P</i><span class="hide-menu">Chart-js</span></a></li>
-                            <li><a href="peity-chart.html"><i class="fa-fw">P</i><span class="hide-menu">Peity Charts</span></a></li>
-                            <li><a href="chartist-js.html"><i class="fa-fw">C</i><span class="hide-menu">Chartist-js</span></a></li>
-                            <li><a href="knob-chart.html"><i class="fa-fw">K</i><span class="hide-menu">Knob Charts</span></a></li>
-                            <li><a href="sparkline-chart.html"><i class="fa-fw">S</i><span class="hide-menu">Sparkline charts</span></a></li>
-                            <li><a href="extra-charts.html"><i class="fa-fw">E</i><span class="hide-menu">Extra Charts</span></a></li>
+                            <li><a href=@Url.Action("Index","Thongkebaidang")><i class="fa-fw">B</i> <span class="hide-menu">Bài đăng</span></a></li>
                         </ul>
                     </li>
                     <li class="devider"></li>
-                    <li> <a href="widgets.html" class="waves-effect"><i class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">Widgets</span></a> </li>
                     <li>
-                        <a href="#" class="waves-effect"><i class="mdi mdi-emoticon fa-fw"></i> <span class="hide-menu">Icons<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="fontawesome.html"><i class="fa-fw">F</i><span class="hide-menu">Font awesome</span></a> </li>
-                            <li> <a href="themifyicon.html"><i class="fa-fw">T</i><span class="hide-menu">Themify Icons</span></a> </li>
-                            <li> <a href="simple-line.html"><i class="fa-fw">S</i><span class="hide-menu">Simple line Icons</span></a> </li>
-                            <li> <a href="material-icons.html"><i class="fa-fw">M</i><span class="hide-menu">Material Icons</span></a> </li>
-                            <li><a href="linea-icon.html"><i class="fa-fw">L</i><span class="hide-menu">Linea Icons</span></a></li>
-                            <li><a href="weather.html"><i class="fa-fw">W</i><span class="hide-menu">Weather Icons</span></a></li>
-                        </ul>
+                        <a href=@Url.Action("Index","Mail") class="waves-effect"><i class="mdi mdi-clipboard-text fa-fw"></i> <span class="hide-menu">Mail</span></a>
                     </li>
-                    <li> <a href="map-google.html" class="waves-effect"><i class="mdi mdi-google-maps fa-fw"></i><span class="hide-menu">Google Map</span></a> </li>
-                    <li> <a href="map-vector.html" class="waves-effect"><i class="mdi mdi-map-marker fa-fw"></i><span class="hide-menu">Vector Map</span></a> </li>
-                    <li> <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-check fa-fw"></i> <span class="hide-menu">Calendar</span></a></li>
-                    <li>
-                        <a href="javascript:void(0)" class="waves-effect"><i class="mdi mdi-checkbox-multiple-marked-outline fa-fw"></i> <span class="hide-menu">Multi-Level Dropdown<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="javascript:void(0)"><i data-icon="/" class="linea-icon linea-basic fa-fw"></i><span class="hide-menu">Second Level Item</span></a> </li>
-                            <li> <a href="javascript:void(0)"><i data-icon="7" class="linea-icon linea-basic fa-fw"></i><span class="hide-menu">Second Level Item</span></a> </li>
-                            <li>
-                                <a href="javascript:void(0)" class="waves-effect"><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i><span class="hide-menu">Third Level </span><span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li> <a href="javascript:void(0)"><i class=" fa-fw">T</i><span class="hide-menu">Third Level Item</span></a> </li>
-                                    <li> <a href="javascript:void(0)"><i class=" fa-fw">M</i><span class="hide-menu">Third Level Item</span></a> </li>
-                                    <li> <a href="javascript:void(0)"><i class=" fa-fw">R</i><span class="hide-menu">Third Level Item</span></a> </li>
-                                    <li> <a href="javascript:void(0)"><i class=" fa-fw">G</i><span class="hide-menu">Third Level Item</span></a> </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="login.html" class="waves-effect"><i class="mdi mdi-logout fa-fw"></i> <span class="hide-menu">Log out</span></a></li>
                     <li class="devider"></li>
-                    <li><a href="documentation.html" class="waves-effect"><i class="fa fa-circle-o text-danger"></i> <span class="hide-menu">Documentation</span></a></li>
-                    <li><a href="gallery.html" class="waves-effect"><i class="fa fa-circle-o text-info"></i> <span class="hide-menu">Gallery</span></a></li>
-                    <li><a href="faq.html" class="waves-effect"><i class="fa fa-circle-o text-success"></i> <span class="hide-menu">Faqs</span></a></li>
+                    <li> <a href=@Url.Action("Index","Googlemap") class="waves-effect"><i class="mdi mdi-google-maps fa-fw"></i><span class="hide-menu">Google Map</span></a> </li>
+                    <li> <a href=@Url.Action("Index","Vectormap") class="waves-effect"><i class="mdi mdi-map-marker fa-fw"></i><span class="hide-menu">Vector Map</span></a> </li>
+                    <li><a href=@Url.Action("Index", "Dangnhap", new { Area = "Guest" }) class="waves-effect"><i class="mdi mdi-logout fa-fw"></i> <span class="hide-menu">Đăng xuất</span></a></li>
+                    <li class="devider"></li>
+                    <li><a href=@Url.Action("Index","Huongdan") class="waves-effect"><i class="fa fa-circle-o text-danger"></i> <span class="hide-menu">Hướng dẫn</span></a></li>
+                    <li><a href=@Url.Action("Index","Thuvien") class="waves-effect"><i class="fa fa-circle-o text-info"></i> <span class="hide-menu">Thư viện</span></a></li>
+                    <li><a href=@Url.Action("Index","Quydinh") class="waves-effect"><i class="fa fa-circle-o text-success"></i> <span class="hide-menu">Quy định</span></a></li>
                 </ul>
             </div>
         </div>
@@ -383,7 +304,7 @@
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="~/Assets/Admin/plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="~/Scripts/jquery-ui.js"></script>
+    @*<script src="~/Scripts/jquery-ui.js"></script>*@
     <!-- Bootstrap Core JavaScript -->
     <script src="~/Assets/Admin/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Sidebar menu plugin JavaScript -->

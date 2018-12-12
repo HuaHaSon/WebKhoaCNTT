@@ -1,14 +1,65 @@
-﻿var luottruycap = {
-    init: function () {
-        luottruycap.RegisterEvents()
+﻿Thongketruycap = {
+    init: function (){
+        Thongketruycap.RegisterEvents()
     },
     RegisterEvents: function () {
-        // do logic here
-        var dulieu = [];
-        var ctx = document.getElementById("myChart").getContext("2d");
+        // bieu do
         var chart1;
+        var soluong;
+        GenerateChart();
+        // do logic here
+        var start = moment().subtract(29, 'days');
+        var end = moment();
 
-        function GenerateChart(dulieu) {
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+            $.ajax({
+                url: "/Admin/Thongkebaidang/loadbaidang",
+                type: "POST",
+                data: { startdate: start.format('MM/DD/YYYY'), enddate: end.format('MM/DD/YYYY') },
+                dataType: "json",
+                success: function (response) {
+                    var dulieu = [];
+                    var res = JSON.parse(response.baidang);
+                    var tong = 0;
+                    $.each(res, function (i, v) {
+                        tong = tong + v.soluong;
+                        dulieu.push({
+                            x: v.ngay,
+                            y: v.soluong
+                        });
+                    });
+                    soluong = tong;
+                    chart1.config.data.datasets[0].data = dulieu;
+                    chart1.update();
+                    $("#baidang").text(soluong);                   
+                }
+            });
+        };
+
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Hôm nay': [moment(), moment()],
+                '7 ngày qua': [moment().subtract(7, 'days'), moment()],
+                '28 ngày qua': [moment().subtract(28, 'days'), moment()],
+                '60 ngày qua': [moment().subtract(60, 'days'), moment()],
+                'Tháng này': [moment().startOf('month'), moment().endOf('month')],
+                'Tháng trước': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            locale: {
+                "customRangeLabel": "Tùy chỉnh",
+                "applyLabel": "Chọn",
+                "cancelLabel": "Hủy",
+            }
+        }, cb);
+
+        cb(start, end);
+
+        // bieu do
+
+        function GenerateChart() {
             var timeFormat = 'DD/MM/YYYY';
             var config = {
                 type: 'line',
@@ -16,7 +67,7 @@
                     datasets: [
                         {
                             label: "Lượt truy cập",
-                            data: dulieu,
+                            data: [],
                             fill: true,
                             borderColor: 'blue',
                             fillColor: "rgba(151,187,205,0.2)",
@@ -25,7 +76,6 @@
                             pointStrokeColor: "#fff",
                             pointHighlightFill: "#fff",
                             pointHighlightStroke: "rgba(151,187,205,1)",
-
                             pointRadius: 1
                         }
                     ]
@@ -84,23 +134,24 @@
                     }
                 }
             };
-
+            var ctx = document.getElementById("myChart").getContext("2d");
             chart1 = new Chart(ctx, config);
-        }
+        };
 
+        $("#myChart").click(function (e) {
+            alert("click");
+        });
         document.getElementById("myChart").onmousemove = function (evt) {
             mousemovechart(chart1, evt);
         };
 
         $("#myChart").mouseleave(function () {
-            $("#luottruycap").text(chart1.config.data.datasets[0].data[chart1.config.data.datasets[0].data.length - 1].y);
-            var pre = (chart1.config.data.datasets[0].data[chart1.config.data.datasets[0].data.length-1].y / chart1.config.data.datasets[0].data[0].y) * 100 - 100;
-            $("#tiletang").text("+" + Math.round(pre * 100) / 100 + "%");
+            $("#baidang").text(soluong);           
         });
 
         function mousemovechart(chart1, evt) {
             var offset = $("#myChart").offset();
-            var a = evt.pageX - offset.left;
+            var a = Math.round(evt.pageX - offset.left);
 
             var x = -1;
             var meta = chart1.getDatasetMeta(0);
@@ -122,59 +173,10 @@
                 else if (a > t)
                     left = mid + 1;
             }
-
             if (x != -1) {
-                var pre = (chart1.config.data.datasets[0].data[x].y / chart1.config.data.datasets[0].data[0].y) * 100 - 100;
-                $("#luottruycap").text(chart1.config.data.datasets[0].data[x].y);
-                $("#tiletang").text("+" + Math.round(pre * 100) / 100 + "%");
+                $("#baidang").text(chart1.config.data.datasets[0].data[x].y);
             }
-        }
-
-        // khoang ngay
-
-        var start = moment().subtract(29, 'days');
-        var end = moment();
-
-        function cb(start, end) {
-            $('#reportrange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
-            $.ajax({
-                url: "/Admin/Luottruycap/Luottruycap",
-                type: "POST",
-                dataType: "json",
-                success: function (response) {
-                    var res = JSON.parse(response.data);
-                    $.each(res, function (i, v) {
-                        dulieu.push({
-                            x: v.ngay,
-                            y: v.soluong + 100
-                        });
-                    });
-                    GenerateChart(dulieu);
-                }
-            });
         };
-
-        $('#reportrange').daterangepicker({
-            startDate: start,
-            endDate: end,
-            ranges: {
-                'Hôm nay': [moment(), moment()],
-                '7 ngày qua': [moment().subtract(7, 'days'), moment()],
-                '28 ngày qua': [moment().subtract(28, 'days'), moment()],
-                '60 ngày qua': [moment().subtract(60, 'days'), moment()],
-                'Tháng này': [moment().startOf('month'), moment().endOf('month')],
-                'Tháng trước': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            },
-            locale: {
-                "customRangeLabel": "Tùy chỉnh",
-                "applyLabel": "Chọn",
-                "cancelLabel": "Hủy",
-            }
-        }, cb);
-
-        cb(start, end);
-
     }
-
 }
-luottruycap.init();
+Thongketruycap.init();

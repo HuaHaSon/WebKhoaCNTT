@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class BaidangController : BaseController
+    public class BaidangController : BaseAdminController
     {
         // GET: Admin/Baidang
         public ActionResult Index()

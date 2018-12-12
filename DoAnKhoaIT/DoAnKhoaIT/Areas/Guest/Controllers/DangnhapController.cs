@@ -14,6 +14,10 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
         // GET: DangNhap
         public ActionResult Index()
         {
+            if(Session[CommonConstants.USER_SESSION] != null)
+            {
+                Session[CommonConstants.USER_SESSION] = null;
+            }
             HttpCookie ck_tentaikhoan = Request.Cookies.Get("Tentaikhoan");
             HttpCookie ck_matkhau = Request.Cookies.Get("Matkhau");
             HttpCookie ck_luumatkhau = Request.Cookies.Get("LuuMatkhau");

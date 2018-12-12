@@ -9,7 +9,6 @@ namespace DoAnKhoaIT.Common
     {
         public string UserName { get; set; }
         public string Name { get; set; }
-        public string PassWord { get; set; }
         public string chucvu { get; set; }
     }
 }
