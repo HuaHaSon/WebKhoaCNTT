@@ -21,6 +21,22 @@ namespace Model.DAO.Admin
         {
             return db.Baidangs.ToList();
         }
+        public int[] thongkebaidangtheongay(DateTime startdate, DateTime enddate)
+        {
+            var d1 = startdate;
+            var d2 = enddate;
+            int soluong = Convert.ToInt32((d2 - d1).TotalDays);
+            int[] a = new int[soluong+1];
+            int i = 0;
+            while(DateTime.Compare(d1,d2) < 0)
+            {
+                var t = d1.AddDays(1);
+                a[i] = db.Baidangs.Where(model => model.Ngaydang >= d1 && model.Ngaydang < t).Count();
+                i++;
+                d1 = t;
+            }
+            return a;
+        }
         public List<Loaibaidang> listloaibaidang()
         {
             return db.Loaibaidangs.ToList();

@@ -111,7 +111,10 @@
         document.getElementById("myChart").onmousemove = function (evt) {
             mousemovechart(chart1, evt);       
         };
-
+        $("#myChart").mouseleave(function () {
+            alert("a");
+        });
+        
 
 
         function mousemovechart(chart1, evt) {

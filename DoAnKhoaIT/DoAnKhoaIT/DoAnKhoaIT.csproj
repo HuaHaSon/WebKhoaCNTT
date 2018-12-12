@@ -185,11 +185,18 @@
     <Compile Include="Areas\Admin\Controllers\CongtacgiaovienController.cs" />
     <Compile Include="Areas\Admin\Controllers\DaotaoController.cs" />
     <Compile Include="Areas\Admin\Controllers\GioithieuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GooglemapController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HuongdanController.cs" />
     <Compile Include="Areas\Admin\Controllers\LuottruycapController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MailController.cs" />
     <Compile Include="Areas\Admin\Controllers\NghiencuukhoahocController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuydinhController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongbaochuyentiepController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThongkebaidangController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongtinnguoidungController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ThuvienController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VectormapController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\BieuMauThuTucController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\BoMonController.cs" />
     <Compile Include="Areas\GiaoVien\Controllers\CongTacController.cs" />
@@ -226,7 +233,9 @@
     <Compile Include="Common\Encrytor.cs" />
     <Compile Include="Common\RememberMe.cs" />
     <Compile Include="Common\TaikhoanLogin.cs" />
+    <Compile Include="Controllers\BaseAdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BaseGiaovienController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -296,9 +305,11 @@
     <Content Include="Assets\Admin\js\admin\controller\HomeAdmin.js" />
     <Content Include="Assets\Admin\js\admin\controller\Luottruycap.js" />
     <Content Include="Assets\Admin\js\admin\controller\Luottruycapadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Mail.js" />
     <Content Include="Assets\Admin\js\admin\controller\Nghiencuukhoahoc.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongbaochuyentiep.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongbaochuyentiepadmin.js" />
+    <Content Include="Assets\Admin\js\admin\controller\Thongkebaidang.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongtinnguoidung.js" />
     <Content Include="Assets\Admin\js\admin\controller\Thongtinnguoidungadmin.js" />
     <Content Include="Assets\Admin\js\cbpFWTabs.js" />
@@ -1041,6 +1052,7 @@
     <Content Include="Assets\Admin\plugins\bower_components\gallery\js\jquery.isotope.min.js" />
     <Content Include="Assets\Admin\plugins\bower_components\gmaps\gmaps.js" />
     <Content Include="Assets\Admin\plugins\bower_components\gmaps\gmaps.min.js" />
+    <Content Include="Assets\Admin\plugins\bower_components\gmaps\goolemap.js" />
     <Content Include="Assets\Admin\plugins\bower_components\gmaps\jquery.gmaps.js" />
     <Content Include="Assets\Admin\plugins\bower_components\gmaps\lib\gmaps.controls.js" />
     <Content Include="Assets\Admin\plugins\bower_components\gmaps\lib\gmaps.core.js" />
@@ -5287,6 +5299,14 @@
     <Content Include="Areas\GiaoVien\Views\Shared\LichGV.cshtml" />
     <Content Include="Areas\Admin\Views\Luottruycap\Index.cshtml" />
     <Content Include="Areas\Guest\Views\Dangnhap\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Thongkebaidang\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Googlemap\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Vectormap\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Quydinh\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Huongdan\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Thuvien\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\Soanthu.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -5322,6 +5342,8 @@
     <Folder Include="Assets\plugins\Uploads\flash\" />
     <Folder Include="Assets\plugins\Uploads\images\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\BaseAdmin\" />
+    <Folder Include="Views\BaseGiaovien\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>

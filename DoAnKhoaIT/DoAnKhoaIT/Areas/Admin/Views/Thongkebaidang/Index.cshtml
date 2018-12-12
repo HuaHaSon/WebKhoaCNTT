@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+@section jsFooter{
+    <script src="~/Assets/Admin/js/admin/controller/Thongkebaidang.js"></script>
+}
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Quản lý</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Thống kê</a></li>
+                <li class="active">Bài đăng</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-12">
+                    <div class="white-box m-b-15" style="padding:5px">
+                        <div class="m-t-10 m-b-10" style="display:inline-block">Khoảng thời gian</div>
+                        <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; display:inline-block">
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="white-box">
+                        <div class="h4" style="border-bottom:solid #f2f2f2 1px;padding-bottom:5px;margin:0px">Số lượng bài đăng</div>
+                        <div id="bieudo">
+                            <canvas id="myChart" height="130"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="white-box">
+                        <div style="height:305px;padding-top:100px">
+                            <div class="h2" id="baidang" style="text-align:center"></div>
+                            <div class="h4" style="text-align:center;color:#999966">Bài đăng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-
+﻿
 
 jQuery('#world-map-markers').vectorMap(
 {

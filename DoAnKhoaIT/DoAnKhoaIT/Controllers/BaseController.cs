@@ -19,7 +19,7 @@ namespace DoAnKhoaIT.Controllers
                 {
                     action = "Index",
                     controller = "Dangnhap",
-                    area = ""
+                    area = "Guest"
                 }));
             }
             base.OnActionExecuting(filterContext);
