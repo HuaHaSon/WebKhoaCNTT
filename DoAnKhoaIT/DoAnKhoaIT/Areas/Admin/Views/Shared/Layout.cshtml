@@ -356,8 +356,46 @@
     <!-- Chart JS -->
     <script src="~/Assets/Admin/plugins/bower_components/Chart.js/Chart.min.js"></script>
     <script src="~/Assets/Admin/plugins/bower_components/Chart.js/Chart.bundle.min.js"></script>
+    <!-- Notify JS -->
+    <script src="~/Assets/plugins/Notify/notify.min.js"></script>
     <script>
+        setInterval(function () {
+            $.ajax({
+                url: '/Admin/Baidang/checkbaidang',
+                type: 'POST',
+                dataType: 'json',
+                data: {},
+                success: function (e) {
+                    if (e.status == true) {
+                        $.notify("Đã cập nhật bài đăng hết hạn", "success");
+                    } else {
+                        
+                    }
 
+                }
+            });
+        }, 10000);
+
+        setInterval(function () {
+            var res = moment().format('hh:mm:ss');
+            $.notify(res, "danger");
+            if (res == "12:00:00" || res == "00:00:00") {
+                $.ajax({
+                    url: '/Admin/Backup/backup',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {},
+                    success: function (e) {
+                        if (e.status == true) {
+                            $.notify("Backup thành công " + res, "success");
+                        } else {
+                            $.notify("Backup thất bại " + res, "danger");
+                        }
+
+                    }
+                });
+            }                        
+        }, 1000);
 
         $(document).ready(function () {
             $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {

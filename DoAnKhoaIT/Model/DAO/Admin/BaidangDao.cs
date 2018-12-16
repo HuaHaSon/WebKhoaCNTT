@@ -202,6 +202,20 @@ namespace Model.DAO.Admin
                 db.Database.ExecuteSqlCommand("delete from chitietbaidang where mabaidang = @mabaidang", sqlParams);
             return true;
         }
+        public bool checkbaidang(DateTime day)
+        {
+            var res = db.Baidangs.Where(model => model.Thoigianhieuluc < day && model.Flag == true).ToList();
+            if(res.Count>0)
+            {
+                foreach (var item in res)
+                {
+                    item.Flag = false;
+                }
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
 
     }
 }

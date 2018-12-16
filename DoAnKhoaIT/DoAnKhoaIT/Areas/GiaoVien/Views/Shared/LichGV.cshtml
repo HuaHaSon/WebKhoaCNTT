@@ -1,8 +1,14 @@
 ﻿<ul>
+    @{ 
+        int t = (int) DateTime.Now.DayOfWeek - 2;
+        DateTime day = DateTime.Now.AddDays(-t);
+        string day2 = day.ToString("dd/MM/yyyy");
+        
+    }
     @foreach (var item in ViewBag.List)
     {
         <li>
-            @Html.ActionLink((string)item.TenCT,"LichHop", "LichGiangDay",new { mact=item.MaCT},null)
+            @Html.ActionLink((string)item.TenCT,"LichHop", "LichGiangDay",new { mact = item.MaCT, ngay = day2},null)
         </li>
     }
 

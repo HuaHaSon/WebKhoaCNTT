@@ -123,6 +123,7 @@
     <Compile Include="ViewModel\Doituonghienthi.cs" />
     <Compile Include="ViewModel\FormMail.cs" />
     <Compile Include="ViewModel\GioithieuModel.cs" />
+    <Compile Include="ViewModel\LichGiaoVienModel.cs" />
     <Compile Include="ViewModel\LichGV_TheoNgay.cs" />
     <Compile Include="ViewModel\HomeModel.cs" />
     <Compile Include="ViewModel\ModelMail.cs" />
