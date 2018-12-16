@@ -46,8 +46,6 @@
         <script src="/TemplatesGV/css/bootstrap.js"></script>
         <script src="/TemplatesGV/css/ct-navbar.js"></script>*@
 
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-
 
 
     <script type="text/javascript">
@@ -66,30 +64,32 @@
                             <img class="img-responsive" id="img-logo" src="/Assets/GiaoVien/images/logosgu.png" />
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-3" id="account">
-
+                            @{
+                                var session = (DoAnKhoaIT.Common.TaikhoanLogin)Session[DoAnKhoaIT.Common.CommonConstants.USER_SESSION];
+                            }
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
                                     <div id="ex4">
-                                        <span class="p1 fa-stack fa-2x has-badge" data-count="4">
+                                        <span id="hopthuden" class="p1 fa-stack fa-2x has-badge" data-count="0">
                                             <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
                                             <a href="@Url.Action("GuiMail","GuiMail",new { txtsearch=""},null)"><i class="fa fa-envelope-o" style="color: cornflowerblue;" data-count="4b"></i></a>
                                         </span>
                                     </div>
                                 </li>
-                                <div class="pull-right" style="margin-top: 8px">
-                                    <ul class="nav pull-right">
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-top:0px"><img src="/Assets/Admin/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle" style="padding-top:0px"> <b class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="/user/preferences"><i class="icon-cog"></i> Thông tin cá nhân</a></li>
-                                                <li><a href="/help/support"><i class="icon-envelope"></i> Tin nhắn</a></li>
-                                                <li><a href="/help/support"><i class="icon-envelope"></i> Cài đặt tài khoản</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="/auth/logout"><i class="icon-off"></i> Đăng xuất</a></li>
-                                            </ul>
-                                        </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="~/Assets/Admin/plugins/images/users/varun.jpg" alt="user-img" width="26" class="img-circle" style="padding-top:0px; padding-bottom:0px"><b class="hidden-xs" id="sessiontext">@*@session.Name*@</b><span class="caret"></span> </a>
+                                    <ul class="dropdown-menu dropdown-user animated flipInY">
+                                        
+                     
+                                        <li><a href="#"><i class="ti-user"></i> Thông tin cá nhân</a></li>
+                                        <li><a href="#"><i class="ti-email"></i> Tin nhắn </a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#"><i class="ti-settings"></i> Cài đặt cài khoản </a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
                                     </ul>
-                                </div>
+                                    <!-- /.dropdown-user -->
+                                </li>
 
                             </ul>
                             @using (Html.BeginForm("TB", "ThongBao", FormMethod.Get))
@@ -327,12 +327,28 @@
     <script src="/Assets/Admin/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
     <script src="/Assets/Admin/js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
+     Custom Theme JavaScript 
     <script src="/Assets/Admin/js/custom.min.js"></script>
     <!-- Dropzone Plugin JavaScript -->
     <script src="/Assets/Admin/plugins/bower_components/dropzone-master/dist/dropzone.js"></script>
     <!--Style Switcher -->
     <script src="/Assets/Admin/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <script>
+        setInterval(function () {           
+            
+            $.ajax({
+                url: '/GiaoVien/GuiMail/hopthuden',
+                type: 'POST',
+                dataType: 'json',
+                data: {},
+                success: function (e) {
+                    $('#hopthuden').attr("data-count", e.res);
+                    document.getElementById("thuden").innerHtml = e.res;
+                }
+            });
+        }, 1000);
+    </script>
 
     @RenderSection("JsFooter", required: false)
 

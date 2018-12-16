@@ -1,0 +1,185 @@
+﻿@model Model.ViewModel.FormMail
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "SoanThu";
+    Layout = "~/Areas/VanPhongKhoa/Views/Shared/_Layout.cshtml";
+}
+
+@section jsFooter{
+    <script src="~/Assets/Admin/plugins/bower_components/html5-editor/wysihtml5-0.3.0.js"></script>
+    <script src="~/Assets/Admin/plugins/bower_components/html5-editor/bootstrap-wysihtml5.js"></script>
+
+    <script>
+        var noidungmail = CKEDITOR.replace('noidung', {
+            customConfig: '/Assets/plugins/ckeditor/config3.js',
+        });
+        $("#btnguimail").click(function () {
+
+            var matkhau = $("#matkhau").val();
+            var nguoinhan = $("#taikhoannhan").val();
+            var tieude = $("#tieude").val();
+            var mucdo = "1";
+            if ($('#quantrong').is(':checked')) {
+                mucdo = "2";
+            }
+            var noidung = CKEDITOR.instances['noidung'].getData();
+            var noidungres = noidung.replace(/</g, '&quirk');
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Mail/SoanThu",
+                data: { matkhau: matkhau, nguoinhan: nguoinhan, tieude: tieude, mucdo: mucdo, noidung: noidungres },
+                dataType: "json",
+
+                success: function (data) {
+                    if (data.status == true) {
+                        alert("Gửi thành công");
+                        window.location.href = "Index";
+                    } else {
+                        alert("Sai mật khẩu hoặc tài khoản");
+                    }
+                }
+            });
+
+        });
+
+    </script>
+}
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Mail</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+            <ol class="breadcrumb">
+                <li class="active">Mail</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- row -->
+    <div class="row">
+        <!-- Left sidebar -->
+        <div class="col-md-12">
+            <div class="white-box">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-3  col-sm-12 col-xs-12 inbox-panel">
+                        <div>
+                            <a href="@Url.Action("SoanThu","Mail")" class="btn btn-custom btn-block waves-effect waves-light">Soạn thư</a>
+                            <div class="list-group mail-list m-t-20">
+                                <a href="@Url.Action("Index","Mail")" class="list-group-item active">Hộp thư đến <span class="label label-rouded label-success pull-right">@ViewBag.SLHTD</span></a>
+                                <a href="@Url.Action("ThuGui","Mail")" class="list-group-item ">Thư đã gửi<span class="label label-rouded label-success pull-right">@ViewBag.SLHTG</span></a>
+                                <a href="@Url.Action("ThuQT","Mail")" class="list-group-item">Thư quan trọng</a>
+                                <a href="@Url.Action("ThuNhap","Mail")" class="list-group-item">Thư nháp</a>
+                                <a href="@Url.Action("ThuRac","Mail")" class="list-group-item">Thùng rác<span class="label label-rouded label-default pull-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 mail_listing">
+
+                        <h3 class="box-title">Soạn thư mới</h3>
+                        <div class="form-group">
+                            @*@Html.TextBoxFor(model => model.chitietchuyentiep.Taikhoannhan, "", new { @id="taikhoannhan", @class = "form-control", @placeholder = "Nhận:" })*@
+                            <input type="password" class="form-control" id="matkhau" placeholder="Mật khẩu:">
+                        </div>
+                        <div class="form-group">
+                            @*@Html.TextBoxFor(model => model.chitietchuyentiep.Taikhoannhan, "", new { @id="taikhoannhan", @class = "form-control", @placeholder = "Nhận:" })*@
+                            <input class="form-control" id="taikhoannhan" value="@ViewBag.nguoinhan" placeholder="Nhận:">
+                        </div>
+                        <div class="form-group" @*data-validate="Bạn chưa chọn mức độ"*@>
+                            <label class="col-lg-2 control-label">Mức độ</label>
+                            <div class="form-group">
+                                @*<input type="radio" name="mucdo" value="binhthuong" /> Bình thường*@
+                                Bình thường
+                                @Html.RadioButtonFor(model => model.flag, "Bình thường", new { @type = "radio", @id = "binhthuong", @name = "mucdo", @checked = "checked" })
+                                Quan trọng
+                                @*<input type="radio" name="mucdo" value="quantrong" style="margin-left:20px" /> Quan trọng*@
+                                @Html.RadioButtonFor(model => model.flag, "Quan trọng", new { @type = "radio", @id = "quantrong", @name = "mucdo" })
+                                @Html.ValidationMessageFor(model => model.flag, "", new { @class = "error" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @*@Html.TextBoxFor(model => model.thongbaochuyentiep.Tieude, "", new { @id="tieude", @class = "form-control", @placeholder = "Tiêu đề:" })*@
+                            <input class="form-control" id="tieude" placeholder="Chủ đề:">
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.TextAreaFor(model => model.thongbaochuyentiep.Noidung, new { @id="noidung", @class = "textarea_editor form-control", @rows="15", @placeholder = "Nhập văn bản:" })*@
+                            <textarea class="textarea_editor form-control" id="noidung" rows="15" placeholder="Nhập văn bản ..."></textarea>
+                        </div>
+                        <hr>
+                        <button class="btn btn-primary" id="btnguimail"><i class="fa fa-envelope-o"></i> Gửi </button>
+                        <button class="btn btn-default"><i class="fa fa-times"></i> Hủy </button>
+
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- ============================================================== -->
+    <!-- Right sidebar -->
+    <!-- ============================================================== -->
+    <!-- .right-sidebar -->
+    <div class="right-sidebar">
+        <div class="slimscrollright">
+            <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+            <div class="r-panel-body">
+                <ul id="themecolors" class="m-t-20">
+                    <li><b>With Light sidebar</b></li>
+                    <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                    <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                    <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                    <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                    <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                    <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                    <li><b>With Dark sidebar</b></li>
+                    <br />
+                    <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                    <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                    <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                    <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                    <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                    <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                </ul>
+                <ul class="m-t-20 all-demos">
+                    <li><b>Choose other demos</b></li>
+                </ul>
+                <ul class="m-t-20 chatonline">
+                    <li><b>Chat option</b></li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right sidebar -->
+    <!-- ============================================================== -->
+</div>
+

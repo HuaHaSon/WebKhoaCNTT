@@ -3,6 +3,56 @@
     ViewBag.Title = "DocMail";
     Layout = "~/Areas/GiaoVien/Views/Shared/_LayoutGV.cshtml";
 }
+@section jsFooter{
+    <script src="~/Assets/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/Assets/plugins/ckfinder/ckfinder.js"></script>
+    @*<script src="~/Assets/GiaoVien/js/GuiMail.js"></script>*@
+    <script>
+        var noidungmail = CKEDITOR.replace('noidungmail', {
+            customConfig: '/Assets/plugins/ckeditor/config3.js',
+        });
+        $("#btngui").click(function () {
+
+            var matkhau = $("#password").val();
+            var nguoinhan = $("#tknhan").val();
+            var tieude = $("#tieude").val();
+            var mucdo = "1";
+            if ($('#quantrong').is(':checked')) {
+                mucdo = "2";
+            }
+            var noidung = CKEDITOR.instances['noidungmail'].getData();
+            var noidungres = noidung.replace(/</g, '&quirk');
+            if (matkhau != "''" && nguoinhan != "''" && tieude != "''" && noidung != "''")
+            {
+                
+                $.ajax({
+                    type: "POST",
+                    url: "/GiaoVien/GuiMail/loadmail",
+                    data: { matkhau: matkhau, nguoinhan: nguoinhan, tieude: tieude, mucdo: mucdo, noidung: noidungres },
+                    dataType: "json",
+
+                    success: function (data) {
+                        if (data.status == true) {
+                            alert("Gửi thành công");
+                            location.reload();
+                        } else {
+                            alert("Sai mật khẩu hoặc tài khoản");
+                        }
+                    }
+                });               
+            }
+            else
+            {
+                alert("Vui lòng nhập đầy đủ thông tin!!");
+            }
+            
+
+
+        });
+
+    </script>
+}
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
@@ -19,7 +69,7 @@
                     <span><a href="#">@ViewBag.HoTen.Gmail</a></span>
                 </div>
                 <a class="mail-dropdown pull-right" href="javascript:;">
-                   
+
                 </a>
             </div>
 
@@ -36,15 +86,16 @@
                                 <h4 class="modal-title">Compose</h4>
                             </div>
                             <div class="modal-body">
-                                @using (Html.BeginForm("GuiMail", "GuiMail", FormMethod.Post, new { @class = "form-horizontal" }))
-                                {
-                                    @*<form role="form" class="form-horizontal">*@
+                               
+                                <form role="form" class="form-horizontal">
                                     @Html.AntiForgeryToken()
 
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label" style="padding-right:0px; padding-left:0px">Mật khẩu gmail</label>
                                         <div class="col-lg-10">
-                                            <input type="password" placeholder="" id="" class="form-control" />
+                                            <input type="password" placeholder="" id="password" class="form-control" />
+                                            @*@Html.TextBoxFor(model => model.password, new { @class = "form-control", @type = "password", @id = "password", @placeholder = "" })
+                @Html.ValidationMessageFor(model => model.password)*@
                                         </div>
                                     </div>
 
@@ -52,9 +103,9 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label" style="padding-left:0px">Người nhận</label>
                                         <div class="col-lg-10">
-                                            @*<input type="text" placeholder="" id="inputEmail1" class="form-control">*@
-                                            @Html.TextBoxFor(model => model.taikhoannhan, new { @class = "form-control", @type = "text", @id = "inputEmail1", @placeholder = "" })
-                                            @Html.ValidationMessageFor(model => model.taikhoannhan)
+                                            <input type="text" placeholder="" id="tknhan" class="form-control">
+                                            @*@Html.TextBoxFor(model => model.taikhoannhan, new { @class = "form-control", @type = "text", @id = "tknhan", @placeholder = "", @required = "required" })
+                @Html.ValidationMessageFor(model => model.taikhoannhan)*@
                                         </div>
                                     </div>
 
@@ -62,21 +113,21 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label" style="padding-left:0px">Tên tiêu đề</label>
                                         <div class="col-lg-10">
-                                            @*<input type="text" placeholder="" id="inputPassword1" class="form-control">*@
-                                            @Html.TextBoxFor(model => model.tieude, new { @class = "form-control", @type = "text", @id = "inputPassword1", @placeholder = "" })
-                                            @Html.ValidationMessageFor(model => model.tieude)
+                                            <input type="text" placeholder="" id="tieude" class="form-control">
+                                            @*@Html.TextBoxFor(model => model.tieude, new { @class = "form-control", @type = "text", @id = "tieude", @placeholder = "", @required = "required" })
+                @Html.ValidationMessageFor(model => model.tieude)*@
                                         </div>
                                     </div>
                                     <div class="form-group" @*data-validate="Bạn chưa chọn mức độ"*@>
                                         <label class="col-lg-2 control-label" style="padding-top:0px">Mức độ</label>
                                         <div class="col-lg-10">
-                                            @*<input type="radio" name="mucdo" value="binhthuong" /> Bình thường*@
                                             Bình thường
-                                            @Html.RadioButtonFor(model => model.flag, "Bình thường", new { @type = "radio", @name = "mucdo" })
+                                            <input type="radio" name="mucdo" value="binhthuong" id="binhthuong" checked="checked" />
+                                            @*@Html.RadioButtonFor(model => model.flag, "Bình thường", new { @type = "radio", @id="binhthuong" ,@name = "mucdo", @checked = "checked" })*@
                                             Quan trọng
-                                            @*<input type="radio" name="mucdo" value="quantrong" style="margin-left:20px" /> Quan trọng*@
-                                            @Html.RadioButtonFor(model => model.flag, "Quan trọng", new { @type = "radio", @name = "mucdo" })
-                                            @Html.ValidationMessageFor(model => model.flag, "", new { @class = "error" })
+                                            <input type="radio" name="mucdo" value="quantrong" id="quantrong" />
+                                            @*@Html.RadioButtonFor(model => model.flag, "Quan trọng", new { @type = "radio", @id = "quantrong", @name = "mucdo" })
+                @Html.ValidationMessageFor(model => model.flag, "", new { @class = "error" })*@
                                         </div>
                                     </div>
 
@@ -84,25 +135,20 @@
                                     <div class="form-group" @*data-validate="Bạn chưa nhập nội dung"*@>
                                         <label class="col-lg-2 control-label">Nội dung</label>
                                         <div class="col-lg-10">
-                                            @*<textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>*@
-                                            @Html.TextAreaFor(model => model.noidung, new { @class = "form-control", @type = "text", @id = "noidungmail", @placeholder = "", @name = "", @rows = "10", @cols = "30" })
-                                            @Html.ValidationMessageFor(model => model.noidung)
+                                            <textarea rows="10" cols="30" class="form-control" id="noidungmail" name=""></textarea>
+                                            @*@Html.TextAreaFor(model => model.noidung, new { @class = "form-control", @type = "text", @id = "noidungmail", @placeholder = "", @name = "", @rows = "10", @cols = "30" })
+                @Html.ValidationMessageFor(model => model.noidung)*@
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        @Html.LabelFor(model => model.upload, new { @style = "margin-left: 120px ;margin-bottom: 10px" })
                                         <div class="col-lg-offset-2 col-lg-10">
-                                            <span class="btn green fileinput-button">
-                                                <i class="fa fa-plus fa fa-white"></i>
-                                                <span>Đính kèm</span>
-                                                <input type="file" name="upload" @*id="fileid"*@>
-                                            </span>
-                                            <button class="btn btn-send" type="submit">Gửi thư</button>
+
+                                            <button class="btn btn-send" type="button" id="btngui">Gửi thư</button>
                                         </div>
                                     </div>
-                                    @*</form>*@
-                                }
+                                </form>
+                                
                             </div>
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
@@ -110,7 +156,7 @@
             </div>
             <ul class="inbox-nav inbox-divider">
                 <li class="active">
-                    <a href="@Url.Action("GuiMail", "GuiMail")"><i class="fa fa-inbox"></i> Hộp thư đến <span class="label label-danger pull-right">@ViewBag.SLHTD</span></a>
+                    <a href="@Url.Action("GuiMail", "GuiMail")"><i class="fa fa-inbox"></i> Hộp thư đến <span id="thuden" class="label label-danger pull-right">@ViewBag.SLHTD</span></a>
                 </li>
                 <li>
                     <a href="@Url.Action("LoadThuGui","GuiMail")"><i class="fa fa-envelope-o"></i>Thư đã gửi<span class="label label-danger pull-right">@ViewBag.SLHTG</span></a>
@@ -124,12 +170,12 @@
                 <li>
                     <a href="@Url.Action("LoadThuXoa","GuiMail")"><i class=" fa fa-trash-o"></i> Thùng rác </a>
                 </li>
-            </ul>                                   
+            </ul>
         </aside>
         <aside class="lg-side">
             <div class="inbox-head">
-                <h3>Hộp thư đến</h3>            
-                </div>
+                <h3>Hộp thư đến</h3>
+            </div>
 
 
 
@@ -169,41 +215,9 @@
                     @Html.Raw(Model.noidung)
                 </div>
                 </br>
-              
-                <div class="attachment-mail">
-                    <b>Trạng thái:</b> @Model.trangthaixem
-                    <h5> Đính kèm </h5>
-                    <ul>
-                        <li>
-                            <a href="#" class="atch-thumb">
-                                hihi haha
-                            </a>
-
-                            <div class="file-name">
-                                <i class="fa fa-download"></i>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#" class="atch-thumb">
-                                pdf-file.jpg
-                            </a>
-
-                            <div class="file-name">
-                                <i class="fa fa-download"></i>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                </div>
-                    <div class="reply-mail m-b-20">
-                        <form action="">
-                            <textarea class="form-control" name="" id="" cols="30" rows="5">Phản hồi</textarea>
-                        </form>
-                    </div>
+                <div>
                     <div class="compose-btn pull-right">
-                        <a class="btn  btn-success" href="inbox-compose.html"> Phản hồi</a>
+                        <a class="btn  btn-success" href="inbox-compose.html">Phản hồi</a>
                     </div>
                 </div>
 
@@ -213,7 +227,7 @@
 
 
 
-</aside>
+        </aside>
     </div>
 </div>
 

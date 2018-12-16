@@ -1,23 +1,47 @@
-﻿@model Model.ViewModel.MailModel
+﻿@model Model.ViewModel.FormMail
+@using PagedList.Mvc
 @{
-    ViewBag.Title = "Soanthu";
+    ViewBag.Title = "SoanThu";
     Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
 }
 @section jsFooter{
     <script src="~/Assets/Admin/plugins/bower_components/html5-editor/wysihtml5-0.3.0.js"></script>
     <script src="~/Assets/Admin/plugins/bower_components/html5-editor/bootstrap-wysihtml5.js"></script>
-    <script src="~/Assets/Admin/plugins/bower_components/dropzone-master/dist/dropzone.js"></script>
-    <script src="~/Assets/Admin/js/admin/controller/Mail.js"></script>
+    
     <script>
-    $(document).ready(function() {
-        $('.textarea_editor').wysihtml5();
-        $('#myDropzone').on('success', function () {
-            var args = Array.prototype.slice.call(arguments);
-
-            // Look at the output in you browser console, if there is something interesting
-            console.log(args);
+        var noidungmail = CKEDITOR.replace('noidung', {
+            customConfig: '/Assets/plugins/ckeditor/config3.js',
         });
-    });
+        $("#btnguimail").click(function () {
+
+            var matkhau = $("#matkhau").val();
+            var nguoinhan = $("#taikhoannhan").val();
+            var tieude = $("#tieude").val();
+            var mucdo = "1";
+            if ($('#quantrong').is(':checked')) {
+                mucdo = "2";
+            }
+            var noidung = CKEDITOR.instances['noidung'].getData();
+            var noidungres = noidung.replace(/</g, '&quirk');
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Mail/SoanThu",
+                data: { matkhau: matkhau, nguoinhan: nguoinhan, tieude: tieude, mucdo: mucdo, noidung: noidungres },
+                dataType: "json",
+
+                success: function (data) {
+                    if (data.status == true) {
+                        alert("Gửi thành công");
+                        window.location.href = "Index";
+                    } else {
+                        alert("Sai mật khẩu hoặc tài khoản");
+                    }
+                }
+            });
+
+        });
+
     </script>
 }
 <div class="container-fluid">
@@ -42,35 +66,50 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-3  col-sm-12 col-xs-12 inbox-panel">
                         <div>
-                            <a href="#" class="btn btn-custom btn-block waves-effect waves-light">Soạn thư</a>
-                            <div class="list-group mail-list m-t-20"> <a href="#" class="list-group-item active">Hộp thư đến <span class="label label-rouded label-success pull-right">5</span></a> <a href="#" class="list-group-item ">Thư gắn sao</a> <a href="#" class="list-group-item">Thư ẩn <span class="label label-rouded label-warning pull-right">15</span></a> <a href="#" class="list-group-item">Thư đã gửi</a> <a href="#" class="list-group-item">Thư nháp <span class="label label-rouded label-default pull-right">55</span></a> </div>
-                            <h3 class="panel-title m-t-40 m-b-0">Labels</h3>
-                            <hr class="m-t-5">
-                            <div class="list-group b-0 mail-list"> <a href="#" class="list-group-item"><span class="fa fa-circle text-info m-r-10"></span>Work</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-warning m-r-10"></span>Family</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-purple m-r-10"></span>Private</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-danger m-r-10"></span>Friends</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-success m-r-10"></span>Corporate</a> </div>
+                            <a href="@Url.Action("SoanThu","Mail")" class="btn btn-custom btn-block waves-effect waves-light">Soạn thư</a>
+                            <div class="list-group mail-list m-t-20"> 
+                            <a href="@Url.Action("Index","Mail")" class="list-group-item active">Hộp thư đến <span class="label label-rouded label-success pull-right">@ViewBag.SLHTD</span></a> 
+                            <a href="@Url.Action("ThuGui","Mail")" class="list-group-item ">Thư đã gửi<span class="label label-rouded label-success pull-right">@ViewBag.SLHTG</span></a> 
+                            <a href="@Url.Action("ThuQT","Mail")" class="list-group-item">Thư quan trọng</a> 
+                            <a href="@Url.Action("ThuNhap","Mail")" class="list-group-item">Thư nháp</a> 
+                            <a href="@Url.Action("ThuRac","Mail")" class="list-group-item">Thùng rác<span class="label label-rouded label-default pull-right"></span></a> </div>                            
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-9 col-sm-8 col-xs-12 mail_listing">
 
-                            <h3 class="box-title">Soạn thư mới</h3>
+                        <h3 class="box-title">Soạn thư mới</h3>
+                        <div class="form-group">
+                            @*@Html.TextBoxFor(model => model.chitietchuyentiep.Taikhoannhan, "", new { @id="taikhoannhan", @class = "form-control", @placeholder = "Nhận:" })*@
+                            <input type="password" class="form-control" id="matkhau" placeholder="Mật khẩu:">
+                        </div>
+                        <div class="form-group">
+                            @*@Html.TextBoxFor(model => model.chitietchuyentiep.Taikhoannhan, "", new { @id="taikhoannhan", @class = "form-control", @placeholder = "Nhận:" })*@
+                            <input class="form-control" id="taikhoannhan" value="@ViewBag.nguoinhan" placeholder="Nhận:">
+                        </div>
+                        <div class="form-group" @*data-validate="Bạn chưa chọn mức độ"*@>
+                            <label class="col-lg-2 control-label" >Mức độ</label>
                             <div class="form-group">
-                                @Html.TextBoxFor(model => model.chitietchuyentiep.Taikhoannhan, "", new { @id="taikhoannhan", @class = "form-control", @placeholder = "Nhận:" })
-                                @*<input class="form-control" placeholder="Nhận:">*@
+                                @*<input type="radio" name="mucdo" value="binhthuong" /> Bình thường*@
+                                Bình thường
+                                @Html.RadioButtonFor(model => model.flag, "Bình thường", new { @type = "radio", @id = "binhthuong", @name = "mucdo", @checked = "checked" })
+                                Quan trọng
+                                @*<input type="radio" name="mucdo" value="quantrong" style="margin-left:20px" /> Quan trọng*@
+                                @Html.RadioButtonFor(model => model.flag, "Quan trọng", new { @type = "radio", @id = "quantrong", @name = "mucdo" })
+                                @Html.ValidationMessageFor(model => model.flag, "", new { @class = "error" })
                             </div>
-                            <div class="form-group">
-                                @Html.TextBoxFor(model => model.thongbaochuyentiep.Tieude, "", new { @id="tieude", @class = "form-control", @placeholder = "Tiêu đề:" })
-                                @*<input class="form-control" placeholder="Chủ đề:">*@
-                            </div>
-                            <div class="form-group">
-                                @Html.TextAreaFor(model => model.thongbaochuyentiep.Noidung, new { @id="noidung", @class = "textarea_editor form-control", @rows="15", @placeholder = "Nhập văn bản:" })
-                                @*<textarea class="textarea_editor form-control" rows="15" placeholder="Nhập văn bản ..."></textarea>*@
-                            </div>
-                            <div class="form-group">
-                                <button type="button" class="btn-success">Chọn File</button>
-                                <input value="" class="form-control" readonly/>
-                            </div>
-                                <hr>
-                                <button class="btn btn-primary" id="btnguimail"><i class="fa fa-envelope-o"></i> Gửi </button>
-                                <button class="btn btn-default"><i class="fa fa-times"></i> Hủy </button>
+                        </div>
+                        <div class="form-group">
+                            @*@Html.TextBoxFor(model => model.thongbaochuyentiep.Tieude, "", new { @id="tieude", @class = "form-control", @placeholder = "Tiêu đề:" })*@
+                            <input class="form-control" id="tieude" placeholder="Chủ đề:">
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.TextAreaFor(model => model.thongbaochuyentiep.Noidung, new { @id="noidung", @class = "textarea_editor form-control", @rows="15", @placeholder = "Nhập văn bản:" })*@
+                            <textarea class="textarea_editor form-control" id="noidung" rows="15" placeholder="Nhập văn bản ..."></textarea>
+                        </div>
+                        <hr>
+                        <button class="btn btn-primary" id="btnguimail"><i class="fa fa-envelope-o"></i> Gửi </button>
+                        <button class="btn btn-default"><i class="fa fa-times"></i> Hủy </button>
 
                     </div>
                 </div>
@@ -141,4 +180,5 @@
     <!-- End Right sidebar -->
     <!-- ============================================================== -->
 </div>
+
 

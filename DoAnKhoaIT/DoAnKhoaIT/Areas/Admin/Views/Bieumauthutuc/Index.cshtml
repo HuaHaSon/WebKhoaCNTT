@@ -340,7 +340,13 @@
                                             <td class="manoidungbieumau">@item.MaNDBMTT</td>
                                             <td>@item.MaBMTT</td>
                                             <td>@item.Tieude</td>
-                                            <td>@item.NoidungBMTT1</td>
+                                            <td>
+                                                @Html.Raw(item.NoidungBMTT1.Substring(0, Math.Min(item.NoidungBMTT1.Length, 350)))
+                                                @if (item.NoidungBMTT1.Length > 350)
+                                                {
+                                                    <span>...</span>
+                                                }
+                                            </td>
                                             <td>@item.Tentaikhoan</td>
                                             <td>@item.Ngaydang</td>
                                             <td>

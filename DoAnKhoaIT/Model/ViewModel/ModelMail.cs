@@ -17,5 +17,6 @@ namespace Model.ViewModel
         public string trangthaichuyen { get; set; }
         public string tieude { get; set; }
         public string tentkgui { get; set; }
+        public int? flag { get; set; }
     }
 }

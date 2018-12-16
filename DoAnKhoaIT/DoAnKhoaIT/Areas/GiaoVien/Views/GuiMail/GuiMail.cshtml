@@ -23,25 +23,73 @@
             }
             var noidung = CKEDITOR.instances['noidungmail'].getData();
             var noidungres = noidung.replace(/</g, '&quirk');
-            
-            $.ajax({
-                type: "POST",
-                url: "/GiaoVien/GuiMail/loadmail",
-                data: { matkhau: matkhau, nguoinhan: nguoinhan, tieude:tieude, mucdo:mucdo, noidung:noidungres },
-                dataType: "json",
+            if (matkhau != "''" && nguoinhan != "''" && tieude != "''" && noidung != "''")
+            {
+                
+                $.ajax({
+                    type: "POST",
+                    url: "/GiaoVien/GuiMail/loadmail",
+                    data: { matkhau: matkhau, nguoinhan: nguoinhan, tieude: tieude, mucdo: mucdo, noidung: noidungres },
+                    dataType: "json",
 
-                success: function (data) {
-                    if (data.status == true) {
-                        alert("Gửi thành công");
-                        location.reload();
-                    } else {
-                        alert("Sai mật khẩu hoặc tài khoản");
+                    success: function (data) {
+                        if (data.status == true) {
+                            alert("Gửi thành công");
+                            location.reload();
+                        } else {
+                            alert("Sai mật khẩu hoặc tài khoản");
+                        }
                     }
-                }              
-            });
+                });               
+            }
+            else
+            {
+                alert("Vui lòng nhập đầy đủ thông tin!!");
+            }
+            
 
         });
-
+        $("#btnxoathu").click(function () {
+            var list = [];
+            var i = 0;
+            $('.chuyenthu').each(function () {
+                
+                if ($(this).closest('tr').find("input").is(":checked")) {                   
+                    list[i] = $(this).data('id');                   
+                    ++i;
+                };                                        
+            });
+            if (list.length > 0) {               
+                list = JSON.stringify(list);
+                list = list.replace("[", "");
+                list = list.replace("]", "");
+                $.ajax({
+                    url: '/GiaoVien/GuiMail/chuyenmail',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: { list: list },
+                    success: function (e) {
+                        alert("Xóa thành công");
+                        location.reload();
+                    }
+                });
+            } else {
+                alert("Bạn chưa chọn thư!");
+            }
+        });
+        $("#tatca").on("click",function () {
+            
+            if ($(this).is(":checked")) {
+                $('.chuyenthu').each(function () {
+                    $(this).closest('tr').find("input").prop('checked', true);
+                });
+            }else{
+                $('.chuyenthu').each(function () {
+                    $(this).closest('tr').find("input").prop('checked', false);
+                });
+            };
+        })
+        
     </script>
 }
 
@@ -86,9 +134,9 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label" style="padding-right:0px; padding-left:0px">Mật khẩu gmail</label>
                                         <div class="col-lg-10">
-                                            @*<input type="password" placeholder="" id="" class="form-control" />*@
-                                            @Html.TextBoxFor(model => model.password, new { @class = "form-control", @type = "password", @id = "password", @placeholder = "" })
-                                            @Html.ValidationMessageFor(model => model.password)
+                                            <input type="password" placeholder="" id="password" class="form-control" />
+                                            @*@Html.TextBoxFor(model => model.password, new { @class = "form-control", @type = "password", @id = "password", @placeholder = "" })
+                                            @Html.ValidationMessageFor(model => model.password)*@
                                         </div>
                                     </div>
 
@@ -96,9 +144,9 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label" style="padding-left:0px">Người nhận</label>
                                         <div class="col-lg-10">
-                                            @*<input type="text" placeholder="" id="inputEmail1" class="form-control">*@
-                                            @Html.TextBoxFor(model => model.taikhoannhan, new { @class = "form-control", @type = "text", @id = "tknhan", @placeholder = "", @required = "required" })
-                                            @Html.ValidationMessageFor(model => model.taikhoannhan)
+                                            <input type="text" placeholder="" id="tknhan" class="form-control">
+                                            @*@Html.TextBoxFor(model => model.taikhoannhan, new { @class = "form-control", @type = "text", @id = "tknhan", @placeholder = "", @required = "required" })
+                                            @Html.ValidationMessageFor(model => model.taikhoannhan)*@
                                         </div>
                                     </div>
 
@@ -106,21 +154,21 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label" style="padding-left:0px">Tên tiêu đề</label>
                                         <div class="col-lg-10">
-                                            @*<input type="text" placeholder="" id="inputPassword1" class="form-control">*@
-                                            @Html.TextBoxFor(model => model.tieude, new { @class = "form-control", @type = "text", @id = "tieude", @placeholder = "", @required = "required" })
-                                            @Html.ValidationMessageFor(model => model.tieude)
+                                            <input type="text" placeholder="" id="tieude" class="form-control">
+                                            @*@Html.TextBoxFor(model => model.tieude, new { @class = "form-control", @type = "text", @id = "tieude", @placeholder = "", @required = "required" })
+                                            @Html.ValidationMessageFor(model => model.tieude)*@
                                         </div>
                                     </div>
                                     <div class="form-group" @*data-validate="Bạn chưa chọn mức độ"*@>
                                         <label class="col-lg-2 control-label" style="padding-top:0px">Mức độ</label>
                                         <div class="col-lg-10">
-                                            @*<input type="radio" name="mucdo" value="binhthuong" /> Bình thường*@
                                             Bình thường
-                                            @Html.RadioButtonFor(model => model.flag, "Bình thường", new { @type = "radio", @id="binhthuong" ,@name = "mucdo", @checked = "checked" })
+                                            <input type="radio" name="mucdo" value="binhthuong" id="binhthuong" checked="checked"/> 
+                                            @*@Html.RadioButtonFor(model => model.flag, "Bình thường", new { @type = "radio", @id="binhthuong" ,@name = "mucdo", @checked = "checked" })*@
                                             Quan trọng
-                                            @*<input type="radio" name="mucdo" value="quantrong" style="margin-left:20px" /> Quan trọng*@
-                                            @Html.RadioButtonFor(model => model.flag, "Quan trọng", new { @type = "radio", @id = "quantrong",@name = "mucdo" })
-                                            @Html.ValidationMessageFor(model => model.flag, "", new { @class = "error" })
+                                            <input type="radio" name="mucdo" value="quantrong" id="quantrong" /> 
+                                            @*@Html.RadioButtonFor(model => model.flag, "Quan trọng", new { @type = "radio", @id = "quantrong", @name = "mucdo" })
+                                            @Html.ValidationMessageFor(model => model.flag, "", new { @class = "error" })*@
                                         </div>
                                     </div>
 
@@ -128,19 +176,15 @@
                                     <div class="form-group" @*data-validate="Bạn chưa nhập nội dung"*@>
                                         <label class="col-lg-2 control-label">Nội dung</label>
                                         <div class="col-lg-10">
-                                            @*<textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>*@
-                                            @Html.TextAreaFor(model => model.noidung, new { @class = "form-control", @type = "text", @id = "noidungmail", @placeholder = "", @name = "", @rows = "10", @cols = "30" })
-                                            @Html.ValidationMessageFor(model => model.noidung)
+                                            <textarea rows="10" cols="30" class="form-control" id="noidungmail" name=""></textarea>
+                                            @*@Html.TextAreaFor(model => model.noidung, new { @class = "form-control", @type = "text", @id = "noidungmail", @placeholder = "", @name = "", @rows = "10", @cols = "30" })
+                                            @Html.ValidationMessageFor(model => model.noidung)*@
                                         </div>
                                     </div>
 
                                     <div class="form-group">                                       
                                         <div class="col-lg-offset-2 col-lg-10">
-                                            <span class="btn green fileinput-button">
-                                                <i class="fa fa-plus fa fa-white"></i>
-                                                <span>Đính kèm</span>
-                                                <input type="file" name="upload" @*id="fileid"*@>
-                                            </span>
+                                           
                                             <button class="btn btn-send" type="button" id="btngui">Gửi thư</button>
                                         </div>
                                     </div>
@@ -152,7 +196,7 @@
             </div>
             <ul class="inbox-nav inbox-divider">
                 <li class="active">
-                    <a href="@Url.Action("GuiMail", "GuiMail")"><i class="fa fa-inbox"></i> Hộp thư đến <span class="label label-danger pull-right">@ViewBag.SLHTD</span></a>
+                    <a href="@Url.Action("GuiMail", "GuiMail")"><i class="fa fa-inbox"></i> Hộp thư đến <span id="thuden" class="label label-danger pull-right">@ViewBag.SLHTD</span></a>
                 </li>
                 <li>
                     <a href="@Url.Action("LoadThuGui","GuiMail")"><i class="fa fa-envelope-o"></i>Thư đã gửi<span class="label label-danger pull-right">@ViewBag.SLHTG</span></a>
@@ -185,76 +229,66 @@
             <div class="inbox-body">
                 <div class="mail-option">
                     <div class="chk-all">
-                        <input type="checkbox" class="mail-checkbox mail-group-checkbox">
+                        <input type="checkbox" class="mail-checkbox mail-group-checkbox" id="tatca">
                         <div class="btn-group">
                             <a data-toggle="dropdown" href="#" class="btn mini all" aria-expanded="false">
-                                All
+                                Tất cả
                                 <i class="fa fa-angle-down "></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#"> None</a></li>
-                                <li><a href="#"> Read</a></li>
-                                <li><a href="#"> Unread</a></li>
-                            </ul>
+                            </a>                           
                         </div>
                     </div>
                     <div class="btn-group">
-                        <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
+                        <a data-original-title="Tải lại" data-placement="top" data-toggle="dropdown" href="@Url.Action("GuiMail","GuiMail")" class="btn mini tooltips">
                             <i class=" fa fa-refresh"></i>
                         </a>
                     </div>
-                    <div class="btn-group hidden-phone">
-                        <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
-                            More
-                            <i class="fa fa-angle-down "></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                            <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                        </ul>
-                    </div>
+                   
                     <div class="btn-group">
-                        <a data-toggle="dropdown" href="#" class="btn mini blue">
-                            Move to
-                            <i class="fa fa-angle-down "></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                            <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                        </ul>
+                        <button class=" btn btn-default" id="btnxoathu">
+                            <i class="fa fa-angle-down "></i> Xóa
+                        </button>
+                       
                     </div>
                     @Html.PagedListPager(Model.v1, page => Url.Action("GuiMail", new { page }))
 
                 </div>
-                @foreach (var item in Model.v1)
-                {
-                    <a href="@Url.Action("DocMail","GuiMail",new { mact=item.mact},null)">
-                        <table class="table table-inbox table-hover">
-                            <tbody>
-                                <tr class="unread">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message  dont-show">@item.tentkgui</td>
-                                    <td class="view-message ">
-                                        @Html.Raw(item.noidung.Substring(0, Math.Min(item.noidung.Length, 550)))
-                                        @if (item.noidung.Length > 500)
-                                        {
-                                            <span>...</span>
-                                        }
-                                    </td>
-                                    <td class="view-message  text-right">@item.ngaynhan.Value.ToString("dd/MM/yyyy")</td>
-                                </tr>
+                <table class="table table-inbox table-hover" id="tbmail">
+                    <tbody>
+                        @foreach (var item in Model.v1)
+                        {
+                           
+                                var res = item.trangthaixem;
+                                if(res == "Đã xem")
+                                {
+                                    res = "read";
+                                }
+                                else
+                                {
+                                    res = "unread";
+                                }
+                            
+                            <tr class="@res chuyenthu" data-id=@item.mact>
+                                <td class="inbox-small-cells">
+                                    <input type="checkbox" class="mail-checkbox">
+                                </td>
+                                <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+                                <td class="view-message  dont-show">@item.tentkgui</td>
+                                <td></td>
+                                <td class="view-message ">
+                                    @Html.Raw(item.noidung.Substring(0, Math.Min(item.noidung.Length, 550)))
+                                    @if (item.noidung.Length > 500)
+                                    {
+                                        <span>...</span>
+                                    }
+                                </td>
+                                <td><a href="@Url.Action("DocMail","GuiMail",new { mact=item.mact},null)"><icon class="glyphicon glyphicon-info-sign text-info" style="font-size: 1.2em"></icon></a></td>
+                                <td class="view-message  text-right">@item.ngaynhan.Value.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
 
-                            </tbody>
-                        </table>
-                    </a>
-                }
+
             </div>
         </aside>
     </div>

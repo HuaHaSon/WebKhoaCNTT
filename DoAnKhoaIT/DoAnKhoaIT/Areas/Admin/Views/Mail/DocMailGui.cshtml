@@ -1,0 +1,121 @@
+﻿@model Model.ViewModel.FormMail
+@{
+    ViewBag.Title = "DocMailGui";
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Mail</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+            <ol class="breadcrumb">
+
+                <li class="active">Chi tiết mail</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- row -->
+    <div class="row">
+        <!-- Left sidebar -->
+        <div class="col-md-12">
+            <div class="white-box">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12 inbox-panel">
+                        <div>
+                            <a href="@Url.Action("SoanThu","Mail")" class="btn btn-custom btn-block waves-effect waves-light">Soạn thư</a>
+                            <div class="list-group mail-list m-t-20">
+                                <a href="@Url.Action("Index","Mail")" class="list-group-item active">Hộp thư đến <span id="thuden" class="label label-rouded label-success pull-right">@ViewBag.SLHTD</span></a>
+                                <a href="@Url.Action("ThuGui","Mail")" class="list-group-item ">Thư đã gửi<span class="label label-rouded label-success pull-right">@ViewBag.SLHTG</span></a>
+                                <a href="@Url.Action("ThuQT","Mail")" class="list-group-item">Thư quan trọng</a>
+                                <a href="@Url.Action("ThuNhap","Mail")" class="list-group-item">Thư nháp</a>
+                                <a href="@Url.Action("ThuRac","Mail")" class="list-group-item">Thùng rác<span class="label label-rouded label-default pull-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 mail_listing">
+                        <div class="media m-b-30 p-t-20">
+                            <h4 class="font-bold m-t-0">@Model.tieude</h4>
+                            <hr>
+                            <a class="pull-left" href="#"> <img class="media-object thumb-sm img-circle" src="../plugins/images/users/pawandeep.jpg" alt=""> </a>
+                            <div class="media-body">
+                                <span class="media-meta pull-right">@Model.ngaynhan</span>
+                                <h4 class="text-danger m-0">@Model.hoten</h4> <small class="text-muted">Đến: @Model.email</small>
+                            </div>
+                        </div>
+                        <p>@Html.Raw(@Model.noidung)</p>
+                        <hr>
+                        <hr>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- ============================================================== -->
+    <!-- Right sidebar -->
+    <!-- ============================================================== -->
+    <!-- .right-sidebar -->
+    <div class="right-sidebar">
+        <div class="slimscrollright">
+            <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+            <div class="r-panel-body">
+                <ul id="themecolors" class="m-t-20">
+                    <li><b>With Light sidebar</b></li>
+                    <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                    <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                    <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                    <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                    <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                    <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                    <li><b>With Dark sidebar</b></li>
+                    <br />
+                    <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                    <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                    <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                    <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                    <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                    <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                </ul>
+                <ul class="m-t-20 all-demos">
+                    <li><b>Choose other demos</b></li>
+                </ul>
+                <ul class="m-t-20 chatonline">
+                    <li><b>Chat option</b></li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Right sidebar -->
+    <!-- ============================================================== -->
+</div>
+

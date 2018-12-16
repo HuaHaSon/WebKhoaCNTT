@@ -29,7 +29,10 @@ namespace Model.DAO.GiaoVien
                                ngaychuyen = a.Ngaychuyen,
                                noidung = a.Noidung,
                                tieude = a.Tieude,
-                               trangthaichuyen = b.Trangthaichuyen
+                               trangthaichuyen = b.Trangthaichuyen,
+                               trangthaixem=b.Trangthaixem,
+                               flag=b.Flag
+                               
                            }).ToList();
                 return res;
             }
@@ -50,7 +53,8 @@ namespace Model.DAO.GiaoVien
                                ngaychuyen = a.Ngaychuyen,
                                noidung = a.Noidung,
                                tieude = a.Tieude,
-                               trangthaichuyen = b.Trangthaichuyen
+                               trangthaichuyen = b.Trangthaichuyen,
+                               flag = b.Flag
                            }).ToList();
                 return res;
             }
@@ -76,7 +80,8 @@ namespace Model.DAO.GiaoVien
                                ngaychuyen = a.Ngaychuyen,
                                noidung = a.Noidung,
                                tieude = a.Tieude,
-                               trangthaichuyen = b.Trangthaichuyen
+                               trangthaichuyen = b.Trangthaichuyen,
+                               flag = b.Flag
                            }).ToList();
                 return res;
             }
@@ -97,7 +102,8 @@ namespace Model.DAO.GiaoVien
                                ngaychuyen = a.Ngaychuyen,
                                noidung = a.Noidung,
                                tieude = a.Tieude,
-                               trangthaichuyen = b.Trangthaichuyen
+                               trangthaichuyen = b.Trangthaichuyen,
+                               flag = b.Flag
                            }).ToList();
                 return res;
             }
@@ -105,7 +111,7 @@ namespace Model.DAO.GiaoVien
         }
         public int CountHTD(string tentk)
         {
-            var res = db.Thongbaochuyentieps.Where(s => db.Chitietchuyentieps.Where(e => e.Machuyentiep == s.Machuyentiep && e.Taikhoannhan == tentk && (e.Flag==2 || e.Flag==3)).Any()).Count();
+            var res = db.Thongbaochuyentieps.Where(s => db.Chitietchuyentieps.Where(e => e.Machuyentiep == s.Machuyentiep && e.Taikhoannhan == tentk && (e.Flag==2 || e.Flag==3) && e.Trangthaixem=="Chưa xem").Any()).Count();
             return res;
         }
         public int CountTDG(string tentk)
@@ -275,7 +281,8 @@ namespace Model.DAO.GiaoVien
                                ngaychuyen = a.Ngaychuyen,
                                noidung = a.Noidung,
                                tieude = a.Tieude,
-                               trangthaixem = b.Trangthaixem
+                               trangthaixem = b.Trangthaixem,
+                               flag = b.Flag
                            }).ToList();
                 return res;
             }
@@ -295,7 +302,8 @@ namespace Model.DAO.GiaoVien
                                ngaychuyen = a.Ngaychuyen,
                                noidung = a.Noidung,
                                tieude = a.Tieude,
-                               trangthaixem = b.Trangthaixem
+                               trangthaixem = b.Trangthaixem,
+                               flag = b.Flag
                            }).ToList();
                 return res;
             }
@@ -379,7 +387,20 @@ namespace Model.DAO.GiaoVien
             res.Trangthaixem = "Đã xem";
             db.SaveChanges();
         }
-        
-        
+        public void SetThuXoa(string mact,string ten)
+        {
+            var a = Convert.ToInt32(mact);
+            var res = db.Chitietchuyentieps.Where(s => s.Machuyentiep == a && s.Taikhoannhan == ten).FirstOrDefault();
+            res.Flag = 1;
+            db.SaveChanges();
+        }
+        public void SetThuXoaGui(string mact, string ten)
+        {
+            var a = Convert.ToInt32(mact);
+            var res = db.Thongbaochuyentieps.Where(s => s.Machuyentiep == a && s.Taikhoangui == ten).FirstOrDefault();
+            res.Flag = 1;
+            db.SaveChanges();
+        }
+
     }
 }

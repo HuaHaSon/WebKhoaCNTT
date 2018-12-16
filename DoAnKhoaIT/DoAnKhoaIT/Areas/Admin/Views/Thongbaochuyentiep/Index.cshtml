@@ -182,11 +182,17 @@
                                             <td class="machuyentiep">@item.Machuyentiep</td>
                                             <td>@item.Taikhoangui</td>
                                             <td>@item.Tieude</td>
-                                            <td>@item.Noidung</td>
+                                            <td>
+                                                @Html.Raw(item.Noidung.Substring(0, Math.Min(item.Noidung.Length, 350)))
+                                                @if (item.Noidung.Length > 350)
+                                                {
+                                                    <span>...</span>
+                                                }
+                                            </td>
                                             <td>@item.Ngaychuyen</td>
                                             <td>
                                                 <a class="btnchuyentiepflag" data-machuyentiep="@item.Machuyentiep" hres="#">
-                                                    @if (@item.Flag == true)
+                                                    @if (@item.Flag != 1)
                                                     {
                                                         <span class="text-info"> Không khóa </span>
                                                     }

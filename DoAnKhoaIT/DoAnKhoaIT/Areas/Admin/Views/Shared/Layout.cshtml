@@ -295,7 +295,7 @@
         <div id="page-wrapper">
             @RenderBody()
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by themedesigner.in </footer>
+            <footer class="footer text-center"> Khoa Công Nghệ Thông Tin - Trường ĐH Sài Gòn </footer>
         </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
@@ -522,7 +522,20 @@
     <script src="~/Assets/Admin/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 
     @RenderSection("JsFooter", required: false)
+    <script>
+        setInterval(function () {
 
+            $.ajax({
+                url: '/Admin/Mail/hopthuden',
+                type: 'POST',
+                dataType: 'json',
+                data: {},
+                success: function (e) {                    
+                    document.getElementById("thuden").innerHtml = e.res;
+                }
+            });
+        }, 1000);
+    </script>
 
 
 </body>

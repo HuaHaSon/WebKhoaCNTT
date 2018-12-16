@@ -228,8 +228,28 @@
     <Compile Include="Areas\Guest\Controllers\ThongTinTuyenSinhController.cs" />
     <Compile Include="Areas\Guest\Controllers\TinTucController.cs" />
     <Compile Include="Areas\Guest\GuestAreaRegistration.cs" />
+    <Compile Include="Areas\TroLi\Controllers\BaidangController.cs" />
+    <Compile Include="Areas\TroLi\Controllers\HomeController.cs" />
+    <Compile Include="Areas\TroLi\Controllers\MailController.cs" />
+    <Compile Include="Areas\TroLi\TroLiAreaRegistration.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\BaiDangController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\BieumauthutucController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\BomonController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\CongtacgiaovienController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\DaotaoController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\GioithieuController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\GooglemapController.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\HomeController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\HuongdanController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\LuottruycapController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\MailController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\NghiencuukhoahocController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\QuydinhController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\ThongbaochuyentiepController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\ThongkebaidangController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\ThongtinnguoidungController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\ThuvienController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\VectormapController.cs" />
     <Compile Include="Areas\VanPhongKhoa\VanPhongKhoaAreaRegistration.cs" />
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Decryptor.cs" />
@@ -4235,6 +4255,29 @@
     <Content Include="Assets\plugins\ckfinder\userfiles\_thumbs\Images\banner-doanhnghiep.jpg" />
     <Content Include="Assets\plugins\Uploads\_thumbs\Images\top_500ae_vn_nametag.png" />
     <Content Include="Assets\plugins\Uploads\_thumbs\Images\troll face.jpg" />
+    <Content Include="Assets\TroLi\Baidang.js" />
+    <Content Include="Assets\VPK\Baidang.js" />
+    <Content Include="Assets\VPK\Baidangadmin.js" />
+    <Content Include="Assets\VPK\Bieumauthutuc.js" />
+    <Content Include="Assets\VPK\Bieumauthutucadmin.js" />
+    <Content Include="Assets\VPK\Bomon.js" />
+    <Content Include="Assets\VPK\Bomonadmin.js" />
+    <Content Include="Assets\VPK\Congtacgiaovien.js" />
+    <Content Include="Assets\VPK\Congtacgiaovienadmin.js" />
+    <Content Include="Assets\VPK\Daotao.js" />
+    <Content Include="Assets\VPK\Daotaoadmin.js" />
+    <Content Include="Assets\VPK\Gioithieu.js" />
+    <Content Include="Assets\VPK\Home.js" />
+    <Content Include="Assets\VPK\HomeAdmin.js" />
+    <Content Include="Assets\VPK\Luottruycap.js" />
+    <Content Include="Assets\VPK\Luottruycapadmin.js" />
+    <Content Include="Assets\VPK\Mail.js" />
+    <Content Include="Assets\VPK\Nghiencuukhoahoc.js" />
+    <Content Include="Assets\VPK\Thongbaochuyentiep.js" />
+    <Content Include="Assets\VPK\Thongbaochuyentiepadmin.js" />
+    <Content Include="Assets\VPK\Thongkebaidang.js" />
+    <Content Include="Assets\VPK\Thongtinnguoidung.js" />
+    <Content Include="Assets\VPK\Thongtinnguoidungadmin.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -5316,17 +5359,58 @@
     <Content Include="Areas\Admin\Views\Quydinh\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Huongdan\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Thuvien\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Mail\Soanthu.cshtml" />
     <Content Include="Areas\VanPhongKhoa\Views\web.config" />
     <Content Include="Areas\VanPhongKhoa\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\VanPhongKhoa\Views\Home\Index.cshtml" />
-    <Content Include="Areas\VanPhongKhoa\Views\BaiDang\BD.cshtml" />
     <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuGui.cshtml" />
     <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuXoa.cshtml" />
     <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuQT.cshtml" />
     <Content Include="Areas\GiaoVien\Views\GuiMail\LoadThuNhap.cshtml" />
     <Content Include="Areas\GiaoVien\Views\GuiMail\DocMail.cshtml" />
     <Content Include="Areas\GiaoVien\Views\GuiMail\DocMailGui.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\ThuGui.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\SoanThu.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\ThuQT.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\ThuNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\ThuRac.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\DocMail.cshtml" />
+    <Content Include="Areas\Admin\Views\Mail\DocMailGui.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Bieumauthutuc\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Bomon\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Congtacgiaovien\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Daotao\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Gioithieu\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Googlemap\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Huongdan\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Luottruycap\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Nghiencuukhoahoc\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Quydinh\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Thongbaochuyentiep\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Thongkebaidang\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Thongtinnguoidung\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Thuvien\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Vectormap\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\BaiDang\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\Index.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\ThuGui.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\ThuQT.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\ThuNhap.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\ThuRac.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\SoanThu.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\DocMail.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Mail\DocMailGui.cshtml" />
+    <Content Include="Areas\TroLi\Views\web.config" />
+    <Content Include="Areas\TroLi\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\TroLi\Views\Home\Index.cshtml" />
+    <Content Include="Areas\TroLi\Views\Baidang\Index.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\Index.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\ThuGui.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\ThuQT.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\ThuNhap.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\ThuRac.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\SoanThu.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\DocMail.cshtml" />
+    <Content Include="Areas\TroLi\Views\Mail\DocMailGui.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -5360,6 +5444,7 @@
     <Folder Include="Areas\GiaoVien\Models\" />
     <Folder Include="Areas\Guest\Models\" />
     <Folder Include="Areas\Guest\Views\HoatDongSV\" />
+    <Folder Include="Areas\TroLi\Models\" />
     <Folder Include="Areas\VanPhongKhoa\Models\" />
     <Folder Include="Assets\plugins\Uploads\files\" />
     <Folder Include="Assets\plugins\Uploads\flash\" />
@@ -5407,7 +5492,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49684</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49684/</IISUrl>
+          <IISUrl>http://localhost:49685/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:49685/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

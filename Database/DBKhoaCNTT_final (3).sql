@@ -17,12 +17,12 @@ CREATE TABLE Taikhoan
 	Flag BIT,
 )
 INSERT INTO Taikhoan VALUES( 'IT1','s2Shwzk2H0I=','12-12-2007','Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT2','12345','11-2-2012','Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT2','ur9EtJLG814=','11-2-2012','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT3','12345','3-22-2005','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT4','CAxpn3X++hs=','11-5-2002' ,'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT5','12345','2-1-2007', 'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT6','12345','1-12-2012','Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT7','12345','12-2-2015','Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT7','9Lg+2y57Rh0=','12-2-2015','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT8','12345','11-13-2013','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT9','d5TT6Zse5uU=','11-11-2011', 'Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT10','12345','11-20-2005', 'Offline',1)
@@ -65,7 +65,7 @@ INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentai
 	VALUES  (N'Hoàng Ngọc Long' ,'1-5-1988' ,'0947856578' ,'nguyennhus293@gmail.com',N'TPHCM', 'IT10','CV2',1)
 
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
-	VALUES  (N'Thiên Văn Minh' ,'3-6-1970' ,'0987652321' ,'trangtruong166@gmail.com',N'TPHCM', 'IT1' ,'CV3',1)
+	VALUES  (N'Thiên Văn Minh' ,'3-6-1970' ,'0987652321' ,'tota251297@gmail.com',N'TPHCM', 'IT1' ,'CV3',1)
 
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
 	 VALUES  (N'Đinh Hoàn' ,'12-1-1990' ,'0987854322','tota251297@gmail.com' ,N'TPHCM', 'IT2' ,'CV4',1)
@@ -1505,7 +1505,7 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT4' ,'TiS' ,N'Đào tạo tiến sĩ Khoa h�
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Thực hiện theo điều 3 của quy chế đ&agrave;o tạo tiến sĩ ban h&agrave;nh k&egrave;m theo quyết định số 25/QĐ-ĐHCNTT-ĐTSĐH ng&agrave;y 15 th&aacute;ng 04 năm 2014 của Hiệu trưởng Trường Đại học S&agrave;i G&ograve;n</p>
 
-<h1><strong>2. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></h1>
+<p><strong>2. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></p>
 
 <p><strong>2.1&nbsp;&nbsp; C&aacute;c học phần bổ sung</strong></p>
 
@@ -1557,12 +1557,12 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT4' ,'TiS' ,N'Đào tạo tiến sĩ Khoa h�
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; NCS phải bảo vệ luận &aacute;n trước hội đồng cấp đơn vị chuy&ecirc;n m&ocirc;n v&agrave; hội đồng cấp Trường theo quy định.</p>
 
-<h1><strong>3. KẾ HOẠCH Đ&Agrave;O TẠO DỰ KIẾN</strong></h1>
+<p><strong>3. KẾ HOẠCH Đ&Agrave;O TẠO DỰ KIẾN</strong></p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; To&agrave;n bộ chương tr&igrave;nh đ&agrave;o tạo tr&igrave;nh độ tiến sĩ đối với người c&oacute; bằng thạc sĩ l&agrave; 3 năm học tập trung li&ecirc;n tục; đối với người c&oacute; bằng tốt nghiệp đại học nhưng chưa c&oacute; bằng thạc sĩ chuy&ecirc;n ng&agrave;nh ph&ugrave; hợp l&agrave; 5 năm học tập trung li&ecirc;n tục.</p>
 ' ,'05-20-2015','IT2' ,1 )
 
-INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công nghệ thông tin',N'<h1><strong>1. GIỚI THIỆU CHUNG</strong></h1>
+INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công nghệ thông tin',N'<p><strong>1. GIỚI THIỆU CHUNG</strong></p>
 
 <p>.</p>
 
@@ -1593,11 +1593,11 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Trường hợp NCS kh&ocirc;ng theo học tập trung li&ecirc;n tục được v&agrave; được Trường chấp nhận th&igrave; chương tr&igrave;nh đ&agrave;o tạo v&agrave; nghi&ecirc;n cứu của NCS phải c&oacute; tổng thời gian học v&agrave; nghi&ecirc;n cứu như quy định tr&ecirc;n, trong đ&oacute; c&oacute; &iacute;t nhất 12 th&aacute;ng tập trung li&ecirc;n tục tại cơ sở đ&agrave;o tạo để thực hiện đề t&agrave;i nghi&ecirc;n cứu. Trong trường hợp n&agrave;y thời gian đ&agrave;o tạo được cộng th&ecirc;m 1 năm tương ứng với từng đối tượng.</p>
 
-<h1><strong>2. ĐỐI TƯỢNG &Aacute;P DỤNG</strong></h1>
+<p><strong>2. ĐỐI TƯỢNG &Aacute;P DỤNG</strong></p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; C&aacute;c kh&oacute;a tuyển sinh tiến sĩ ng&agrave;nh CNTT từ &nbsp;năm 2014.</p>
 
-<h1><strong>3. QUY CHẾ Đ&Agrave;O TẠO</strong></h1>
+<p><strong>3. QUY CHẾ Đ&Agrave;O TẠO</strong></p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Chương tr&igrave;nh đ&agrave;o tạo tiến sĩ ng&agrave;nh CNTT của trường Đại học S&agrave;i G&ograve;n&nbsp;được thực hiện căn cứ v&agrave;o:</p>
 
@@ -1607,7 +1607,7 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 	<li>Quy chế đ&agrave;o tạo tr&igrave;nh độ tiến sĩ ban h&agrave;nh k&egrave;m theo th&ocirc;ng tư số 10/2009/TT-BGD&amp;ĐT ng&agrave;y 07/5/2009 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo; v&agrave; Th&ocirc;ng tư số 05/2012/TT-BGDĐT ng&agrave;y 15/2/2012 của Bộ Gi&aacute;o dục v&agrave; Đ&agrave;o tạo về việc Sửa đổi, bổ sung Th&ocirc;ng tư 10/2009/TT-BGDĐT, c&oacute; hiệu lực từ 2/4/2012.</li>
 </ul>
 
-<h1><strong>4. CHUẨN ĐẦU RA</strong></h1>
+<p><strong>4. CHUẨN ĐẦU RA</strong></p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Học vi&ecirc;n tốt nghiệp chương tr&igrave;nh đ&agrave;o tạo sau đại học tiến sĩ ng&agrave;nh CNTT phải đ&aacute;p ứng c&aacute;c y&ecirc;u cầu về ti&ecirc;u chuẩn đầu ra (k&yacute; hiệu LO &ndash; Learning Outcomes) sau:</p>
 
@@ -1654,7 +1654,7 @@ INSERT INTO NoidungDT	VALUES  ( 'NDDT5' ,'TiS' ,N'Đào tạo tiến sĩ Công n
 	<li>C&oacute; thể giảng dạy hệ Đại học, Sau Đại học ng&agrave;nh CNTT tại c&aacute;c trường Đại học.</li>
 </ul>
 
-<h1><strong>5. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></h1>
+<p><strong>5. CHƯƠNG TR&Igrave;NH Đ&Agrave;O TẠO</strong></p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Căn cứ v&agrave;o Quy chế đ&agrave;o tạo tiến sĩ của trường ĐH.SG, NCS phải thực hiện 3 phần nội dung của chương tr&igrave;nh đ&agrave;o tạo sau đ&acirc;y:</p>
 
@@ -2722,8 +2722,8 @@ INSERT INTO NoidungGT VALUES ('GT8','CCTC',N'Cựu viên chức khoa',N'
 --where MaBM='BM2' and Chucvu like 'Tiến sĩ'
 --select * from Bomon
 
---select * from Thongbaochuyentiep WHERE Taikhoangui='IT4'
---select* from Chitietchuyentiep WHERE Taikhoannhan='IT4' and Machuyentiep=1
+--select * from Thongbaochuyentiep WHERE Taikhoangui='IT7'
+--select* from Chitietchuyentiep WHERE Taikhoannhan='IT7' and Machuyentiep=1
 
 select * 
 from Thongbaochuyentiep a,Chitietchuyentiep b, Thongtinnguoidung c
@@ -2731,3 +2731,6 @@ where a.Machuyentiep=b.Machuyentiep and a.Taikhoangui= c.Tentaikhoan and  b.Taik
 
 --select * from Thongtinnguoidung
 select * from Baidang where (ĐoituongHT='GV' or ĐoituongHT='ALL') and Maloai='TT'
+
+select * from Thongtinnguoidung
+select * from Chucvu

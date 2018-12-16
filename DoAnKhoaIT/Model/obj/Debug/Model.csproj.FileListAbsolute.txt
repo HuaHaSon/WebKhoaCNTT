@@ -96,5 +96,5 @@ C:\Users\HaSon\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csp
 C:\Users\HaSon\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\HaSon\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.dll
 C:\Users\HaSon\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.pdb
-C:\Users\HaSon\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
 C:\Users\DELL PC\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\HaSon\Documents\GitHub\WebKhoaCNTT\DoAnKhoaIT\Model\obj\Debug\Model.csprojAssemblyReference.cache

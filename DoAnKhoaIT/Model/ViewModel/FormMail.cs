@@ -36,7 +36,7 @@ namespace Model.ViewModel
         public DateTime? ngaygui { get; set; }
         public string trangthaixem { get; set; }
         public string trangthaichuyen { get; set; }
-        public HttpPostedFileBase upload { get; set; }
+        
 
     }
 }

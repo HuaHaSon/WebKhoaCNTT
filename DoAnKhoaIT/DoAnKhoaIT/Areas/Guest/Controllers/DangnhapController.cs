@@ -84,9 +84,17 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
                     Session.Add(CommonConstants.USER_SESSION, usersession);
                     if (usersession.chucvu != "CV3")
                     {
-                        return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien",ten=usersession.UserName.ToString()});
+                        if(usersession.chucvu =="CV1")
+                            return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien",ten=usersession.UserName.ToString()});
+                        else if (usersession.chucvu == "CV8")
+                            return RedirectToAction("Index", "Home", new { area = "VanPhongKhoa", ten = usersession.UserName.ToString() });
+                        else
+                            return RedirectToAction("Index", "Home", new { area = "TroLi", ten = usersession.UserName.ToString() });
+
+
+
                     }                   
-                    return RedirectToAction("Index", "Home", new { area = "Admin" });
+                    return RedirectToAction("Index", "Home", new { area = "Admin" ,ten= usersession.UserName.ToString()});
                 }
                 else
                     if (res == -1)

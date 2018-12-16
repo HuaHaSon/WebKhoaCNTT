@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/VanPhongKhoa/Views/Shared/_Layout.cshtml";
+}
+
+
+@section jsFooter{
+    <script src="~/Assets/Admin/js/admin/controller/Luottruycapadmin.js"></script>
+}
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Quản lý</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Thống kê</a></li>
+                <li class="active">Lượt truy cập</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <div class="white-box m-b-15" style="padding:5px">
+                    <div class="m-t-10 m-b-10" style="display:inline-block">Khoảng thời gian</div>
+                    <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; display:inline-block">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span></span> <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="white-box">
+                    <div class="h4" style="border-bottom:solid #f2f2f2 1px;padding-bottom:5px;margin:0px">Lượt truy cập</div>
+                    <div>
+                        <canvas id="myChart" height="130"></canvas>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="white-box">
+                    <div style="height:300px;padding-top:100px">
+                        <div class="h2" id="luottruycap" style="text-align:center">10.000</div>
+                        <div class="h4 text-danger" style="text-align:center">Tổng lượt truy cập</div>
+                        <div class="h4 text-info" id="tiletang" style="text-align:center">+1%</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

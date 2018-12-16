@@ -12,6 +12,7 @@ using PagedList;
 using System.Text;
 using System.IO;
 using System.Net.Mime;
+using Newtonsoft.Json;
 
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
@@ -19,7 +20,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
     {
         // GET: GiaoVien/GuiMail
         SGU db = new SGU();
-        public ActionResult GuiMail(string txtsearch,int page=1,int pagesize=2)
+        public ActionResult GuiMail(string txtsearch,int page=1,int pagesize=5)
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
@@ -27,7 +28,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
             model.v1 = dao.LoadThuDen(ten, txtsearch).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
-            ViewBag.HoTen = dao.GetTen(ten);           
+            ViewBag.HoTen = dao.GetTen(ten);                
             if (model == null)
                 return View(new ModelMail());
             return View(model);
@@ -93,7 +94,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
                 status
             });
         }
-        public ActionResult LoadThuGui(string txtsearch,int page = 1, int pagesize = 2)
+        public ActionResult LoadThuGui(string txtsearch,int page = 1, int pagesize = 5)
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
@@ -152,7 +153,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
         //    return View(model);
         //}
 
-        public ActionResult LoadThuXoa(string txtsearch,int page = 1, int pagesize = 2)
+        public ActionResult LoadThuXoa(string txtsearch,int page = 1, int pagesize = 5)
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
@@ -211,7 +212,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
         //        return View(new ModelMail());
         //    return View(model);
         //}
-        public ActionResult LoadThuNhap(string txtsearch,int page = 1, int pagesize = 2)
+        public ActionResult LoadThuNhap(string txtsearch,int page = 1, int pagesize = 5)
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
@@ -270,7 +271,7 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
         //        return View(new ModelMail());
         //    return View(model);
         //}
-        public ActionResult LoadThuQT(string txtsearch,int page = 1, int pagesize = 2)
+        public ActionResult LoadThuQT(string txtsearch,int page = 1, int pagesize = 5)
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
@@ -358,6 +359,46 @@ namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
                 return View(new ModelMail());
             return View(res);
         }
+        [HttpPost]
+        public JsonResult hopthuden()
+        {
+            GuiMail dao = new GuiMail();
+            string ten = HomeController.tentk;
+            var res = dao.CountHTD(ten);
+            return Json(new
+            {
+                res
+            });
+        }
+        [HttpPost]
+        public JsonResult chuyenmail(string list)
+        {
+            GuiMail dao = new GuiMail();
+            string ten = HomeController.tentk;
+            string[] Multi = list.Split(',');
+            foreach(var item in Multi)
+            {
+                dao.SetThuXoa(item, ten);
+            }
+            return Json(new
+            {
 
+            });
+        }
+        [HttpPost]
+        public JsonResult chuyenmail1(string list)
+        {
+            GuiMail dao = new GuiMail();
+            string ten = HomeController.tentk;
+            string[] Multi = list.Split(',');
+            foreach (var item in Multi)
+            {
+                dao.SetThuXoaGui(item, ten);
+            }
+            return Json(new
+            {
+
+            });
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace DoAnKhoaIT.Controllers
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             var session = (TaikhoanLogin)Session[CommonConstants.USER_SESSION];
-            if (session != null && session.Chuvu == "IT1")
+            if (session != null && session.chucvu != "CV3")
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                 {

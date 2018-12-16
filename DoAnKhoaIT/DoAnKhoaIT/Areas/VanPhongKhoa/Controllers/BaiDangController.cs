@@ -13,7 +13,7 @@ namespace DoAnKhoaIT.Areas.VanPhongKhoa.Controllers
     public class BaiDangController : Controller
     {
         // GET: VanPhongKhoa/BaiDang
-        public ActionResult BD()
+        public ActionResult Index()
         {
             BaidangDao dao = new BaidangDao();
             BaidangAdminModel model = new BaidangAdminModel();

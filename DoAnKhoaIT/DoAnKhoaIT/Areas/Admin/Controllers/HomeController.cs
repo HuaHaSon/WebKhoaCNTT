@@ -13,13 +13,15 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
     public class HomeController : BaseAdminController
     {
+        public static string tentk = "";
         // GET: Admin/Home
-        public ActionResult Index()
+        public ActionResult Index(string ten)
         {
             HomeModel model = new HomeModel();
             model.listchitietnghiencuukhoahoc = new NghiencuukhoahocDao().listchitietnghiencuukhoahoc();
             ViewBag.giaovien = new BomonDao().listgiaovien().Count();
             ViewBag.monhoc = new BomonDao().listmonhoc().Count();
+            tentk = ten;
             return View(model);
         }
         public JsonResult loadlichGV(string status)
