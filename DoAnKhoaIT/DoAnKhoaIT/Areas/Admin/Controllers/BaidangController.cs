@@ -272,5 +272,23 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
                 status = true
             });
         }
+        [HttpPost]
+        public JsonResult Checkbaidang()
+        {
+            DateTime date = DateTime.Now;
+            BaidangDao dao = new BaidangDao();
+            var res = dao.checkbaidang(date);
+            if(res == true)
+            {
+                return Json(new
+                {
+                    status = true
+                });
+            }
+            return Json(new
+            {
+                status = false
+            });
+        }
     }
 }

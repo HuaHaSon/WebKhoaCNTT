@@ -119,5 +119,18 @@ namespace Model.DAO.GiaoVien
             return thu;
                      
         }
+        public List<List<ChitietCTGV>> lich(DateTime ngaybatdau, string ma)
+        {
+            List<List<ChitietCTGV>> lich = new List<List<ChitietCTGV>>();
+            string chuyen = ngaybatdau.ToShortDateString();
+            DateTime ngay1 = Convert.ToDateTime(chuyen + " 00:00:00");
+            for (int i = 0; i < 7; ++i)
+            {
+                DateTime ngay2 = ngay1.AddDays(1);
+                lich.Add(db.ChitietCTGVs.Where(model => model.MaCT == ma && model.NgayCT >= ngay1 && model.NgayCT < ngay2).ToList());
+                ngay1 = ngay2;
+            }
+            return lich;
+        }
     }
 }
