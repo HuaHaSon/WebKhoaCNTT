@@ -5,9 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using Model.EF;
 using Model.DAO.GiaoVien;
+using DoAnKhoaIT.Controllers;
+
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class TinTucController : Controller
+    public class TinTucController : BaseGiaovienController    
     {
         // GET: GiaoVien/TinTuc
         TinTucDAO dao = new TinTucDAO();

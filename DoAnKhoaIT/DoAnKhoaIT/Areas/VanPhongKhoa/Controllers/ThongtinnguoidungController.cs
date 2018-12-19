@@ -1,4 +1,5 @@
 ﻿using DoAnKhoaIT.Common;
+using DoAnKhoaIT.Controllers;
 using Model.DAO.Admin;
 using Model.EF;
 using Model.ViewModel;
@@ -11,7 +12,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.VanPhongKhoa.Controllers
 {
-    public class ThongtinnguoidungController : Controller
+    public class ThongtinnguoidungController : BaseVanPhongKhoaController
     {
         // GET: VanPhongKhoa/Thongtinnguoidung
         public ActionResult Index()

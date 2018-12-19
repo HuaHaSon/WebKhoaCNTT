@@ -1,4 +1,5 @@
-﻿using Model.DAO.Admin;
+﻿using DoAnKhoaIT.Controllers;
+using Model.DAO.Admin;
 using Model.EF;
 using Model.ViewModel;
 using Newtonsoft.Json;
@@ -10,19 +11,20 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.TroLi.Controllers
 {
-    public class BaidangController : Controller
+    public class BaidangController : BaseTroLiController
     {
         // GET: TroLi/Baidang
         public ActionResult Index()
         {
             BaidangDao dao = new BaidangDao();
             BaidangAdminModel model = new BaidangAdminModel();
-            model.listbaidang = dao.listbaidang();
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            model.listbaidang = dao.listbaidangtheochucvu(session.chucvu);
             model.listloaibaidang = dao.listloaibaidang();
             model.listchucvu = dao.listchucvu();
             model.listag = dao.listtag();
-            model.listchucvudangbai = dao.listchucvudangbai();
-            model.listagdangbai = dao.listtagdangbai(dao.listchucvudangbai().First().Machucvu); // lay ma dau tien
+            model.listchucvudangbai = dao.chucvu(session.chucvu);
+            model.listagdangbai = dao.listtagdangbai(dao.chucvu(session.chucvu).First().Machucvu); // lay ma dau tien
             ViewBag.Trangthai = dao.ITrangthai;
             ViewBag.Hienthi = dao.IHienthi;
             return View(model);

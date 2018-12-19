@@ -22,7 +22,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v1 = dao.LoadThuDen(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -35,7 +36,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v2 = dao.LoadThuGui(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -48,7 +50,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v5 = dao.LoadThuQuanTrong(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -61,7 +64,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v4 = dao.LoadThuNhap(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -74,7 +78,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v3 = dao.LoadThuXoa(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -101,7 +106,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
             var status = false;
             //try
             //{
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             GuiMail dao = new GuiMail();
             string gmail = dao.GetMail(ten);
 
@@ -154,7 +160,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         public ActionResult DocMail(int mact)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             dao.GetTT(ten, mact);
             string gmail = dao.GetMail(ten);
             ViewBag.HoTen = dao.GetTen(ten);
@@ -169,7 +176,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         public ActionResult DocMailGui(int mact)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             string gmail = dao.GetMail(ten);
             ViewBag.HoTen = dao.GetTen(ten);
             ViewBag.SLHTD = dao.CountHTD(ten);
@@ -184,7 +192,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         public JsonResult hopthuden()
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             var res = dao.CountHTD(ten);
             return Json(new
             {
@@ -195,7 +204,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         public JsonResult chuyenmail(string list)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             string[] Multi = list.Split(',');
             foreach (var item in Multi)
             {
@@ -210,7 +220,8 @@ namespace DoAnKhoaIT.Areas.Admin.Controllers
         public JsonResult chuyenmail1(string list)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             string[] Multi = list.Split(',');
             foreach (var item in Multi)
             {

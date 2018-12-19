@@ -336,6 +336,7 @@
     <Compile Include="Areas\VanPhongKhoa\Controllers\MailController.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\NghiencuukhoahocController.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\QuydinhController.cs" />
+    <Compile Include="Areas\VanPhongKhoa\Controllers\SaoluuController.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\ThongbaochuyentiepController.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\ThongkebaidangController.cs" />
     <Compile Include="Areas\VanPhongKhoa\Controllers\ThongtinnguoidungController.cs" />
@@ -350,6 +351,8 @@
     <Compile Include="Controllers\BaseAdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BaseGiaovienController.cs" />
+    <Compile Include="Controllers\BaseTroLiController.cs" />
+    <Compile Include="Controllers\BaseVanPhongKhoaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5504,6 +5507,7 @@
     <Content Include="Areas\TroLi\Views\Mail\SoanThu.cshtml" />
     <Content Include="Areas\TroLi\Views\Mail\DocMail.cshtml" />
     <Content Include="Areas\TroLi\Views\Mail\DocMailGui.cshtml" />
+    <Content Include="Areas\VanPhongKhoa\Views\Saoluu\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -5546,6 +5550,8 @@
     <Folder Include="Models\" />
     <Folder Include="Views\BaseAdmin\" />
     <Folder Include="Views\BaseGiaovien\" />
+    <Folder Include="Views\BaseTroLi\" />
+    <Folder Include="Views\BaseVanPhongKhoa\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>

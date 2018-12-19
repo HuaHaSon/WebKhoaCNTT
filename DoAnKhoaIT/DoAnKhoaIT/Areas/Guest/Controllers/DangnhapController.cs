@@ -6,12 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Model.EF;
 namespace DoAnKhoaIT.Areas.Guest.Controllers
 {
      public class DangNhapController : Controller
     {
         // GET: DangNhap
+        SGU db = new SGU();
         public ActionResult Index()
         {
             if(Session[CommonConstants.USER_SESSION] != null)
@@ -81,20 +82,21 @@ namespace DoAnKhoaIT.Areas.Guest.Controllers
                     usersession.UserName = user.Tentaikhoan;
                     usersession.Name = user.Hoten;
                     usersession.chucvu = user.Machucvu;
+                    usersession.mail = db.Thongtinnguoidungs.Where(s => s.Tentaikhoan == user.Tentaikhoan).Select(s => s.Gmail).FirstOrDefault();
                     Session.Add(CommonConstants.USER_SESSION, usersession);
-                    if (usersession.chucvu != "CV3")
+                    if (usersession.chucvu != "CV3" && usersession.chucvu != "CV2")
                     {
                         if(usersession.chucvu =="CV1")
-                            return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien",ten=usersession.UserName.ToString()});
+                            return RedirectToAction("IndexGV", "Home", new { area = "GiaoVien"});
                         else if (usersession.chucvu == "CV8")
-                            return RedirectToAction("Index", "Home", new { area = "VanPhongKhoa", ten = usersession.UserName.ToString() });
+                            return RedirectToAction("Index", "Home", new { area = "VanPhongKhoa" });
                         else
-                            return RedirectToAction("Index", "Home", new { area = "TroLi", ten = usersession.UserName.ToString() });
+                            return RedirectToAction("Index", "Home", new { area = "TroLi" });
 
 
 
                     }                   
-                    return RedirectToAction("Index", "Home", new { area = "Admin" ,ten= usersession.UserName.ToString()});
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });
                 }
                 else
                     if (res == -1)

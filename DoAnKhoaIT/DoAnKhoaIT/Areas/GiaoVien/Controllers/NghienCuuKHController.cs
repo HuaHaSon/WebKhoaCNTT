@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using DoAnKhoaIT.Controllers;
 using Model.DAO.GiaoVien;
 using Model.EF;
+using System.Web.Mvc;
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class NghienCuuKHController : Controller
+    public class NghienCuuKHController : BaseGiaovienController
     {
         // GET: GiaoVien/NghienCuuKH
         NghienCuuKH dao = new NghienCuuKH();

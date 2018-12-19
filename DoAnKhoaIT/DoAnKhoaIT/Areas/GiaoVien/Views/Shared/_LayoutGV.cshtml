@@ -72,7 +72,7 @@
                                     <div id="ex4">
                                         <span id="hopthuden" class="p1 fa-stack fa-2x has-badge" data-count="0">
                                             <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
-                                            <a href="@Url.Action("GuiMail","GuiMail",new { txtsearch=""},null)"><i class="fa fa-envelope-o" style="color: cornflowerblue;" data-count="4b"></i></a>
+                                            <a href="@Url.Action("GuiMail","GuiMail")"><i class="fa fa-envelope-o" style="color: cornflowerblue;" data-count="4b"></i></a>
                                         </span>
                                     </div>
                                 </li>
@@ -82,11 +82,11 @@
                                         
                      
                                         <li><a href="#"><i class="ti-user"></i> Thông tin cá nhân</a></li>
-                                        <li><a href="#"><i class="ti-email"></i> Tin nhắn </a></li>
+                                        <li><a href="@Url.Action("GuiMail", "GuiMail")"><i class="ti-email"></i> Tin nhắn </a></li>
                                         <li role="separator" class="divider"></li>
                                         <li><a href="#"><i class="ti-settings"></i> Cài đặt cài khoản </a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
+                                        <li><a href="@Url.Action("Index", "Dangnhap", new { Area = "Guest" })"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
                                     </ul>
                                     <!-- /.dropdown-user -->
                                 </li>
@@ -196,7 +196,7 @@
                                                     <i class="fa fa-angle-right fa-menu"></i>
                                                     <ul>
                                                         <li>
-                                                            <a href="cac-trinh-do-dao-tao-cua-truong.html">Sự kiện khoa học</a>
+                                                            @Html.ActionLink("Sự kiện khoa học", "NCKH", "NghienCuuKH")
                                                         </li>
                                                         <li>
                                                             @Html.ActionLink("Bài báo công bố", "NCKH_BaiBao", "NghienCuuKH")
@@ -335,16 +335,26 @@
     <script src="/Assets/Admin/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 
     <script>
-        setInterval(function () {           
-            
+       
+        
+          var s = 0;
+        setInterval(function () {          
             $.ajax({
-                url: '/GiaoVien/GuiMail/hopthuden',
+                url: '/VanPhongKhoa/Mail/hopthuden',
                 type: 'POST',
                 dataType: 'json',
                 data: {},
-                success: function (e) {
+                success: function (e) {   
                     $('#hopthuden').attr("data-count", e.res);
-                    document.getElementById("thuden").innerHtml = e.res;
+                    if (s != e.res) {
+                        $.notify("Bạn có " + e.res + " thư mới", "success");
+                        s = e.res;
+                        if (document.getElementById("thuden").innerHTML != null) {
+                            document.getElementById("thuden").innerHTML = e.res;
+                        }                       
+                    } else {
+                        
+                    }
                 }
             });
         }, 1000);

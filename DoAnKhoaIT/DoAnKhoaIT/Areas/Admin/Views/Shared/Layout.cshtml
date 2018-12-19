@@ -211,18 +211,18 @@
                                 <div class="dw-user-box">
                                     <div class="u-img"><img src="~/Assets/Admin/plugins/images/users/varun.jpg" alt="user" /></div>
                                     <div class="u-text">
-                                        <h4>Administrator</h4>
-                                        <p class="text-muted">AdminSG@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Xem hồ sơ</a>
+                                        <h4>@session.Name</h4>
+                                        <p class="text-muted">@session.mail</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Xem hồ sơ</a>
                                     </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="ti-user"></i> Thông tin cá nhân</a></li>
-                            <li><a href="#"><i class="ti-email"></i> Tin nhắn </a></li>
+                            <li><a href="@Url.Action("Index","Mail")"><i class="ti-email"></i> Tin nhắn </a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="ti-settings"></i> Cài đặt cài khoản </a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
+                            <li><a href="@Url.Action("Index", "Dangnhap", new { Area = "Guest" })"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
                         </ul>
                         <!-- /.dropdown-user -->
                     </li>
@@ -371,31 +371,31 @@
                     } else {
                         
                     }
-
                 }
             });
-        }, 10000);
+        }, 1000);
 
         setInterval(function () {
-            var res = moment().format('hh:mm:ss');
-            $.notify(res, "danger");
-            if (res == "12:00:00" || res == "00:00:00") {
+            var res = moment().format('hh:mm');
+            //$.notify(res, "danger");
+            
                 $.ajax({
                     url: '/Admin/Backup/backup',
                     type: 'POST',
                     dataType: 'json',
-                    data: {},
+                    data: {mocthoigian: res},
                     success: function (e) {
-                        if (e.status == true) {
+                        if (e.status == "1") {
                             $.notify("Backup thành công " + res, "success");
                         } else {
+                            if (e.status == "0")
                             $.notify("Backup thất bại " + res, "danger");
-                        }
+                        };
 
                     }
                 });
-            }                        
-        }, 1000);
+                               
+        }, 60000);
 
         $(document).ready(function () {
             $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
@@ -561,15 +561,23 @@
 
     @RenderSection("JsFooter", required: false)
     <script>
+        var s = 0;
         setInterval(function () {
-
             $.ajax({
                 url: '/Admin/Mail/hopthuden',
                 type: 'POST',
                 dataType: 'json',
                 data: {},
-                success: function (e) {                    
-                    document.getElementById("thuden").innerHtml = e.res;
+                success: function (e) {
+                    if (s != e.res) {
+                        $.notify("Bạn có " + e.res + " thư mới", "success");
+                        s = e.res;
+                        if (document.getElementById("thuden").innerHTML != null) {
+                            document.getElementById("thuden").innerHTML = e.res;
+                        }
+                    } else {
+
+                    }
                 }
             });
         }, 1000);

@@ -90,6 +90,7 @@
     <Compile Include="EF\Baidang.cs" />
     <Compile Include="EF\Bieumauthutuc.cs" />
     <Compile Include="EF\Bomon.cs" />
+    <Compile Include="EF\CheckBaidang.cs" />
     <Compile Include="EF\Chitietbaidang.cs" />
     <Compile Include="EF\Chitietchuyentiep.cs" />
     <Compile Include="EF\ChitietCTGV.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="EF\Chitietquyen.cs" />
     <Compile Include="EF\Chucvu.cs" />
     <Compile Include="EF\CongtacGV.cs" />
+    <Compile Include="EF\Detail.cs" />
+    <Compile Include="EF\Filebackup.cs" />
     <Compile Include="EF\Loaibaidang.cs" />
     <Compile Include="EF\Loaidaotao.cs" />
     <Compile Include="EF\LoaiGT.cs" />
@@ -106,6 +109,7 @@
     <Compile Include="EF\NoidungDT.cs" />
     <Compile Include="EF\NoidungGT.cs" />
     <Compile Include="EF\Quyennguoidung.cs" />
+    <Compile Include="EF\Saoluu.cs" />
     <Compile Include="EF\SGU.cs" />
     <Compile Include="EF\Tag.cs" />
     <Compile Include="EF\Taikhoan.cs" />

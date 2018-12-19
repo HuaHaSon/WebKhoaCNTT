@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class DaotaoController : BaseController
+    public class DaotaoController : BaseAdminController
     {
         // GET: Admin/Daotao
         public ActionResult Index()

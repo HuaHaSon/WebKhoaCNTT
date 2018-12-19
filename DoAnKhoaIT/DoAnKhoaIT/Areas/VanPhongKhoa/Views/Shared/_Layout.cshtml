@@ -212,18 +212,18 @@
                                 <div class="dw-user-box">
                                     <div class="u-img"><img src="~/Assets/Admin/plugins/images/users/varun.jpg" alt="user" /></div>
                                     <div class="u-text">
-                                        <h4>Administrator</h4>
-                                        <p class="text-muted">AdminSG@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Xem hồ sơ</a>
+                                        <h4>@session.Name</h4>
+                                        <p class="text-muted">@session.mail</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">Xem hồ sơ</a>
                                     </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="ti-user"></i> Thông tin cá nhân</a></li>
-                            <li><a href="#"><i class="ti-email"></i> Tin nhắn </a></li>
+                            <li><a href="@Url.Action("Index","Mail")"><i class="ti-email"></i> Tin nhắn </a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="ti-settings"></i> Cài đặt cài khoản </a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
+                            <li><a href="@Url.Action("Index", "Dangnhap", new { Area = "Guest" })"><i class="fa fa-power-off"></i> Đăng xuất </a></li>
                         </ul>
                         <!-- /.dropdown-user -->
                     </li>
@@ -275,6 +275,9 @@
                     <li class="devider"></li>
                     <li>
                         <a href=@Url.Action("Index","Mail") class="waves-effect"><i class="mdi mdi-clipboard-text fa-fw"></i> <span class="hide-menu">Mail</span></a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("Index","Saoluu") class="waves-effect"><i class="mdi mdi-clipboard-text fa-fw"></i> <span class="hide-menu">Sao lưu và phục hồi</span></a>
                     </li>
                     <li class="devider"></li>
                     <li> <a href=@Url.Action("Index","Googlemap") class="waves-effect"><i class="mdi mdi-google-maps fa-fw"></i><span class="hide-menu">Google Map</span></a> </li>
@@ -357,6 +360,7 @@
     <!-- Chart JS -->
     <script src="~/Assets/Admin/plugins/bower_components/Chart.js/Chart.min.js"></script>
     <script src="~/Assets/Admin/plugins/bower_components/Chart.js/Chart.bundle.min.js"></script>
+    <script src="~/Assets/plugins/Notify/notify.min.js"></script>
     <script>
 
 
@@ -521,7 +525,28 @@
     </script>
     <!--Style Switcher -->
     <script src="~/Assets/Admin/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
-
+    <script>
+        var s = 0;
+        setInterval(function () {          
+            $.ajax({
+                url: '/VanPhongKhoa/Mail/hopthuden',
+                type: 'POST',
+                dataType: 'json',
+                data: {},
+                success: function (e) {                    
+                    if (s != e.res) {
+                        $.notify("Bạn có " + e.res + " thư mới", "success");
+                        s = e.res;
+                        if (document.getElementById("thuden").innerHTML != null) {
+                            document.getElementById("thuden").innerHTML = e.res;
+                        }                       
+                    } else {
+                        
+                    }
+                }
+            });
+        }, 1000);
+    </script>
     @RenderSection("JsFooter", required: false)
 
 

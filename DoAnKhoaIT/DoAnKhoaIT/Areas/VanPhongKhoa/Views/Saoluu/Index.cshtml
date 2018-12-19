@@ -1,0 +1,249 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/VanPhongKhoa/Views/Shared/_Layout.cshtml";
+}
+@section jsFooter{
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '/VanPhongKhoa/Saoluu/loaddulieu',
+                dataType: 'json',
+                type: 'POST',
+                data: {},
+                success: function (e) {
+                    $("#saoluu option").remove();
+                    var fileres = JSON.parse(e.file);
+                    for (var i = 0; i < fileres.length; ++i) {
+                        $("#saoluu").append('<option value=' + fileres[i].filepath + '>' + fileres[i].tenfile + '</option>');
+                    };
+                    $('#mocthoigian div').remove();
+                    for (var i = 0; i < e.list.length; ++i) {                       
+                        $("#mocthoigian").append('<div class="form-group"><div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true"><input value = ' + e.list[i] + ' type = "text" class= "form-control" readonly><span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span></div></div>');
+
+                    }                   
+                    $("#sv").val(e.sv);
+                    $("#username").val(e.username);
+                    $("#mk").val(e.mk);
+                    $("#db").val(e.db);
+                }
+            });
+        });
+        $("#btnthem").click(function () {            
+            $("#mocthoigian").append('<div class="form-group"><div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true"><input type = "text" class= "form-control" readonly><span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span></div></div>');
+            $('.clockpicker').clockpicker();            
+        });
+        $("#btncaidat").click(function () {
+            var saoluu = '{"Tenserver":"", "tentk":"","matkhau":"","data":""}';
+            saoluu = JSON.parse(saoluu);
+            saoluu.Tenserver = $("#sv").val();
+            saoluu.tentk = $("#username").val();
+            saoluu.matkhau = $("#mk").val();
+            saoluu.data = $("#db").val();
+            
+            var list = [];
+            var i = 0;
+            var check = 0;
+            $(".clockpicker").each(function () {
+                list[i] = $(this).find('input').val();
+                if (list[i] != "") {
+                    check++
+                }
+                i++;
+            });
+            list = JSON.stringify(list);
+            list = list.replace("[", "");
+            list = list.replace("]", "");
+            if (saoluu.data != "" && saoluu.matkhau != "" && saoluu.tentk != "" && saoluu.Tenserver != "" && check == i) {
+                saoluu = JSON.stringify(saoluu);                
+                $.ajax({
+                    url: '/VanPhongKhoa/Saoluu/savebackup',
+                    dataType: 'json',
+                    type: 'POST',
+                    data: { saoluu: saoluu, mocthoigian: list },
+                    success: function (e) {
+                        if (e.status == true) {
+                            $.notify("Lưu thành công","success");
+                        } else {
+                            $.notify("Lưu thất bại", "danger");
+                        }
+                    }
+                });
+            } else {
+                $.notify("Thiếu thông tin", "danger");
+            }
+        });
+        $("#btnlammoi").click(function () {
+            $('#mocthoigian div').remove(); 
+            $("#mocthoigian").append('<div class="form-group"><div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true"><input type = "text" class= "form-control" readonly><span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span></div></div>');
+            $('.clockpicker').clockpicker();
+        });
+        $("#btnsaoluu").click(function () {    
+            $.ajax({
+                url: '/VanPhongKhoa/Saoluu/restore',
+                dataType: 'json',
+                type: 'POST',
+                data: { backUpFile: $("#saoluu").children("option:selected").val() },
+                success: function (e) {
+                    $.notify("Phục hồi dữ liệu  thành công!", "success");
+                }
+            });
+        });
+
+    </script>
+}
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Quản lý</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+            <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Quản lý</a></li>
+                <li class="active">Bài đăng</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box" id="tabbackup">
+                <ul class="nav customtab nav-tabs" role="tablist">
+                    <li role="presentation" id="tabsaoluu" class="active"><a href="#saoluu1" aria-controls="saoluu" role="tab" data-toggle="tab" aria-expanded="true"><i class="ti-home"></i><span class="hidden-xs"> Sao lưu </span></a></li>
+                    <li role="presentation" id="tabphuchoi" class=""><a href="#phuchoi1" aria-controls="phuchoi" role="tab" data-toggle="tab" aria-expanded="false"><i class="ti-user"></i> <span class="hidden-xs"> Phục hồi </span></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active in" id="saoluu1">
+                        <h3> <strong> Thiết lập sao lưu </strong> </h3>
+                        <div class="white-box">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label>Server:</label>
+                                    <input type="text" class="form-control" placeholder="DESKTOP-MEMEU1K\THANHETN" id="sv" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên tài khoản:</label>
+                                    <input type="text" class="form-control" placeholder="sa" id="username" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Mật khẩu:</label>
+                                    <input type="password" class="form-control" placeholder="******" id="mk" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Database:</label>
+                                    <input type="text" class="form-control" placeholder="DbKhoaCNTT" id="db" />
+                                </div>
+                            </form>
+                        </div>
+                        <h3> <strong> Thiết lập thời gian sao lưu </strong> </h3>
+                        <div class="white-box" style="padding-bottom:0px" id="mocthoigian">
+                            <div class="form-group">
+                                <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
+                                    <input type="text" class="form-control" readonly> <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
+                                    <input type="text" class="form-control" readonly> <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="white-box" style="margin-top:0px;padding-top:0px">
+                            <div class="form-group">
+                                <button class="btn btn-info" id="btnthem"> + Thêm mốc thời gian </button>
+                                <button class="btn btn-warning" id="btnlammoi"> Làm mới </button>
+                                <button class="btn btn-success" id="btncaidat"> Lưu cài đặt </button>
+                            </div>
+                        </div>
+                        
+                        
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="phuchoi1">
+                        <h3><strong>Thiết lập phục hồi</strong></h3>
+                        <div class="white-box">
+                            <div class="form-group">
+                                <label>Chọn File sao lưu:</label>
+                                <select class="form-control" id="saoluu">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn-success" id="btnsaoluu" style="float:right"> Sao lưu </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <div class="right-sidebar">
+                <div class="slimscrollright">
+                    <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                    <div class="r-panel-body">
+                        <ul id="themecolors" class="m-t-20">
+                            <li><b>With Light sidebar</b></li>
+                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                            <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                            <li><b>With Dark sidebar</b></li>
+                            <br />
+                            <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                            <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                            <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                            <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                            <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                            <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                        </ul>
+                        <ul class="m-t-20 all-demos">
+                            <li><b>Choose other demos</b></li>
+                        </ul>
+                        <ul class="m-t-20 chatonline">
+                            <li><b>Chat option</b></li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </div>
+    </div>
+
+</div>
+

@@ -5,9 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using Model.EF;
 using Model.DAO.Guest;
+using DoAnKhoaIT.Controllers;
+
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class BoMonController : Controller
+    public class BoMonController : BaseGiaovienController
     {
         BoMonDAO dao = new BoMonDAO();
         // GET: GiaoVien/BoMon

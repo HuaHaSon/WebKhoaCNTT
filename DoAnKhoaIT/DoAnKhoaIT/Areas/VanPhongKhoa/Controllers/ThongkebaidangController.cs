@@ -1,4 +1,5 @@
-﻿using Model.DAO.Admin;
+﻿using DoAnKhoaIT.Controllers;
+using Model.DAO.Admin;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.VanPhongKhoa.Controllers
 {
-    public class ThongkebaidangController : Controller
+    public class ThongkebaidangController : BaseVanPhongKhoaController
     {
         // GET: VanPhongKhoa/Thongkebaidang
         public ActionResult Index()

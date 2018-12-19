@@ -21,6 +21,18 @@ namespace Model.DAO.Admin
         {
             return db.Baidangs.ToList();
         }
+        public List<Baidang> listbaidangtheochucvu(string chucvu)
+        {
+            var res = (from a in db.Baidangs
+                       join b in db.Chitietbaidangs
+                       on a.Mabaidang equals b.Mabaidang
+                       join c in db.Tags
+                        on b.TagID equals c.TagID
+                       where c.Machucvu == chucvu
+                       select a).ToList();
+            return res;
+                     
+;        }
         public int[] thongkebaidangtheongay(DateTime startdate, DateTime enddate)
         {
             var d1 = startdate;
@@ -46,6 +58,10 @@ namespace Model.DAO.Admin
             return db.Chucvus.ToList();
 
         }
+        public List<Chucvu> chucvu(string chucvu)
+        {
+            return db.Chucvus.Where(s => s.Machucvu == chucvu).ToList();
+        }
         public List<Tag> listtag()
         {
             return db.Tags.ToList();
@@ -58,12 +74,16 @@ namespace Model.DAO.Admin
         public List<Tag> listtagdangbai(string machucvu)
         {
             return db.Tags.Where(model => model.Machucvu == machucvu).ToList();
-        }
+        }        
         public bool thembaidang(Baidang entity)
         {
             var check = db.Baidangs.Find(entity.Mabaidang);
             if (check != null) return false;
             var res = db.Baidangs.Add(entity);
+            CheckBaidang ck = new CheckBaidang();
+            ck.Mabaidang = entity.Mabaidang;
+            ck.Flag = false;
+            db.CheckBaidangs.Add(ck);
             db.SaveChanges();
             return true;
         }

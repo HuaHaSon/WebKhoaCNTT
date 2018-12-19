@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class GioithieuController : BaseController
+    public class GioithieuController : BaseAdminController
     {
         // GET: Admin/Gioithieu
         public ActionResult Index()

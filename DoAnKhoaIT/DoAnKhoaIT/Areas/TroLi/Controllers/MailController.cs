@@ -1,4 +1,5 @@
-﻿using Model.DAO.GiaoVien;
+﻿using DoAnKhoaIT.Controllers;
+using Model.DAO.GiaoVien;
 using Model.EF;
 using Model.ViewModel;
 using PagedList;
@@ -12,7 +13,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.TroLi.Controllers
 {
-    public class MailController : Controller
+    public class MailController : BaseTroLiController
     {
         // GET: TroLi/Mail
         SGU db = new SGU();
@@ -20,7 +21,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v1 = dao.LoadThuDen(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -33,7 +35,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v2 = dao.LoadThuGui(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -46,7 +49,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v5 = dao.LoadThuQuanTrong(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -59,7 +63,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v4 = dao.LoadThuNhap(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -72,7 +77,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         {
             FormMail model = new FormMail();
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             model.v3 = dao.LoadThuXoa(ten, null).ToPagedList(page, pagesize);
             ViewBag.SLHTD = dao.CountHTD(ten);
             ViewBag.SLHTG = dao.CountTDG(ten);
@@ -83,10 +89,17 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         }
         public ActionResult SoanThu(string nguoinhan)
         {
+            GuiMail dao = new GuiMail();
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
+            ViewBag.HoTen = dao.GetTen(ten);
+            ViewBag.SLHTD = dao.CountHTD(ten);
+            ViewBag.SLHTG = dao.CountTDG(ten);
             if (nguoinhan == null)
                 return View();
             else
             {
+
                 ViewBag.nguoinhan = nguoinhan;
                 return View();
             }
@@ -99,7 +112,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
             var status = false;
             //try
             //{
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             GuiMail dao = new GuiMail();
             string gmail = dao.GetMail(ten);
 
@@ -152,7 +166,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         public ActionResult DocMail(int mact)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             dao.GetTT(ten, mact);
             string gmail = dao.GetMail(ten);
             ViewBag.HoTen = dao.GetTen(ten);
@@ -167,7 +182,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         public ActionResult DocMailGui(int mact)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             string gmail = dao.GetMail(ten);
             ViewBag.HoTen = dao.GetTen(ten);
             ViewBag.SLHTD = dao.CountHTD(ten);
@@ -182,7 +198,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         public JsonResult hopthuden()
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             var res = dao.CountHTD(ten);
             return Json(new
             {
@@ -193,7 +210,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         public JsonResult chuyenmail(string list)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             string[] Multi = list.Split(',');
             foreach (var item in Multi)
             {
@@ -208,7 +226,8 @@ namespace DoAnKhoaIT.Areas.TroLi.Controllers
         public JsonResult chuyenmail1(string list)
         {
             GuiMail dao = new GuiMail();
-            string ten = HomeController.tentk;
+            var session = (Common.TaikhoanLogin)Session[Common.CommonConstants.USER_SESSION];
+            string ten = session.UserName;
             string[] Multi = list.Split(',');
             foreach (var item in Multi)
             {

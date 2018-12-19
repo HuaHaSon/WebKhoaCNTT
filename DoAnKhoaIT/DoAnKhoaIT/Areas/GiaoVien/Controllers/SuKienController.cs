@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DoAnKhoaIT.Controllers;
 using Model.DAO.GiaoVien;
 using Model.EF;
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class SuKienController : Controller
+    public class SuKienController : BaseGiaovienController
     {
         // GET: GiaoVien/SuKien
         SuKien dao = new SuKien();

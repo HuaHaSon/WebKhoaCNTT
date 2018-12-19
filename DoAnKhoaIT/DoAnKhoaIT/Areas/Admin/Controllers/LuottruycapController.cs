@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class LuottruycapController : BaseController
+    public class LuottruycapController : BaseAdminController
     {
         // GET: Admin/Luotruycap
         public ActionResult Index()

@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class ThongtinnguoidungController : BaseController
+    public class ThongtinnguoidungController : BaseAdminController
     {
         // GET: Admin/Thongtinnguoidung
         public ActionResult Index()

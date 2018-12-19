@@ -15,6 +15,7 @@
         public virtual DbSet<Baidang> Baidangs { get; set; }
         public virtual DbSet<Bieumauthutuc> Bieumauthutucs { get; set; }
         public virtual DbSet<Bomon> Bomons { get; set; }
+        public virtual DbSet<CheckBaidang> CheckBaidangs { get; set; }
         public virtual DbSet<Chitietbaidang> Chitietbaidangs { get; set; }
         public virtual DbSet<Chitietchuyentiep> Chitietchuyentieps { get; set; }
         public virtual DbSet<ChitietCTGV> ChitietCTGVs { get; set; }
@@ -22,6 +23,8 @@
         public virtual DbSet<Chitietquyen> Chitietquyens { get; set; }
         public virtual DbSet<Chucvu> Chucvus { get; set; }
         public virtual DbSet<CongtacGV> CongtacGVs { get; set; }
+        public virtual DbSet<Detail> Details { get; set; }
+        public virtual DbSet<Filebackup> Filebackups { get; set; }
         public virtual DbSet<Loaibaidang> Loaibaidangs { get; set; }
         public virtual DbSet<Loaidaotao> Loaidaotaos { get; set; }
         public virtual DbSet<LoaiGT> LoaiGTs { get; set; }
@@ -31,6 +34,7 @@
         public virtual DbSet<NoidungDT> NoidungDTs { get; set; }
         public virtual DbSet<NoidungGT> NoidungGTs { get; set; }
         public virtual DbSet<Quyennguoidung> Quyennguoidungs { get; set; }
+        public virtual DbSet<Saoluu> Saoluus { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<Taikhoan> Taikhoans { get; set; }
         public virtual DbSet<Thongbaochuyentiep> Thongbaochuyentieps { get; set; }
@@ -52,6 +56,10 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<Baidang>()
+                .HasOptional(e => e.CheckBaidang)
+                .WithRequired(e => e.Baidang);
+
+            modelBuilder.Entity<Baidang>()
                 .HasMany(e => e.Chitietbaidangs)
                 .WithRequired(e => e.Baidang)
                 .WillCascadeOnDelete(false);
@@ -62,6 +70,10 @@
 
             modelBuilder.Entity<Bomon>()
                 .Property(e => e.MaBM)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<CheckBaidang>()
+                .Property(e => e.Mabaidang)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Chitietbaidang>()
@@ -119,6 +131,30 @@
 
             modelBuilder.Entity<CongtacGV>()
                 .Property(e => e.MaCT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Detail>()
+                .Property(e => e.Tenserver)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Detail>()
+                .Property(e => e.tentk)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Detail>()
+                .Property(e => e.matkhau)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Detail>()
+                .Property(e => e.data)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Filebackup>()
+                .Property(e => e.tenfile)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Filebackup>()
+                .Property(e => e.filepath)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Loaibaidang>()
@@ -185,6 +221,10 @@
                 .HasMany(e => e.Chitietquyens)
                 .WithRequired(e => e.Quyennguoidung)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Saoluu>()
+                .Property(e => e.Thoigian)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Tag>()
                 .Property(e => e.TagID)

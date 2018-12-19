@@ -35,7 +35,7 @@
                             @Html.ActionLink(item.Tieude, "CT_DaoTao", "DaoTao", new { manddt = item.MaNDDT, tenloai = @ViewBag.TenLoai, madt = @ViewBag.MaDT }, null)
                         </h2>
                         <p>@Html.Raw(item.NoidungDT1.Substring(0, Math.Min(item.NoidungDT1.Length, 550)))....</p>
-                        <p class="read-more btn btn-primary"> @Html.ActionLink("Xem thêm", " CT_DaoTao", "DaoTao", new { manddt = item.MaNDDT, tenloai = @ViewBag.TenLoai, madt = @ViewBag.MaDT }, new { style = "color: White" }) </p>
+                        <p class="read-more btn btn-primary"> @Html.ActionLink("Xem thêm", "CT_DaoTao", "DaoTao", new { manddt = item.MaNDDT, tenloai = @ViewBag.TenLoai, madt = @ViewBag.MaDT }, new { style = "color: White" }) </p>
                     </div>
                 }
 

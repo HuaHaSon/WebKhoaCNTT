@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DoAnKhoaIT.Controllers;
 using Model.DAO.GiaoVien;
 using Model.ViewModel;
 
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class LichGiangDayController : Controller
+    public class LichGiangDayController : BaseGiaovienController
     {
         // GET: GiaoVien/LichGiangDay
         LichGV dao = new LichGV();

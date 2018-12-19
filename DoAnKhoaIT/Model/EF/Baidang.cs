@@ -40,6 +40,8 @@ namespace Model.EF
 
         public virtual Loaibaidang Loaibaidang { get; set; }
 
+        public virtual CheckBaidang CheckBaidang { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chitietbaidang> Chitietbaidangs { get; set; }
     }

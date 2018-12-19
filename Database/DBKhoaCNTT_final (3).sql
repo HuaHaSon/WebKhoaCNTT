@@ -18,14 +18,14 @@ CREATE TABLE Taikhoan
 )
 INSERT INTO Taikhoan VALUES( 'IT1','s2Shwzk2H0I=','12-12-2007','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT2','ur9EtJLG814=','11-2-2012','Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT3','12345','3-22-2005','Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT3','nhfTi0IOJNA=','3-22-2005','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT4','CAxpn3X++hs=','11-5-2002' ,'Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT5','12345','2-1-2007', 'Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT6','12345','1-12-2012','Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT5','7jhDF21iOa8=','2-1-2007', 'Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT6','I8cEAoxQZSE=','1-12-2012','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT7','9Lg+2y57Rh0=','12-2-2015','Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT8','12345','11-13-2013','Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT8','hcIrhlmORTY=','11-13-2013','Offline',1)
 INSERT INTO Taikhoan VALUES( 'IT9','d5TT6Zse5uU=','11-11-2011', 'Offline',1)
-INSERT INTO Taikhoan VALUES( 'IT10','12345','11-20-2005', 'Offline',1)
+INSERT INTO Taikhoan VALUES( 'IT10','aMBu6u2jeUk=','11-20-2005', 'Offline',1)
 go	
 CREATE TABLE Chucvu
 (
@@ -36,7 +36,7 @@ CREATE TABLE Chucvu
 GO
 INSERT INTO Chucvu VALUES  ( 'CV1', N'Giáo viên', 1)
 INSERT INTO Chucvu VALUES  ( 'CV2', N'Phó trưởng khoa', 1)
-INSERT INTO Chucvu VALUES  ( 'CV3', N'Trưởng khoa ', 1)
+INSERT INTO Chucvu VALUES  ( 'CV3', N'Trưởng khoa', 1)
 INSERT INTO Chucvu VALUES  ( 'CV4', N'Trợ lý Khoa học', 1)
 INSERT INTO Chucvu VALUES  ( 'CV5', N'Trợ lý Văn thể mỹ', 1)
 INSERT INTO Chucvu VALUES  ( 'CV6', N'Trợ lý Phòng máy', 1)
@@ -1356,6 +1356,75 @@ INSERT INTO Baidang  VALUES ('BD60','TT',N'Công chức TP.HCM phải mặc qu�
 
 <p>Ngo&agrave;i ra, khi giao tiếp qua điện thoại, c&ocirc;ng chức phải xưng t&ecirc;n, chức danh, chức vụ, cơ quan, đơn vị nơi c&ocirc;ng t&aacute;c; trao đổi ngắn gọn, tập trung v&agrave;o nội dung c&ocirc;ng việc; &acirc;m lượng vừa đủ nghe; kh&ocirc;ng tỏ th&aacute;i độ thiếu lịch sự, kh&ocirc;ng gắt gỏng hay n&oacute;i trống kh&ocirc;ng; kh&ocirc;ng ngắt điện thoại đột ngột.</p>
 ','06/10/2018',N'Trần Bá Xú','10/20/2019','GV',1)
+
+create table CheckBaidang
+(
+	Mabaidang varchar(50) NOT NULL,
+	Flag Bit,
+	PRIMARY KEY (Mabaidang),
+	FOREIGN KEY (Mabaidang) REFERENCES Baidang (Mabaidang)
+)
+
+insert into CheckBaidang values('BD1',1)
+insert into CheckBaidang values('BD2',1)
+insert into CheckBaidang values('BD3',1)
+insert into CheckBaidang values('BD4',1)
+insert into CheckBaidang values('BD5',1)
+insert into CheckBaidang values('BD6',1)
+insert into CheckBaidang values('BD7',1)
+insert into CheckBaidang values('BD8',1)
+insert into CheckBaidang values('BD9',1)
+insert into CheckBaidang values('BD10',1)
+insert into CheckBaidang values('BD11',1)
+insert into CheckBaidang values('BD12',1)
+insert into CheckBaidang values('BD13',1)
+insert into CheckBaidang values('BD14',1)
+insert into CheckBaidang values('BD15',1)
+insert into CheckBaidang values('BD16',1)
+insert into CheckBaidang values('BD17',1)
+insert into CheckBaidang values('BD18',1)
+insert into CheckBaidang values('BD19',1)
+insert into CheckBaidang values('BD20',1)
+insert into CheckBaidang values('BD21',1)
+insert into CheckBaidang values('BD22',1)
+insert into CheckBaidang values('BD23',1)
+insert into CheckBaidang values('BD24',1)
+insert into CheckBaidang values('BD25',1)
+insert into CheckBaidang values('BD26',1)
+insert into CheckBaidang values('BD27',1)
+insert into CheckBaidang values('BD28',1)
+insert into CheckBaidang values('BD29',1)
+insert into CheckBaidang values('BD30',1)
+insert into CheckBaidang values('BD31',1)
+insert into CheckBaidang values('BD32',1)
+insert into CheckBaidang values('BD33',1)
+insert into CheckBaidang values('BD34',1)
+insert into CheckBaidang values('BD35',1)
+insert into CheckBaidang values('BD36',1)
+insert into CheckBaidang values('BD37',1)
+insert into CheckBaidang values('BD38',1)
+insert into CheckBaidang values('BD39',1)
+insert into CheckBaidang values('BD40',1)
+insert into CheckBaidang values('BD41',1)
+insert into CheckBaidang values('BD42',1)
+insert into CheckBaidang values('BD43',1)
+insert into CheckBaidang values('BD44',1)
+insert into CheckBaidang values('BD45',1)
+insert into CheckBaidang values('BD46',1)
+insert into CheckBaidang values('BD47',1)
+insert into CheckBaidang values('BD48',1)
+insert into CheckBaidang values('BD49',1)
+insert into CheckBaidang values('BD50',1)
+insert into CheckBaidang values('BD51',1)
+insert into CheckBaidang values('BD52',1)
+insert into CheckBaidang values('BD53',1)
+insert into CheckBaidang values('BD54',1)
+insert into CheckBaidang values('BD55',1)
+insert into CheckBaidang values('BD56',1)
+insert into CheckBaidang values('BD57',1)
+insert into CheckBaidang values('BD58',1)
+insert into CheckBaidang values('BD59',1)
+insert into CheckBaidang values('BD60',1)
 
 GO
 CREATE TABLE Chitietbaidang
@@ -2725,12 +2794,43 @@ INSERT INTO NoidungGT VALUES ('GT8','CCTC',N'Cựu viên chức khoa',N'
 --select * from Thongbaochuyentiep WHERE Taikhoangui='IT7'
 --select* from Chitietchuyentiep WHERE Taikhoannhan='IT7' and Machuyentiep=1
 
-select * 
-from Thongbaochuyentiep a,Chitietchuyentiep b, Thongtinnguoidung c
-where a.Machuyentiep=b.Machuyentiep and a.Taikhoangui= c.Tentaikhoan and  b.Taikhoannhan='IT4' and (b.Flag=2 or b.Flag=3)
+--select * 
+--from Thongbaochuyentiep a,Chitietchuyentiep b, Thongtinnguoidung c
+--where a.Machuyentiep=b.Machuyentiep and a.Taikhoangui= c.Tentaikhoan and  b.Taikhoannhan='IT4' and (b.Flag=2 or b.Flag=3)
+
+----select * from Thongtinnguoidung
+--select * from Baidang where (ĐoituongHT='GV' or ĐoituongHT='ALL') and Maloai='TT'
 
 --select * from Thongtinnguoidung
-select * from Baidang where (ĐoituongHT='GV' or ĐoituongHT='ALL') and Maloai='TT'
+--select * from Chucvu
 
-select * from Thongtinnguoidung
-select * from Chucvu
+create table Saoluu
+(	
+	Thoigian varchar(10) primary key	
+)
+--insert into Saoluu(Thoigian) values ('08:00')
+--insert into Saoluu(Thoigian) values ('16:00')
+--insert into Saoluu(Thoigian) values ('00:00')
+
+--select * from Saoluu
+
+create table Detail
+(
+	Tenserver varchar(100) primary key not null,
+	tentk varchar(10) not null,
+	matkhau varchar(10) not null,
+	data varchar(50) not null
+
+)	
+--SELECT * from Detail
+--select * from Filebackup
+--select * from Saoluu
+--insert into Detail values('DESKTOP-FT6DMB0\HASONIT','sa','1','DbKhoaCNTT')	
+
+create table Filebackup
+(
+	ID int identity(1,1) primary key,
+	tenfile varchar(100),
+	filepath varchar(500)
+)
+insert into Filebackup(tenfile,filepath) values('backup_17_12_2018_04_17_43.bak','E:\backup_17_12_2018_04_17_43.bak')

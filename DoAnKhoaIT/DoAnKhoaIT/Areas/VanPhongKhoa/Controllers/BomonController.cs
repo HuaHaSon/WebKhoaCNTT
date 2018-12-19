@@ -1,4 +1,5 @@
-﻿using Model.DAO.Admin;
+﻿using DoAnKhoaIT.Controllers;
+using Model.DAO.Admin;
 using Model.EF;
 using Model.ViewModel;
 using Newtonsoft.Json;
@@ -10,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.VanPhongKhoa.Controllers
 {
-    public class BomonController : Controller
+    public class BomonController : BaseVanPhongKhoaController
     {
         // GET: VanPhongKhoa/Bomon
         public ActionResult Index()

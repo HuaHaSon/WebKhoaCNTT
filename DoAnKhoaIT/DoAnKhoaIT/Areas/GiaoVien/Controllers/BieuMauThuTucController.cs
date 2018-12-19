@@ -5,9 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using Model.EF;
 using Model.DAO.Guest;
+using DoAnKhoaIT.Controllers;
+
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class BieuMauThuTucController : Controller
+    public class BieuMauThuTucController : BaseGiaovienController
     {
         // GET: GiaoVien/BieuMauThuTuc
         BMTTDAO dao = new BMTTDAO();

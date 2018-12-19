@@ -1,4 +1,5 @@
-﻿using Model.DAO.Admin;
+﻿using DoAnKhoaIT.Controllers;
+using Model.DAO.Admin;
 using Model.EF;
 using Model.ViewModel;
 using Newtonsoft.Json;
@@ -10,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class ThongbaochuyentiepController : Controller
+    public class ThongbaochuyentiepController : BaseAdminController
     {
         // GET: Admin/Thongbaochuyentiep
         public ActionResult Index()

@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.Admin.Controllers
 {
-    public class BomonController : BaseController
+    public class BomonController : BaseAdminController
     {
         // GET: Admin/Bomon
         public ActionResult Index()

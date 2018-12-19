@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DoAnKhoaIT.Controllers;
 using Model.DAO.GiaoVien;
 using Model.EF;
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class ThongBaoController : Controller
+    public class ThongBaoController : BaseGiaovienController
     {
         // GET: GiaoVien/ThongBao
         public ActionResult TB(string txtsearch, string tieude, string noidung, string loaibd, DateTime? tungay, DateTime? denngay, int page = 1, int pagesize = 5)

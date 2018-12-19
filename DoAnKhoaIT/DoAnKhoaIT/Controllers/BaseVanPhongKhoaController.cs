@@ -8,30 +8,33 @@ using System.Web.Routing;
 
 namespace DoAnKhoaIT.Controllers
 {
-    public class BaseAdminController : BaseController
+    public class BaseVanPhongKhoaController : BaseController
     {
+        // GET: BaseVanPhongKhoa
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             var session = (TaikhoanLogin)Session[CommonConstants.USER_SESSION];
-            if (session != null && session.chucvu == "CV1")
+            if (session != null && (session.chucvu == "CV3" || session.chucvu == "CV2"))
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                 {
-                    action = "IndexGV",
+                    action = "Index",
                     controller = "Home",
-                    area = "GiaoVien"
+                    area = "Admin"
                 }));
-            }else{
-                if (session != null && session.chucvu == "CV8")
+            }
+            else
+            {
+                if (session != null && session.chucvu == "CV1")
                 {
                     filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                     {
-                        action = "Index",
+                        action = "IndexGV",
                         controller = "Home",
-                        area = "VanPhongKhoa"
+                        area = "GiaoVien"
                     }));
                 }else{
-                    if (session != null && session.chucvu != "CV2" && session.chucvu != "CV3")
+                    if (session != null && session.chucvu != "CV8")
                     {
                         filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                         {

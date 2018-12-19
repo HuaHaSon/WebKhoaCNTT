@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DoAnKhoaIT.Controllers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.VanPhongKhoa.Controllers
 {
-    public class LuottruycapController : Controller
+    public class LuottruycapController : BaseVanPhongKhoaController
     {
         // GET: VanPhongKhoa/Luottruycap
         public ActionResult Index()

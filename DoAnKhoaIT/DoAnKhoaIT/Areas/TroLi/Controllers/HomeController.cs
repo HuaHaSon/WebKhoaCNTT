@@ -1,4 +1,5 @@
-﻿using Model.DAO.Admin;
+﻿using DoAnKhoaIT.Controllers;
+using Model.DAO.Admin;
 using Model.EF;
 using Model.ViewModel;
 using Newtonsoft.Json;
@@ -10,18 +11,18 @@ using System.Web.Mvc;
 
 namespace DoAnKhoaIT.Areas.TroLi.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseTroLiController
     {
         // GET: TroLi/Home
-        public static string tentk = "";
+       
         // GET: Admin/Home
-        public ActionResult Index(string ten)
+        public ActionResult Index()
         {
             HomeModel model = new HomeModel();
             model.listchitietnghiencuukhoahoc = new NghiencuukhoahocDao().listchitietnghiencuukhoahoc();
             ViewBag.giaovien = new BomonDao().listgiaovien().Count();
             ViewBag.monhoc = new BomonDao().listmonhoc().Count();
-            tentk = ten;
+         
             return View(model);
         }
         public JsonResult loadlichGV(string status)

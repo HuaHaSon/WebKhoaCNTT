@@ -5,9 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using Model.EF;
 using Model.DAO.Guest;
+using DoAnKhoaIT.Controllers;
+
 namespace DoAnKhoaIT.Areas.GiaoVien.Controllers
 {
-    public class DaoTaoController : Controller
+    public class DaoTaoController : BaseGiaovienController
     {
         // GET: GiaoVien/DaoTao
         public ActionResult DaoTao(string maloaidt, string tenloai, int page = 1, int pagesize = 5)
