@@ -80,7 +80,7 @@ INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentai
 	VALUES (N'Nguyễn Văn Long' ,'12-8-1990' ,'0366789741' ,'nguyennhus293@gmail.com',N'TPHCM', 'IT6' ,'CV7',1)
  
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
-	VALUES  (N'Trần Thị Hồng' , '2-5-1979'  ,'0346804211' ,'minhphuc605@gmail.com',N'TPHCM', 'IT7','CV8' ,1)
+	VALUES  (N'Trần Thị Hồng' , '2-5-1979'  ,'0346804211' ,'tota251297@gmail.com',N'TPHCM', 'IT7','CV8' ,1)
 INSERT INTO Thongtinnguoidung(Hoten, Namsinh, Sodienthoai, Gmail,Quequan, Tentaikhoan, Machucvu,Flag) 
 	VALUES  (N'Trần Thị Bé Ba' , '2-5-1979'  ,'0346804211' ,'minhphuc605@gmail.com',N'TPHCM', 'IT8','CV8' ,1)
 go
@@ -2825,7 +2825,7 @@ create table Detail
 --SELECT * from Detail
 --select * from Filebackup
 --select * from Saoluu
---insert into Detail values('DESKTOP-FT6DMB0\HASONIT','sa','1','DbKhoaCNTT')	
+insert into Detail values('DESKTOP-FT6DMB0\HASONIT','sa','1','DbKhoaCNTT')	
 
 create table Filebackup
 (
